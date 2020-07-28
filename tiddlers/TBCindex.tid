@@ -1,0 +1,23 @@
+caption: Offen
+created: 20200105183443517
+modified: 20200728115444055
+tags: Index
+title: TBCindex
+tmap.id: 9ba90107-8c36-4821-9300-822b38b47344
+type: text/vnd.tiddlywiki
+
+Abenteuer
+
+<$list filter="[tag[Spieler]search:text[TBC]!title[Spieler]sort[title]]">
+<div class="tc-menu-list-subitem">
+<$link to={{!!title}}><$view field="title"/></$link>
+</div>
+</$list>
+
+Anderes
+
+<$list filter="[!tag[Spieler]search:text[TBC]!prefix[$:/]!title[TBCindex]sort[title]]">
+<div class="tc-menu-list-subitem">
+<$link to={{!!title}}><$view field="title"/></$link>
+</div>
+</$list>
