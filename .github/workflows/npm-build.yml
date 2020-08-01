@@ -18,7 +18,7 @@ jobs:
     - run: npm install git+https://github.com/WkoD/TiddlyDnD.git
     - run: $(npm bin)/tiddlywiki --output ./public --build index
     - name: Deploy Index
-      uses: peaceiris/actions-gh-pages@master
+      uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./public
