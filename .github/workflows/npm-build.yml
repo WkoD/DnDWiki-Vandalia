@@ -1,6 +1,9 @@
 name: NPM Index.html build
 
-on: push
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   build:
@@ -13,11 +16,9 @@ jobs:
       with:
         node-version: '12'
     - run: npm install git+https://github.com/WkoD/TiddlyDnD.git
-    - run: $(npm bin)/tiddlywiki --output . --build index
-    - name: push index
-      run: |
-        git config user.name "$GITHUB_ACTOR"
-        git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
-        git add index.html
-        git commit -m "Index aktualisiert"
-        git push
+    - run: $(npm bin)/tiddlywiki --output ./public --build index
+    - name: Deploy Index
+      uses: peaceiris/actions-gh-pages@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./public
