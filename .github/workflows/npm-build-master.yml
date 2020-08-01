@@ -1,4 +1,4 @@
-name: NPM Index.html build
+name: NPM Index.html build master
 
 on:
   push:
