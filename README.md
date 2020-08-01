@@ -1,1 +1,1 @@
-# DnDWiki
+https://wkod.github.io/DnDWiki/
