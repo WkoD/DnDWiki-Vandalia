@@ -13,4 +13,4 @@ jobs:
       with:
         node-version: '12'
     - run: npm install git+https://github.com/WkoD/TiddlyDnD.git
-    - run: tiddlywiki --version
+    - run: $(npm bin)/tiddlywiki --version
