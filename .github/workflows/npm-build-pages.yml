@@ -11,33 +11,5 @@ jobs:
     
     steps:
     - uses: actions/checkout@master
-    - name: Use Node.js
-      uses: actions/setup-node@master
-      with:
-        node-version: '12'
-    - name: Install TiddlyDnD
-      run: npm install git+https://github.com/WkoD/TiddlyDnD.git
-    - name: Build TiddlyWiki master index.html
-      run: $(npm bin)/tiddlywiki --output ./twpage --build index
-    - name: Merge draft
-      run: |
-        git pull 'https://github.com/$GITHUB_REPOSITORY.git' draft
-    - name: Update SiteTitle.tid for draft
-      run: echo " DRAFT" >> ./tiddlers/$__SiteTitle.tid
-    - name: Build TiddlyWiki draft index.html
-      run: $(npm bin)/tiddlywiki --output ./temp --build index
-    - name: Move draft index.html
-      run: mv ./temp/index.html ./twpage/draft.html
-    - name: Link resource directories
-      run: |
-        ln -s ./Ereignis ./twpage/Ereignis
-        ln -s ./Gegenstand ./twpage/Gegenstand
-        ln -s ./Karte ./twpage/Karte
-        ln -s ./Ort ./twpage/Ort
-        ln -s ./Person ./twpage/Person
-        ln -s ./Spieler ./twpage/Spieler
-    - name: Deploy to gh_pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./twpage
+    - run: |
+      git branch -a
