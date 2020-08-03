@@ -1,0 +1,12 @@
+created: 20200308095521995
+list-after: $:/core/ui/ViewTemplate/body
+modified: 20200728110413743
+tags: $:/tags/ViewTemplate
+title: $:/_my/ViewTemplate/Karte
+type: text/vnd.tiddlywiki
+
+<$reveal tag="div" class="tc-tiddler-body" type="nomatch" stateTitle=<<folded-state>> text="hide" retain="yes" animate="yes">
+<$list filter="[all[current]has:field[karte]]">
+<$transclude tiddler="$:/_my/Template/Karte"/>
+</$list>
+</$reveal>

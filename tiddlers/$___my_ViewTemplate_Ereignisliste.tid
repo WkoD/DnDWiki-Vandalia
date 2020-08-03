@@ -1,0 +1,17 @@
+created: 20200305182729567
+list-after: $:/_my/ViewTemplate/Karte
+modified: 20200728110413726
+tags: $:/tags/ViewTemplate
+title: $:/_my/ViewTemplate/Ereignisliste
+type: text/vnd.tiddlywiki
+
+<$reveal tag="div" class="tc-tiddler-body" type="nomatch" stateTitle=<<folded-state>> text="hide" retain="yes" animate="yes">
+<$list filter="[all[current]tag[Organisation]][all[current]tag[Ort]][all[current]tag[Person]][all[current]tag[Spieler]!tag[Ereignis]]">
+
+<hr>
+<h3>Geschichte</h3>
+<table><tr><th align="center" colspan="3">Zeitpunkt (DR)</th><th>Ereignis</th></tr>
+<$list filter="[all[current]backlinks[]tag[Ereignis]][tag{!!title}tag[Ereignis]] +[!ereignisliste[]]">{{!!title}}</$list>
+</table>
+</$list>
+</$reveal>

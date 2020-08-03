@@ -1,0 +1,41 @@
+name: NPM build index.html
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@master
+    - name: Use Node.js
+      uses: actions/setup-node@master
+      with:
+        node-version: '12'
+    - name: Install TiddlyDnD
+      run: npm install git+https://github.com/WkoD/TiddlyDnD.git
+    - name: Build TiddlyWiki master index.html
+      run: $(npm bin)/tiddlywiki --output ./twpage --build index
+    - name: Merge draft
+      run: |
+        git merge draft
+    - name: Build TiddlyWiki draft index.html
+      run: $(npm bin)/tiddlywiki --output ./temp --build index
+    - name: Move draft index.html
+      run: mv ./temp/index.html ./twpage/draft.html
+    - name: Link resource directories
+      run: |
+        ln -s ./Ereignis ./twpage/Ereignis
+        ln -s ./Gegenstand ./twpage/Gegenstand
+        ln -s ./Karte ./twpage/Karte
+        ln -s ./Ort ./twpage/Ort
+        ln -s ./Person ./twpage/Person
+        ln -s ./Spieler ./twpage/Spieler
+    - name: Deploy to gh_pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./twpage
