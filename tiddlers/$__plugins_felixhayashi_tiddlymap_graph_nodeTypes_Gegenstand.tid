@@ -1,7 +1,0 @@
-created: 20200728112042260
-modified: 20200728112109069
-priority: 1
-scope: [tag[Gegenstand]]
-style: {"color":{"background":"rgba(255,128,255,1)"}}
-title: $:/plugins/felixhayashi/tiddlymap/graph/nodeTypes/Gegenstand
-type: text/vnd.tiddlywiki
