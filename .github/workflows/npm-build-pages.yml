@@ -40,6 +40,9 @@ jobs:
         ln -s ./Ort ./twpage/Ort
         ln -s ./Person ./twpage/Person
         ln -s ./Spieler ./twpage/Spieler
+    - name: Clean
+      run: |
+        rm -rf node_modules/gh-pages/.cache
     - name: Deploy to gh_pages
       uses: peaceiris/actions-gh-pages@v3
       with:
