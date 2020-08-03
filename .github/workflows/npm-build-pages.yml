@@ -27,7 +27,7 @@ jobs:
         git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
         git merge origin/draft
     - name: Update SiteTitle.tid for draft
-      run: echo " DRAFT" >> ./tiddlers/$__SiteTitle.tid
+      run: echo " DRAFT" >> './tiddlers/$__SiteTitle.tid'
     - name: Build TiddlyWiki draft index.html
       run: $(npm bin)/tiddlywiki --output ./temp --build index
     - name: Move draft index.html
