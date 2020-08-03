@@ -34,12 +34,12 @@ jobs:
       run: mv ./temp/index.html ./twpage/draft.html
     - name: Link resource directories
       run: |
-        ln -s ./Ereignis ./twpage/Ereignis
-        ln -s ./Gegenstand ./twpage/Gegenstand
-        ln -s ./Karte ./twpage/Karte
-        ln -s ./Ort ./twpage/Ort
-        ln -s ./Person ./twpage/Person
-        ln -s ./Spieler ./twpage/Spieler
+        mv ./Ereignis ./twpage/Ereignis
+        mv ./Gegenstand ./twpage/Gegenstand
+        mv ./Karte ./twpage/Karte
+        mv ./Ort ./twpage/Ort
+        mv ./Person ./twpage/Person
+        mv ./Spieler ./twpage/Spieler
     - name: Clean
       run: |
         rm -rf node_modules/gh-pages/.cache
