@@ -30,14 +30,14 @@ jobs:
     - if: github.ref != 'refs/heads/master'
       name: Rename index.html for branches other than master
       run: mv ./twpage/index.html ./twpage/${{ steps.extract_branch.outputs.branch }}.html
-    - name: Move resource directories
+    - name: Link resource directories
       run: |
-        mv ./Ereignis ./twpage/Ereignis
-        mv ./Gegenstand ./twpage/Gegenstand
-        mv ./Karte ./twpage/Karte
-        mv ./Ort ./twpage/Ort
-        mv ./Person ./twpage/Person
-        mv ./Spieler ./twpage/Spieler
+        ln ./Ereignis ./twpage/Ereignis
+        ln ./Gegenstand ./twpage/Gegenstand
+        ln ./Karte ./twpage/Karte
+        ln ./Ort ./twpage/Ort
+        ln ./Person ./twpage/Person
+        ln ./Spieler ./twpage/Spieler
     - name: Deploy to gh_pages
       uses: peaceiris/actions-gh-pages@v3
       with:
