@@ -36,18 +36,20 @@ exports.run = function(title) {
 
 function buildPath(tiddler, name) {
 
-   var ret ="[img[";
+   var ret ="[img[images/";
 
    if (tiddler.hasTag("Ereignis")) {
       ret += "Ereignis/";
-   } else if (tiddler.hasTag("Gegenstand") || tiddler.hasTag("Organisation")) {
+   } else if (tiddler.hasTag("Gegenstand")) {
       ret += "Gegenstand/";
+   } else if (tiddler.hasTag("Organisation")) {
+      ret += "Organisation/";
+   } else if (tiddler.hasTag("Ort")) {
+      ret += "Ort/";
    } else if (tiddler.hasTag("Person") || tiddler.hasTag("Gott")) {
       ret += "Person/";
    } else if (tiddler.hasTag("Spieler")) {
       ret += "Spieler/";
-   } else if (tiddler.hasTag("Ort")) {
-      ret += "Ort/";
    }
 
    return ret + name + "]]";
