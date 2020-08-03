@@ -1,5 +1,5 @@
 /*\
-title: map
+title: karte
 type: application/javascript
 module-type: macro
 \*/
@@ -9,7 +9,7 @@ module-type: macro
 /*global $tw: false */
 "use strict";
 
-exports.name = "map";
+exports.name = "karte";
 
 exports.params = [
    { name: "title" }
@@ -28,7 +28,7 @@ exports.run = function(title) {
 
       ret += "Karte/"
 
-      ret += tiddler.fields.map + "]]";
+      ret += tiddler.fields.karte + "]]";
    }
 
    return ret;
