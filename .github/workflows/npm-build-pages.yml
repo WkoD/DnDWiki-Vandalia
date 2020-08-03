@@ -14,9 +14,8 @@ jobs:
     - uses: actions/checkout@master
     - name: Extract branch name
       shell: bash
-      run: |
-        echo "::set-env name=BRANCH_NAME::$(echo ${GITHUB_REF#refs/heads/} | sed 's/\//_/g')"
-        echo "building ${BRANCH_NAME}"
+      run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+      id: extract_branch
     - name: Use Node.js
       uses: actions/setup-node@master
       with:
@@ -25,9 +24,9 @@ jobs:
       run: npm install git+https://github.com/WkoD/TiddlyDnD.git
     - name: Build TiddlyWiki index.html
       run: $(npm bin)/tiddlywiki --output ./twpage --build index
-    - if:
-      name: Rename draft index.html
-      run: mv ./twpage/index.html ./twpage/draft.html
+    - if: ${{ steps.extract_branch.outputs.branch }} != 'master'
+      name: Rename ${{ steps.extract_branch.outputs.branch }} index.html
+      run: mv ./twpage/index.html ./twpage/${{ steps.extract_branch.outputs.branch }}.html
     - name: Deploy to gh_pages
       uses: peaceiris/actions-gh-pages@v3
       with:
