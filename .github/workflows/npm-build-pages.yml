@@ -25,7 +25,7 @@ jobs:
     - name: Build TiddlyWiki index.html
       run: $(npm bin)/tiddlywiki --output ./twpage --build index
     - if: github.ref != 'refs/heads/master'
-      name: Rename ${{ steps.extract_branch.outputs.branch }} index.html
+      name: Rename index.html for branches other than master
       run: mv ./twpage/index.html ./twpage/${{ steps.extract_branch.outputs.branch }}.html
     - name: Deploy to gh_pages
       uses: peaceiris/actions-gh-pages@v3
