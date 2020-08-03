@@ -26,13 +26,20 @@ jobs:
       name: Update SiteTitle.tid for branches other than master
       run: echo " ${{ steps.extract_branch.outputs.branch }}" >> ./tiddlers/$__SiteTitle.tid
     - name: Build TiddlyWiki index.html
-      run: $(npm bin)/tiddlywiki --output . --build index
+      run: $(npm bin)/tiddlywiki --output ./twpage --build index
     - if: github.ref != 'refs/heads/master'
       name: Rename index.html for branches other than master
-      run: mv ./index.html ./${{ steps.extract_branch.outputs.branch }}.html
+      run: mv ./twpage/index.html ./twpage/${{ steps.extract_branch.outputs.branch }}.html
+    - name: Move resource directories
+      run: |
+        mv ./Ereignis ./twpage/Ereignis
+        mv ./Gegenstand ./twpage/Gegenstand
+        mv ./Karte ./twpage/Karte
+        mv ./Ort ./twpage/Ort
+        mv ./Person ./twpage/Person
+        mv ./Spieler ./twpage/Spieler
     - name: Deploy to gh_pages
-      uses: peaceiris/actions-gh-pages@v3.6.4
+      uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./
-        exclude_assets: '.github,node_modules,tiddlers,package-lock.json,tiddlywiki.info'
+        publish_dir: ./twpage
