@@ -21,7 +21,7 @@ jobs:
       run: $(npm bin)/tiddlywiki --output ./twpage --build index
     - name: Merge draft
       run: |
-        git merge draft
+        git merge origin/draft
     - name: Build TiddlyWiki draft index.html
       run: $(npm bin)/tiddlywiki --output ./temp --build index
     - name: Move draft index.html
