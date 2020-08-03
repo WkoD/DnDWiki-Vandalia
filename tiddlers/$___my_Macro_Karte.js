@@ -23,12 +23,16 @@ exports.run = function(title) {
 
    var ret = "";
 
-   if (tiddler) {
-      ret +="[img[";
+   if (tiddler && tiddler.fields.karte) {
+      var images = tiddler.fields.karte.split(",");
 
-      ret += "Karte/"
+      for (var i = 0; i < images.length; ++i) {
+		ret +="[img[images/";
 
-      ret += tiddler.fields.karte + "]]";
+		ret += "Karte/"
+
+		ret += tiddler.fields.karte + "]]";
+      }
    }
 
    return ret;
