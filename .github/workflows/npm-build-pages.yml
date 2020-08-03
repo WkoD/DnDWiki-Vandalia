@@ -11,6 +11,8 @@ jobs:
     
     steps:
     - uses: actions/checkout@master
+      with:
+        fetch-depth: 0
     - name: Use Node.js
       uses: actions/setup-node@master
       with:
@@ -21,7 +23,6 @@ jobs:
       run: $(npm bin)/tiddlywiki --output ./twpage --build index
     - name: Merge draft
       run: |
-        git fetch origin/draft
         git merge origin/draft
     - name: Update SiteTitle.tid for draft
       run: echo " DRAFT" >> ./tiddlers/$__SiteTitle.tid
