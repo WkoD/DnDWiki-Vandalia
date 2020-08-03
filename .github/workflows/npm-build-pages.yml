@@ -27,6 +27,9 @@ jobs:
     - if: github.ref != 'refs/heads/master'
       name: Rename index.html for branches other than master
       run: mv ./twpage/index.html ./twpage/${{ steps.extract_branch.outputs.branch }}.html
+    - if: github.ref != 'refs/heads/master'
+      name: Update SiteTitle.tid for branches other than master
+      run: echo " ${{ steps.extract_branch.outputs.branch }}" >> ./tiddlers/$__SiteTitle.tid
     - name: Deploy to gh_pages
       uses: peaceiris/actions-gh-pages@v3
       with:
