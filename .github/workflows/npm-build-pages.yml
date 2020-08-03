@@ -24,7 +24,7 @@ jobs:
       run: npm install git+https://github.com/WkoD/TiddlyDnD.git
     - name: Build TiddlyWiki index.html
       run: $(npm bin)/tiddlywiki --output ./twpage --build index
-    - if: ${{ steps.extract_branch.outputs.branch }} != 'master'
+    - if: github.ref != 'refs/heads/master'
       name: Rename ${{ steps.extract_branch.outputs.branch }} index.html
       run: mv ./twpage/index.html ./twpage/${{ steps.extract_branch.outputs.branch }}.html
     - name: Deploy to gh_pages
