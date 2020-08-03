@@ -1,5 +1,0 @@
-created: 20200728110554666
-filter: [tag[Ort]] [tag[Person]!search:datum[.]] [tag[Spieler]!search:datum[.]!tag[Ereignis]] [title[Abenteuer]]
-modified: 20200728110554666
-title: $:/plugins/felixhayashi/tiddlymap/graph/views/Ortschaften/filter/nodes
-type: text/vnd.tiddlywiki
