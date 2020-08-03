@@ -1,0 +1,7 @@
+created: 20200306181001651
+modified: 20200728113803263
+tags: 
+title: $:/_my/Template/Karte
+type: text/vnd.tiddlywiki
+
+<$macrocall $name="karte" title={{!!title}}/>
