@@ -1,0 +1,36 @@
+name: NPM build index.html
+
+on:
+  push:
+    branches:
+      - master
+      - draft
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@master
+    - name: Extract branch name
+      shell: bash
+      run: |
+        echo "::set-env name=BRANCH_NAME::$(echo ${GITHUB_REF#refs/heads/} | sed 's/\//_/g')"
+        echo "building ${BRANCH_NAME}"
+    - name: Use Node.js
+      uses: actions/setup-node@master
+      with:
+        node-version: '12'
+    - name: Install TiddlyDnD
+      run: npm install git+https://github.com/WkoD/TiddlyDnD.git
+    - name: Build TiddlyWiki index.html
+      run: $(npm bin)/tiddlywiki --output ./twpage --build index
+    - if:
+      name: Rename draft index.html
+      run: mv ./twpage/index.html ./twpage/draft.html
+    - name: Deploy to gh_pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./twpage
+        keep_files: true
