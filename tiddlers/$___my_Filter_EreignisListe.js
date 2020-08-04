@@ -145,17 +145,43 @@ var prepare_results = function (source) {
          if (tiddler.fields.datum) {
             var dates = tiddler.fields.datum.split(".");
             var flag = dates.length > 1 ? "(Start)" : null;
+			var prev = 0;
 
             for (var i = 0; i < dates.length; ++i) {
-               var date = dates[i].split("-");
-               
-               if (flag && (i === (dates.length - 1))) {
-                  flag = "(Ende)";
-               }
+			   if (dates[i]) {
+                  var date = dates[i].split("-");
+				  
+				  if (i === 0) {
+				     prev = date[0] * 10000;
+
+                     if (date[1]) {
+				        prev = prev + date[1] * 100;
+					 }
+					 
+                     if (date[1]) {
+				        prev = prev + date[2];
+					 }
+				  }
      
-               results.push({title: tiddler.fields.title, year: date[0], month: date[1], day: date[2], order: (i * -1), flag: flag, tt: hastag});
+				  var order = date[0] * 10000;
+
+                  if (date[1]) {
+				     order = order + date[1] * 100;
+				  }
+					 
+                  if (date[1]) {
+				     order = order + date[2];
+				  }
+				  
+				  if (flag && (i === (dates.length - 1))) {
+                     flag = "(Ende)";
+                  }
+				  
+                  results.push({title: tiddler.fields.title, year: date[0], month: date[1], day: date[2], order: (1 / (prev - order)), flag: flag, tt: hastag});
                
-               flag = "(Fortsetzung)";
+                  flag = "(Fortsetzung)";
+				  prev = order;
+			   }
             }
          } else {
             results.push({title: tiddler.fields.title, year: "????", month: null, day: null, order: 0, flag: null, tt: hastag});
