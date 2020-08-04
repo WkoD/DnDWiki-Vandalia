@@ -14,26 +14,29 @@ exports.name = "subtiddler";
 exports.params = [
    { name: "title"},
    { name: "sub" },
-   { name: "text" }
+   { name: "heading" },
+   { name: "tags" }
 ];
 
 /*
 Run the macro
 */
-exports.run = function(title, sub, text) {
+exports.run = function(title, sub, heading, tags) {
    var tiddler = this.wiki.getTiddler(title + "#" + sub);
    var ret = "";
    
    if (tiddler) {
-	   if (text) {
-		   ret += "<h3>" + text + "</h3>";
-	   } else {
-		   ret += "<h3>" + sub + "</h3>";
+	   if (heading) {
+		  ret += "<h3>" + heading + "</h3>";
 	   }
 	   
-	   ret += "<$transclude tiddler=\"" + tiddler.fields.title + "\"/>";
+	   if (tags) {
+	      ret += "<$list filter=\"[title[" + tiddler.fields.title + "]tags[]sort[title]]\" template=\"$:/core/ui/TagTemplate\" />";
+	   }
+	   
+       ret += "<$transclude tiddler=\"" + tiddler.fields.title + "\" mode=\"block\"/>";
    }
-	
+    
    return ret;
 };
 
