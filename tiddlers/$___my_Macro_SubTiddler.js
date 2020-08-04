@@ -32,7 +32,7 @@ exports.run = function(title, sub, heading, tags) {
 	   }
 	   
 	   if (tags) {
-	      ret += "<$list filter=\"[title[" + tiddler.fields.title + "]tags[]sort[title]]\" template=\"$:/core/ui/TagTemplate\" />";
+	      ret += "<$list filter=\"[title[" + tiddler.fields.title + "]tags[]!title[" + sub + "]sort[title]]\" template=\"$:/core/ui/TagTemplate\" />";
 	   }
 	   
 	   if (tiddler.fields.bild) {
