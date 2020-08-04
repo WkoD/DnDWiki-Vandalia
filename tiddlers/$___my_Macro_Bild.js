@@ -50,6 +50,8 @@ function buildPath(tiddler, name) {
       ret += "Person/";
    } else if (tiddler.hasTag("Spieler")) {
       ret += "Spieler/";
+   } else {
+	  return "";
    }
 
    return ret + name + "]]";
