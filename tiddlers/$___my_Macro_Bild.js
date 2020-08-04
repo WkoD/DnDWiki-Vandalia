@@ -12,14 +12,16 @@ module-type: macro
 exports.name = "bild";
 
 exports.params = [
-   { name: "title" }
+   { name: "title" },
+   { name: "parent" }
 ];
 
 /*
 Run the macro
 */
-exports.run = function(title) {
+exports.run = function(title, parent) {
    var tiddler = this.wiki.getTiddler(title);
+   var ptiddler = this.wiki.getTiddler(parent);
 
    var ret = "";
 
@@ -27,14 +29,14 @@ exports.run = function(title) {
       var images = tiddler.fields.bild.split(",");
 
       for (var i = 0; i < images.length; ++i) {
-         ret += buildPath(tiddler, images[i]);
+         ret += buildPath(tiddler, ptiddler, images[i]);
       }
    }
 
    return ret;
 };
 
-function buildPath(tiddler, name) {
+function buildPath(tiddler, ptiddler, name) {
 
    var ret ="[img[images/";
 
@@ -42,6 +44,8 @@ function buildPath(tiddler, name) {
       ret += "Ereignis/";
    } else if (tiddler.hasTag("Gegenstand")) {
       ret += "Gegenstand/";
+   } else if (tiddler.hasTag("Karte")) {
+      ret += "Karte/";
    } else if (tiddler.hasTag("Organisation")) {
       ret += "Organisation/";
    } else if (tiddler.hasTag("Ort")) {
@@ -50,6 +54,8 @@ function buildPath(tiddler, name) {
       ret += "Person/";
    } else if (tiddler.hasTag("Spieler")) {
       ret += "Spieler/";
+   } else if (ptiddler) {
+      return buildPath(ptiddler, null, name);
    } else {
 	  return "";
    }

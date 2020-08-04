@@ -23,6 +23,7 @@ Run the macro
 */
 exports.run = function(title, sub, heading, tags) {
    var tiddler = this.wiki.getTiddler(title + "#" + sub);
+   var parent = this.wiki.getTiddler(title);
    var ret = "";
    
    if (tiddler) {
@@ -32,6 +33,10 @@ exports.run = function(title, sub, heading, tags) {
 	   
 	   if (tags) {
 	      ret += "<$list filter=\"[title[" + tiddler.fields.title + "]tags[]sort[title]]\" template=\"$:/core/ui/TagTemplate\" />";
+	   }
+	   
+	   if (tiddler.fields.bild) {
+		  ret += "<div align=\"center\"><$macrocall $name=\"bild\" title=\"" + tiddler.fields.title + "\" parent=\"" + parent.fields.title + "\"/></div>"
 	   }
 	   
        ret += "<$transclude tiddler=\"" + tiddler.fields.title + "\" mode=\"block\"/>";
