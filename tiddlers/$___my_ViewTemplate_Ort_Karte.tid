@@ -6,9 +6,7 @@ title: $:/_my/ViewTemplate/Ort_Karte
 type: text/vnd.tiddlywiki
 
 <$reveal tag="div" class="tc-tiddler-body" type="nomatch" stateTitle=<<folded-state>> text="hide" retain="yes" animate="yes">
-<$list filter="[all[current]tag[Ort]has:field[karte]]">
-<h3>Karte</h3>
-<$transclude tiddler="$:/_my/Template/Karte"/>
-<$macrocall $name="subtiddler" title={{!!title}} sub="Karte"/>
+<$list filter="[all[current]tag[Ort]]">
+<$macrocall $name="subtiddler" title={{!!title}} sub="Karte" heading="Karte"/>
 </$list>
 </$reveal>
