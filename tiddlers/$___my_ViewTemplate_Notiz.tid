@@ -6,5 +6,5 @@ title: $:/_my/ViewTemplate/Notiz
 type: text/vnd.tiddlywiki
 
 <$reveal tag="div" class="tc-tiddler-body" type="nomatch" stateTitle=<<folded-state>> text="hide" retain="yes" animate="yes">
-<$macrocall $name="subtiddler" title={{!!title}} sub="Notiz"/>
+<$macrocall $name="subtiddler" title={{!!title}} sub="Notiz" heading="Notiz" tags="true"/>
 </$reveal>
