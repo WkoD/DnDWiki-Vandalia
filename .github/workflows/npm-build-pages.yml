@@ -21,6 +21,8 @@ jobs:
         node-version: '12'
     - name: Install TiddlyDnD
       run: npm install git+https://github.com/WkoD/TiddlyDnD.git
+    - name: Update SiteTitle.tid for master
+      run: echo '${{ github.event.repository.name }}' >> './tiddlers/$__SiteTitle.tid'
     - name: Build TiddlyWiki master index.html
       run: $(npm bin)/tiddlywiki --output ./twpage --build index
     - name: Merge draft
