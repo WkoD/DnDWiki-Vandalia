@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - master
-      - draft
+    repository_dispatch:
 
 jobs:
   build:
