@@ -1,0 +1,47 @@
+name: NPM build index.html
+
+on:
+  push:
+    branches:
+      - master
+    repository_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@master
+      with:
+        ref: master
+        fetch-depth: 0
+    - name: Use Node.js
+      uses: actions/setup-node@master
+      with:
+        node-version: '12'
+    - name: Install TiddlyDnD
+      run: npm install git+https://github.com/WkoD/TiddlyDnD.git
+    - name: Update SiteTitle.tid for master
+      run: echo '${{ github.event.repository.name }}' >> './tiddlers/$__SiteTitle.tid'
+    - name: Build TiddlyWiki master index.html
+      run: $(npm bin)/tiddlywiki --output ./twpage --build index
+    - name: Merge draft
+      run: |
+        git config user.name "$GITHUB_ACTOR"
+        git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+        git merge origin/draft
+    - name: Update SiteTitle.tid for draft
+      run: echo " DRAFT" >> './tiddlers/$__SiteTitle.tid'
+    - name: Build TiddlyWiki draft index.html
+      run: $(npm bin)/tiddlywiki --output ./temp --build index
+    - name: Move draft index.html
+      run: mv ./temp/index.html ./twpage/draft.html
+    - name: Copy resource directories
+      run: |
+        cp -rl ./data ./twpage/data
+        cp -rl ./images ./twpage/images
+    - name: Deploy to gh_pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./twpage
