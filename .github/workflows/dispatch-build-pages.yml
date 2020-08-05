@@ -1,0 +1,18 @@
+name: Dispatch build index.html
+
+on:
+  push:
+    branches:
+      - draft
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Dispatch to master
+      run: |
+        curl -X POST https://api.github.com/repos/$GITHUB_REPOSITORY/dispatches \
+        -H 'Accept: application/vnd.github.everest-preview+json' \
+        -u ${{ secrets.GITHUB_TOKEN }} \
+        --data '{"event_type": "update" }'
