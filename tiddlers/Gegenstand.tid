@@ -1,13 +1,21 @@
 caption: Gegenstände
 color: #ff80ff
 created: 20200209095911454
-modified: 20200728110413765
+modified: 20200805075358851
 tags: Index
 title: Gegenstand
 tmap.id: b76920ba-2674-4a8f-acd1-b3666cc22307
 type: text/vnd.tiddlywiki
 
+!!! Gegenstände
 <$list filter="[tag[Gegenstand]sort[title]]">
+<div class="tc-menu-list-subitem">
+<$macrocall $name="totlink" title={{!!title}} style="~~"/>
+</div>
+</$list>
+
+!!! Materialien
+<$list filter="[tag[Material]!tag[Gegenstand]sort[title]]">
 <div class="tc-menu-list-subitem">
 <$link to={{!!title}}><$view field="title"/></$link>
 </div>

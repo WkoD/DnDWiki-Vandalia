@@ -6,7 +6,7 @@ title: $:/_my/ViewTemplate/Ereignisliste
 type: text/vnd.tiddlywiki
 
 <$reveal tag="div" class="tc-tiddler-body" type="nomatch" stateTitle=<<folded-state>> text="hide" retain="yes" animate="yes">
-<$list filter="[all[current]tag[Organisation]][all[current]tag[Ort]][all[current]tag[Person]][all[current]tag[Spieler]!tag[Ereignis]]">
+<$list filter="[all[current]!is[system]!untagged[]!tag[Index]!tag[Information]!tag[Ereignis]]">
 
 <hr>
 <h3>Geschichte</h3>

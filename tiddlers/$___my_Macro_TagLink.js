@@ -1,5 +1,5 @@
 /*\
-title: marklink
+title: taglink
 type: application/javascript
 module-type: macro
 \*/
@@ -9,21 +9,26 @@ module-type: macro
 /*global $tw: false */
 "use strict";
 
-exports.name = "marklink";
+exports.name = "taglink";
 
 exports.params = [
    { name: "title" },
-   { name: "tag" }
+   { name: "tag" },
+   { name: "style" }
 ];
 
 /*
 Run the macro
 */
-exports.run = function(title, tag) {
+exports.run = function(title, tag, style) {
    var tiddler = this.wiki.getTiddler(title);
 
    if (tiddler && tiddler.hasTag(tag)) {
-      return "__[[" + title + "]]__";
+	  if (style) {
+		 return style + "[[" + title + "]]" + style;
+	  } else {
+         return "__[[" + title + "]]__";
+	  }
    } else {
       return "[[" + title + "]]";
    }
