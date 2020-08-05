@@ -15,8 +15,6 @@ jobs:
       with:
         ref: master
         fetch-depth: 0
-    - name: Set current date as env variable
-      run: echo "::set-env name=NOW::$(date +'%Y-%m-%dT%H:%M:%S')"
     - name: Use Node.js
       uses: actions/setup-node@master
       with:
@@ -26,7 +24,7 @@ jobs:
     - name: Update SiteTitle.tid for master
       run: echo '${{ github.event.repository.name }}' >> './tiddlers/$__SiteTitle.tid'
     - name: Update SiteSubtitle.tid with timestamp
-      run: echo $NOW >> './tiddlers/$__SiteSubtitle.tid'
+      run: echo $(TZ=Europe/Berlin date +'%Y-%m-%dT%H:%M:%S') >> './tiddlers/$__SiteSubtitle.tid'
     - name: Build TiddlyWiki master index.html
       run: $(npm bin)/tiddlywiki --output ./twpage --build index
     - name: Merge draft
