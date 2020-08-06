@@ -15,18 +15,30 @@ exports.params = [
    { name: "title"},
    { name: "sub" },
    { name: "heading" },
-   { name: "tags" }
+   { name: "tags" },
+   { name: "template" },
+   { name: "style" }
 ];
 
 /*
 Run the macro
 */
-exports.run = function(title, sub, heading, tags) {
+exports.run = function(title, sub, heading, tags, template, style) {
    var tiddler = this.wiki.getTiddler(title + "#" + sub);
    var parent = this.wiki.getTiddler(title);
    var ret = "";
    
    if (tiddler) {
+	   if (template) {
+		  ret += "<p class=\"" + template;
+		  
+		  if (style) {
+			 ret += "\" style=\"" + style;
+		  }
+		  
+		  ret += "\">";
+	   }
+	   
 	   if (heading) {
 		  ret += "<h3>" + heading + "</h3>";
 	   }
@@ -40,6 +52,10 @@ exports.run = function(title, sub, heading, tags) {
 	   }
 	   
        ret += "<$transclude tiddler=\"" + tiddler.fields.title + "\" mode=\"block\"/>";
+	   
+	   if (template) {
+	      ret += "</p>";
+	   }
    }
     
    return ret;
