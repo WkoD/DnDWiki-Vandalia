@@ -1,19 +1,18 @@
 color: #0069D2
 created: 20171009090415567
-modified: 20200804122325889
+modified: 20200806121810689
 title: Abenteuer
 tmap.id: 48325664-8054-4826-a32a-22020c7790a7
 type: text/vnd.tiddlywiki
+
+@@float:right;{{||Index}}
+@@
 
 !! Abenteurer
 
 {{||Spieler}}
 
-''{{||Erfahrungspunkte}} EXP''
-
-!! Index
-
-{{||Index}}
-
+@@clear:both;
 ---
 {{||Ereignis}}
+@@
