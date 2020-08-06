@@ -8,18 +8,18 @@ type: text/vnd.tiddlywiki
 
 !!! Aktiv
 <ul>
-<$list filter="[tag[Spieler]!tag[Ereignis]!search:datum[.]sort[title]]">
+<$list filter="[tag[Spieler]!tag[Ereignis]!search:datum[.]sort[caption]]">
 <div class="tc-menu-list-subitem">
-<li><$link to={{!!title}}><$view field="vollstaendig"/></$link></li>
+<li><$link to={{!!title}}><$view field="caption"/></$link> (<$view field="spieler"/>)</li>
 </div>
 </$list>
 </ul>
 
 !!! Inaktiv
 <ul>
-<$list filter="[tag[Spieler]!tag[Ereignis]search:datum[.]sort[title]]">
+<$list filter="[tag[Spieler]!tag[Ereignis]search:datum[.]sort[caption]]">
 <div class="tc-menu-list-subitem">
-<li><$link to={{!!title}}><$view field="vollstaendig"/></$link></li>
+<li><$link to={{!!title}}><$view field="caption"/></$link> (<$view field="spieler"/>)</li>
 </div>
 </$list>
 </ul>
