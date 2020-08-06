@@ -6,7 +6,7 @@ title: TBCindex
 tmap.id: 9ba90107-8c36-4821-9300-822b38b47344
 type: text/vnd.tiddlywiki
 
-Abenteuer
+!!! Abenteuer
 
 <$list filter="[tag[Spieler]search:text[TBC]!title[Spieler]sort[title]]">
 <div class="tc-menu-list-subitem">
@@ -14,7 +14,7 @@ Abenteuer
 </div>
 </$list>
 
-Anderes
+!!! Anderes
 
 <$list filter="[!tag[Spieler]search:text[TBC]!prefix[$:/]!title[TBCindex]sort[title]]">
 <div class="tc-menu-list-subitem">
