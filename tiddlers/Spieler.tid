@@ -23,3 +23,12 @@ type: text/vnd.tiddlywiki
 </div>
 </$list>
 </ul>
+
+!!! Erfahrung
+<ul>
+<$list filter="[tag[Spieler]!tag[Ereignis]search:datum[.]sort[caption]]">
+<div class="tc-menu-list-subitem">
+<b>{{||Erfahrungspunkte}} EXP</b>
+</div>
+</$list>
+</ul>
