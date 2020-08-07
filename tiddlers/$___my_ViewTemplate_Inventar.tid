@@ -5,12 +5,16 @@ tags: $:/tags/ViewTemplate
 title: $:/_my/ViewTemplate/Inventar
 
 <$reveal tag="div" class="tc-tiddler-body" type="nomatch" stateTitle=<<folded-state>> text="hide" retain="yes" animate="yes">
-<$list filter="[all[current]tag[Spieler]!tag[Ereignis]][all[current]tag[Person]]">
+<$list filter="[all[current]tag[Spieler]!tag[Ereignis]][all[current]tag[Person]subfilter<hasitems>]">
+<$set name=name value={{!!title}}>
+<$list filter="[tag[Gegenstand]person<name>limit[1]]">
 <h3>Gegenstände</h3>
 <ul>
-<$list filter="[person{!!title}]">
+<$list filter="[tag[Gegenstand]person<name>sort[title]]">
 <li><$link to={{!!title}}>{{{ [{!!title}] }}}</$link></li>
 </$list>
 </ul>
+</$list>
+</$set>
 </$list>
 </$reveal>
