@@ -49,13 +49,13 @@ jobs:
         publish_dir: ./twpage
 
   dispatch:
+    if: github.repository == 'WkoD/DnDWiki'
     runs-on: ubuntu-latest
     
     strategy:
       matrix:
         downstream: ['WkoD/DnDWiki-Vandalia']
     
-    if: ${{ github.repository }} == 'WkoD/DnDWiki'
     steps:
     - uses: actions/checkout@master
     - name: Dispatch to ${{ matrix.downstream }}
