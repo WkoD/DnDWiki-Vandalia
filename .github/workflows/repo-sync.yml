@@ -9,24 +9,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - name: repo-merge master
-      uses: WkoD/git-merge@master
       with:
-        source_repo: "https://github.com/WkoD/DnDWiki.git"
-        source_branch: "master"
-        destination_repo: "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
-        destination_branch: "master"
-    - name: repo-merge draft
-      uses: WkoD/git-merge@master
-      with:
-        source_repo: "https://github.com/WkoD/DnDWiki.git"
-        source_branch: "draft"
-        destination_repo: "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
-        destination_branch: "draft"
-    - name: Dispatch to master
+        ref: master
+        fetch-depth: 0
+    - name: merge master
       run: |
-        curl -X POST \
-        "https://api.github.com/repos/${{ github.repository }}/actions/workflows/npm-build-pages.yml/dispatches" \
-        -H 'Accept: application/vnd.github.v3+json' \
-        -u ${{ secrets.DISPATCH_PAT }} \
-        -d '{"ref":"master"}'
+        git config user.name "$GITHUB_ACTOR"
+        git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+        git pull 'https://github.com/WkoD/DnDWiki.git' master
+        git push origin master
+    - name: merge draft
+      run: |
+        git config user.name "$GITHUB_ACTOR"
+        git config user.email
+        git checkout draft
+        git pull 'https://github.com/WkoD/DnDWiki.git' draft
+        git push origin draft
