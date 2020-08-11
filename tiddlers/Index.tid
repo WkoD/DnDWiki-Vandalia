@@ -6,9 +6,11 @@ tmap.id: 4057b806-e9ee-456a-90a5-0f378b313828
 type: text/vnd.tiddlywiki
 
 <ul>
-<$list filter="[tag[Index]!title[Index]has:field[caption]sort[title]]">
 <div class="tc-menu-list-subitem">
+<$list filter="[tag[Index]!title[Index]!title[TBCindex]has:field[caption]sort[caption]]">
 <li><$link to={{!!title}}><$view field="caption"/></$link></li>
-</div>
 </$list>
+<br>
+<li><$link to="TBCindex">{{TBCindex!!caption}}</$link></li>
+</div>
 </ul>

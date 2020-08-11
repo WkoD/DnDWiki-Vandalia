@@ -1,5 +1,5 @@
 created: 20200728110521996
-filter: [tag[Gott]] [tag[Organisation]] [tag[Person]] [tag[Spieler]!tag[Ereignis]] [title[Abenteuer]]
+filter: [tag[Gott]] [tag[Organisation]] [tag[Person]] [tag[Spieler]] [title[Abenteuer]]
 modified: 20200728110521996
 title: $:/plugins/felixhayashi/tiddlymap/graph/views/Organisationen/filter/nodes
 type: text/vnd.tiddlywiki

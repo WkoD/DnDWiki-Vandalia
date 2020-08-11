@@ -8,7 +8,7 @@ type: text/vnd.tiddlywiki
 
 !!! Abenteuer
 
-<$list filter="[tag[Spieler]search:text[TBC]!title[Spieler]sort[title]]">
+<$list filter="[tag[Abenteuer]search:text[TBC]sort[title]]">
 <div class="tc-menu-list-subitem">
 <$link to={{!!title}}><$view field="title"/></$link>
 </div>
@@ -16,7 +16,7 @@ type: text/vnd.tiddlywiki
 
 !!! Anderes
 
-<$list filter="[!tag[Spieler]search:text[TBC]!prefix[$:/]!title[TBCindex]sort[title]]">
+<$list filter="[!tag[Abenteuer]search:text[TBC]!prefix[$:/]!title[TBCindex]!title[Index]sort[title]]">
 <div class="tc-menu-list-subitem">
 <$link to={{!!title}}><$view field="title"/></$link>
 </div>
