@@ -141,7 +141,7 @@ var prepare_results = function (source) {
    var results = [];
    source(function(tiddler,title) {
       if (tiddler) {
-         var hastag = tiddler.hasTag("Spieler");
+         var hastag = tiddler.hasTag("Abenteuer");
          if (tiddler.fields.datum) {
             var dates = tiddler.fields.datum.split(".");
             var flag = dates.length > 1 ? "(Start)" : null;
