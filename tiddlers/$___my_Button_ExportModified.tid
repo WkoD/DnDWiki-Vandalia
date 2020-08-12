@@ -1,6 +1,6 @@
 caption: {{$:/core/images/export-button}}
 created: 20200812071345237
-modified: 20200812084232055
+modified: 20200812105050258
 tags: $:/tags/PageControls
 title: $:/_my/Button/ExportModified
 type: text/vnd.tiddlywiki
@@ -14,4 +14,4 @@ type: text/vnd.tiddlywiki
 \end
 
 <$macrocall $name="exportButton" exportFilter="
-[!is[system]!sort[modified]greaterthan:modified{$:/SiteSubtitle!!text}]" lingoBase="$:/_my/Button/ExportModified/"/>
+[!is[system]!sort[modified]greaterthan:modified{$:/_my/Button/ExportModified/modified!!text}]" lingoBase="$:/_my/Button/ExportModified/"/>
