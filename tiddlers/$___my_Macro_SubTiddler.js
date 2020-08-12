@@ -24,7 +24,7 @@ exports.params = [
 Run the macro
 */
 exports.run = function(title, sub, heading, tags, template, style) {
-   var tiddler = this.wiki.getTiddler(title + "#" + sub);
+   var tiddler = this.wiki.getTiddler(title + "/" + sub);
    var parent = this.wiki.getTiddler(title);
    var ret = "";
    
