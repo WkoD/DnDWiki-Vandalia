@@ -1,0 +1,10 @@
+created: 20200814083238043
+list-after: $:/_my/ViewTemplate/Inventar
+modified: 20200814095653919
+tags: $:/tags/ViewTemplate
+title: $:/_my/ViewTemplate/TBC
+type: text/vnd.tiddlywiki
+
+<$reveal tag="div" class="tc-tiddler-body" type="nomatch" stateTitle=<<folded-state>> text="hide" retain="yes" animate="yes">
+<$macrocall $name="subtiddler" title={{!!title}} sub="TBC" heading="Offene Aufgaben" template="tc-tiddler-frame" style="width:100%;border: 3px solid red;"/>
+</$reveal>
