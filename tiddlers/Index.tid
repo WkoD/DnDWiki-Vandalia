@@ -7,10 +7,10 @@ type: text/vnd.tiddlywiki
 
 <ul>
 <div class="tc-menu-list-subitem">
-<$list filter="[tag[Index]!title[Index]!title[TBCindex]has:field[caption]sort[caption]]">
+<$list filter="[tag[Index]!title[Index]!prefix[TBC]has:field[caption]sort[caption]]">
 <li><$link to={{!!title}}><$view field="caption"/></$link></li>
 </$list>
 <br>
-<li><$link to="TBCindex">{{TBCindex!!caption}}</$link></li>
+<li><$link to="TBC">{{TBC!!caption}}</$link></li>
 </div>
 </ul>
