@@ -5,8 +5,10 @@ title: TBC/Abenteuer
 tmap.id: feb740a0-52bb-443d-b6df-5787624fcf13
 type: text/vnd.tiddlywiki
 
+<ul>
 <$list filter="[tag[Abenteuer]search:text[TBC]sort[title]]">
 <div class="tc-menu-list-subitem">
-<$link to={{!!title}}><$view field="title"/></$link>
+<li><$link to={{!!title}}><$view field="title"/></$link></li>
 </div>
 </$list>
+</ul>
