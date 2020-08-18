@@ -42,7 +42,7 @@ function buildPath(tiddler, ptiddler, name) {
 
    if (tiddler.hasTag("Ereignis")) {
       ret += "Ereignis/";
-   } else if (tiddler.hasTag("Gegenstand")) {
+   } else if (tiddler.hasTag("Artefakt") || tiddler.hasTag("Buch") || tiddler.hasTag("Gegenstand") || tiddler.hasTag("Material")) {
       ret += "Gegenstand/";
    } else if (tiddler.hasTag("Karte")) {
       ret += "Karte/";

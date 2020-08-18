@@ -3,14 +3,29 @@ list-after: $:/core/ui/ViewTemplate/tags
 modified: 20200731085848317
 tags: $:/tags/ViewTemplate
 title: $:/_my/ViewTemplate/Gegenstand
+type: text/vnd.tiddlywiki
 
 <$reveal tag="div" class="tc-tiddler-body" type="nomatch" stateTitle=<<folded-state>> text="hide" retain="yes" animate="yes">
-<$list filter="[all[current]tag[Gegenstand]]">
+<$list filter="[all[current]tag[Artefakt]][all[current]tag[Buch]]">
 <hr>
 <b>Jahr:</b> <$macrocall $name="datumlang" datum={{!!datum}}/>
 <br>
+<$list filter="[all[current]has:field[person]]">
 <b>Besitzer:</b>
-<$link to={{!!person}}>{{{ [{!!person}] }}}</$link>
+{{!!person}}
+</$list>
+<$list filter="[all[current]has:field[ort]]">
+<b>Ort:</b>
+{{!!ort}}
+</$list>
+<br>
+<$list filter="[all[current]tag[Artefakt]]">
+<b>Schöpfer:</b>
+</$list>
+<$list filter="[all[current]tag[Buch]]">
+<b>Autor:</b>
+</$list>
+{{!!schoepfer}}
 <br>
 <hr>
 </$list>

@@ -7,8 +7,8 @@ title: Gegenstand
 tmap.id: b76920ba-2674-4a8f-acd1-b3666cc22307
 type: text/vnd.tiddlywiki
 
-!!! Gegenstände
-<$list filter="[tag[Gegenstand]sort[title]]">
+!!! Artefakte
+<$list filter="[tag[Artefakt]sort[title]]">
 <div class="tc-menu-list-subitem">
 <$macrocall $name="totlink" title={{!!title}} style="~~"/>
 </div>
@@ -18,6 +18,13 @@ type: text/vnd.tiddlywiki
 <$list filter="[tag[Buch]sort[title]]">
 <div class="tc-menu-list-subitem">
 <$macrocall $name="totlink" title={{!!title}} style="~~"/>
+</div>
+</$list>
+
+!!! Gegenstände
+<$list filter="[tag[Gegenstand]sort[title]]">
+<div class="tc-menu-list-subitem">
+<$link to={{!!title}}><$view field="title"/></$link>
 </div>
 </$list>
 
