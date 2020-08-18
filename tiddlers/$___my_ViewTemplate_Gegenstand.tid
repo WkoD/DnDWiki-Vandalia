@@ -13,20 +13,46 @@ type: text/vnd.tiddlywiki
 <$list filter="[all[current]has:field[person]]">
 <b>Besitzer:</b>
 {{!!person}}
+<br>
 </$list>
 <$list filter="[all[current]has:field[ort]]">
 <b>Ort:</b>
 {{!!ort}}
-</$list>
 <br>
-<$list filter="[all[current]tag[Artefakt]]">
+</$list>
+<$list filter="[all[current]tag[Artefakt]has:field[schoepfer]]">
 <b>Schöpfer:</b>
-</$list>
-<$list filter="[all[current]tag[Buch]]">
-<b>Autor:</b>
-</$list>
 {{!!schoepfer}}
 <br>
+</$list>
+<$list filter="[all[current]tag[Buch]has:field[schoepfer]]">
+<b>Autor:</b>
+{{!!schoepfer}}
+<br>
+</$list>
+<hr>
+</$list>
+<$list filter="[all[current]tag[Gegenstand]]">
+<hr>
+<$list filter="[all[current]has:field[zutat]]">
+<b>Zutaten:</b>
+<table style="width:50%;">
+<$list filter="[all[current]get:field[zutat]split[,]sort[title]]">
+<tr>
+<$list filter="[{!!title}split[:]nth[2]]">
+<td style="width:20%;text-align: center;">
+{{!!title}}
+</td>
+</$list>
+<$list filter="[{!!title}split[:]first[]]">
+<td style="width:80%;text-align: center;">
+<$link to={{!!title}}><$view field="title"/></$link>
+</td>
+</$list>
+</tr>
+</$list>
+</table>
+</$list>
 <hr>
 </$list>
 </$reveal>
