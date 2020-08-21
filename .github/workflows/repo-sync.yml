@@ -34,3 +34,6 @@ jobs:
         -H 'Accept: application/vnd.github.v3+json' \
         -u ${{ secrets.DISPATCH_PAT }} \
         -d '{"ref":"master"}'
+    - name: Done
+      run: |
+        echo "Done"
