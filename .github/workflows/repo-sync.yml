@@ -38,4 +38,4 @@ jobs:
         -u ${{ secrets.DISPATCH_PAT }} \
         -d '{"ref":"master"}'
     - run: |
-      echo "Debug"
+      echo "Debug2"
