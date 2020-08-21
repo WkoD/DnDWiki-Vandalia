@@ -39,4 +39,4 @@ jobs:
         -d '{"ref":"master"}'
     - name: Debug
       run: |
-        echo "Debug2"
+        echo "Debug3"
