@@ -6,7 +6,7 @@ title: $:/_my/ViewTemplate/Gegenstand
 type: text/vnd.tiddlywiki
 
 <$reveal tag="div" class="tc-tiddler-body" type="nomatch" stateTitle=<<folded-state>> text="hide" retain="yes" animate="yes">
-<$list filter="[all[current]tag[Artefakt]][all[current]tag[Buch]]">
+<$list filter="[all[current]multitag[Artefakt,Buch]]">
 <hr>
 <b>Jahr:</b> <$macrocall $name="datumlang" datum={{!!datum}}/>
 <br>

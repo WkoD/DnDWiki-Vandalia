@@ -5,7 +5,7 @@ tags: $:/tags/ViewTemplate
 title: $:/_my/ViewTemplate/Inventar
 
 <$reveal tag="div" class="tc-tiddler-body" type="nomatch" stateTitle=<<folded-state>> text="hide" retain="yes" animate="yes">
-<$list filter="[all[current]tag[Spieler]][all[current]tag[Person]]">
+<$list filter="[all[current]multitag[Person,Spieler]]">
 <$set name=name value={{!!title}}>
 <$list filter="[tag[Artefakt]person<name>limit[1]]">
 <h3>Artefakte</h3>
