@@ -29,7 +29,7 @@ type: text/vnd.tiddlywiki
 </$list>
 
 !!! Materialien
-<$list filter="[tag[Material]!tag[Gegenstand]sort[title]]">
+<$list filter="[tag[Material]sort[title]]">
 <div class="tc-menu-list-subitem">
 <$link to={{!!title}}><$view field="title"/></$link>
 </div>

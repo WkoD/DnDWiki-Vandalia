@@ -20,26 +20,14 @@ exports.multitag = function(source,operator,options) {
 	var tags = operator.operand.split(",");
 
     for (var i = 0; i < tags.length; ++i) {
-        // Old semantics:
-        var tiddlers;
-        if(operator.prefix === "!") {
-            // Returns a copy of the input if operator.operand is missing
-            tiddlers = options.wiki.getTiddlersWithTag(tags[i]);
-            source(function(tiddler,title) {
-                if(tiddlers.indexOf(title) === -1) {
-                    results.push(title);
-                }
-            });
-        } else {
-            // Returns empty results if operator.operand is missing
-			tiddlers = options.wiki.getTiddlersWithTag(tags[i]);
-			source(function(tiddler,title) {
-				if(tiddlers.indexOf(title) !== -1) {
-					results.push(title);
-				}
-			});
-			results = options.wiki.sortByList(results,tags[i]);
-        }		
+		// Returns empty results if operator.operand is missing
+		var tiddlers = options.wiki.getTiddlersWithTag(tags[i]);
+		source(function(tiddler,title) {
+			if(tiddlers.indexOf(title) !== -1) {
+				results.push(title);
+			}
+		});
+		results = options.wiki.sortByList(results,tags[i]);
     }
     return results;
 };
