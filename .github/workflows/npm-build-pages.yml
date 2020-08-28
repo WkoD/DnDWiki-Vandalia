@@ -38,9 +38,9 @@ jobs:
         echo " DRAFT" >> './tiddlers/$__SiteTitle.tid'
         rm './tiddlers/.keep'
     - name: Build TiddlyWiki draft index.html
-      run: $(npm bin)/tiddlywiki --output ./temp --build index
-    - name: Move draft index.html
-      run: mv ./temp/index.html ./twpage/draft.html
+      run: |
+        $(npm bin)/tiddlywiki --output ./temp --password '${{ secrets.DRAFT_PASSWORD }}' --build index
+        mv ./temp/index.html ./twpage/draft.html
     - name: Copy resource directories
       run: |
         cp -rl ./data ./twpage/data
