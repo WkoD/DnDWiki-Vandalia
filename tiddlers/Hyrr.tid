@@ -1,0 +1,28 @@
+bild: Hyrr.jpg
+created: 20180912115211968
+modified: 20200827082446604
+tags: Person Tiergeister
+title: Hyrr
+tmap.edges: {"797b4489-dab4-4e78-919b-11ef0c933375":{"to":"aed8abb0-4d00-4a7f-bd10-66dbe533f972","type":"OP_Mitglied"},"e6b065dc-e726-4538-818d-e316697bbf7e":{"to":"94e2dfba-159e-4802-869f-438fd8a67171","type":"unknown"}}
+tmap.id: 82be0b5b-024f-4278-afd1-4239f63e3116
+type: text/vnd.tiddlywiki
+
+Der [[Tiergeist|Tiergeister]] des Feuers und der Flammen, der die Gestalt eines brennenden Raben annimmt. Der Name bedeutet "Feuer" in nordischer Poesie. Hyrr ist in der [[Ebene des Feuers]], im nordischen als Muspellsheim bekannt, zu Hause. Er ist im Pakt mit [[Ragna]] und unterstützt ihn auf seiner Reise.
+
+Hyrr hatte bereits vor mehr als 1000 Jahren einen Pakt, damals mit einem Mann namens Zorin.
+
+Hyrr möchte, dass [[Ragna]] einen Vulkan besucht, um die Wärme durch ihn zu spüren.
+
+!!! Fähigkeiten
+
+* Wegweisendes Licht
+
+Der Träger denkt an eine bestimmte Person oder einen Gegenstand, den er gesehen hat und schickt einen brennenden Raben gegen das Ziel, der selbstständig sein Ziel innerhalb von 90ft sucht und trifft, sofern es einen Luftweg dorthin gibt. Der getroffene muss einen DEX SAVE (DC 15) machen oder er wird mit 1d6 (EX 1d8) fire DMG getroffen, sonst erleidet er den halben DMG. 
+
+* Schild der Flammen
+
+Der Träger kann als Reaktion seinen Schild in eine Aura von Flammen tauchen. Die Flammen fügen dem Träger keinen Schaden zu, jedoch jeder Gegner, der ihnen zu nahe kommt, erleidet 1d4 (EX 1d6) fire DMG. Nach einer Runde erlischen die Flammen wieder.
+
+* Illusion der Hitze
+
+Der Träger kann in einem 30ft Radius in einem Raum von 5ft eine optimische Illusion erschaffen. Jede phyische Interaktion zeigt die wahre Natur und eine Kreatur kann einen Investigation (Intelligence) CHECK machen (DC13) (EX DC15).

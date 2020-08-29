@@ -1,0 +1,9 @@
+created: 20200818075541264
+modified: 20200818075707146
+tags: Gegenstand
+title: Trank der Regeneration
+tmap.id: f51fc31c-3baa-48b4-bd36-c2e15e85e82d
+type: text/vnd.tiddlywiki
+zutat: Graufarn:5,Löwengras:5
+
+Eine oragne Flüssigkeit, die über 3 Runden Gesundheit wiederherstellt. Die Regenerationsrate berechnet sich aus (1/4 Hitdice + Durchschnittswert eines Hitdice + Konstitutionsmodifikator) / 2.
