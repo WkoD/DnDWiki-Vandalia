@@ -1,0 +1,10 @@
+created: 20200308095521995
+list-after: $:/_my/ViewTemplate/TBC
+modified: 20200814095705427
+tags: $:/tags/ViewTemplate
+title: $:/_my/ViewTemplate/Notiz
+type: text/vnd.tiddlywiki
+
+<$reveal tag="div" class="tc-tiddler-body" type="nomatch" stateTitle=<<folded-state>> text="hide" retain="yes" animate="yes">
+<$macrocall $name="subtiddler" title={{!!title}} sub="Notiz" heading="Notiz" tags="true" template="tc-tiddler-frame" style="width:100%;border: 3px solid black;"/>
+</$reveal>

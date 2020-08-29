@@ -1,0 +1,28 @@
+created: 20200731085719858
+list-after: $:/core/ui/ViewTemplate/body
+modified: 20200731085848317
+tags: $:/tags/ViewTemplate
+title: $:/_my/ViewTemplate/Inventar
+
+<$reveal tag="div" class="tc-tiddler-body" type="nomatch" stateTitle=<<folded-state>> text="hide" retain="yes" animate="yes">
+<$list filter="[all[current]multitag[Person,Spieler]]">
+<$set name=name value={{!!title}}>
+<$list filter="[tag[Artefakt]person<name>limit[1]]">
+<h3>Artefakte</h3>
+<ul>
+<$list filter="[tag[Artefakt]person<name>sort[title]]">
+<li><$link to={{!!title}}>{{{ [{!!title}] }}}</$link></li>
+</$list>
+</ul>
+</$list>
+<$list filter="[tag[Buch]person<name>limit[1]]">
+<h3>Bücher</h3>
+<ul>
+<$list filter="[tag[Buch]person<name>sort[title]]">
+<li><$link to={{!!title}}>{{{ [{!!title}] }}}</$link></li>
+</$list>
+</ul>
+</$list>
+</$set>
+</$list>
+</$reveal>

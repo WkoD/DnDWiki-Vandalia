@@ -1,0 +1,71 @@
+name: NPM build index.html
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@master
+      with:
+        ref: master
+        fetch-depth: 0
+    - name: Use Node.js
+      uses: actions/setup-node@master
+      with:
+        node-version: '12'
+    - name: Install TiddlyDnD
+      run: npm install git+https://github.com/WkoD/TiddlyDnD.git
+    - name: Update master
+      run: |
+        echo '${{ github.event.repository.name }}' >> './tiddlers/$__SiteTitle.tid'
+        echo $(TZ=Europe/Berlin date +'%Y-%m-%dT%H:%M:%S') >> './tiddlers/$__SiteSubtitle.tid'
+        echo $(date +'%Y%m%d%H%M%S%3N') >> './tiddlers/$___my_Button_ExportModified_modified.tid'
+    - name: Build TiddlyWiki master index.html
+      run: $(npm bin)/tiddlywiki --output ./twpage --build index
+    - name: Merge draft
+      run: |
+        git config user.name "$GITHUB_ACTOR"
+        git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+        git merge origin/draft
+    - name: Update draft
+      run: |
+        echo " DRAFT" >> './tiddlers/$__SiteTitle.tid'
+        rm './tiddlers/.keep'
+    - name: Build TiddlyWiki draft index.html
+      run: |
+        $(npm bin)/tiddlywiki --output ./temp --password '${{ secrets.DRAFT_PASSWORD }}' --build index
+        mv ./temp/index.html ./twpage/draft.html
+    - name: Copy resource directories
+      run: |
+        cp -rl ./data ./twpage/data
+        cp -rl ./images ./twpage/images
+        find ./twpage -type f -name '.keep' -exec rm {} +
+    - name: Deploy to gh_pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./twpage
+
+  dispatch:
+    if: github.repository == 'WkoD/DnDWiki'
+    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        downstream: ['WkoD/DnDWiki-Vandalia', 'WkoD/DnDWiki-Illusia']
+    
+    steps:
+    - uses: actions/checkout@master
+    - name: Dispatch to ${{ matrix.downstream }}
+      run: |
+        curl -X POST \
+        "https://api.github.com/repos/${{ matrix.downstream }}/actions/workflows/repo-sync.yml/dispatches" \
+        -H 'Accept: application/vnd.github.v3+json' \
+        -u ${{ secrets.DISPATCH_PAT }} \
+        -d '{"ref":"master"}'

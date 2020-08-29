@@ -1,0 +1,30 @@
+color: #005500
+created: 20200209100237010
+modified: 20200805071045792
+tags: Index
+title: Spieler
+tmap.id: ba69daf3-7ae8-46bf-b613-2556c9e273e3
+type: text/vnd.tiddlywiki
+
+!!! Aktiv
+<ul>
+<$list filter="[tag[Spieler]!search:datum[.]sort[caption]]">
+<div class="tc-menu-list-subitem">
+<li><$link to={{!!title}}><$view field="caption"/></$link> (<$view field="spieler"/>)</li>
+</div>
+</$list>
+</ul>
+
+!!! Inaktiv
+<ul>
+<$list filter="[tag[Spieler]search:datum[.]sort[caption]]">
+<div class="tc-menu-list-subitem">
+<li><$link to={{!!title}}><$view field="caption"/></$link> (<$view field="spieler"/>)</li>
+</div>
+</$list>
+</ul>
+
+!!! Erfahrung
+<ul>
+<b>{{||Erfahrungspunkte}} EXP</b>
+</ul>

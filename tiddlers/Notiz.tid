@@ -1,0 +1,14 @@
+caption: Notizen
+color: #000000
+created: 20200803132013316
+modified: 20200814085923785
+tags: Index
+title: Notiz
+tmap.id: 85b428c5-42e8-4ee4-a36f-d35d7e0bb1a6
+type: text/vnd.tiddlywiki
+
+<$list filter="[tag[Notiz]sort[title]]">
+<div class="tc-menu-list-subitem">
+<$link to={{!!title}}><$view field="title"/></$link>
+</div>
+</$list>

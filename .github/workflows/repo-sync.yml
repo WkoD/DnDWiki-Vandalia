@@ -1,0 +1,38 @@
+name: DnDWiki merge
+
+on:
+  workflow_dispatch:
+
+jobs:
+  repo-merge:
+    if: github.repository != 'WkoD/DnDWiki'
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@master
+      with:
+        ref: master
+        fetch-depth: 0
+    - name: merge master
+      run: |
+        git config user.name "$GITHUB_ACTOR"
+        git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+        git remote set-url origin 'https://WkoD:${{ secrets.DISPATCH_PAT }}@github.com/${{ github.repository }}.git'
+        git checkout master
+        git pull 'https://github.com/WkoD/DnDWiki.git' master
+        git push origin master
+    - name: merge draft
+      run: |
+        git config user.name "$GITHUB_ACTOR"
+        git config user.email
+        git remote set-url origin 'https://WkoD:${{ secrets.DISPATCH_PAT }}@github.com/${{ github.repository }}.git'
+        git checkout draft
+        git pull 'https://github.com/WkoD/DnDWiki.git' draft
+        git push origin draft
+    - name: Dispatch to master
+      run: |
+        curl -X POST \
+        "https://api.github.com/repos/${{ github.repository }}/actions/workflows/npm-build-pages.yml/dispatches" \
+        -H 'Accept: application/vnd.github.v3+json' \
+        -u ${{ secrets.DISPATCH_PAT }} \
+        -d '{"ref":"master"}'

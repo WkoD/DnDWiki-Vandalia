@@ -1,0 +1,14 @@
+created: 20200814072659528
+modified: 20200814090029884
+tags: Index
+title: TBC/Abenteuer
+tmap.id: feb740a0-52bb-443d-b6df-5787624fcf13
+type: text/vnd.tiddlywiki
+
+<ul>
+<$list filter="[tag[Ereignis]subtiddler[TBC]sort[title]]">
+<div class="tc-menu-list-subitem">
+<li><$link to={{!!title}}><$view field="title"/></$link></li>
+</div>
+</$list>
+</ul>
