@@ -19,7 +19,7 @@ jobs:
         git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
         git remote set-url origin 'https://WkoD:${{ secrets.DISPATCH_PAT }}@github.com/${{ github.repository }}.git'
         git checkout master
-        git pull 'https://github.com/WkoD/DnDWiki.git' master -s theirs --allow-unrelated-histories
+        git pull 'https://github.com/WkoD/DnDWiki.git' master -X theirs --allow-unrelated-histories
         git push origin master
     - name: merge draft
       run: |
@@ -27,7 +27,7 @@ jobs:
         git config user.email
         git remote set-url origin 'https://WkoD:${{ secrets.DISPATCH_PAT }}@github.com/${{ github.repository }}.git'
         git checkout draft
-        git pull 'https://github.com/WkoD/DnDWiki.git' draft -s theirs --allow-unrelated-histories
+        git pull 'https://github.com/WkoD/DnDWiki.git' draft -X theirs --allow-unrelated-histories
         git push origin draft
     - name: Dispatch to master
       run: |
