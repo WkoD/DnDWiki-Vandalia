@@ -1,6 +1,6 @@
 created: 20200824105510910
 list-after: $:/core/ui/ViewTemplate/body
-modified: 20200824130723125
+modified: 20200828094424102
 tags: $:/tags/ViewTemplate
 title: $:/_my/ViewTemplate/Organisation
 type: text/vnd.tiddlywiki
@@ -40,9 +40,9 @@ type: text/vnd.tiddlywiki
 </div>
 </$list>
 </$list>
-<$list filter="[multitag[Organisation]edgetype:OO_Untergebener<name>limit[1]]">
-<h3>Untergebene</h3>
-<$list filter="[multitag[Organisation]edgetype:OO_Untergebener<name>sort[title]]">
+<$list filter="[multitag[Organisation]edgetype:unknown_dashed<name>limit[1]]">
+<h3>Sonstige Verbindungen</h3>
+<$list filter="[multitag[Organisation]edgetype:unknown_dashed<name>sort[title]]">
 <div class="tc-menu-list-subitem">
 <$macrocall $name="totlink" title={{!!title}} style="~~"/>
 </div>
