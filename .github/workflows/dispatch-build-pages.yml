@@ -1,0 +1,19 @@
+name: Dispatch build index.html
+
+on:
+  push:
+    branches:
+      - draft
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Dispatch to master
+      run: |
+        curl -X POST \
+        "https://api.github.com/repos/${{ github.repository }}/actions/workflows/npm-build-pages.yml/dispatches" \
+        -H 'Accept: application/vnd.github.v3+json' \
+        -u ${{ secrets.DISPATCH_PAT }} \
+        -d '{"ref":"master"}'
