@@ -1,6 +1,6 @@
 created: 20200824105510910
 list-after: $:/core/ui/ViewTemplate/body
-modified: 20200828094424102
+modified: 20200831070728997
 tags: $:/tags/ViewTemplate
 title: $:/_my/ViewTemplate/Organisation
 type: text/vnd.tiddlywiki
@@ -16,7 +16,7 @@ type: text/vnd.tiddlywiki
 </div>
 </$list>
 </$list>
-<$list filter="[multitag[Gott,Person,Spieler]edgetypegroup:OP_Mitglied<name>limit[1]]">
+<$list filter="[multitag[Gott,Person,Spieler]edgetype:OP_Mitglied<name>limit[1]]">
 <h3>Mitglieder</h3>
 <$list filter="[multitag[Gott,Person,Spieler]edgetype:OP_Mitglied<name>sort[title]]">
 <div class="tc-menu-list-subitem">
