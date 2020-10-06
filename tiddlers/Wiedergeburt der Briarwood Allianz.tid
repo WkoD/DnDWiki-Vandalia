@@ -1,9 +1,9 @@
 created: 20190412070533535
 datum: 1350-12-03.1350-12-20
-modified: 20200811055318659
+modified: 20201006114345895
 tags: [[Haus Eiree]] Briarwood Sjach Ereignis Abenteuer
 title: Wiedergeburt der Briarwood Allianz
-tmap.edges: {"a429a60b-88b2-475a-9750-58396ada58a9":{"to":"900a6e66-5d66-4190-b0c6-f67a452b5fd4","type":"OO_Buendnis"},"65b61a49-b5e1-4c42-8111-076e83fdc494":{"to":"879a9f5e-5f23-41dd-843e-dcf38e7c63a1","type":"OO_Buendnis"}}
+tmap.edges: {}
 tmap.id: 2847b146-0cb3-47b3-8798-34bb35d550bb
 type: text/vnd.tiddlywiki
 
