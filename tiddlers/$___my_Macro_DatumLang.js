@@ -24,7 +24,8 @@ exports.run = function(datum, yearonly) {
    
    var dateStart = dates[0].split("-");
    var dateEnd = dates[dates.length - 1].split("-");
-   var result;
+   var resultStart;
+   var resultEnd;
 
    // Jahr setzen
    var ret = "//";
@@ -50,23 +51,37 @@ if (!yearonly) {
    if (dateStart.length > 1) {
       ret += "//";
    
-      result = require("$:/_my/Macro/Library").getMonatTag(dateStart[1], dateStart[2]);
+      resultStart = require("$:/_my/Macro/Library").getMonatTag(dateStart[1], dateStart[2]);
 
-      if (result[1]) {
-         ret += result[1] + ". ";
+      if (resultStart[1]) {
+         ret += resultStart[1] + ". ";
       }
 
-      ret += result[0];
+      ret += resultStart[0];
+	  
+	  if (dateStart[3]) {
+		 ret += " " + dateStart[3] + " Uhr";
+	  }
 
       if (dates.length > 1) {
-         ret += " - ";
-         result = require("$:/_my/Macro/Library").getMonatTag(dateEnd[1], dateEnd[2]);
+         var retEnd = "";
+         resultEnd = require("$:/_my/Macro/Library").getMonatTag(dateEnd[1], dateEnd[2]);
 
-         if (result[1]) {
-            ret += result[1] + ". ";
+         if (resultEnd[1] && (resultEnd[0] !== resultStart[0] || resultEnd[1] !== resultStart[1])) {
+            retEnd += resultEnd[1] + ". ";
          }
 
-         ret += result[0];
+         if (retEnd || resultEnd[0] !== resultStart[0]) {
+            retEnd += resultEnd[0];
+		 }
+		  
+		 if (dateEnd[3] && (retEnd || dateEnd[3] !== dateStart[3])) {
+	        retEnd += " " + dateEnd[3] + " Uhr";
+		 }
+		 
+		 if (retEnd) {
+	        ret += " - " + retEnd;
+		 }
       }
       
       ret += "//";
