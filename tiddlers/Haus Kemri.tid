@@ -1,10 +1,10 @@
 bild: Haus Kemri.png
 color: #FF8000
 created: 20180618141427967
-modified: 20200828093425367
+modified: 20201006114419886
 tags: Organisation [[Königreich von Vandalia]] [[Haus Kemri]]
 title: Haus Kemri
-tmap.edges: {"02f06a37-3c04-45e9-b193-43621ca9b552":{"to":"033251ad-3793-407d-8311-3e91913f5778","type":"G_Patron"},"ded3acde-6b3a-4136-b002-ec9497d155ff":{"to":"ce765694-968a-41ff-af99-997703c2b6d2","type":"OO_Buendnis"}}
+tmap.edges: {"02f06a37-3c04-45e9-b193-43621ca9b552":{"to":"033251ad-3793-407d-8311-3e91913f5778","type":"G_Patron"},"ded3acde-6b3a-4136-b002-ec9497d155ff":{"to":"ce765694-968a-41ff-af99-997703c2b6d2","type":"OO_Buendnis"},"0e811ade-0a3e-4f1e-8c91-037c53907ad7":{"to":"879a9f5e-5f23-41dd-843e-dcf38e7c63a1","type":"OO_Buendnis"}}
 tmap.id: 645bbb66-407d-4198-8b5f-e9268da4075b
 type: text/vnd.tiddlywiki
 
