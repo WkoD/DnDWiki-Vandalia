@@ -1,9 +1,9 @@
 bild: Logan.png
 created: 20200308155811189
-modified: 20200827084041201
+modified: 20201108164246942
 tags: Person Miehall
 title: Logan
-tmap.edges: {}
+tmap.edges: {"aa4596c8-4f5b-42ce-b9c6-48a476051afa":{"to":"41ee9793-9c3b-4317-8491-1babf7894ec4","type":"unknown"}}
 tmap.id: 4846ba7a-23a3-4374-b90c-0484f869626e
 type: text/vnd.tiddlywiki
 
