@@ -51,21 +51,3 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./twpage
-
-  dispatch:
-    if: github.repository == 'WkoD/DnDWiki'
-    runs-on: ubuntu-latest
-    
-    strategy:
-      matrix:
-        downstream: ['WkoD/DnDWiki-Vandalia', 'WkoD/DnDWiki-Illusia']
-    
-    steps:
-    - uses: actions/checkout@master
-    - name: Dispatch to ${{ matrix.downstream }}
-      run: |
-        curl -X POST \
-        "https://api.github.com/repos/${{ matrix.downstream }}/actions/workflows/repo-sync.yml/dispatches" \
-        -H 'Accept: application/vnd.github.v3+json' \
-        -u ${{ secrets.DISPATCH_PAT }} \
-        -d '{"ref":"master"}'
