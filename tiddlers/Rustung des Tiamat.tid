@@ -1,6 +1,6 @@
 created: 20190131090020423
 datum: 850
-modified: 20200831071853382
+modified: 20201203090515692
 person: Balseth
 schoepfer: Sjach,Haus Eiree
 tags: Sjach Artefakt
@@ -12,6 +12,12 @@ Ein Set von Rüstungsteilen, die für die [[Schlacht um den Briarwood]] durch di
 
 !!! Effekte
 
-* Stiefel des Blitzdrachens //(gefunden in der [[Festung im Briarwood]])//
+* Beinschienen des Blitzdrachens //(gefunden in der [[Festung im Briarwood]])//
 
-Schwarze Stiefel (Heavy Armor), die mit Symbolen vom Kriegerklan der [[Sjach]] verziehrt sind. Dünne blaue Linien verlaufen über die Seiten der Stiefel. Der Träger erhält +1 STR (Max. 30) und die Fähigkeit Lightning Dash. Sie ermöglicht einmalig einen Dash von 15ft als Bonusaction auszuführen, bei der sein Körper und seine Ausrüstung in eine Blitzform wechseln. Zwischen Start und Endpunkt ist es damit möglich, durch Öffnungen von mindestens 1ft zu gelangen und jede Kreatur, die durchquert wird, erhält 1d10 lightning DMG oder bei einem DEX save (DC15) die Hälfte. Die Fähigkeit kann nach einer langen Rast erneut verwendet werden.
+Schwarze Beinschienen (Heavy Armor), die mit Symbolen vom Kriegerklan der [[Sjach]] verziehrt sind. Dünne blaue Linien verlaufen über die Seiten. Der Träger erhält +1 STR (Max. 20) und die Fähigkeit Lightning Dash. Sie ermöglicht einmalig einen Dash von 15ft als Bonusaktion auszuführen, bei der sein Körper und seine Ausrüstung in eine Blitzform wechseln. Zwischen Start und Endpunkt ist es damit möglich, durch Öffnungen von mindestens 1ft zu gelangen und jede Kreatur, die durchquert wird, erhält 1d10 lightning DMG oder bei einem DEX save (DC15) die Hälfte. Die Fähigkeit kann nach einer langen Rast erneut verwendet werden.
+
+* Armschienen des Erddrachens //(gefunden in der [[Festung im Briarwood]])//
+
+Schwarze Armschienen (Heavy Armor), die mit Symbolen vom Kriegerklan der [[Sjach]] verziehrt sind. Dünne grüne-braune Linien verlaufen über die Seiten. Der Träger erhält 1+ CON (Max. 20) und die Fähigkeit Earthen Wall. Sie ermöglicht einmalig eine Mauer aus Gestein als Aktion zu erschaffen. Die Mauer kann dabei maximal 100ft³ umfassen (z.B. 10x10x1ft oder 10x5x2ft) und muss stabil mit dem Boden verbunden sein. Die Fähigkeit kann nach einer langen Rast erneut verwendet werden.
+
+TBC
