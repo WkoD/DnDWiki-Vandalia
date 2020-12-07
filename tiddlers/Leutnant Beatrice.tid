@@ -1,9 +1,9 @@
 bild: Leutnant Beatrice.jpg
 created: 20201203091501185
-modified: 20201203091752127
+modified: 20201207114135166
 tags: Person [[Haus Alba]]
 title: Leutnant Beatrice
-tmap.edges: {"ddcd83d7-60ec-4060-b43d-8534fe3bf574":{"to":"8040c4a7-b23d-4a91-8a50-d5a3024bcbf3","type":"OP_Mitglied"}}
+tmap.edges: {"ddcd83d7-60ec-4060-b43d-8534fe3bf574":{"to":"8040c4a7-b23d-4a91-8a50-d5a3024bcbf3","type":"OP_Mitglied"},"69cef753-d174-4e8f-8dde-a8c9a72dc6d0":{"to":"2b165260-23c5-4b58-9e64-1ea026362b16","type":"unknown"}}
 tmap.id: 25e1e6cd-bf53-46c9-b8a8-3ecc623f2746
 type: text/vnd.tiddlywiki
 

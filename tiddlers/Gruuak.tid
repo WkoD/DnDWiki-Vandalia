@@ -1,10 +1,10 @@
 bild: Gruuak.png
 created: 20171012090742072
 datum: .1350-07
-modified: 20200729072333924
+modified: 20201207120200367
 tags: Biestvolk Person
 title: Gruuak
-tmap.edges: {"3e19678f-42d7-4ce8-a928-a455d7495b91":{"to":"d2b9dc5b-5f54-4d79-8a14-c92569049961","type":"OP_Mitglied"}}
+tmap.edges: {}
 tmap.id: 1435255a-82bc-4fb0-beea-e7f1d4e3daba
 type: text/vnd.tiddlywiki
 
