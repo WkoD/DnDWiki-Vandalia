@@ -1,10 +1,24 @@
 bild: Eikthyrnir.jpg
 created: 20200923085743579
-modified: 20200923085921078
+modified: 20210305102753580
 tags: Person Tiergeister
 title: Eikthyrnir
 tmap.edges: {"4214fd54-eb60-492b-b9db-f28dcb57f0ca":{"to":"aed8abb0-4d00-4a7f-bd10-66dbe533f972","type":"OP_Mitglied"}}
 tmap.id: dc29a6e9-638c-4d54-be72-50514e07258e
 type: text/vnd.tiddlywiki
 
-TBC
+
+
+!!! Fähigkeiten
+
+* Macht
+
+Wenn der Träger einen Nahkampf Angriff macht, dann kann er seine Reaktion verwenden, um 1d4 extra Force Damage zu machen.
+
+* Unbewegliches Objekt
+
+Wenn ein äußerer Einfluss versucht, dich von deiner aktuellen Position zu bewegen, dann kannst du deine Reaktion aufwenden und bis zum Start deiner nächsten Runde nicht bewegt werden.
+
+* Schwerkraftkontrolle
+
+Du kannst die Schwerkraft für eine Kreatur in 30ft Sichtweite anpassen. Entweder senkst du die Gravitation und die Kreatur kann mit doppelter Geschwindigkeit agieren oder du erhöhst sie, wodurch die Kreatur sich nur die halbe Geschwindigkeit bewegen kann. Eine Kreatur muss einen Con Save machen, oder der Effekt wirkt, bis zum Ende ihrer nächsten Runde. Die Kreatur kann den Save mit Absicht nicht schaffen.

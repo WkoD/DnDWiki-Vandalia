@@ -1,8 +1,8 @@
 created: 20200804072730585
-modified: 20201207133535709
+modified: 20210305104501417
 tags: [[Apostel von Tenebris]] Organisation Nordvolk
 title: Orden von Hela
-tmap.edges: {"d23be412-9df1-4200-9549-c60187614613":{"to":"d2b9dc5b-5f54-4d79-8a14-c92569049961","type":"unknown_dashed"}}
+tmap.edges: {"4d6fe6fb-256f-4282-8c1b-e1f91c40546d":{"to":"d2b9dc5b-5f54-4d79-8a14-c92569049961","type":"OO_Buendnis"}}
 tmap.id: 77fcd4ed-8e95-4da7-86db-17c07fbf85dd
 type: text/vnd.tiddlywiki
 
