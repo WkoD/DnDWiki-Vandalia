@@ -1,8 +1,8 @@
 created: 20190205140555164
 datum: 1350-10
-modified: 20200831073253664
+modified: 20210305103446841
 person: Ragna
-schoepfer: Hyrr,Nehalennia
+schoepfer: Hyrr,Nehalennia,Eikthyrnir
 tags: Tiergeister Artefakt
 title: Geisterarmschienen
 tmap.id: 095c3c23-e3eb-4227-a5f3-a17842371481
@@ -12,6 +12,6 @@ Armschienen, die [[Ragna]] plötzlich nach einem Zusammentreffen mit [[Nehalenni
 
 !!! Effekte
 
-* Zwei oder mehr verbundene Tiergeister
+* Drei oder mehr verbundene Tiergeister
 
-Der Träger erhält +1 CON (Maximum 30) und die Fähigkeit "Wut der Geister". Damit ist es möglich, im Rage Status für jedes Mal, wenn tatsächlicher Schaden genommen wird, einen Charge (maximal 5) zu laden und bei einem Angriff diese als Bonusaktion für zusätzlichen Schaden zu benutzen (1d4 x Chargelevel). Alle Charges verlieren ihre Wirkung, wenn der Rage Status endet.
+Der Träger erhält +2 CON und die Fähigkeit "Wut der Geister". Damit ist es möglich, im Rage Status für jedes Mal, wenn tatsächlicher Schaden genommen wird, einen Charge (maximal 5) zu laden und bei einem Angriff diese als Bonusaktion für zusätzlichen Schaden zu benutzen (1d4 x Chargelevel). Alle Charges verlieren ihre Wirkung, wenn der Rage Status endet.

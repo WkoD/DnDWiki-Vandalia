@@ -1,10 +1,10 @@
 bild: Ellid - Schamanin der Knochen.png
 created: 20200104161814771
 datum: .1350-12-23
-modified: 20201207124154519
+modified: 20210305104554054
 tags: Person [[Apostel von Tenebris]]
 title: Ellid
-tmap.edges: {"1e4cb29e-8940-4687-9006-87b6171589d3":{"to":"d2b9dc5b-5f54-4d79-8a14-c92569049961","type":"OP_Mitglied"}}
+tmap.edges: {"1e4cb29e-8940-4687-9006-87b6171589d3":{"to":"d2b9dc5b-5f54-4d79-8a14-c92569049961","type":"OP_Mitglied"},"2bc605a3-f3ce-49f1-922b-76ed7a44a1ec":{"to":"3414adfa-9dc6-42ec-8660-671b0bf3343f","type":"unknown"}}
 tmap.id: 8f42c7a0-3d0a-483c-8485-44c8c80529bb
 type: text/vnd.tiddlywiki
 

@@ -1,6 +1,6 @@
 bild: Hyrr.jpg
 created: 20180912115211968
-modified: 20200923091500846
+modified: 20210305103225012
 tags: Person Tiergeister
 title: Hyrr
 tmap.edges: {"797b4489-dab4-4e78-919b-11ef0c933375":{"to":"aed8abb0-4d00-4a7f-bd10-66dbe533f972","type":"OP_Mitglied"},"e6b065dc-e726-4538-818d-e316697bbf7e":{"to":"94e2dfba-159e-4802-869f-438fd8a67171","type":"unknown"}}
@@ -17,11 +17,11 @@ Hyrr möchte, dass [[Ragna]] einen Vulkan besucht, um die Wärme durch ihn zu sp
 
 * Wegweisendes Licht
 
-Der Träger denkt an eine bestimmte Person oder einen Gegenstand, den er gesehen hat und schickt einen brennenden Raben gegen das Ziel, der selbstständig sein Ziel innerhalb von 90ft sucht und trifft, sofern es einen Luftweg dorthin gibt. Der getroffene muss einen DEX SAVE (DC 15) machen oder er wird mit 1d6 (EX 1d8) fire DMG getroffen, sonst erleidet er den halben DMG. 
+Der Träger denkt an eine bestimmte Person oder einen Gegenstand, den er gesehen hat und schickt einen brennenden Raben als Fernkampfangriff gegen das Ziel, der selbstständig sein Ziel innerhalb von 90ft sucht. Bei einem Treffer erleidet das Ziel 1d8 fire Damage.
 
 * Schild der Flammen
 
-Der Träger kann als Reaktion seinen Schild in eine Aura von Flammen tauchen. Die Flammen fügen dem Träger keinen Schaden zu, jedoch jeder Gegner, der ihnen zu nahe kommt, erleidet 1d4 (EX 1d6) fire DMG. Nach einer Runde erlischen die Flammen wieder.
+Wird der Träger angegriffen, kann er sich als Reaktion in eine Aura von Flammen hüllen. Der Angreifer erleidet dadurch 1d4 fire Damage und die Flamme erlischt danach wieder.
 
 * Illusion der Hitze
 
