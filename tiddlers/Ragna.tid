@@ -2,11 +2,11 @@ bild: Ragna.jpg
 caption: Ragna den Okuvliga
 created: 20171014102056965
 datum: 1325
-modified: 20210617173929221
+modified: 20211002105328281
 spieler: Jan
 tags: Nordvolk Spieler
 title: Ragna
-tmap.edges: {"33eeadd0-7763-4f7c-9f02-6deaa0f26e15":{"to":"48325664-8054-4826-a32a-22020c7790a7","type":"unknown"},"f1102baa-38d6-4aef-bcec-9703eee14b9d":{"to":"82be0b5b-024f-4278-afd1-4239f63e3116","type":"PP_Bund"},"54f926c7-60b4-472e-9a08-3cb7e38202f8":{"to":"1f3bedfb-8898-4518-8790-e5167e7f341e","type":"PP_Bund"},"cce0625f-a60a-4ca1-86b1-b68ce97f01a6":{"to":"ab51f828-50d5-4980-a54a-ba7733572aef","type":"PP_Familie"},"b6156c86-917d-401f-8987-e91902f46fd9":{"to":"50b91316-be3b-42ab-a8a6-4b0dea770caf","type":"OP_Mitglied"}}
+tmap.edges: {"33eeadd0-7763-4f7c-9f02-6deaa0f26e15":{"to":"48325664-8054-4826-a32a-22020c7790a7","type":"unknown"},"f1102baa-38d6-4aef-bcec-9703eee14b9d":{"to":"82be0b5b-024f-4278-afd1-4239f63e3116","type":"PP_Bund"},"54f926c7-60b4-472e-9a08-3cb7e38202f8":{"to":"1f3bedfb-8898-4518-8790-e5167e7f341e","type":"PP_Bund"},"cce0625f-a60a-4ca1-86b1-b68ce97f01a6":{"to":"ab51f828-50d5-4980-a54a-ba7733572aef","type":"PP_Familie"},"b6156c86-917d-401f-8987-e91902f46fd9":{"to":"50b91316-be3b-42ab-a8a6-4b0dea770caf","type":"OP_Mitglied"},"c092f55f-22eb-41d4-a88c-046d45b63a65":{"to":"dc29a6e9-638c-4d54-be72-50514e07258e","type":"PP_Bund"}}
 tmap.id: e8e116c8-bb86-4e21-847b-1f70865e28ab
 type: text/vnd.tiddlywiki
 
