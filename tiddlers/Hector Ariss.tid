@@ -1,10 +1,12 @@
 bild: Hector Ariss.jpg
 created: 20200209182808429
-modified: 20200824124336371
+modified: 20211002115245690
 tags: [[Haus Alba]] Person Avalon
 title: Hector Ariss
-tmap.edges: {"b34ab6ac-6573-45da-a785-fbd159cac2b5":{"to":"12094fee-bfe9-45f3-90a7-a3f196551777","type":"unknown"},"49e7dbf7-8216-4d5c-a0da-ed9e8d65dd29":{"to":"b512d2eb-2c5d-4faa-a5f8-09698be8b7c0","type":"OP_Mitglied"},"80a4a649-ae4f-4bce-9452-25783bebde87":{"to":"8040c4a7-b23d-4a91-8a50-d5a3024bcbf3","type":"OP_Mitglied_Ehem"}}
+tmap.edges: {"b34ab6ac-6573-45da-a785-fbd159cac2b5":{"to":"12094fee-bfe9-45f3-90a7-a3f196551777","type":"unknown"},"49e7dbf7-8216-4d5c-a0da-ed9e8d65dd29":{"to":"b512d2eb-2c5d-4faa-a5f8-09698be8b7c0","type":"OP_Mitglied"},"ddeee856-aae5-46a1-9b12-ef83396e2d49":{"to":"36320787-66e9-431a-b25d-18b4ff2d2d35","type":"PP_Familie"}}
 tmap.id: 441555fa-8860-4706-869b-9f14ed111437
 type: text/vnd.tiddlywiki
 
 Ein Barde aus [[Dun Eidean]] und eigentlich ein Vasall von [[Haus Alba]], der immer ein fröhliches Lied auf den Lippen hat. Er schloss sich aus unbekannten Gründen den Piraten von [[Avalon]] an.
+
+Er reist vielt umher und geht so seinem Vater [[Hector Ariss]] aus dem Weg, der ihn als seinen Nachfolger positionieren will.
