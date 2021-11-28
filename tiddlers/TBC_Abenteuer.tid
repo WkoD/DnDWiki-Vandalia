@@ -6,7 +6,7 @@ tmap.id: feb740a0-52bb-443d-b6df-5787624fcf13
 type: text/vnd.tiddlywiki
 
 <ul>
-<$list filter="[tag[Ereignis]subtiddler[TBC]sort[title]]">
+<$list filter="[tag[Ereignis]contains:text[@@.tc-tiddler-frame]sort[title]]">
 <div class="tc-menu-list-subitem">
 <li><$link to={{!!title}}><$view field="title"/></$link></li>
 </div>
