@@ -1,6 +1,6 @@
 bild: Eikthyrnir.jpg
 created: 20200923085743579
-modified: 20211002110240070
+modified: 20211128111220978
 tags: Person Tiergeister
 title: Eikthyrnir
 tmap.edges: {"4214fd54-eb60-492b-b9db-f28dcb57f0ca":{"to":"aed8abb0-4d00-4a7f-bd10-66dbe533f972","type":"OP_Mitglied"},"1f36283f-6020-4918-970c-a6c524365239":{"to":"94e2dfba-159e-4802-869f-438fd8a67171","type":"unknown"}}
@@ -21,4 +21,4 @@ Wenn ein äußerer Einfluss versucht, dich von deiner aktuellen Position zu bewe
 
 * Schwerkraftkontrolle
 
-Du kannst die Schwerkraft für eine Kreatur oder ein Objekt in 30ft Sichtweite anpassen. Entweder senkst du die Gravitation und das Ziel kann mit doppelter Geschwindigkeit und halbiertem Gewicht agieren oder du erhöhst sie, wodurch das Ziel sich nur die halbe Geschwindigkeit mit doppeltem Gewicht bewegen kann. Eine Kreatur muss einen Con Save machen, oder der Effekt wirkt, bis zum Ende ihrer nächsten Runde. Die Kreatur kann den Save mit Absicht nicht schaffen, während Objekte automatisch versagen.
+Du kannst als Bonusaktion die Schwerkraft für eine Kreatur oder ein Objekt in 30ft Sichtweite anpassen. Entweder senkst du die Gravitation und das Ziel kann mit doppelter Geschwindigkeit und halbiertem Gewicht agieren oder du erhöhst sie, wodurch das Ziel sich nur die halbe Geschwindigkeit mit doppeltem Gewicht bewegen kann. Eine Kreatur muss einen Con Save machen, oder der Effekt wirkt, bis zum Ende ihrer nächsten Runde. Die Kreatur kann den Save mit Absicht nicht schaffen, während Objekte automatisch versagen.

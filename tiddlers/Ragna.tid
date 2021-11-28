@@ -2,7 +2,7 @@ bild: Ragna.jpg
 caption: Ragna den Okuvliga
 created: 20171014102056965
 datum: 1325
-modified: 20211002105328281
+modified: 20211128111325793
 spieler: Jan
 tags: Nordvolk Spieler
 title: Ragna
@@ -18,7 +18,7 @@ Auch bekannt als der Unbeugsame.
 
 !!! Pakt mit Tiergeistern
 
-Ragna kann Pakte mit Tiergeistern eingehen, die sich über die Tattoos auf seinem Körper zeigen. Pakte geben ihm die Möglichkeit, die Kräfte der Tiergeister während einer langen Rast in Totems zu verarbeiten, wodurch er oder seine Verbündeten diese nutzen können. Eine Kreatur kann dabei immer nur von einem Totem gleichzeitig profitieren. Der DC für Totemfähigkeiten berechnet sich aus 10 + Rage Damage und der Hit Modifier aus Proficiency + Rage Damage. Ein Totem bekommt 1d4 + Rage Damage Ladungen, wenn es erschaffen wurde.
+Ragna kann Pakte mit Tiergeistern eingehen, die sich über die Tattoos auf seinem Körper zeigen. Pakte geben ihm die Möglichkeit, die Kräfte der Tiergeister während einer langen Rast in Totems zu verarbeiten, wodurch er oder seine Verbündeten diese nutzen können. Nachdem ein Totem erschaffen wurde, kann ein weiteres erst nach 5 Tagen gemacht werden. Eine Kreatur kann dabei immer nur von einem Totem gleichzeitig profitieren. Der DC für Totemfähigkeiten berechnet sich aus 10 + Rage Damage und der Hit Modifier aus Proficiency + Rage Damage. Ein Totem bekommt 1d4 + Rage Damage Ladungen, wenn es erschaffen wurde.
 
 * [[Hyrr]] der Feuerrabe //(Rotes Tatoo nach [[Pakt mit dem Feuergeist Hyrr]])//
 * [[Nehalennia]] der Wasserdrache //(Blau/Weißes Spiraltatoo nach der [[Reise zum Tempel im hohen Norden]])//
