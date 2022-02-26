@@ -1,10 +1,12 @@
 created: 20200731085719858
 list-after: $:/core/ui/ViewTemplate/body
-modified: 20200731085848317
+modified: 20220226183935705
 tags: $:/tags/ViewTemplate
 title: $:/_my/ViewTemplate/Inventar
+type: text/vnd.tiddlywiki
 
 <$reveal tag="div" class="tc-tiddler-body" type="nomatch" stateTitle=<<folded-state>> text="hide" retain="yes" animate="yes">
+<$list filter="[all[current]tags[]tag[Spieler]] ~[{$:/state/Spieler}] +[compare:string:eq{$:/state/Spieler}]" variable=null>
 <$list filter="[all[current]multitag[Person,Spieler]]">
 <$set name=name value={{!!title}}>
 <$list filter="[tag[Artefakt]person<name>limit[1]]">
@@ -24,5 +26,6 @@ title: $:/_my/ViewTemplate/Inventar
 </ul>
 </$list>
 </$set>
+</$list>
 </$list>
 </$reveal>
