@@ -11,8 +11,3 @@ Während der [[Hochzeit|Jarl Ragna und seine Braut]] in [[Kattegat]] fand [[Ther
 Wieder alleine durchsuchte [[Theren]] die Regale auf anraten von [[Al]] und fand dort zwei Bücher. Für seine Rettung von [[Liiri-Drir]] verlangte [[Al]], dass er die Bücher an neue Orte bringen sollte. Das Buch "Der dunkle Ozean" sollte in die große Bibliothek von [[Cair Di]] und "Das Schloss der Nacht" sollte in das Schloss von [[Dun Eidean]]. Auch sollte sich [[Theren]] damit nicht zu viel Zeit lassen.
 
 [[Theren]] brachte das erste Buch in die Geschichtsbibliothek von [[Dun Eidean]], ohne dass die Verwalterin [[Allisa Fairydust]] oder seine Freunde es mitbekamen.
-
-
-<$list filter="[all[current]tags[]tag[Spieler]] ~{$:/state/Spieler} +[compare:string:eq{$:/state/Spieler}]" variable=null>
-YES
-</$list>
