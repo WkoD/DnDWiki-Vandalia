@@ -1,6 +1,6 @@
 bild: Cair Di.png
 created: 20200804115039581
-modified: 20200804115154638
+modified: 20220301092349115
 tags: Karte
 title: Cair Di/Karte
 tmap.id: 37d8fa9d-68e9-488a-9302-04c871790b57
@@ -9,13 +9,17 @@ type: text/vnd.tiddlywiki
 
 ''//Artisans Ward//''
 
-!!!! Handwerkskammer
+!!!! Handwerkskammer (12)
 
 Die Vereinigung aller Handwerker der Stadt. [[Bryn Rees]] ist der aktuelle Kammermeister.
 
+!!!! Rhonas Tinkturen (17)
+
+Ein kleines verstecktes Häuschen, welches man nur finden kann, wenn man danach sucht. [[Rhona]] verkauft hier magische Tinkturen und Kräuter.
+
 ''//Civic Ward//''
 
-!!!! Händlergilde
+!!!! Händlergilde (7)
 
 Ein Schwein mit einem roten Schal wohnt hier. Es heißt Sir Dankbart und ist mit Sir Barbatos befreundet.
 
@@ -26,6 +30,10 @@ Ein Schwein mit einem roten Schal wohnt hier. Es heißt Sir Dankbart und ist mit
 Ein Laden, der vor allem alltägliche Dinge anbietet. Zusätzlich gibt es eine große Auswahl an Produkten für die Schiffsfahrt, was viele Kapitäne zu seinen Kunden macht. Besitzerin ist die Halbelfe [[Theresa Andalin]], die den Laden mit ihrem Schwein Persephone betreibt.
 
 ''//Palace Ward//''
+
+!!!! [[Quartiere der Leibwache]]
+
+Die persönlichen Quartiere der Leibwache von [[Haus Kemri]].
 
 !!!! [[Haus Kemri]] (8)
 
@@ -56,3 +64,7 @@ Ein Gasthaus (modest) das augenscheinlich an eine Hafenspelunke erinnert, allerd
 !!!! [[Haus Newin]] (7)
 
 Der Sitz von [[Tristan Newin]], dem Patriarchen von [[Haus Newin]].
+
+!!!! [[Gästebaracken]] (12)
+
+Mehrere Gebäude dienen als temporäre Unterkünfte für befreundete Armeen oder können als Auffangbecken bei Katastrophen benutzt werden. Neben Schlafsäalen gibt es auch eine große Küche und unterirdische Lager, die stehts gefüllt sind.
