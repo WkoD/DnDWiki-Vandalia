@@ -3,7 +3,7 @@ created: 20220319110349996
 modified: 20220319110451598
 tags: [[Arkhen's Invocatorium]] Person
 title: Reizell Mark
-tmap.edges: {"d09f8c80-f5da-4794-89c7-2c359dc85de8":{"to":"490fe1f0-a0d3-448a-9417-15e4c2d37a8c","type":"OP_Mitglied"}}
+tmap.edges: {"d09f8c80-f5da-4794-89c7-2c359dc85de8":{"to":"490fe1f0-a0d3-448a-9417-15e4c2d37a8c","type":"OP_Mitglied"},"dd764e32-6dd0-4311-bd7c-544eeeefd0cd":{"to":"887c6742-92de-4cce-bfbf-2bb52260fc64","type":"unknown"}}
 tmap.id: eb6aa966-a9c9-4116-8c42-8475230031eb
 type: text/vnd.tiddlywiki
 

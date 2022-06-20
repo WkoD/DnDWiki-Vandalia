@@ -3,7 +3,7 @@ created: 20220319102650873
 modified: 20220319103237946
 tags: [[Arkhen's Invocatorium]] Person
 title: Aria Velka
-tmap.edges: {"d53d3eae-4b6a-4e7b-a563-b369537f87c5":{"to":"490fe1f0-a0d3-448a-9417-15e4c2d37a8c","type":"O_Anfuehrer"}}
+tmap.edges: {"d53d3eae-4b6a-4e7b-a563-b369537f87c5":{"to":"490fe1f0-a0d3-448a-9417-15e4c2d37a8c","type":"O_Anfuehrer"},"a759d1ac-ee22-43c4-9a19-9dedb3a49857":{"to":"189c0b23-efb1-4b70-8a4d-a025ba559ff1","type":"unknown"}}
 tmap.id: 937523a5-f3c8-4abc-9441-52ff9d24acb4
 type: text/vnd.tiddlywiki
 

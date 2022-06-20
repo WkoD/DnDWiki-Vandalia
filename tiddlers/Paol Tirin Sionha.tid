@@ -3,7 +3,7 @@ created: 20220319110048943
 modified: 20220319110334630
 tags: [[Arkhen's Invocatorium]] Person
 title: Paol Tirin Sionha
-tmap.edges: {"2aee5769-f9ed-4b69-bb8c-60b6cbe4f648":{"to":"490fe1f0-a0d3-448a-9417-15e4c2d37a8c","type":"OP_Mitglied"}}
+tmap.edges: {"2aee5769-f9ed-4b69-bb8c-60b6cbe4f648":{"to":"490fe1f0-a0d3-448a-9417-15e4c2d37a8c","type":"OP_Mitglied"},"c2b6fb26-a3ec-48f7-a57e-67817bbe6e7c":{"to":"887c6742-92de-4cce-bfbf-2bb52260fc64","type":"unknown"}}
 tmap.id: c6c77d1b-ffda-4d53-93c2-5848a0ba13a5
 type: text/vnd.tiddlywiki
 

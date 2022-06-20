@@ -3,7 +3,7 @@ created: 20200308204024306
 modified: 20220226180722078
 tags: Person [[Arkhen's Invocatorium]]
 title: Abigal Davenlow
-tmap.edges: {"fb2f7a2f-e285-43d6-8a6a-908b2e297b47":{"to":"490fe1f0-a0d3-448a-9417-15e4c2d37a8c","type":"OP_Mitglied"}}
+tmap.edges: {"fb2f7a2f-e285-43d6-8a6a-908b2e297b47":{"to":"490fe1f0-a0d3-448a-9417-15e4c2d37a8c","type":"OP_Mitglied"},"3e4a8594-748a-4709-b93b-d2f4a67c55f1":{"to":"887c6742-92de-4cce-bfbf-2bb52260fc64","type":"unknown"}}
 tmap.id: 663c9d8d-374d-4f49-a33c-41e30d5a1ede
 type: text/vnd.tiddlywiki
 
