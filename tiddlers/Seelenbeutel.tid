@@ -1,0 +1,11 @@
+created: 20220620183722999
+modified: 20220620184250431
+person: Actrielle
+tags: Artefakt
+title: Seelenbeutel
+tmap.id: 4a70de87-e939-4a2f-8a95-b8a21f8c33c8
+type: text/vnd.tiddlywiki
+
+Ein kleiner Beutel aus unbekanntem Leder. Er ist leer und es ist unmöglich etwas materielles hineinzutun. 
+
+Wenn eine Kreatur im Umkreis von 60ft stirbt, dann kann die Reaktion aufgewendet werden, um die Energie der Kreatur im Seelenbeutel zu fangen. Ist die Kreatur schwächer als der Anwender, gelingt der Fang sofort, andernfalls muss ein Arcana Checl mit DC10 + Kreaturenstärke geschafft werden. Sobald der Beutel gefüllt ist, kann eine Aktion aufgewendet werden, um die HP einer beliebigen Kreatur im Umkreis von 60ft um 1d8 * Kreaturenstärke zu heilen. Die Energie wird dabei vollständig verbraucht. Im Beutel kann sich immer nur die Energie einer Kreatur befinden. Sollte er bereits gefüllt sein, wird die vorherige Energie automatisch freigelassen.

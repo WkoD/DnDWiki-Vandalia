@@ -1,6 +1,6 @@
 created: 20220306114705967
 datum: 1351-06-28.
-modified: 20220306123540036
+modified: 20220620190802227
 tags: Abenteuer Ereignis Menzoberranzan
 title: Familie ist immer für dich da
 tmap.id: ec44ac65-08a6-4792-8e94-ba6c0c619dbf
@@ -14,4 +14,7 @@ Bei ihrer [[Flucht|Das Ende der Jagd]] aus [[Dun Eidean]] erhielten die Abenteur
 
 Um die Bewegung der Dunkelelfen im Auge zu behalten kehrte [[Banbanza]] zu ihnen zurück. Mit Beweisen einer erfolglosen Verfolgung der Abenteurer und einigen Sending Schriftrollen zur Kommunikation machte er sich auf den Weg.
 
-TBC
+@@.tc-tiddler-frame
+@@width:100%;border: 3px solid red;
+Die Dunkelelfen sind immernoch aktiv.
+@@
