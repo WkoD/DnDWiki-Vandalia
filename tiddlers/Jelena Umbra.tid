@@ -1,6 +1,6 @@
-bild: Jelena Umbra.jpg
+bild: Jelena Umbra.jpg,Jelena Shadow.png
 created: 20200308203715844
-modified: 20220319112416289
+modified: 20220806083624337
 tags: Person [[Arkhen's Invocatorium]]
 title: Jelena Umbra
 tmap.edges: {"bfdeb646-d983-4592-83ac-6a72935ecd72":{"to":"490fe1f0-a0d3-448a-9417-15e4c2d37a8c","type":"OP_Mitglied"},"bfb299da-da72-491d-803f-9f7e620d1ee6":{"to":"887c6742-92de-4cce-bfbf-2bb52260fc64","type":"unknown"}}
@@ -9,8 +9,4 @@ type: text/vnd.tiddlywiki
 
 Jelena arbeitet in [[Arkhen's Invocatorium]] als Administrator für den Forschungsbereich. Ihr fällt es zu, erfolgreiche Studenten für weitergehende Forschung auszuwählen und sie mit Räumlichkeiten und Materialen zu versorgen. Sie war es auch, die [[Theren]] und [[Shinfel Blightsworn]] zusammengebracht hat.
 
-Gerüchte gehen um, dass Jelena immer mal mit schwarzen Flügeln gesehen wurde.
-
-<$list filter="[{$:/state/Spieler}] +[compare:string:eq[Theren]]" variable=null>
-<img src="images\Person\Jelena Shadow.png"/>
-</$list>
+Jelena ist eine [[Schicksalsweber]]in, auch wenn sie das geheim hält. Gelegentlich wurde ihre wahre Form in [[Arkhen's Invocatorium]] flüchtig gesehen.
