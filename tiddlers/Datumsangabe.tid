@@ -1,0 +1,9 @@
+caption: Datumsangabe
+created: 20230926110809657
+modified: 20230926111504833
+tags: $:/tags/TextEditor/Snippet
+title: Datumsangabe
+tmap.id: 1060ba82-150b-43c7-90e6-6ba7f0bf8039
+type: text/vnd.tiddlywiki
+
+<b>Jahr:</b> <$macrocall $name="datumlang" datum="yyyy-mm-dd"/>

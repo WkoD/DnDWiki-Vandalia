@@ -1,18 +1,24 @@
 created: 20220306140820397
 datum: 1350-12-27.1351-06-23.1351-07-01.
-modified: 20220306141732504
+modified: 20230926111433708
 tags: Abenteuer Ereignis Mondwächter
 title: Suche nach Kaguya
 tmap.id: ca690e7a-0270-4d58-b7f2-4b6de209fd8f
 type: text/vnd.tiddlywiki
 
+<b>Jahr:</b> <$macrocall $name="datumlang" datum="1350-12-27"/>
+
 [[Balseth]] und [[Theren]] besuchten den [[Sichelmondwald]] auf der Suche nach [[Kaguya]], fanden dort aber nur Leichen von Eulenbären und Mitgliedern vom [[Orden von Hela]]. [[Kaguya]] war verschwunden. [[Bronn]], [[Tiris]] und [[Pepo]] kehrten zur gleichen Zeit auch zurück und stellten sich nach kurzer Verwirrung gegen die Abenteurer, da sie sie für das ganze verwantwortlich machten. Nach einem kurzen Handgemenge trennten sich die beiden Gruppen. [[Bronn]], [[Tiris]] und [[Pepo]] machten sich auf, [[Kaguya]] zu finden und ihr Vertrauen in die Abenteurer war vorerst erschüttert.
 
 ---
 
+<b>Jahr:</b> <$macrocall $name="datumlang" datum="1351-06-23"/>
+
 [[Theren]] und [[Actrielle]] traf im Tempel von [[Dun Eidean]] auf [[Tiris]], die einer Spur folgte.
 
 ---
+
+<b>Jahr:</b> <$macrocall $name="datumlang" datum="1351-07-01"/>
 
 Mit dem Zauber Scrying versuchte [[Theren]] [[Kaguya]]s Aufenthaltsort ausfindig zu machen. Er fand sie dabei in einer dunklen Zeller einer alten Festung vor. Scheinbar wurde sie gefoltert, doch ihr Leben war vorerst außer Gefahr. In ihrer Zelle war auch eine schwer zugerichtete Elfin, die eine Krone oder etwas vergleichbares trug, welches große Macht verströmte. Sie redete wirres Zeug, doch konnte sie auch den Scrying Zauber erkennen. Eine der Wachen trug das Wappen vom [[Königreich von Vandalia]]. 
 

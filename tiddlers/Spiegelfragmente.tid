@@ -1,25 +1,35 @@
 created: 20200814110442357
 datum: 1351-04-05.1351-05-12.1351-06-24.1351-06-26.1351-07-09
-modified: 20230818125709390
+modified: 20230926111621691
 tags: Abenteuer Ereignis Nordvolk [[Königreich von Vandalia]] [[Haus Eiree]] [[Haus Alba]] [[Haus Kemri]]
 title: Spiegelfragmente
 tmap.id: 052ba960-491c-4648-9651-13f28ad5b612
 type: text/vnd.tiddlywiki
 
+<b>Jahr:</b> <$macrocall $name="datumlang" datum="1351-04-05"/>
+
 Nachdem die Abenteurer vom [[Spiegel der Seelen]] erfahren hatten, machten sie sich auf die Suche. Erster Halt war die Baronin [[Aideen Eiree]] in [[Baile]], die möglicherweise Hinweise auf den Verbleib des Artefaktes haben könnte.
 
 ---
+
+<b>Jahr:</b> <$macrocall $name="datumlang" datum="1351-05-12"/>
 
 Die Abenteurer erhielten ein Fragment des Spiegels von [[Aideen Eiree]] nach ihrer [[Rettung|Ende der Sklaverei]]. Der Größe nach handelte es sich um ein Drittel einer Kreisringfläche. [[Aideen Eiree]] konnte ihnen auch sagen, dass [[Haus Kemri]] und [[Haus Alba]] ein ähnliches Stück besitzen sollten und zur Aktivierung möglicherweise eine Schamanin vom [[Nordvolk]] nöig sein könnte.
 
 ---
 
+<b>Jahr:</b> <$macrocall $name="datumlang" datum="1351-06-24"/>
+
 In [[Dun Eidean]] fragten die Abenteurer [[Robert Alba]] nach den Spiegelfragmenten. [[Theren]] gab dabei fragwürdige Gründe an, warum sie die Fragmente suchen und [[Robert Alba]] wollte ihnen fast die Hilfe verwehren. Er entschied sich dann aber, dass die Abenteurer etwas für [[Dun Eidean]] tun sollten, in dem sie sich um Probleme kümmerten. Die Gruppe entschied sich, [[Tomas Alba]] bei einem Monsterproblem zu unterstützen.
 
 ---
 
+<b>Jahr:</b> <$macrocall $name="datumlang" datum="1351-06-26"/>
+
 Nachdem die Abenteurer das Nest in der Mine zerstört hatten, kehrten sie zu [[Robert Alba]] zurück. Zum Dank für die Hilfe überreichte er ihnen einen silbernen Spiegel mit nordischen Runen, welchen er für den gesuchten Spiegel der Seelen hielt. Nach einer kleinen Untersuchung fand [[Theren]] ein geheimes Fach in dem Spiegel, welches das echte Fragment vom [[Spiegel der Seelen]] enthielt. Damit hatten die Abenteurer jetzt 2 Fragmente.
 
 ---
+
+<b>Jahr:</b> <$macrocall $name="datumlang" datum="1351-07-09"/>
 
 [[Dilwyn Kemri]] stellte ihr Spiegelfragment in Aussicht, wenn die Abenteurer als erfahrene Kämpfer gegen die [[Hazim'Tor]] in die [[Schlacht ziehen würden|Schlangen in den Kahlabergen]]. Vor der Übergabe verstarb [[Dilwyn Kemri]], ihre Tochter übergab aber das Spiegelfragment später an die Abenteurer. Damit waren alle Teile vom [[Spiegel der Seelen]] zusammen.

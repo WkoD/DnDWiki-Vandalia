@@ -1,16 +1,20 @@
 created: 20220306131644796
 datum: 1351-07-09.1351-07-12
-modified: 20220806085825203
+modified: 20230926111754109
 tags: Abenteuer Ereignis [[Haus Kemri]] Sjach
 title: Schlangen in den Kahlabergen
 tmap.id: 02ef323f-36df-4cf4-b176-a58f8b968f6e
 type: text/vnd.tiddlywiki
+
+<b>Jahr:</b> <$macrocall $name="datumlang" datum="1351-07-09"/>
 
 In [[Cair Di]] fanden die Abenteurer viele [[Sjach]], die sich für eine Expedition ins [[Kahlagebirge]] vorbereiteten. Von [[Dilwyn Kemri]] und [[Sakur]] erfuhren sie, dass dort die Überreste der [[Hazim'Tor]] mehrere Dörfer überfallen und Sklaven genommen hatten. [[Dilwyn Kemri]] wollte das Problem ein für alle mal lösen und heuerte die [[Sjach]] an, sich darum zu kümmern. Wenn die Abenteurer an der Expedition als erfahrene Kämpfer teilnehmen würden, so stellte sie auch ein Fragment vom [[Spiegel der Seelen]] als zusätzliche Belohnung in Aussicht.
 
 Zusammen mit [[Baeela and Raeena]] ritten die Abenteurer der Expedition voraus, um das Dorf [[Golwyn]] nach einem [[Labor|Der verlassene Leuchtturm]] von [[Tyria]] zu durchsuchen. Schnelle Pferde aus [[Baile]] sollten ihnen dabei ungefähr einen Tag der Suche ermöglichen, bevor sie weiter gen Süden aufbrechen müssten. Nach den [[Ereignissen im Dorf|Der verlassene Leuchtturm]] schlossen die Abenteurer zum Rest der [[Sjach]] auf.
 
 ---
+
+<b>Jahr:</b> <$macrocall $name="datumlang" datum="1351-07-12"/>
 
 Die Abenteurer erreichten ein provisorisches Lager der [[Sjach]] Expedition. Unter der Leitung von [[Sakur]] hatten sie bereits die Tunneleingänge der [[Hazim'Tor]] gesichtet und bereiteten sich auf einen Großangriff vor. Die Späher hatten dabei [[Paol Tirin Sionha]] und [[Briya Sigd]] aufgegriffen, die selbst einen Angriff planten. Sie verfolgten den Rest von [[Jelenas Expedition]], der durch die [[Hazim'Tor]] in [[Hafod]] gefangen genommen wurde. Die Abenteurer wählten den vermuteten Haupteingang als ihr Angriffsiel und [[Paol Tirin Sionha]] und [[Briya Sigd]], beschützt von [[Baeela and Raeena]] sollten als zweites Team für Heilung sorgen. Der Rest der [[Sjach]] würde zur gleichen Zeit die anderen Eingänge attackieren, damit niemand entkommen konnte.
 

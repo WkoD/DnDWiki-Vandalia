@@ -1,10 +1,12 @@
 created: 20200308202750827
 datum: 1351-01-01.1351-07-01.1351-07-12
-modified: 20220806085704686
+modified: 20230926112002938
 tags: [[Andu Falas]] [[Arkhen's Invocatorium]] Ereignis Abenteuer
 title: Jelenas Expedition
 tmap.id: 390b52a4-3614-4661-80ab-152f9d2aad85
 type: text/vnd.tiddlywiki
+
+<b>Jahr:</b> <$macrocall $name="datumlang" datum="1351-01-01"/>
 
 [[Jelena Umbra]] brach mit einigen anderen Mitgliedern von [[Arkhen's Invocatorium]] unter dem Schutz von Mitgliedern der [[Spellguard]] nach [[Andu Falas]] auf, um dort ihre Studien fortzusetzen. Ihr Forschungsteam bestand aus [[Abigal Davenlow]], [[Paol Tirin Sionha]] und [[Reizell Mark]], während sich ihr Geleitschutz aus [[Sariell Naabal, Arum|Sariell Naabal]] und [[Briya Sigd]] unter der Leitung von [[Vivian Cross]] zusammensetzte.
 
@@ -12,9 +14,13 @@ type: text/vnd.tiddlywiki
 
 ---
 
+<b>Jahr:</b> <$macrocall $name="datumlang" datum="1351-07-01"/>
+
 Im Dorf [[Hafod]] wurde die Expedition von den [[Hazim'Tor]] überrascht. Trotz guter Chancen, zu entkommen, streckte [[Jelena Umbra]] die Waffen, als die Dorfbewohner in Gefahr waren. Die Expedition wurde so auch gefangen genommen und ins [[Kahlagebirge]] verschleppt. Nur [[Briya Sigd]] und [[Paol Tirin Sionha]] konnten der Gefangennahme entgehen, da sie sich gerade außerhalb des Dorfes befunden hatten. Die beiden nahmen die Verfolgung auf.
 
 ---
+
+<b>Jahr:</b> <$macrocall $name="datumlang" datum="1351-07-12"/>
 
 Die Abenteurer [[retteten die Expedition|Schlangen in den Kahlabergen]] zusammen mit den [[Sjach]], [[Briya Sigd]] und [[Paol Tirin Sionha]] aus dem Tempelkomplex der [[Hazim'Tor]] und erhielten dort ein Amulett von der Medusa [[Philia]], welches der wahre Grund für die Expedition war. Nur [[Jelena Umbra]] wusste davon und hatte die Abenteurer bei ihrer Rettung darum gebeten, das Amulett zu ihr zu bringen.
 
