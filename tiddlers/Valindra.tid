@@ -1,6 +1,6 @@
-bild: Valindra (portrait).jpg
+bild: Valindra (portrait).jpg,Valindra.png
 created: 20190209111106777
-modified: 20200729074417666
+modified: 20240125181211661
 tags: Person Händlergilde
 title: Valindra
 tmap.edges: {"5c300e2f-3ec0-48dc-b798-9b2677829c94":{"to":"3414adfa-9dc6-42ec-8660-671b0bf3343f","type":"PP_Feindschaft"}}
@@ -8,3 +8,5 @@ tmap.id: 318264b0-c23d-4ad7-8797-3957ff851db8
 type: text/vnd.tiddlywiki
 
 Eine Elfin und fahrende Händlerin aus [[Cair Di]]. Trotz ihrer jungen Gesichtszüge wirkt ihre Haut verbraucht und ihr Haar verblasst. Ihre Stimme wird immer wieder von Husten unterbrochen. Sie ist auf der Suche nach einer Schamanin, auf die sie vor Jahren getroffen ist. Sie verkauft allerlei magische Rollen und Edesteine, um ihre Suche zu finanzieren.
+
+Ihre wahre Gestalt als Untote offenbarte sich in [[Tyrias Versteck]].
