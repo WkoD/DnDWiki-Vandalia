@@ -1,6 +1,6 @@
 created: 20230818125752117
-datum: 1351-08-02
-modified: 20230820191313723
+datum: 1351-08-02.1351-08-04.1351-08-09
+modified: 20240125181421925
 tags: Ereignis Abenteuer [[Apostel von Tenebris]] Nordvolk Valküren
 title: Tyrias Versteck
 tmap.id: e7ba0275-307a-4ab4-8148-abada3c897ce
@@ -8,6 +8,36 @@ type: text/vnd.tiddlywiki
 
 Mit den 3 Spiegelfragmenten kehrten die Abenteurer nach [[Kattegat]] zurück. Sie fanden ein verändertes Dorf vor, denn Handel mit [[Dun Eidean]] florierte. Scheinbar waren sogar Landvermesser zwischen den beiden Orten unterwegs. Denoch waren auch hier die Auswirkungen des [[Aegis]] Schild zu spüren. Für Jarl [[Ragna]] wurde ein imposantes Willkommensfest veranstaltet, auf dem er auch von der Schwangerschaft von [[Lagertha]] erfuhr. Nach dem Fest suchten die Abenteurer [[Frigg]] auf, die durch den Verlust zu den Göttern stark in Mitleidenschaft gezogen war. Es brauchte einige Zeit und die Hilfe von [[Lagertha]], doch schließlich konnte [[Frigg]] das Ritual für den [[Spiegel der Seelen]] durchführen. Es zeigte sich schnell, dass das Ritual enorme Kraft kostete, doch es gelang ihr, den Ort von [[Tyria]]s Versteck im [[Riganwald]] zu zeigen. Sie entdeckte auch einen Nebelschleier, die das Versteck schützte und schuff ein Amulett, mit dem die Abenteurer hindurchfinden sollten.
 
-Die Abenteurer berieten die nächsten Schritte und entschieden, sowohl die [[Sjach]] um einen kleinen Eingreiftrupp als Unterstütztung zu bitten, als auch den [[Valküren]] vom Ort des Verstecks zu erzählen.
+Die Abenteurer berieten die nächsten Schritte und entschieden, sowohl die [[Sjach]] um einen kleinen Eingreiftrupp als Unterstütztung zu bitten, als auch den [[Valküren]] vom Ort des Verstecks zu erzählen. Leider erhielten sie von den [[Valküren]] keine Antwort.
 
-TBC
+---
+
+<b>Jahr:</b> <$macrocall $name="datumlang" datum="1351-08-04"/>
+
+Per Teleportationszirkel begaben sich die Abenteurer nach [[Baile]], wo sie noch einige Tage im Wirtshaus von [[Sabrina]] rasteten. [[Theren]] versprach weiterhin [[Amara Azaer]], ihr ein magisches Artefakt von ihrer nächsten Expedition mitzubringen, wofür es einen Rabatt auf den Einkauf gab. Nach 2 Tagen machten sich die Abenteurer auf den Weg zum Treffpunkt mit den [[Sjach]], die [[Valküren]] stießen leider nicht dazu.
+
+---
+
+<b>Jahr:</b> <$macrocall $name="datumlang" datum="1351-08-09"/>
+
+Nach mehreren Tagen Fussmarsch erreichten die Abenteurer die versteckte Festung von [[Tyria]]. Den umgebenden Nebel konnten sie mit dem Amulett von [[Frigg]] durchdringen, doch folgte danach ein Kampf gegen mutierte Bestien, die [[Tyria]] zum Schutz postiert hatte. Am Eingang wartete Odger, das letzte Mitglied vom [[Orden von Hela]], das noch zu [[Tyria]] stand. Bei ihm war sein Sohn [[Leif Odgerson]]. Odger wollte einen Kampf mit dem neuen Jarl [[Ragna]], um den traditionellen Tod im Kampf zu finden. Vorher ließ er sich aber noch versprechen, dass sein Sohn in [[Kategatt]] aufgenommen werden würde, um ein Leben fern vom Orden zu erleben. Es folgte ein kurzer, aber spannender Zweikampf, aus dem [[Ragna]] als Sieger hervorging. [[Leif Odgerson]] würde am Eingang der Festung auf die Abenteurer warten, und derweil seinen Vater nach den alten Sitten begraben.
+
+Die Abenteurer betraten die sehr alte Festung und entdeckten Blasen von Energie, die etwas im inneren versorgten. Sie verbrachten einige Zeit damit, einige der Blasen zu zerstören, bevor sie weiter in die Festung vordrangen. In einer Halle fanden sie eine Bibliothek und [[Liiri-Einn]], die sie dort erwartete.
+
+* Actrielle hat Splitter vom Weltentor
+* Tor soll gesichert werden (Kategatt mit Sjach Support)
+* Hati hat sich geopfert, um Silmeria in eine Schutzschicht aus Eis zu hüllen, in dem Eis ist ein Schimmern erkennbar
+* eine Schwarze Masse hat Ragna durch kleinere Zwischendimensionen um die materielle Ebene verfolgt, wurde dann aber vernichtet
+* Goldschädel und Silberhaar tot
+* Hugslugs wurden von Actrielle eingesammelt, sie reagieren freundlich (mit Haste) auf Theren, aber feindlich (explosion) auf andere
+* Geheimgang Symbol
+* Vision von Theren im fleischigen Tunnel
+
+@@.tc-tiddler-frame
+@@width:100%;border: 3px solid red;
+[[Lagertha]] soll für [[Actrielle]] magische Kreide besorgen, wenn die Abenteurer das nächste mal in [[Kattegat]] sind.
+
+[[Floki]] baut für [[Ragna]] aus den gesammelten Metallverflechtungen ein Netz. Dafür muss er aber erst eine Maschine konstruieren, die dieses Netz spannen kann. Die Fertigstellung wird frühstens für 1351-08-09 erwartet.
+
+Die Einwohner von [[Kategatt]] wollen eine Abstimmung durchführen, ob Einwanderer in die Stadt zugelassen werden. Die Abstimmung findet am 1351-08-23 statt.
+@@
