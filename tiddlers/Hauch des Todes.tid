@@ -1,6 +1,6 @@
 created: 20191004124948628
-datum: 1350-12-19
-modified: 20211128120928460
+datum: 1350-12-19.1351-08-09
+modified: 20240304154119980
 tags: [[Königreich von Vandalia]] Ereignis Abenteuer
 title: Hauch des Todes
 tmap.id: cef88325-f57b-4046-a1a5-56a81b171a37
@@ -11,6 +11,12 @@ type: text/vnd.tiddlywiki
 [[Valindra]] erzählte von ihrer Suche nach einer Schamanin, die sie vor langer Zeit verflucht hatte, [[Theren]] konnte sie aber nicht davon überzeugen, sich helfen zu lassen. [[Valindra]] flüchtete durch einen Geheimgang und die Abenteurer konnten gerade noch entkommen, bevor das Haus in sich zusammen fiel.
 
 Die Abenteurer berichteten [[Ki-Ra]] dann später, dass [[Valindra]] keine Spionin für das [[Königreich von Vandalia]] ist.
+
+----
+
+<b>Jahr:</b> <$macrocall $name="datumlang" datum="1351-08-09"/>
+
+[[Valindra]] tauchte in [[Tyrias Versteck]] erneut auf. Sie hatte sich dem Körper einer [[Sjach]] Drudin bemächtigt und konnte so unbemerkt mit den Abenteurern reisen. Zusammen mit [[Liiri-Einn]] und einigen Büchern verschwand sie.
 
 @@.tc-tiddler-frame
 @@width:100%;border: 3px solid red;
