@@ -3,7 +3,7 @@ created: 20220319104306807
 modified: 20220319104841826
 tags: [[Arkhen's Invocatorium]] Person
 title: Briya Sigd
-tmap.edges: {"ba3764a8-3a3a-483f-be38-5897ee4ff225":{"to":"b02ba5f4-91f0-4e64-bce3-acdc87e45072","type":"OP_Mitglied"},"5395f0bd-0acc-487a-8fce-15ecdb767834":{"to":"490fe1f0-a0d3-448a-9417-15e4c2d37a8c","type":"OP_Mitglied_Ehem"},"7ca85237-8890-472b-9ef3-c25ff010934f":{"to":"887c6742-92de-4cce-bfbf-2bb52260fc64","type":"unknown"},"22fabdba-6c9b-4a96-9421-40801870deba":{"to":"887c6742-92de-4cce-bfbf-2bb52260fc64","type":"unknown"}}
+tmap.edges: {"ba3764a8-3a3a-483f-be38-5897ee4ff225":{"to":"b02ba5f4-91f0-4e64-bce3-acdc87e45072","type":"OP_Mitglied"},"5395f0bd-0acc-487a-8fce-15ecdb767834":{"to":"490fe1f0-a0d3-448a-9417-15e4c2d37a8c","type":"OP_Mitglied_Ehem"},"7ca85237-8890-472b-9ef3-c25ff010934f":{"to":"887c6742-92de-4cce-bfbf-2bb52260fc64","type":"unknown"},"22fabdba-6c9b-4a96-9421-40801870deba":{"to":"887c6742-92de-4cce-bfbf-2bb52260fc64","type":"unknown"},"bf286d19-ad8c-4d83-9ed4-bd3ea95d11e4":{"to":"50b91316-be3b-42ab-a8a6-4b0dea770caf","type":"OP_Mitglied"}}
 tmap.id: 133278be-e63a-46cf-9de2-4c4d8095014c
 type: text/vnd.tiddlywiki
 

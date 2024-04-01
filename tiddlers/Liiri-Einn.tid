@@ -3,7 +3,7 @@ created: 20211128100117427
 modified: 20211128100403604
 tags: [[Apostel von Tenebris]] Person Sjach
 title: Liiri-Einn
-tmap.edges: {"d5f7108d-1ee7-4b55-afdf-77455d5092cb":{"to":"c0cb2b16-18a6-448a-8eb9-223cf84f872c","type":"unknown_dashed"},"e07bf3a6-298d-4a06-a8c3-1909d473721f":{"to":"3414adfa-9dc6-42ec-8660-671b0bf3343f","type":"PP_Bund"}}
+tmap.edges: {"d5f7108d-1ee7-4b55-afdf-77455d5092cb":{"to":"c0cb2b16-18a6-448a-8eb9-223cf84f872c","type":"unknown_dashed"},"e07bf3a6-298d-4a06-a8c3-1909d473721f":{"to":"3414adfa-9dc6-42ec-8660-671b0bf3343f","type":"PP_Bund"},"299f7969-b374-446d-9a41-b2c55c59fd3e":{"to":"318264b0-c23d-4ad7-8797-3957ff851db8","type":"PP_Freundschaft"}}
 tmap.id: 82bd119d-153d-4cab-aa28-aa8168b7eca1
 type: text/vnd.tiddlywiki
 
