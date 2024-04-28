@@ -1,6 +1,6 @@
 created: 20210305103941294
-datum: 1351-06-04
-modified: 20211128121008085
+datum: 1351-06-04.1351-09.
+modified: 20240428201046226
 tags: Abenteuer Ereignis Sjach
 title: Der Feind im eigenen Körper
 tmap.id: a396ba66-4235-4aea-bd00-7be61972ed24
@@ -8,7 +8,17 @@ type: text/vnd.tiddlywiki
 
 [[Balasar]]s Arm war anscheinden durch [[Tyria]] in eine Art Mimic verändert worden, der häufig nach Nahrung verlangte. Unsicher, was es damit auf sich hat, wurde er nach [[Miehall]] geschickt, so dass die Ältesten das ergründen konnten. [[Paahoh]] war zufällig mit einigen [[Sjach]] im Dorf angekommen, um die Dienste des Klans anzubieten und er begleitete [[Balasar]] auf dem Rückweg.
 
+----
+
+<b>Jahr:</b> <$macrocall $name="datumlang" datum="1351-09"/>
+
+[[Raiann]] wurde mit ihren Geschwistern [[Balasar]] und [[Liiri-Drir]] wiedervereint, die ebenfalls mit den Nachwirkungen von [[Tyria]]s Einfluss kämpften. [[Die Heilung|Der Feind im eigenen Körper]] von [[Balasar]]s Arm kam nicht voran und [[Liiri-Drir]] wurde im Klan noch immer nicht gut aufgenommen. Auch zeigte sich ihr Körper als instabil und auf lange Sicht würde er wohl kollabieren. Dazu gesellte sich jetzt [[Raiann]], welche psychisch durch [[Tyria]] schwer mitgenommen war. Alle drei wohnten weiterhin in einem kleinen Außenposten nahe des Waldrands unter Beobachtung. [[Balseth]] nutzte die Gelegenheit, die drei über die vergangenen Ereignisse mit [[Tyria]] und das Überleben von [[Liiri-Einn]] und [[Liiri-Fjorir]] zu informieren. [[Liiri-Drir]] zeigte sich hier etwas hin und hergerissen zwischem ihrem Klan und ihren neuen "Schwestern". Ihr Wunsch war es, alle zu schützen.
+
 @@.tc-tiddler-frame
 @@width:100%;border: 3px solid red;
-Was hat es mit dem Arm auf sich und kann man das Rückgängig machen?
+Was hat es mit dem Arm auf sich? [[Theren]]s Forschungen ergaben, dass eine Transformationskammer von [[Tyria]] die Verwandlung eventuell rückgängig machen könnte. [[Sjach]] Söldner sollten Labore von [[Tyria]] suchen, deren Standorte sie aus den Aufzeichnungen aus [[Tyrias Versteck]] erhalten hatten.
+
+Der Körper von [[Liiri-Drir]] ist [[instabil|Konflikte im Klan der Sjach]]. Die Sjach suchen Hilfe von Außen, wie ihr geholfen werden kann.
+
+[[Raiann]] ist psychisch belastet durch das, was [[Tyria]] mit ihr gemacht hat.
 @@
