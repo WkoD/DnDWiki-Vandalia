@@ -1,6 +1,6 @@
 created: 20220306114705967
-datum: 1351-06-28.
-modified: 20240125173218435
+datum: 1351-06-28.1351-10-16.
+modified: 20240428190328324
 tags: Abenteuer Ereignis Menzoberranzan
 title: Familie ist immer für dich da
 tmap.id: ec44ac65-08a6-4792-8e94-ba6c0c619dbf
@@ -14,9 +14,16 @@ Bei ihrer [[Flucht|Das Ende der Jagd]] aus [[Dun Eidean]] erhielten die Abenteur
 
 Um die Bewegung der Dunkelelfen im Auge zu behalten kehrte [[Banbanza]] zu ihnen zurück. Mit Beweisen einer erfolglosen Verfolgung der Abenteurer und einigen Sending Schriftrollen zur Kommunikation machte er sich auf den Weg.
 
+---
+
+<b>Jahr:</b> <$macrocall $name="datumlang" datum="1351-10-16"/>
+
+[[Actrielle]] nahm mittels des Zauberspruchs "Dream" Verbindung zu [[Banbanza]] auf. Dieser konnte sie über den chaotischen Zustand der Dunkelelfen informieren, nachdem sie ihre Verbindung zu [[Lolth]] verloren hatten. Die Ordnung wurde aber langsam durch die Matronmutter [[Azurna]] wiederhergestellt, indem sie die Macht der [[leuchtenden Amethysten|Meteor von Tenebris]] anzapfte. Nicht alle Dunkelelfen waren mit dieser "korrupten" Energie einverstanden, doch der Großteil folgte ihr weiterhin.
+
+In dieser Zeit entschlüsselte [[Theren]] die Schriftrolle, die sie einst [[von den Dunkelelfen erbeutet|Schild der Götter]] hatten. In ihr war ein Plan, einen alten Tempel im Süden vom [[Königreich von Vandalia]] zu besetzten und dort Seelenenergie abzuzapfen. Informationen von [[Banbanza]] und aus [[Tyrias Versteck]] gaben den ungefähren Ort des Tempels preis.
+
+
 @@.tc-tiddler-frame
 @@width:100%;border: 3px solid red;
-Die Dunkelelfen sind immernoch aktiv.
-
-Theren hat eine [[verschlüsselte Schriftrolle der Dunkelelfen|Schild der Götter]] an sich genommen und versucht diese zu entschlüsseln.
+Die Dunkelelfen versuchen einen uralten Tempel für ihre Zwecke zu verwenden. Noch brauchen sie einige Zeit, für Vorbereitungen.
 @@
