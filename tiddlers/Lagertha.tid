@@ -1,13 +1,15 @@
 bild: Lagertha.jpg
 created: 20201207112358150
 datum: 1324
-modified: 20230818125626242
-tags: Person Nordvolk
+modified: 20240501082031614
+tags: Person Nordvolk Vinland
 title: Lagertha
-tmap.edges: {"510aeed1-c6d8-4676-abef-c27c6e03f80a":{"to":"dafe0800-58a1-4ded-b76d-7ae2b01cf067","type":"unknown"},"65e22b85-f41d-48c1-b0de-0cd4adec8f85":{"to":"50b91316-be3b-42ab-a8a6-4b0dea770caf","type":"OP_Mitglied"}}
+tmap.edges: {"510aeed1-c6d8-4676-abef-c27c6e03f80a":{"to":"dafe0800-58a1-4ded-b76d-7ae2b01cf067","type":"unknown"},"65e22b85-f41d-48c1-b0de-0cd4adec8f85":{"to":"50b91316-be3b-42ab-a8a6-4b0dea770caf","type":"OP_Mitglied"},"ee671a7f-b47f-4a22-b428-15cf36de3762":{"to":"bac89fad-7dae-49fa-8792-00c06b252415","type":"OP_Mitglied"},"0413e9f7-69e8-4cce-ba79-06b8fa9bb835":{"to":"3121f9dc-cae6-4499-a8ff-89a2d8718919","type":"PP_Familie"}}
 tmap.id: c6529624-105c-439f-ac89-44404d64e481
 type: text/vnd.tiddlywiki
 
-Die vierte Tochter von [[König Horik]] von [[Skadva]] und Braut von [[Ragna]]. Die Vermählung wurde bereits im Kindesalter der beiden organisiert, doch sie entwickelte auch selbst starke Gefühle für [[Ragna]].
+Die einzige Tochter von König [[Sven Sigra]] von [[Vinland]] und Braut von [[Ragna]]. Die Vermählung wurde bereits im Kindesalter der beiden organisiert, doch sie entwickelte auch selbst starke Gefühle für [[Ragna]].
+
+Lagertha wurde in ihrer Kindheit von [[Agin]] in Kampfkunst und sozialem Umgang unterrichtet.
 
 Nach ihrer [[Hochzeit|Jarl Ragna und seine Braut]] wurde Lagartha mit [[Ragna]]s Kind schwanger.
