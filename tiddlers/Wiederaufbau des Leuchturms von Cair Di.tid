@@ -1,16 +1,25 @@
 created: 20240427071711871
-datum: 1351-10-20.1351-10-30
-modified: 20240428185513330
+datum: 1351-10-20.1351-10-30.1351-11-11
+modified: 20241112183943972
 tags: Abenteuer Ereignis [[Haus Kemri]]
 title: Wiederaufbau des Leuchturms von Cair Di
 tmap.id: 170c0f10-204d-483f-9978-eef7ae9f80cd
 type: text/vnd.tiddlywiki
 
-Nach der [[Zerstörung von Teilen|Das Licht des Leuchtturms]] vom [[Leuchtturm von Cair Di]] begann der mühseliger Wiederaufbau. [[Eine sich wandelnde Welt]] machte das Unterfangen mit jedem Tag schwieriger und aus den Schatten griffen bald [[Boten der Nacht]] an. [[Aderyn]] und [[Avalanche]] wurden beauftragt, die Arbeiten zu sichern. [[Actrielle]], auf Durchreise in [[Cair Di]], schloss sich ihnen für einen Monat an und kämpfte Seite an Seite. In dieser Zeit zeigte sich auch [[Yami]] und viele Opfter waren bei den Arbeiten zu beklagen. Am Ende konnte die magische Formation im Leuchtturm aber wieder aufgebaut werden.
+Nach der [[Zerstörung von Teilen|Das Licht des Leuchtturms]] vom [[Leuchtturm von Cair Di]] begann der mühseliger Wiederaufbau. [[Eine sich wandelnde Welt]] machte das Unterfangen mit jedem Tag schwieriger und aus den Schatten griffen bald [[Boten der Nacht]] an. [[Aderyn]] und [[Avalanche]] wurden beauftragt, die Arbeiten zu sichern. [[Actrielle]], auf Durchreise in [[Cair Di]], schloss sich ihnen für einen Monat an und kämpfte Seite an Seite. In dieser Zeit zeigte sich auch [[Yami]] und viele Opfer waren bei den Arbeiten zu beklagen. Am Ende konnte die magische Formation im Leuchtturm aber wieder aufgebaut werden.
 
 Bei der Trauer- und gleichzeitig Dankesfeier sagte [[Lynette Kemri]] zu [[Actrielle]], dass das [[Auge des Lichts]] nun wieder zurück zum Leuchtturm gebracht werden sollte.
 
-@@.tc-tiddler-frame
-@@width:100%;border: 3px solid red;
-Die Abenteurer haben das Auge des Lichts. [[Lynette Kemri]] hat über [[Actrielle]] informiert, dass der Leuchtturm genug Reparaturen erfahren hat und das Auge des Lichts zurückgebracht werden sollte. Als Belohnung sind 5000GP pro Person veranschlagt.
-@@
+---
+
+<b>Jahr:</b> <$macrocall $name="datumlang" datum="1351-11-11"/>
+
+[[Balseth]] und [[Theren]] teleportierten sich nach [[Cair Di]], um das [[Auge des Lichts]] zurückzubringen. Sie fanden die Stadt in Dunkelheit getränkt vor. [[Lynette Kemri]] bat sie, das Artefakt direkt zum Leuchturm zu bringen, da sie Angst um dessen Sicherheit hatte. Die beiden machten sich per Boot auf den Weg zum Leuchtturm und sollten dort [[Nazira]] treffen, die von [[Erin Llyod]] dort hingeschickt worden war. [[Dylan Tydewi]] bgeleitete mit seinen Rittern die Abenteurer, nachdem er die Genehmigung von [[Lynette Kemri]] bekommen hatte.
+
+Die Bootstour verlief ereignislos, allerdings war es unnatürlich still. Der Leuchtturm selbst lag in absoluter Dunkelheit und keine Seele war zu sehen. [[Dylan Tydewi]] bewachte das Boot und den Steg, während die Abenteurer zur Spitze aufbrachen. Sie fanden im Inneren [[Nazira]], die von besessenen Soldaten angegriffen wurde. Die Soldaten wurden bewusstlos geschlagen und [[Nazira]] kümmerte sich um sie, während die Abenteurer weiter vordrangen. Sie wateten durch knietiefe Finsternis und wehrten weitere Angreifer ab, bis sie die Leuchtkammer erreichten. Dort hantierten [[Yami]] und weitere [[Boten der Nacht]] mit einem schwarzen Gebilde, aus dem fast flüssige Finsternis austrat. Es kam zum Kampf und [[Balseth]] und [[Theren]] nutzten jeden Trick, um gegen die übermächtigen Gegner zu bestehen. So schafften sie es, das [[Auge des Lichts]] in den Sockel in der Mitte der Kammer zu bringen und den Leuchtturm zu aktivieren. Das Licht zerstörte das schwarze Gebilde und einige der [[Boten der Nacht]], doch [[Yami]] entkam. Danach schoßen weitere Strahlen in den Himmel und vertrieben die Dunkelheit über [[Cair Di]]. Geschützt durch einen [[Schild|Aegis]] konnte das [[Auge des Lichts]] nun nicht länger entwendet werden und strahlte mit seinem Licht über den Horizont.
+
+<$list filter="[{$:/state/Spieler}] +[compare:string:eq[Theren]]" variable=Theren>
+[[Theren]] fand einen Gegenstand in der Leuchtkammer, zu dem er sich hingezogen fühlte. [[Al]] war sehr an dem Gegenstand interessiert und bot an, [[Theren]] im Gegenzug zu helfen. Das Angebot bestand aber nur, bis [[Der dunkle Turm]] betreten worden würde. Das Artefakt wurde von [[Al]] Herz des Zinnsoldaten genannt. Eine Analyse zeigte, dass das Artefakt eine ähnlich Existenz wie [[Atiesh]] war.
+</$list>
+
+Bei ihrer Rückkehr übergab [[Lynette Kemri]] den Abenteurern ihre verdiente Belohnung und bedankte sich dafür, dass sie [[Cair Di]] geretten hatten. Die Stadt war unter dem Licht des Leuchtturms wiue ausgewechselt und Hoffnung zeigte sich in der Bevölkerung.

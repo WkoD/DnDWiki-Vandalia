@@ -1,6 +1,6 @@
 created: 20220306132719580
-datum: 1351-07-01.1351-07-11.
-modified: 20230926112141660
+datum: 1351-07-01.1351-07-11.1351-11-10.
+modified: 20241112162945685
 tags: Abenteuer Ereignis [[Apostel von Tenebris]]
 title: Der dunkle Turm
 tmap.id: a382b3e1-3a93-49b6-997f-9524c9eac91f
@@ -16,9 +16,13 @@ Bei der Verwendung des Zaubers Scrying gelang [[Theren]] ein Einblick in den dun
 
 Später während einer langen Rast hatte [[Theren]] einen Traum von [[Shinfel Blightsworn]], damals noch in [[Arkhen's Invocatorium]]. Tränen liefen ihr Gesicht herunter und in ihren Armen hielt sie den leblosen Körper eines kleinen Kindes. Schmerz durchzog seinen Kopf, wodurch er aufwachte.
 
+---
+
+<b>Jahr:</b> <$macrocall $name="datumlang" datum="1351-11-10"/>
+
+Die Abenteurer verwendeten den [[Spiegel der Seelen]], um den [[schwarzen Turm|Schwarzer Turm]] zu finden. Das Ritual war kraftraubender als normal, doch [[Frigg]] konnte den Turm nördlich des [[Sichelmondwald]]es finden. Der Turm war allerdings nicht direkt dort, sondern in einer Zwischendimension, so dass er über den normalen Weg nicht zu betreteten war.
+
 @@.tc-tiddler-frame
 @@width:100%;border: 3px solid red;
-Der Standort des dunklen Turms ist immernoch ein Mysterium.
-
 [[Shinfel Blightsworn]] hat das [[Schwert der Sterne]] in Besitz genommen, welches vorher in einem Labor von [[Tyria]] war.
 @@
