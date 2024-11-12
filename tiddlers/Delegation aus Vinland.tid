@@ -1,6 +1,6 @@
 created: 20240501082523128
-datum: 1351-08-15
-modified: 20240501083524048
+datum: 1351-08-15.1351-11-12
+modified: 20241112171125115
 tags: Vinland Nordvolk Abenteuer Ereignis
 title: Delegation aus Vinland
 tmap.id: 703c8fec-5ee4-4557-820a-d698a29f3c30
@@ -16,3 +16,21 @@ Die Hochzeitsgeschenke umfassten:
 * 20 Fässer Met aus den persönlichen Reserven von [[Vinland]].
 
 Nach der Gründung des Triskel-Rates wurde [[Björn Solskin]] ein Platz darin angeboten. [[Björn Solskin]] nahm an und sah darin die Chance, das Zusammenleben in [[Kattegat]] zu beobachten.
+
+---
+
+<b>Jahr:</b> <$macrocall $name="datumlang" datum="1351-11-12"/>
+
+<img src="images\Ereignis\Ankunft aus Vinland.jpg"/>
+
+Einige Monate später folgte [[Sven Sigra]] und die Schamanin [[Revna]] mit Schiffen seiner Flotte, die die [[Frosttrolle|Bewohner des eisigen Nordens]] besiegt hatten. [[Ragna]] und ganz [[Kattegat]] empfingen die Schiffe mit der gebührenden Ehrerbietung, doch kam es zu einem Attentat auf [[Sven Sigra]] von einem seiner eigenen Männer. Das Attentat wurde verhindert und der Attentäter an Ort und Stelle gerichtet. [[Actrielle]] fand ein Armand mit einer Wolfskralle, das Erkennungsmerkmal der Rebellen.
+
+Es folgte ein ausgelassenes Gelage zusammen mit den Bewohnern von [[Kattegat]] und den Neuankömmlingen, unter denen nicht nur [[Nordvolk]], sondern auch weitere [[Bewohner des eisigen Nordens]] waren. [[Sven Sigra]] brachte den Schädel eines Eisriesen mit, als Zeichen der Stärke [[Vinland]]s, sowie Fässer mit Met. Während der Feierlichkeiten fragte er [[Ragna]] und [[Lagertha]] nach dem Zustand von [[Kattegat]] und dem [[Königreich von Vandalia]]. [[Ragna]] erklärte ihm, dass es gute Verbindungen zu [[Haus Alba]] gab und eine friedliche Coexistenz mit dem Königreich bestehe. Sonst hielt er Informationen eher zurück, gerade was das [[Biestvolk]] und andere verborgene Angelegenheiten anging. Es folgten Absprachen zum Handel zwischen [[Kattegat]] (Nahrung, Stoffe, Metalle) und [[Vinland]] (Seltene Rohstoffe, Öl, Alkohol). [[Vinland]] würde Schiffe für den Handel schicken.
+
+Der Besuch währte nur kurz und [[Sven Sigra]], scheinbar zufrieden mit seiner Einschätzung von Jarl [[Ragna]] kehrte an Bord seines Flagschiffs Niddhog und dem Rest seiner Flotte zurück nach [[Vinland]]. [[Björn Solskin]] blieb in [[Kattegat]] als zusätzliche Verbindung zu [[Vinland]].
+
+
+@@.tc-tiddler-frame
+@@width:100%;border: 3px solid red;
+Es scheint Rebellen im Untergrund von [[Vinland]] zu geben, die direkt gegen [[Sven Sigra]] agieren.
+@@

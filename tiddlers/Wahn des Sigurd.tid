@@ -1,7 +1,7 @@
 created: 20230820184239325
-datum: 1329
-modified: 20240320182722781
-tags: Ereignis Nordvolk
+datum: 1329.1351-11-18
+modified: 20241112185732093
+tags: Ereignis Nordvolk Abenteuer
 title: Wahn des Sigurd
 tmap.id: bf1c1232-2dbb-4a01-ade9-f8b085c8e73a
 type: text/vnd.tiddlywiki
@@ -10,7 +10,14 @@ type: text/vnd.tiddlywiki
 
 Die [[Krone des Wahnsinns]] versenkte [[Eoria]] im [[Vandenmeer]], doch durch Zufall oder Schicksal fand sie ihren Weg einige Jahre später in die [[Festung Solis]], die, nach ihrer Versenkung, von [[Tyria]] als Basis benutzt wurde. Sie sollte dort [[weitere Verwendung|Tyrias Forschungsbericht]] finden.
 
-@@.tc-tiddler-frame
-@@width:100%;border: 3px solid red;
-Eoria gab den Standort des Hains an Ragna weiter.
-@@
+---
+
+<b>Jahr:</b> <$macrocall $name="datumlang" datum="1351-11-18"/>
+
+Die Abenteurer betraten den [[Sichelmondwald]] auf der Suche nach dem Hain. Der Wald war in Finsternis getaucht und [[Kipi]]s attackierten aus den Schatten. Mit Mühe erreichten die Abenteurer aber den Hain, der ihnen eine Zuflucht bot.
+
+<img src="images\Ereignis\Hain von Sigurd.jpg"/>
+
+Federn gleiteten sanft zwischen den Bäumen und Tiere trotteten friedlich. Im Hain war [[Sigurd den Okuvliga]] nach alten Gebräuchen vom [[Nordvolk]] begraben. Mittels Magie erweckte [[Ragna]] den Geist seines Vaters, um [[mehr über seien Mutter zu erfahren|Ragnas Geburt]]. Sein Vater gab ihm noch folgendes mit auf den Weg: Götter sind wankemütig und grausam. Niemand kennt ihre Regeln außer ihnen selbst und niemand weiß, wann er gegen ihre Regeln verstoßen hat, außer ihnen selbst. Sollte [[Ragna]] je vor den Göttern stehen, so sollte er auf ihre Füße spucken, für das was sie den Menschen antaten. Und er solle nicht ihren Boten trauen, so war es die oberste [[Valküre|Valküren]], die ihm [[Lena]] und den Verstand nahm. [[Ragna]] schnitzte eine Rune für das Grab seines Vaters.
+
+[[Liiri-Fjorir]] brannte eine Schneise durch den Wald, was den Abenteurern die Rückkehr an den Waldrand ermöglichte.

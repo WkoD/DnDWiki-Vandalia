@@ -1,6 +1,6 @@
 created: 20220306114705967
-datum: 1351-06-28.1351-10-16.
-modified: 20240428190328324
+datum: 1351-06-28.1351-10-16.1351-11-14.
+modified: 20241112184508556
 tags: Abenteuer Ereignis Menzoberranzan
 title: Familie ist immer für dich da
 tmap.id: ec44ac65-08a6-4792-8e94-ba6c0c619dbf
@@ -22,8 +22,17 @@ Um die Bewegung der Dunkelelfen im Auge zu behalten kehrte [[Banbanza]] zu ihnen
 
 In dieser Zeit entschlüsselte [[Theren]] die Schriftrolle, die sie einst [[von den Dunkelelfen erbeutet|Schild der Götter]] hatten. In ihr war ein Plan, einen alten Tempel im Süden vom [[Königreich von Vandalia]] zu besetzten und dort Seelenenergie abzuzapfen. Informationen von [[Banbanza]] und aus [[Tyrias Versteck]] gaben den ungefähren Ort des Tempels preis.
 
+Das Verrsteck der Dunkelelfen befand sich im Süden des Landes.
+
+---
+
+<b>Jahr:</b> <$macrocall $name="datumlang" datum="1351-11-14"/>
+
+Die Abenteurer heuerten die Scouts von [[Avalanche]] an, um die Dunkelelfen zu beschatten. Sie sollten den Tempel ausspähen und die Truppenbewegungen im Auge behalten. Falls nötig sollte auch Sabotage betrieben werden. [[Aderyn]] erklärte sich einverstanden und nahm auch nur Gold für Material, da sie sich in der Schuld der Abenteurer sah, die so abgegolten wurde. Die Scouts erhielten genug Gold für 1 Monat Beschattung und eine Anzahlung für einen zweiten, falls nötig. Über [[Dream]] informierte [[Actrielle]] auch [[Banbanza]] über die Scouts.
 
 @@.tc-tiddler-frame
 @@width:100%;border: 3px solid red;
 Die Dunkelelfen versuchen einen uralten Tempel für ihre Zwecke zu verwenden. Noch brauchen sie einige Zeit, für Vorbereitungen.
+
+Die Scouts von [[Avalanche]] beschatten die Dunkelelfen. Sie sollen nach Truppen ausschau halten und wenn möglich einen Lageplan des Tempels erstellen. Teleportzirkel wären auch gut. Sollte ein Ritual gestartet werden, sollen sie Sabotage betreiben, wenn möglich. Die Scouts agieren in 2 6er Gruppen und haben Message Schriftrollen, um Statusupdates zu geben.
 @@
