@@ -1,6 +1,6 @@
 created: 20220306132719580
-datum: 1351-07-01.1351-07-11.1351-11-10.
-modified: 20241112162945685
+datum: 1351-07-01.1351-07-11.1351-11-10.1351-11-20.
+modified: 20241121182609312
 tags: Abenteuer Ereignis [[Apostel von Tenebris]]
 title: Der dunkle Turm
 tmap.id: a382b3e1-3a93-49b6-997f-9524c9eac91f
@@ -21,6 +21,16 @@ Später während einer langen Rast hatte [[Theren]] einen Traum von [[Shinfel Bl
 <b>Jahr:</b> <$macrocall $name="datumlang" datum="1351-11-10"/>
 
 Die Abenteurer verwendeten den [[Spiegel der Seelen]], um den [[schwarzen Turm|Schwarzer Turm]] zu finden. Das Ritual war kraftraubender als normal, doch [[Frigg]] konnte den Turm nördlich des [[Sichelmondwald]]es finden. Der Turm war allerdings nicht direkt dort, sondern in einer Zwischendimension, so dass er über den normalen Weg nicht zu betreteten war.
+
+---
+
+<b>Jahr:</b> <$macrocall $name="datumlang" datum="1351-11-10"/>
+
+Die Abenteurer erreichten zusammen mit den [[Mondwächter]]n den richtigen Ort. [[Tiris]] fing ein Ritual an, um mit Hilfe des Mondes eine Brücke zum Turm zu schlagen, der in einer Zwischenebene sonst unerreichbar war. Die Macht des Rituals erweckte untote Körper, von denen ein [[violettes Licht|Meteor von Tenebris]] ausging. Sie wehrten mehrer Wellen der Untoten ab und erhielten unerwartet Unterstützung von [[Ramscha]] und einer Gruppe von verzauberten Wildschweinen. Als der Spalt groß genug war, schickten die [[Mondwächter]] die Abenteurer hindurch und blieben zurück, [[Tiris]] bis dahin zu schützen. 
+
+In der Zwischendimension fanden die Abenteurer den [[schwarzen Turm|Zitadelle der Schatten]], in einem Feld aus knöchrigen Bäumen. Die Bäume stellten sich bei näherem Hinsehen als Überreste von erstarrten Skeletten dar, die langsam zu Staub zerfielen, davor aber auch [[violettes Licht|Meteor von Tenebris]]  von sich gaben.
+
+TBC
 
 @@.tc-tiddler-frame
 @@width:100%;border: 3px solid red;

@@ -1,6 +1,6 @@
 created: 20220306140820397
-datum: 1350-12-27.1351-06-23.1351-07-01.1351-11-10.
-modified: 20241112195042295
+datum: 1350-12-27.1351-06-23.1351-07-01.1351-11-10.1351-11-19.
+modified: 20241121182156033
 tags: Abenteuer Ereignis Mondwächter
 title: Suche nach Kaguya
 tmap.id: ca690e7a-0270-4d58-b7f2-4b6de209fd8f
@@ -28,13 +28,21 @@ Mit dem Zauber Scrying versuchte [[Theren]] [[Kaguya]]s Aufenthaltsort ausfindig
 
 Die [[Mondwächter]] [[Bronn]], [[Tiris]] und [[Pepo]] suchten lange vergeblich nach Spuren, die zu [[Kaguya]] führten. Dann aber bekamen sie einen Hinweis auf einen Entführungsring nahe [[Cair Di]]. Sie infiltrierten den Unterschlupf und trafen dort auf einen Mann namens [[Ibis]] und seine Anhänger. Dieser bestätigte, dass er [[Kaguya]] entführt, aber auch bereits an [[Tyria]] weitergegeben hatte. [[Ibis]] unterbrach den Dialog und murmelte etwas von dem Tod von [[Tyria]], bevor er per Teleportzirkel verschwand. Die [[Mondwächter]], gefangen in einer paralysiernden Falle, wurden von [[Ki-Ra]] befreit und kämpften gegen die Anhänger vn [[Ibis]]. Leider konnten sie ihn danach aber nicht mehr Einholen, da der Teleportzirkel zerstört wurde. Ohne weitere Anhaltspunkte folgten sie [[Ki-Ra]] zum [[Biestvolk]], in der Hoffnung, neue Spuren zu finden.
 
+Im Unterschlupf fanden sie ein Buch, welches Namen und Beschreibungen von vielen Kindern enthielt. Dazu war ein kryptischer, nummerischer Wert. Viele Kinder hatten nur einstellige Werte, ein paar gingen aber auch bis in die 50iger. Herausstach ein Kind, das vermutlich [[Kaguya]] war, dessen Wert bei 99 lag.
+
 ---
 
 <b>Jahr:</b> <$macrocall $name="datumlang" datum="1351-11-10"/>
 
-Mit dem [[Spiegel der Seelen]] konnten die Abenteurer ein geheimes Gefängnis in den Klippen nördlich der [[Hauptstadt Vandalia]] finden, wo [[Kaguya]] gefangen gehalten wurde.
+Mit dem [[Spiegel der Seelen]] konnten die Abenteurer ein [[geheimes Gefängnis|Gefängnis der schwarzen Sonne]] in den Klippen nördlich der [[Hauptstadt Vandalia]] finden, wo [[Kaguya]] gefangen gehalten wurde.
+
+---
+
+<b>Jahr:</b> <$macrocall $name="datumlang" datum="1351-11-10"/>
+
+[[Li-Ta]] hatte den [[Biestkönig]] Shu von der Suche nach dem [[geheimen Gefängnis|Gefängnis der schwarzen Sonne]] unterrichtet und er gab den Abenteurern alte, aber durchaus brauchbare Pläne der Struktur. Auch gab er ihnen ein Erkennungsmerkmal, sollten sie dort auf Gefangene vom [[Biestvolk]] treffen. [[Im Lager vom Biestkönig|Der falsche König]] trafen die Abenteurer auch auf die [[Mondwächter]]. [[Tiris]] erzählte von einer Vision, dass wenn sie mit dem [[dunklen Turm|Der dunkle Turm]] helfen würde, im Gegenzug [[Kaguya]] geholfen werden würde. Zusammen zogen sie weiter.
 
 @@.tc-tiddler-frame
 @@width:100%;border: 3px solid red;
-[[Kaguya]] wurde entführt und [[Bronn]], [[Tiris]] und [[Pepo]] suchen nach ihr.
+[[Bronn]], [[Tiris]] und [[Pepo]] unterstützen die Abenteurer beim [[dunklen Turm|Der dunkle Turm]] und erhalten danach Unterstützung bei [[Kaguya]]s Befreiung.
 @@

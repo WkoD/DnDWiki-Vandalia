@@ -1,6 +1,6 @@
 created: 20220218143034816
-datum: 1351-06-27.
-modified: 20220218143423584
+datum: 1351-06-27.1351-11-19.
+modified: 20241121180949178
 tags: Abenteuer Ereignis [[Königreich von Vandalia]]
 title: Der falsche König
 tmap.id: aa2bd904-be48-46c0-ae55-64aaa7390066
@@ -8,7 +8,19 @@ type: text/vnd.tiddlywiki
 
 Die Abenteurer erfuhren von [[Eoria]], dass es scheinbar einen falschen König gebe. Im [[Verhör von Geron|Das Ende der Jagd]] wurden die Hinweise konkreter, dass [[Catarina Langley]] dahinter stecken könnte.
 
+---
+
+<b>Jahr:</b> <$macrocall $name="datumlang" datum="1351-11-19"/>
+
+Am Rand des [[Sichelmondwald]]es trafen die Abenteurer auf einen Trupp vom [[Biestvolk]]. [[Li-Ta]] erkannte sie und brachte sie zum Anführer der Truppe, dem [[Biestkönig]] Shu. Dieser begrüßte die Abenteurer und dankte ihnen für die [[vergangene Rettung|Einreise am Kahla-Grenzposten]] von [[Li-Ta]].
+
+[[Biestkönig]] Shu erzählte von seinen Plänen, die [[Hauptstadt Vandalia]] anzugreifen, und bezeichnete den [[aktuellen König als Hochstapler|Der falsche König]]. Er erzählte, dass der wahre König mit seiner gesamten Familie [[beim Attentat umkam|Attentat auf den König]]. Er vermutete den falschen König oder Personen in seinem Umfeld auch hinter der Dunkelheit, die sich über das Land ausbreitete und wollte weiteren Schaden der Bevölkerung verhindern.
+
+Die Abenteurer informierten Shu über mögliche Personen in den Schatten, die den König vielleicht ausnutzten, darunter auch [[Catarina Langley]].
+
 @@.tc-tiddler-frame
 @@width:100%;border: 3px solid red;
-Ist [[Catarina Langley]] der falsche König und manipuliert das [[Königreich von Vandalia]]?
+[[Biestkönig]] Shu bezeichnet den König als Hochstapler, manipuliert [[Catarina Langley]] das [[Königreich von Vandalia]] aus den Schatten?
+
+[[Biestkönig]] Shu wird im zwölften Monat einen Angriff auf die [[Hauptstadt Vandalia]] starten.
 @@
