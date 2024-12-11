@@ -3,7 +3,7 @@ created: 20200308203715844
 modified: 20220806083624337
 tags: Person [[Arkhen's Invocatorium]]
 title: Jelena Umbra
-tmap.edges: {"bfdeb646-d983-4592-83ac-6a72935ecd72":{"to":"490fe1f0-a0d3-448a-9417-15e4c2d37a8c","type":"OP_Mitglied"},"bfb299da-da72-491d-803f-9f7e620d1ee6":{"to":"887c6742-92de-4cce-bfbf-2bb52260fc64","type":"unknown"}}
+tmap.edges: {"bfdeb646-d983-4592-83ac-6a72935ecd72":{"to":"490fe1f0-a0d3-448a-9417-15e4c2d37a8c","type":"OP_Mitglied"},"bfb299da-da72-491d-803f-9f7e620d1ee6":{"to":"887c6742-92de-4cce-bfbf-2bb52260fc64","type":"unknown"},"273b1d38-1294-4d1a-af70-69e960984777":{"to":"0cd9694c-3472-4e01-a02e-b6c78fb30237","type":"OP_Mitglied"}}
 tmap.id: 8b5a79c1-c362-4d8e-a4fd-c128b30c3874
 type: text/vnd.tiddlywiki
 
