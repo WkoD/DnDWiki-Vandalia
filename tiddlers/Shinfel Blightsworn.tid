@@ -1,6 +1,6 @@
-bild: Shinfel (portrait).png
+bild: Shinfel (masked).png,Shinfel (portrait).png
 created: 20180919172243812
-modified: 20200729105114515
+modified: 20241219083400865
 tags: [[Arkhen's Invocatorium]] Person [[Apostel von Tenebris]]
 title: Shinfel Blightsworn
 tmap.edges: {"c6cf5917-e7e4-4d09-bce0-c936edb933e4":{"to":"d2b9dc5b-5f54-4d79-8a14-c92569049961","type":"OP_Mitglied"},"e4df231c-e32c-4e63-9a3a-d374a18e3013":{"to":"490fe1f0-a0d3-448a-9417-15e4c2d37a8c","type":"OP_Mitglied_Ehem"},"660e423a-000c-4718-9c12-ba783bdc8205":{"to":"c8085ff6-fa6e-4ae4-8aa4-a87815d510ed","type":"PP_Bund"}}
