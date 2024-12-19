@@ -3,7 +3,7 @@ created: 20180919172243812
 modified: 20241219083400865
 tags: [[Arkhen's Invocatorium]] Person [[Apostel von Tenebris]]
 title: Shinfel Blightsworn
-tmap.edges: {"c6cf5917-e7e4-4d09-bce0-c936edb933e4":{"to":"d2b9dc5b-5f54-4d79-8a14-c92569049961","type":"OP_Mitglied"},"e4df231c-e32c-4e63-9a3a-d374a18e3013":{"to":"490fe1f0-a0d3-448a-9417-15e4c2d37a8c","type":"OP_Mitglied_Ehem"},"660e423a-000c-4718-9c12-ba783bdc8205":{"to":"c8085ff6-fa6e-4ae4-8aa4-a87815d510ed","type":"PP_Bund"}}
+tmap.edges: {"c6cf5917-e7e4-4d09-bce0-c936edb933e4":{"to":"d2b9dc5b-5f54-4d79-8a14-c92569049961","type":"OP_Mitglied"},"e4df231c-e32c-4e63-9a3a-d374a18e3013":{"to":"490fe1f0-a0d3-448a-9417-15e4c2d37a8c","type":"OP_Mitglied_Ehem"},"0592b27d-4914-47f6-b607-d4f4c4351773":{"to":"437f3518-eb08-425d-b012-2ba29217d424","type":"OP_Mitglied_Ehem"}}
 tmap.id: e3162179-21fe-4486-87e8-83663c2c027b
 type: text/vnd.tiddlywiki
 

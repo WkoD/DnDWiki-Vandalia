@@ -1,6 +1,6 @@
 created: 20220306132719580
 datum: 1351-07-01.1351-07-11.1351-11-10.1351-11-20.
-modified: 20241121182609312
+modified: 20241219194828145
 tags: Abenteuer Ereignis [[Apostel von Tenebris]]
 title: Der dunkle Turm
 tmap.id: a382b3e1-3a93-49b6-997f-9524c9eac91f
@@ -26,11 +26,21 @@ Die Abenteurer verwendeten den [[Spiegel der Seelen]], um den [[schwarzen Turm|S
 
 <b>Jahr:</b> <$macrocall $name="datumlang" datum="1351-11-10"/>
 
-Die Abenteurer erreichten zusammen mit den [[Mondwächter]]n den richtigen Ort. [[Tiris]] fing ein Ritual an, um mit Hilfe des Mondes eine Brücke zum Turm zu schlagen, der in einer Zwischenebene sonst unerreichbar war. Die Macht des Rituals erweckte untote Körper, von denen ein [[violettes Licht|Meteor von Tenebris]] ausging. Sie wehrten mehrer Wellen der Untoten ab und erhielten unerwartet Unterstützung von [[Ramscha]] und einer Gruppe von verzauberten Wildschweinen. Als der Spalt groß genug war, schickten die [[Mondwächter]] die Abenteurer hindurch und blieben zurück, [[Tiris]] bis dahin zu schützen. 
+<$list filter="[{$:/state/Spieler}] +[compare:string:eq[Theren]]" variable=Theren>
+[[Al]] schloss einen Handel mit [[Theren]]. Im Gegenzug für die Kontrolle über das Herz des Zinnsoldaten gab [[Al]] Wissen über das [[Seelenprisma]]. Kurz darauf meldete sich [[Abigal Davenlow]] und berichtete von einem Durchbruch. Ein Prototyp sollte in wenigen Wochen bereitstehen.
+</$list>
 
-In der Zwischendimension fanden die Abenteurer den [[schwarzen Turm|Zitadelle der Schatten]], in einem Feld aus knöchrigen Bäumen. Die Bäume stellten sich bei näherem Hinsehen als Überreste von erstarrten Skeletten dar, die langsam zu Staub zerfielen, davor aber auch [[violettes Licht|Meteor von Tenebris]]  von sich gaben.
+Die Abenteurer erreichten zusammen mit den [[Mondwächter]]n den richtigen Ort. [[Tiris]] fing ein Ritual an, um mit Hilfe des Mondes eine Brücke zum Turm zu schlagen, der in einer Zwischenebene sonst unerreichbar war. Die Macht des Rituals erweckte untote Körper, von denen ein [[violettes Licht|Meteor von Tenebris]] ausging. Sie wehrten mehrer Wellen der Untoten ab und erhielten unerwartet Unterstützung von [[Ramscha]] und einer Gruppe von verzauberten Wildschweinen. Als der Spalt groß genug war, schickten die [[Mondwächter]] die Abenteurer hindurch und blieben zurück, [[Tiris]] zu schützen. 
 
-TBC
+In der Zwischendimension fanden die Abenteurer den [[schwarzen Turm|Zitadelle der Schatten]], in einem Feld aus knöchrigen Bäumen. Die Bäume stellten sich bei näherem Hinsehen als Überreste von erstarrten Skeletten dar, die langsam zu Staub zerfielen, davor aber auch [[violettes Licht|Meteor von Tenebris]] von sich gaben.
+
+[[Demos]] begrüßte die Abenteurer am Eingang des Turms und ließ sie hinein. [[Demos]] war ein Konstrukt, dass den Turm verwaltete, und seine aktuelle Meisterin [[Shinfel Blightsworn]] hatte ihm den Befehl gegeben, [[Theren]] und seine Gefährten hineinzulassen. Die Abenteurer durften sich frei bewegen, solange sie im unteren Bereich des Turms blieben. Sie fanden dort einen gigantischen [[leuchtenden Amethysten|Meteor von Tenebris]] vor, verstärkt durch [[Magisches Holz]]. Im Turm fanden sich auch Konstrukte von [[Nicol Bolas]] (Wissen über Barrieremagie), [[Liliana Vess]] (Wissen über die Untoten des Turms) und [[Aria Velka]] (Wissen über Energietransfer). [[Shinfel Blightsworn]] hatte sie erschaffen, um ihr bei ihrer Arbeit zu helfen. Schließlich zeigte [[Demos]] eine Aufzeichnung, die [[Shinfel Blightsworn]] bei der [[Durchführung ihres Experimentes|Adrias Geburt]] zeigte. Sie hatte alles aufgezeichnet, um [[Theren]] damit zu konfrontieren. Ausgelöst dadurch schaltete sich ein Teil der Erinnerung von [[Theren]] frei oder jedenfalls von einem früheren [[Theren]]. Sie zeigten eine alternative Vergangenheit, in der er mit [[Shinfel Blightsworn]] zusammengekommen war und sie ein gemeinsames Kind hatten. Das Kind starb aber durch [[eine Krankheit, die die beiden bei ihren Experimenten unwissentlich ausgelöst|Shinfels Verschwinden]] hatten. Der alte [[Theren]] konnte [[Shinfel Blightsworn]] aus dieser Trauer nicht herausziehen und sie verkaufte ihre Seele. Der alte [[Theren]] erkannte zu spät, was passiert war, und so wandte auch er sich an den [[Fiend|Adria]]. Durch einen Trick gelang es ihm aber, [[Zeit herauszuholen|Therens Verbannung]]. Danach [[schickte er sich selbst los|Untergang der Cirdan]], [[Shinfel Blightsworn]] doch noch irgendwie zu retten.
+
+[[Os]] war ebenfalls im Turm, er hatte [[Shinfel Blightsworn]] den Ort vom [[Schwert der Sterne]] verraten und half, die untoten Horden vor dem Turm dauerhaft zu befrieden. Im Gegenzug hatte er den Schädel vom letzten [[Nar-Belath]] erhalten.
+
+Auf Drängen des [[Fiends|Adria]] fasste [[Theren]] die Entscheidung, sich nicht zu entscheiden und er gab weder seine Seele auf, noch die von [[Shinfel Blightsworn]]. Das verärgerte den [[Fiend|Adria]] und er legte seine Kräfte auf Eis.
+
+Die Abenteurer erkannten, dass sie zu spät waren und [[Shinfel Blightsworn]] hatte ihr [[Ziel bereits erreicht|Adrias Geburt]]. TBC
 
 @@.tc-tiddler-frame
 @@width:100%;border: 3px solid red;
