@@ -1,7 +1,7 @@
 created: 20220306140820397
-datum: 1350-12-27.1351-06-23.1351-07-01.1351-11-10.1351-11-19.
-modified: 20241121182156033
-tags: Abenteuer Ereignis Mondwächter
+datum: 1350-12-27.1351-06-23.1351-07-01.1351-11-10.1351-11-19.1351-11-24
+modified: 20250609193435779
+tags: Abenteuer Ereignis Mondwächter [[Ritter der schwarzen Sonne]] [[Apostel von Tenebris]]
 title: Suche nach Kaguya
 tmap.id: ca690e7a-0270-4d58-b7f2-4b6de209fd8f
 type: text/vnd.tiddlywiki
@@ -38,11 +38,20 @@ Mit dem [[Spiegel der Seelen]] konnten die Abenteurer ein [[geheimes Gefängnis|
 
 ---
 
-<b>Jahr:</b> <$macrocall $name="datumlang" datum="1351-11-10"/>
+<b>Jahr:</b> <$macrocall $name="datumlang" datum="1351-11-19"/>
 
 [[Li-Ta]] hatte den [[Biestkönig]] Shu von der Suche nach dem [[geheimen Gefängnis|Gefängnis der schwarzen Sonne]] unterrichtet und er gab den Abenteurern alte, aber durchaus brauchbare Pläne der Struktur. Auch gab er ihnen ein Erkennungsmerkmal, sollten sie dort auf Gefangene vom [[Biestvolk]] treffen. [[Im Lager vom Biestkönig|Der falsche König]] trafen die Abenteurer auch auf die [[Mondwächter]]. [[Tiris]] erzählte von einer Vision, dass wenn sie mit dem [[dunklen Turm|Der dunkle Turm]] helfen würde, im Gegenzug [[Kaguya]] geholfen werden würde. Zusammen zogen sie weiter.
 
-@@.tc-tiddler-frame
-@@width:100%;border: 3px solid red;
-[[Bronn]], [[Tiris]] und [[Pepo]] unterstützen die Abenteurer beim [[dunklen Turm|Der dunkle Turm]] und erhalten danach Unterstützung bei [[Kaguya]]s Befreiung.
-@@
+---
+
+<b>Jahr:</b> <$macrocall $name="datumlang" datum="1351-11-24"/>
+
+Die Abenteurer reisten zu dem Punkt, den der [[Spiegel der Seelen]] als geheimes [[Gefängnis der schwarzen Sonne]] gezeigt hatte. Mit den alten Bauplänen vom [[Biestkönig]] konnten sie sich unentdeckt durch einen geheimen Gang reinschleichen und viele der Wachen unschädlich machen. Der Hauptmann des Gefängnisses [[Micheal Aurelius]] durchschaute aber ihre Tarnung und es kam zum Kampf, aus dem die Abenteurer siegreich hervor gingen. Die [[Ritter der schwarzen Sonne]] gaben dabei keine Informationen preis, doch gab es einiges von den Gefangenen zu hören.
+
+Unter den Gefangenen war der ehemalige [[Großkanzler Rotterdam]], der einiges zum Königreich sagen konnte. Begleitet von [[Actrielle]] und [[Ragna]] machte er sich auf den Weg nach [[Dun Eidean]], um den Bürgerkrieg zu beenden. Er hoffte, dass Baron [[Robert Alba]] ihm dabei helfen könnte, Vernunft in den König zu bekommen.
+
+Auch konnte [[Kaguya]] gerettet werden, die mehr zu den [[Hintergründen der Schamaninnen|Die erste Walpurgisnacht]] und [[ihrer Herkunft|Kaguyas Geburt]] veriet. [[Kaguya]] nahm eine weitere Gefangene [[Lucy]] auf und beide machten sich auf, die Dunkelheit zu finden, die die Schamaninnen kontrollierte. Die Mondwächter, geschockt über [[Kaguya]]s wahre Herkunft, hielten doch zu ihr und begleiteten die beiden.
+
+Der befreite [[Nichny]] Krieger [[Nu-Han]] nahm die übrigen Gefangenen, darunter der ehemalige General Arnold Armstrong und weitere in Ungnade gefallene Adlige und unliebsame Gelehrte in Richtung [[Biestvolk]], um sie in Sicherheit zu bringen. 
+
+[[Balseth]] und [[Theren]] versuchten derweil in [[Baile]] das Logbuch von [[Micheal Aurelius]] zu entschlüsseln, um mehr Informationen über die [[Ritter der schwarzen Sonne]] zu bekommen.

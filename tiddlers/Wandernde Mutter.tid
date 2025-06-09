@@ -1,7 +1,7 @@
 created: 20240501095651880
-datum: 1351-11-01
-modified: 20240501101812641
-tags: Ereignis
+datum: 1351-11-01.1351-11-23.
+modified: 20250609190752779
+tags: Ereignis Abenteuer
 title: Wandernde Mutter
 tmap.id: cd3f1e16-0eb2-46a2-9763-8080d0726bcd
 type: text/vnd.tiddlywiki
@@ -10,7 +10,15 @@ Die Abenteurer hörten Gerüchte über eine Heilerin, die im Dorf [[Gallaibh]] g
 
 Das Dorf wurde wenige Wochen zurvor von einer unbekannten Krankheit heimgesucht, doch die Heilerin konnte helfen, als alle anderen schon aufgegeben hatten. Seither fühlten sich die Bewohner auch stärker als je zu vor und blickten selbst in diesen unklaren Zeiten hoffnungsvoll in die Zukunft.
 
+----
+
+<b>Jahr:</b> <$macrocall $name="datumlang" datum="1351-11-23"/>
+
+Auf dem Weg zum geheimen Gefängnis der [[Ritter der schwarzen Sonne]] trafen die Abenteurer auf [[Lurea]], [[Yagak]] und [[Anyoo]] am Dorf [[Twisla]], unweit der [[Hauptstadt Vandalia]]. Die drei waren zusammen unterwegs, zu Reisen, Schnappszutaten zu besorgen bzw. Mineralien für Magie zu finden. Das Dorf kam ihnen merkwürdig vor und die Abenteurer beschlossen, das näher zu untersuchen. Die Einwohner des Dorfes waren unnatürlich fröhlich gestimmt und furchtlos, verglichen mit dem Rest vom [[Königreich von Vandalia]]. Körperlich überragend fit, keine Anzeichen von Krankheiten und sogar Feldanbau mittem im Winter. Die Abenteurer wurden freundlich empfangen und erfuhren, dass die Bewohner alles der wandernden Mutter zu verdanken hatten. Einige Nachfragen zeigten, dass es sich um [[Shinfel Blightsworn]] handelte, die zusammen mit einem [[kleinen Mädchen|Adria]] mitte des 10ten Monats im Dorf erschienen. Die Bewohner waren am Ende, doch Kräutertinkturen und neue Ideen der Landwirtschaft drängten Krankheit und Elend zurück. Die wandernde Mutter verweilte nur kurz und verließ das Dorf, als es bergauf ging. Die Bewohner sahen sich auch nach ihrer Abreise noch immer in ihrer Schuld.
+
+Die Abenteurer informierten ihre Verbündeten über die wandernde Mutter.
+
 @@.tc-tiddler-frame
 @@width:100%;border: 3px solid red;
-Wer ist diese Heilerin?
+[[Shinfel Blightsworn]] wandert mit einem [[kleinen Mädchen|Adria]] durch die Dörfer und scheint ihnen zu helfen.
 @@
