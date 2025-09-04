@@ -1,6 +1,6 @@
 created: 20220306114705967
-datum: 1351-06-28.1351-10-16.1351-11-14.
-modified: 20241112184508556
+datum: 1351-06-28.1351-10-16.1351-11-14.1351-11-26.
+modified: 20250904144100342
 tags: Abenteuer Ereignis Menzoberranzan
 title: Familie ist immer für dich da
 tmap.id: ec44ac65-08a6-4792-8e94-ba6c0c619dbf
@@ -14,7 +14,7 @@ Bei ihrer [[Flucht|Das Ende der Jagd]] aus [[Dun Eidean]] erhielten die Abenteur
 
 Um die Bewegung der Dunkelelfen im Auge zu behalten kehrte [[Banbanza]] zu ihnen zurück. Mit Beweisen einer erfolglosen Verfolgung der Abenteurer und einigen Sending Schriftrollen zur Kommunikation machte er sich auf den Weg.
 
----
+----
 
 <b>Jahr:</b> <$macrocall $name="datumlang" datum="1351-10-16"/>
 
@@ -24,11 +24,17 @@ In dieser Zeit entschlüsselte [[Theren]] die Schriftrolle, die sie einst [[von 
 
 Das Verrsteck der Dunkelelfen befand sich im Süden des Landes.
 
----
+----
 
 <b>Jahr:</b> <$macrocall $name="datumlang" datum="1351-11-14"/>
 
 Die Abenteurer heuerten die Scouts von [[Avalanche]] an, um die Dunkelelfen zu beschatten. Sie sollten den Tempel ausspähen und die Truppenbewegungen im Auge behalten. Falls nötig sollte auch Sabotage betrieben werden. [[Aderyn]] erklärte sich einverstanden und nahm auch nur Gold für Material, da sie sich in der Schuld der Abenteurer sah, die so abgegolten wurde. Die Scouts erhielten genug Gold für 1 Monat Beschattung und eine Anzahlung für einen zweiten, falls nötig. Über [[Dream]] informierte [[Actrielle]] auch [[Banbanza]] über die Scouts.
+
+----
+
+<b>Jahr:</b> <$macrocall $name="datumlang" datum="1351-11-26"/>
+
+[[Avalanche]] meldete sich mit neuen Informationen über die Dunkelelfen. Leider kamen die Scouts zu spät, den Tempel zu infiltrieren, und so war der Ritualstatus unbekannt. Die Matronmutter [[Azurna]] wurde nicht gesichtet, doch waren der [[Orden der Wut]] anwesend. Immer wieedr konnten sie auch Unstimmigkeiten zwischen den Dunkelelfen beobachten, was eventuell zu einem Schlagabtausch von Fraktionen innerhalb der Reihen führen könnte. Im nächsten Schritt wollten die Scouts einen der immer wieder vorkommenden Transporte vom Versteck der Dunkelelfen überfallen und das transportierte Material untersuchen. [[Actrielle]] rieht aber von diesem Schritt ab.
 
 @@.tc-tiddler-frame
 @@width:100%;border: 3px solid red;
