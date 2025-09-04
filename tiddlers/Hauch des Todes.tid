@@ -1,6 +1,6 @@
 created: 20191004124948628
-datum: 1350-12-19.1351-08-09
-modified: 20240304154119980
+datum: 1350-12-19.1351-08-09.1351-11-26.
+modified: 20250904140439229
 tags: [[Königreich von Vandalia]] Ereignis Abenteuer
 title: Hauch des Todes
 tmap.id: cef88325-f57b-4046-a1a5-56a81b171a37
@@ -18,7 +18,13 @@ Die Abenteurer berichteten [[Ki-Ra]] dann später, dass [[Valindra]] keine Spion
 
 [[Valindra]] tauchte in [[Tyrias Versteck]] erneut auf. Sie hatte sich dem Körper einer [[Sjach]] Drudin bemächtigt und konnte so unbemerkt mit den Abenteurern reisen. Zusammen mit [[Liiri-Einn]] und einigen Büchern verschwand sie.
 
+----
+
+<b>Jahr:</b> <$macrocall $name="datumlang" datum="1351-11-26"/>
+
+Mit einem unerwarteten Sending von [[Sakur]] an [[Balseth]] trauchte [[Valindra]] wieder auf. Sie wartete in einem von [[Tyria]]s versteckten Laboren, als [[Sakur]] und einige andere [[Sjach]] dieses am nordöstlichen Rand vom [[Brimsee]] fanden. Über [[Sakur]] ließ [[Valindra]] eine Nachricht an die Abenteurer kommen. Sie brauchte Hilfe im Kampf gegen Dunkelelfen, die einen Tempel im Süden vom [[Königreich von Vandalia]] und bot dafür das intakte Labor an. Auf die Frage, warum die Abenteurer helfen sollten, kam von ihr, dass sie ein gemeinsames Interesse sah, war doch ein Mitglied der Abenteurer selbst eine Dunkelelfe. [[Balseth]] antwortete, dass die Abenteurer sich auf den Weg machen würden, nachdem sie [[Tyrias Versteck]] aufgesucht hatten.
+
 @@.tc-tiddler-frame
 @@width:100%;border: 3px solid red;
-Der Verbleib von [[Valindra]] ist ungewiss.
+[[Valindra]] wartet in einem von Tyrias Laboren auf die Ankunft der Abenteurer. [[Sakur]] befindet sich dort und beobachtet das ganze.
 @@
