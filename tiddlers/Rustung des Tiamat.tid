@@ -1,6 +1,6 @@
 created: 20190131090020423
 datum: 850
-modified: 20250904150217788
+modified: 20250918193958990
 person: Balseth
 schoepfer: Sjach,Haus Eiree
 tags: Sjach Artefakt
@@ -28,4 +28,7 @@ Ein schwarzer Brustpanzer (Splint +1), der mit Symbolen om Kriegerklan der [[Sja
 
 Die Axt ist Teil der Rüstung und durch sie fließt die selbe Energie.
 
-TBC
+@@.tc-tiddler-frame
+@@width:100%;border: 3px solid red;
+Balor kennt den Verbleib vom letzten Teil der Rüstung.
+@@
