@@ -7,29 +7,30 @@ jobs:
   repo-merge:
     if: github.repository != 'WkoD/DnDWiki'
     runs-on: ubuntu-latest
-    
+
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@v4
       with:
         ref: master
         fetch-depth: 0
-    - name: merge master
+    - name: Sync technical layer from base
       run: |
         git config user.name "$GITHUB_ACTOR"
         git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
         git remote set-url origin 'https://WkoD:${{ secrets.DISPATCH_PAT }}@github.com/${{ github.repository }}.git'
-        git checkout master
-        git pull 'https://github.com/WkoD/DnDWiki.git' master -X theirs --allow-unrelated-histories
+        git fetch 'https://github.com/WkoD/DnDWiki.git' master
+        # System-Layer exakt uebernehmen (inkl. Loeschungen von $-Tiddlern)
+        git rm -r --quiet --ignore-unmatch ':(glob)tiddlers/$*'
+        # Base-Tiddler (System + Template-Hubs) uebernehmen, aber die 4 fork-eigenen Datendateien AUSNEHMEN
+        git checkout FETCH_HEAD -- tiddlers \
+          ':(exclude)tiddlers/Datum.tid' \
+          ':(exclude)tiddlers/Erfahrungspunkte.tid' \
+          ':(exclude)tiddlers/Spieler.tid' \
+          ':(exclude)tiddlers/TBC_Abenteuer.tid' \
+          tiddlywiki.info .github CLAUDE.md
+        git diff --cached --quiet || git commit -m "Sync technische Schicht von DnDWiki-Base"
         git push origin master
-    - name: merge draft
-      run: |
-        git config user.name "$GITHUB_ACTOR"
-        git config user.email
-        git remote set-url origin 'https://WkoD:${{ secrets.DISPATCH_PAT }}@github.com/${{ github.repository }}.git'
-        git checkout draft
-        git pull 'https://github.com/WkoD/DnDWiki.git' draft -X theirs --allow-unrelated-histories
-        git push origin draft
-    - name: Dispatch to master
+    - name: Dispatch build
       run: |
         curl -X POST \
         "https://api.github.com/repos/${{ github.repository }}/actions/workflows/npm-build-pages.yml/dispatches" \
