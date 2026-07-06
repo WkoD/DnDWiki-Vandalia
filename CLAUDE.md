@@ -89,6 +89,10 @@ Jeder Tiddler bekommt typischerweise zwei Arten von Tags:
 
 `tiddlywiki/tiddlyweb`, `tiddlywiki/filesystem`, `tiddlywiki/highlight`, `felixhayashi/tiddlymap` (Beziehungsgraph/Karten-Ansicht, genutzt über `tmap.id`/`tmap.edges`), `felixhayashi/hotzone`, `felixhayashi/topstoryview`, `flibbles/vis-network`. Themes: `tiddlywiki/vanilla`, `tiddlywiki/snowwhite`.
 
+### Dev-Server-Plugin (`$:/plugins/wkod/staticfiles`)
+
+Wiki-lokales Server-Plugin (Datei `tiddlers/$__plugins_wkod_staticfiles.tid`, Feld `platform: server`) mit einem `module-type: route`-Modul, das im `--listen`-Node-Server die Ordner `images/` und `data/` unter `/images/…` bzw. `/data/…` ausliefert (mit `..`-Traversal-Schutz). Nötig, damit die relativen `[img[images/…]]`-Pfade aus dem `bild`-Makro **im lokalen Server** Bilder zeigen — der Standard-Server bedient sonst nur `/files/`. Durch `platform: server` schließt TiddlyWikis Offline-Save-Filter (`-[has[plugin-type]field:platform[server]]`) das Plugin **aus dem Build (`index.html`) aus**: die gebaute/deployte Seite bleibt unverändert (dort liegt `images/` ohnehin neben `index.html`). Reines Dev-Hilfsmittel, keine Wirkung im Browser/Build.
+
 ### Eigene Erweiterungen (`$:/_my/...`)
 
 Im Namespace `$:/_my/` (Dateien `$___my_*`):
