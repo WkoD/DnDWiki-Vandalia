@@ -1,13 +1,15 @@
 {
-    "description": "Basic client-server edition",
+    "description": "DnDWiki – Kampagnen-Vorlage (Client-Server). Formatschicht + Plugins kommen aus TiddlyDnD-Plugins (TIDDLYWIKI_PLUGIN_PATH).",
     "plugins": [
         "tiddlywiki/tiddlyweb",
         "tiddlywiki/filesystem",
         "tiddlywiki/highlight",
-		"felixhayashi/tiddlymap",
-		"felixhayashi/hotzone",
-		"felixhayashi/topstoryview",
-		"flibbles/vis-network"
+        "wkod/dndwiki-core",
+        "wkod/staticfiles",
+        "felixhayashi/tiddlymap",
+        "felixhayashi/hotzone",
+        "felixhayashi/topstoryview",
+        "flibbles/vis-network"
     ],
     "themes": [
         "tiddlywiki/vanilla",

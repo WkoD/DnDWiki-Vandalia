@@ -1,115 +1,83 @@
 # DnDWiki
 
-Ein **TiddlyWiki 5** (Node.js-Edition) für eine D&D-Kampagne. Das Repo enthält nur die
-Wiki-Inhalte (Tiddler in `tiddlers/`) und Assets (`images/`, `data/`) — die TiddlyWiki-Engine
-selbst liegt im Schwester-Projekt [`TiddlyDnD`](https://github.com/WkoD/TiddlyDnD).
+Ein **TiddlyWiki 5** (Node.js-Edition) für D&D-Kampagnen. Dieses Repo ist die
+**kopierbare Kampagnen-Vorlage**: es enthält nur pro-Wiki-Konfig, die Datendatei-Vorlagen
+(`Datum`, `Erfahrungspunkte`) und (leeren) Content in `tiddlers/` sowie Assets
+(`images/`, `data/`). Engine und Formatschicht kommen als Abhängigkeiten:
 
-> Diese README ist die **menschenlesbare** Doku (Setup, Betrieb, CI/Secrets). Ergänzende Dateien:
-> - `CLAUDE.md` — technische Detail-Doku für die KI-Assistenz (Content-Modell, eigene Makros/Plugins).
-> - `CAMPAIGN.md` — kampagnenspezifischer Kontext (nur in den Forks ausgefüllt).
+- **Engine:** offizielles [`tiddlywiki`](https://www.npmjs.com/package/tiddlywiki) aus npm
+  (kein eigener Fork mehr), in `package.json` gepinnt.
+- **Formatschicht + alle Plugins:** aus [`TiddlyDnD-Plugins`](https://github.com/WkoD/TiddlyDnD-Plugins),
+  **fest versioniert** gepinnt. Die D&D-Formatschicht ist dort das Plugin `wkod/dndwiki-core`.
+
+> Ergänzende Dateien: `CLAUDE.md` (technische Detail-Doku), `CAMPAIGN.md` (kampagnenspezifisch).
 
 ## Repo-Familie
 
 | Repo | Rolle |
 |------|-------|
-| **`DnDWiki`** | Kanonisches **Basis-Template** (ohne Kampagnen-Lore). Hier passieren alle Änderungen an der gemeinsamen technischen Schicht. |
-| **`DnDWiki-Vandalia`**, **`DnDWiki-Tyranny`** | Kampagnen-**Forks**. Enthalten echten Kampagnen-Inhalt; technisch identisch zu Base. |
-| **`TiddlyDnD`** | Die **Engine** (dünner Fork von `TiddlyWiki5`), wird lokal daneben ausgecheckt bzw. im CI per npm installiert. |
+| **`DnDWiki`** | Kopierbare **Kampagnen-Vorlage** (ohne Kampagnen-Lore). |
+| **`DnDWiki-Vandalia`**, **`DnDWiki-Tyranny`** | Kampagnen = Kopie der Vorlage + eigener Content + eigene `Datum`/`Erfahrungspunkte`/Konfig. |
+| **`TiddlyDnD-Plugins`** | Formatschicht (`dndwiki-core`) + `staticfiles` + Drittanbieter, **versioniert** (semver-Tags/Releases). |
 
-Die technische Schicht wird **einseitig von Base in die Forks** synchronisiert (siehe *Sync* unten).
+**Neue Kampagne** = dieses Repo **1:1 kopieren**, Content füllen. Es müssen keine
+Ordner ausgeschlossen werden — Formatschicht/Plugins kommen aus dem Pin.
 
 ## Lokale Entwicklung
 
-**Voraussetzungen:** [Node.js](https://nodejs.org/) und die Engine `TiddlyDnD` als Schwester-Ordner
-(`../TiddlyDnD` neben diesem Repo).
-
-**Wiki mit Live-Editing starten** (aus dem Repo-Ordner heraus, Standardport 8080):
+**Voraussetzung:** [Node.js](https://nodejs.org/).
 
 ```bash
-node ../TiddlyDnD/tiddlywiki.js . --listen
+npm install     # Engine (tiddlywiki@5.4.0) + TiddlyDnD-Plugins (gepinnt) holen
+npm start       # Server mit Live-Editing auf http://localhost:8080
+npm run build   # statische index.html nach ./twpage bauen (wie CI)
 ```
 
-Dann im Browser `http://localhost:8080` öffnen. Im Browser gemachte Änderungen werden automatisch
-als `.tid`-Dateien zurück auf die Platte geschrieben.
+Im Browser gemachte Änderungen an **Content** werden als `.tid`-Dateien zurückgeschrieben.
+Die **Formatschicht** (Makros/ViewTemplates/Hubs) erscheint als read-only Shadow — sie wird
+**nicht hier**, sondern im Repo `TiddlyDnD-Plugins` bearbeitet (s. u.).
 
-### In VS Code arbeiten (ohne separaten Browser)
+Beide Skripte setzen `TIDDLYWIKI_PLUGIN_PATH=node_modules/tiddlydnd-plugins/plugins` automatisch.
 
-Es gibt eine Multi-Root-Workspace-Datei `DnDWiki.code-workspace` (im übergeordneten Ordner, **nicht**
-Teil der Repos), die alle Repos bündelt und pro Wiki einen Server-Task bereitstellt:
+**Bilder im Dev-Server:** Das Plugin `wkod/staticfiles` (aus `TiddlyDnD-Plugins`, `platform: server`)
+liefert `images/` und `data/` im `--listen`-Server aus. Es ist aus dem Offline-Build ausgeschlossen.
 
-| Task | Wiki | Port |
-|------|------|------|
-| `TW: DnDWiki (8080)` | Base | 8080 |
-| `TW: Vandalia (8081)` | Vandalia | 8081 |
-| `TW: Tyranny (8082)` | Tyranny | 8082 |
+### In VS Code arbeiten
 
-Ablauf: **Tasks: Run Task** → gewünschten Server starten → **Simple Browser: Show** →
-`http://localhost:<port>`. Das Wiki läuft dann als Tab *innerhalb* von VS Code (volle Funktion inkl.
-Bilder). Empfohlene Extension fürs `.tid`-Editing: **`joshua-fontany.tw5-syntax`**.
+Die Multi-Root-Workspace-Datei `DnDWiki.code-workspace` (im übergeordneten Ordner) bündelt alle
+Repos und bietet pro Wiki einen Start-Button/Task (Ports: DnDWiki 8080 / Vandalia 8081 / Tyranny 8082).
 
-**Bilder im Dev-Server:** Der Standard-`--listen`-Server liefert nur `/files/` aus, nicht `images/`.
-Deshalb enthält die technische Schicht das kleine Server-Plugin **`$:/plugins/wkod/staticfiles`**
-(Datei `tiddlers/$__plugins_wkod_staticfiles.tid`), das `images/` und `data/` im Dev-Server unter
-`/images/…` bzw. `/data/…` bereitstellt. Es trägt `platform: server` und wird dadurch **aus dem
-Offline-Build ausgeschlossen** — die deployte `index.html` bleibt unverändert.
+## Formatschicht ändern & Plugin-Version anheben (Versions-Bump)
 
-### Statisch bauen
+Die gemeinsame Formatschicht liegt **im Repo `TiddlyDnD-Plugins`**. Ablauf einer Änderung:
 
-```bash
-node ../TiddlyDnD/tiddlywiki.js . --output ./twpage --build index
-```
+1. Im Repo `TiddlyDnD-Plugins`: Format-Dateien unter `plugins/wkod/dndwiki-core/` im IDE bearbeiten,
+   `npm start` zur Vorschau. Dann die `version` in `plugins/wkod/dndwiki-core/plugin.info` erhöhen
+   (semver: patch=Fix, minor=neu+abwärtskompatibel, major=brechend).
+2. Committen, **taggen == Version** und Release setzen:
+   ```bash
+   git tag 1.1.0 && git push origin master 1.1.0
+   gh release create 1.1.0 --generate-notes
+   ```
+3. In **diesem** Wiki (und jeder Kampagne, die die neue Version will) den Pin in `package.json`
+   **bewusst** anheben und neu installieren:
+   ```jsonc
+   "tiddlydnd-plugins": "git+https://github.com/WkoD/TiddlyDnD-Plugins.git#1.1.0"
+   ```
+   ```bash
+   npm install
+   ```
+
+**Kein Auto-Sync:** Eine neue Plugin-Version erreicht ein Wiki erst durch diesen bewussten
+Pin-Bump — gewollte Stabilität und Reproduzierbarkeit (jeder Klon baut denselben Stand). Das
+Plugin-Repo kennt die Kampagnen nicht.
 
 ## Deployment & CI (GitHub Actions)
 
-- **`npm-build-pages.yml`** — bei Push auf `master` oder manuell. Installiert die Engine, baut die
-  öffentliche `index.html`, kopiert `data/` und `images/` dazu und deployt nach `gh-pages`.
-- **`repo-sync.yml`** — nur manuell (`workflow_dispatch`), läuft **in den Forks** (nicht in Base).
-  Übernimmt die technische Schicht aus `WkoD/DnDWiki` per gezieltem Pfad-Checkout
-  (`tiddlers/`, `tiddlywiki.info`, `.github/`, `CLAUDE.md`) und **nimmt dabei nur die vier
-  fork-eigenen Datendateien aus** (`Datum.tid`, `Erfahrungspunkte.tid`, `Spieler.tid`,
-  `TBC_Abenteuer.tid`). Danach stößt er automatisch den Build an.
+- **`npm-build-pages.yml`** — bei Push auf `master` oder manuell: `npm install` (holt Engine +
+  gepinnte Plugins), aktualisiert Titel/Zeitstempel-Tiddler, baut die öffentliche `index.html`
+  (mit gesetztem `TIDDLYWIKI_PLUGIN_PATH`), kopiert `data/` und `images/` dazu und deployt nach
+  `gh-pages`.
 
-Sync auslösen (Beispiel):
-
-```bash
-gh workflow run repo-sync.yml -R WkoD/DnDWiki-Vandalia --ref master
-```
-
-## GitHub-Secret: `DISPATCH_PAT`
-
-Der `repo-sync.yml`-Workflow braucht ein Personal Access Token als **Repository-Secret** mit dem
-exakten Namen **`DISPATCH_PAT`** (Repo → *Settings → Secrets and variables → Actions*).
-
-**Wozu:** Der eingebaute `GITHUB_TOKEN` darf keine Folge-Workflows auslösen. Der `DISPATCH_PAT` wird
-daher genutzt, um (1) die übernommene technische Schicht nach `master` des Forks zu **pushen** und
-(2) danach den `npm-build-pages`-Build per `workflow_dispatch` **anzustoßen**.
-
-**Wo nötig:** in **jedem Fork** (`DnDWiki-Vandalia`, `DnDWiki-Tyranny`). In Base ist er der
-Vollständigkeit halber gesetzt, wird dort aber **nicht** genutzt (der Sync läuft nicht in Base).
-
-**Benötigte Rechte** — eine der beiden Varianten:
-
-| Token-Typ | Erforderliche Rechte |
-|-----------|----------------------|
-| **Classic PAT** | Scopes **`repo`** + **`workflow`** |
-| **Fine-grained PAT** | Repository-Zugriff auf die 3 Repos; Permissions: **Contents: Read and write**, **Actions: Read and write**, **Workflows: Read and write** (Metadata: Read wird automatisch gesetzt) |
-
-Das Token muss dem Account **`WkoD`** gehören (der Workflow authentifiziert als `WkoD:<token>`).
-Fine-grained Tokens können optional **ohne Ablaufdatum** erstellt werden.
-
-**Secret setzen** (mit der GitHub CLI):
-
-```bash
-gh secret set DISPATCH_PAT -R WkoD/DnDWiki-Vandalia   # Wert wird versteckt abgefragt
-```
-
-**Prüfen, dass die Kette läuft:**
-
-```bash
-gh secret list -R WkoD/DnDWiki-Tyranny                 # DISPATCH_PAT vorhanden?
-gh workflow run repo-sync.yml -R WkoD/DnDWiki-Tyranny --ref master
-gh run list -R WkoD/DnDWiki-Tyranny --workflow repo-sync.yml -L 1
-```
-
-Ein erfolgreicher `repo-sync`-Lauf ist vollständig grün (inkl. Schritt *„Dispatch build"*) und
-startet automatisch einen `npm-build-pages`-Lauf.
+Es gibt **keinen `repo-sync`-Workflow und kein `DISPATCH_PAT`-Secret mehr** — die gemeinsame
+Schicht kommt über den Plugin-Pin, nicht über Datei-Sync.
