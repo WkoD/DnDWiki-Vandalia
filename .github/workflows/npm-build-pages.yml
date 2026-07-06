@@ -28,6 +28,7 @@ jobs:
     - name: Build TiddlyWiki master index.html
       env:
         TIDDLYWIKI_PLUGIN_PATH: node_modules/tiddlydnd-plugins/plugins
+        NODE_OPTIONS: --no-deprecation
       run: npx tiddlywiki --output ./twpage --build index
     - name: Copy resource directories
       run: |

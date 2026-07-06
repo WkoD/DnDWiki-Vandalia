@@ -4,8 +4,8 @@
   "private": true,
   "description": "DnDWiki – kopierbare Kampagnen-Vorlage fuer D&D-Wikis (TiddlyWiki5). Formatschicht/Plugins aus TiddlyDnD-Plugins.",
   "scripts": {
-    "start": "cross-env TIDDLYWIKI_PLUGIN_PATH=node_modules/tiddlydnd-plugins/plugins tiddlywiki . --listen",
-    "build": "cross-env TIDDLYWIKI_PLUGIN_PATH=node_modules/tiddlydnd-plugins/plugins tiddlywiki . --output ./twpage --build index"
+    "start": "cross-env NODE_OPTIONS=--no-deprecation TIDDLYWIKI_PLUGIN_PATH=node_modules/tiddlydnd-plugins/plugins tiddlywiki . --listen",
+    "build": "cross-env NODE_OPTIONS=--no-deprecation TIDDLYWIKI_PLUGIN_PATH=node_modules/tiddlydnd-plugins/plugins tiddlywiki . --output ./twpage --build index"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
