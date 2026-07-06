@@ -13,6 +13,9 @@ jobs:
       with:
         ref: master
         fetch-depth: 0
+        # Kein GITHUB_TOKEN-extraheader hinterlegen, sonst pusht git als GitHub App
+        # (GITHUB_TOKEN) statt als DISPATCH_PAT und darf keine Workflow-Dateien schreiben.
+        persist-credentials: false
     - name: Sync technical layer from base
       run: |
         git config user.name "$GITHUB_ACTOR"
@@ -27,7 +30,7 @@ jobs:
           ':(exclude)tiddlers/Erfahrungspunkte.tid' \
           ':(exclude)tiddlers/Spieler.tid' \
           ':(exclude)tiddlers/TBC_Abenteuer.tid' \
-          tiddlywiki.info .github CLAUDE.md
+          tiddlywiki.info .github CLAUDE.md README.md
         git diff --cached --quiet || git commit -m "Sync technische Schicht von DnDWiki-Base"
         git push origin master
     - name: Dispatch build
