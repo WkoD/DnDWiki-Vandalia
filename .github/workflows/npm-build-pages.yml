@@ -19,14 +19,15 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: '20'
-    - name: Install TiddlyDnD
-      run: npm install git+https://github.com/WkoD/TiddlyDnD.git
+    - name: Install dependencies (tiddlywiki + TiddlyDnD-Plugins)
+      run: npm install
     - name: Update master
       run: |
         echo '${{ github.event.repository.name }}' >> './tiddlers/$__SiteTitle.tid'
         echo $(TZ=Europe/Berlin date +'%Y-%m-%dT%H:%M:%S') >> './tiddlers/$__SiteSubtitle.tid'
-        echo $(date +'%Y%m%d%H%M%S%3N') >> './tiddlers/$___my_Button_ExportModified_modified.tid'
     - name: Build TiddlyWiki master index.html
+      env:
+        TIDDLYWIKI_PLUGIN_PATH: node_modules/tiddlydnd-plugins/plugins
       run: npx tiddlywiki --output ./twpage --build index
     - name: Copy resource directories
       run: |
