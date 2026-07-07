@@ -66,7 +66,10 @@ Die gemeinsame Formatschicht liegt **im Repo `TiddlyDnD-Plugins`**. Ablauf einer
    ```
    ```bash
    npm install
+   # npm cached Git-Tags aggressiv – wenn die neue Version lokal nicht gezogen wird:
+   rm -rf node_modules package-lock.json && npm install
    ```
+   (In der CI/auf frischen Rechnern entfällt das – dort wird der Tag immer frisch geholt.)
 
 **Kein Auto-Sync:** Eine neue Plugin-Version erreicht ein Wiki erst durch diesen bewussten
 Pin-Bump — gewollte Stabilität und Reproduzierbarkeit (jeder Klon baut denselben Stand). Das
