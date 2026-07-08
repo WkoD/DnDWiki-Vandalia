@@ -1,6 +1,6 @@
 {
   "name": "dndwiki-vandalia",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "description": "Vandalia – D&D-Kampagnen-Wiki (TiddlyWiki5). Formatschicht (dndwiki-core + staticfiles) aus TiddlyDnD-Plugins; Graph-Stack (flibbles) einzeln release-gepinnt.",
   "scripts": {
