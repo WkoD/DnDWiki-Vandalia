@@ -20,6 +20,24 @@ Dieses Repository ist ein **TiddlyWiki5** (Node.js-Edition) Wiki für eine D&D-K
 
 **Kein `repo-sync.yml` mehr.** Statt Datei-Sync gilt: jedes Wiki **pinnt eine feste Plugin-Version** und aktualisiert sie **bewusst** (Pin `#1.0.0` → `#1.1.0` + `npm install`). Das Plugin-Repo kennt die Kampagnen nicht (skaliert beliebig, stabil/reproduzierbar).
 
+### Vorlagen-Version (`package.json` → `version`) & Template-Update
+
+Das Feld **`version`** in `package.json` ist **keine eigene Kampagnen-Version**, sondern die **`DnDWiki`-Vorlagenversion, auf der dieses Wiki basiert** (in der Vorlage `DnDWiki` selbst: deren eigene Version, per Git-Tag/Release). Es gibt damit **zwei getrennte Versionsachsen**:
+
+- **Formatschicht** → `dndwiki-core`-**Pin** in `devDependencies` (z. B. `#1.1.0`).
+- **Gerüst-Vorlage** → Feld **`version`** (steht auf der `DnDWiki`-Release-Version, z. B. `1.1.0`).
+
+**Auf ein neueres Template aktualisieren** (optional, nur wenn gewünscht — Kampagnen müssen nicht mitziehen):
+
+1. `git remote add template https://github.com/WkoD/DnDWiki.git` (einmalig)
+2. `git fetch template --tags`
+3. `git diff template/<eigene version>..template/<neue version> -- scripts .gitignore .github tiddlywiki.info package.json` — Gerüst-Änderungen sichten (funktioniert repo-übergreifend per Pfad, auch ohne gemeinsame Historie).
+4. **Nur Gerüst** übernehmen, dann `version` in `package.json` auf die neue Vorlagenversion setzen.
+
+**Gerüst — aus der Vorlage übernehmbar:** `scripts/tw.js`, `.gitignore`, `.github/workflows/`, `tiddlywiki.info`, `package.json`-Struktur (Scripts / `devDependencies` / Plugin-Pin — **aber `name` behalten**), die generischen Basis-Graph-Views `$:/graph/Default`|`Kosmogramm`|`Weltkarte`|`Gegenstände` (sofern lokal nicht angepasst).
+
+**Niemals überschreiben — kampagnen-eigen:** aller Lore-Content in `tiddlers/`, die pro-Wiki-Konfig (SiteTitle/SiteSubtitle/DefaultTiddlers), `Datum`/`Erfahrungspunkte` mit echten Daten, **lokal angepasste Views** (z. B. eine `Weltkarte` mit Hintergrundbild/Positionen), `images/`, `data/`, `CAMPAIGN.md` sowie das Feld `name` in `package.json`.
+
 ## Doku-Ablage-Modell
 
 - **`CLAUDE.md`** / **`README.md`**: liegen in jedem Repo; da es keinen Sync mehr gibt, werden sie bei Bedarf aus der `DnDWiki`-Vorlage übernommen (Pull, nicht Push).
