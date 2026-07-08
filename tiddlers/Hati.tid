@@ -4,9 +4,9 @@ datum: .1351-08-04
 modified: 20240501084715061
 tags: Person Tiergeister
 title: Hati
-tmap.edges: {"c23018e0-c14b-4923-8920-0709cb6cca3b":{"to":"aed8abb0-4d00-4a7f-bd10-66dbe533f972","type":"OP_Mitglied"}}
-tmap.id: 50e3b412-af89-4f52-9a28-1ccd44330fae
 type: text/vnd.tiddlywiki
+mitglied: Tiergeister
+allianz: Silmeria
 
 Ein Geisterwolf, der seit seiner Geburt mit [[Silmeria]] unterwegs war. Der Sage nach war er ein Kind von [[Fenrir]] und jagte den Mond über den Nachthimmel.
 

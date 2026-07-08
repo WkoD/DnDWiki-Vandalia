@@ -3,7 +3,6 @@ datum: 1351-04-05.1351-05-12.1351-06-24.1351-06-26.1351-07-09
 modified: 20230926111621691
 tags: Abenteuer Ereignis Nordvolk [[Königreich von Vandalia]] [[Haus Eiree]] [[Haus Alba]] [[Haus Kemri]]
 title: Spiegelfragmente
-tmap.id: 052ba960-491c-4648-9651-13f28ad5b612
 type: text/vnd.tiddlywiki
 
 <b>Jahr:</b> <$macrocall $name="datumlang" datum="1351-04-05"/>

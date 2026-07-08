@@ -3,7 +3,6 @@ datum: 1350-12-27.1351-06-23.1351-07-01.1351-11-10.1351-11-19.1351-11-24
 modified: 20250904085005827
 tags: Abenteuer Ereignis Mondwächter [[Ritter der schwarzen Sonne]] [[Apostel von Tenebris]]
 title: Suche nach Kaguya
-tmap.id: ca690e7a-0270-4d58-b7f2-4b6de209fd8f
 type: text/vnd.tiddlywiki
 
 <b>Jahr:</b> <$macrocall $name="datumlang" datum="1350-12-27"/>

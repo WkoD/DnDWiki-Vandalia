@@ -1,0 +1,10 @@
+caption: Live
+created: 20260708122558840
+edges.fields: [all[]] -[[tags]] -[[list]]
+edges.functions: links
+filter: [list[$:/StoryList]multitag[Gott,Organisation,Person,Spieler,Ort,Ereignis,Artefakt,Buch,Gegenstand,Material]]
+modified: 20260708122610910
+neighbors.incoming: 0
+template: $:/dndwiki/graph/templates/dnd-graph
+title: $:/graph/Default
+type: application/json

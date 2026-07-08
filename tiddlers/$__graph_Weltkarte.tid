@@ -1,0 +1,9 @@
+caption: Weltkarte
+edges.fields: ort
+edges.functions: [all[]] -[[links]] -[[transcludes]]
+filter: [tag[Ort]] [multitag[Gott,Person,Spieler]has[ort]]
+template: $:/dndwiki/graph/templates/dnd-graph
+title: $:/graph/Weltkarte
+type: application/json
+
+{}

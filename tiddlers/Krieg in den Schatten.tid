@@ -3,7 +3,6 @@ datum: 1350-12-22.1351-07-09.1351-07-14
 modified: 20230926111910236
 tags: Avalanche [[Königreich von Vandalia]] Ereignis [[Haus Kemri]] Zodiac
 title: Krieg in den Schatten
-tmap.id: 23c3c007-9385-4a84-b397-586d524d42d2
 type: text/vnd.tiddlywiki
 
 <b>Jahr:</b> <$macrocall $name="datumlang" datum="1350-12-22"/>

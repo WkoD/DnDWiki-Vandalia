@@ -7,8 +7,10 @@ Ein **TiddlyWiki 5** (Node.js-Edition) für D&D-Kampagnen. Dieses Repo ist die
 
 - **Engine:** offizielles [`tiddlywiki`](https://www.npmjs.com/package/tiddlywiki) aus npm
   (kein eigener Fork mehr), in `package.json` gepinnt.
-- **Formatschicht + alle Plugins:** aus [`TiddlyDnD-Plugins`](https://github.com/WkoD/TiddlyDnD-Plugins),
-  **fest versioniert** gepinnt. Die D&D-Formatschicht ist dort das Plugin `wkod/dndwiki-core`.
+- **Formatschicht:** aus [`TiddlyDnD-Plugins`](https://github.com/WkoD/TiddlyDnD-Plugins),
+  **fest versioniert** gepinnt. Die D&D-Formatschicht ist dort das Plugin `dndwiki-core` (+ `staticfiles`).
+- **Graph-Stack:** `flibbles/tw5-graph` (`graph` + `vis-network` + `relink`), einzeln als npm-Git-Dependency
+  auf Release-Tags gepinnt (nicht im Bundle). Ein Node-Launcher (`scripts/tw.js`) fügt alle daraus zu `TIDDLYWIKI_PLUGIN_PATH` zusammen.
 
 > Ergänzende Dateien: `CLAUDE.md` (technische Detail-Doku), `CAMPAIGN.md` (kampagnenspezifisch).
 
@@ -37,9 +39,10 @@ Im Browser gemachte Änderungen an **Content** werden als `.tid`-Dateien zurück
 Die **Formatschicht** (Makros/ViewTemplates/Hubs) erscheint als read-only Shadow — sie wird
 **nicht hier**, sondern im Repo `TiddlyDnD-Plugins` bearbeitet (s. u.).
 
-Beide Skripte setzen `TIDDLYWIKI_PLUGIN_PATH=node_modules/tiddlydnd-plugins/plugins` automatisch.
+Beide Skripte laufen über den Node-Launcher `scripts/tw.js`, der `TIDDLYWIKI_PLUGIN_PATH` aus allen
+Plugin-Paketen in `node_modules` (`tiddlydnd-plugins` + `tw5-graph`/`tw5-vis-network`/`tw5-relink`) plattformübergreifend zusammensetzt.
 
-**Bilder im Dev-Server:** Das Plugin `wkod/staticfiles` (aus `TiddlyDnD-Plugins`, `platform: server`)
+**Bilder im Dev-Server:** Das Plugin `staticfiles` (aus `TiddlyDnD-Plugins`, `platform: server`)
 liefert `images/` und `data/` im `--listen`-Server aus. Es ist aus dem Offline-Build ausgeschlossen.
 
 ### In VS Code arbeiten
@@ -51,8 +54,8 @@ Repos und bietet pro Wiki einen Start-Button/Task (Ports: DnDWiki 8080 / Vandali
 
 Die gemeinsame Formatschicht liegt **im Repo `TiddlyDnD-Plugins`**. Ablauf einer Änderung:
 
-1. Im Repo `TiddlyDnD-Plugins`: Format-Dateien unter `plugins/wkod/dndwiki-core/` im IDE bearbeiten,
-   `npm start` zur Vorschau. Dann die `version` in `plugins/wkod/dndwiki-core/plugin.info` erhöhen
+1. Im Repo `TiddlyDnD-Plugins`: Format-Dateien unter `plugins/dndwiki-core/` im IDE bearbeiten,
+   `npm start` zur Vorschau. Dann die `version` in `plugins/dndwiki-core/plugin.info` erhöhen
    (semver: patch=Fix, minor=neu+abwärtskompatibel, major=brechend).
 2. Committen, **taggen == Version** und Release setzen:
    ```bash

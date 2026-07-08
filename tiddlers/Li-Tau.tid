@@ -4,9 +4,10 @@ datum: 1312
 modified: 20200729073430567
 tags: Miehall Person Biestvolk
 title: Li-Tau
-tmap.edges: {"33a05902-1db3-4dcb-84aa-bae6abac0ec5":{"to":"41ee9793-9c3b-4317-8491-1babf7894ec4","type":"unknown"},"a656645b-023d-41a9-9f06-6a2d8618da66":{"to":"3409b7d5-b63a-491a-815f-09af906e18f3","type":"OP_Mitglied_Ehem"}}
-tmap.id: ebc0a5c2-ce92-4ace-b4b3-eb526d9dbf2b
 type: text/vnd.tiddlywiki
+familie: Li-Ta
+ort: Miehall
+ehemals: Biestvolk
 
 Eine Nichny mit schwarzem Fell und smaraggrünen Augen. Sie ist die stolze Mutter von [[Li-Ta]].
 
