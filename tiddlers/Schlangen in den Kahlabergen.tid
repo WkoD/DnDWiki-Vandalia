@@ -3,7 +3,6 @@ datum: 1351-07-09.1351-07-12
 modified: 20241219083703073
 tags: Abenteuer Ereignis [[Haus Kemri]] Sjach
 title: Schlangen in den Kahlabergen
-tmap.id: 02ef323f-36df-4cf4-b176-a58f8b968f6e
 type: text/vnd.tiddlywiki
 
 <b>Jahr:</b> <$macrocall $name="datumlang" datum="1351-07-09"/>

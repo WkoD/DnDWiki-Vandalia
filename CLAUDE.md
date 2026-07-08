@@ -7,7 +7,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 Dieses Repository ist ein **TiddlyWiki5** (Node.js-Edition) Wiki für eine D&D-Kampagne. Alle Inhalte sind auf Deutsch. Das Repo enthält nur die Wiki-Inhalte (Tiddlers), Assets und die Build-Konfiguration:
 
 - **Engine:** offizielles `tiddlywiki` aus npm (kein eigener Fork mehr), als devDependency in `package.json` gepinnt (`5.4.0`).
-- **Formatschicht & alle Plugins:** kommen aus dem separaten Repo **`WkoD/TiddlyDnD-Plugins`** (lokal `../TiddlyDnD-Plugins`), das per **fester Version** in `package.json` gepinnt ist (`git+…/TiddlyDnD-Plugins.git#<version>`). Die D&D-Formatschicht ist dort das Plugin `$:/plugins/wkod/dndwiki-core`. Eingebunden über `TIDDLYWIKI_PLUGIN_PATH` (→ `node_modules/tiddlydnd-plugins/plugins`).
+- **Formatschicht:** kommt aus dem separaten Repo **`WkoD/TiddlyDnD-Plugins`** (lokal `../TiddlyDnD-Plugins`), per **fester Version** in `package.json` gepinnt (`git+…/TiddlyDnD-Plugins.git#<version>`). Die D&D-Formatschicht ist dort das Plugin `$:/plugins/dndwiki-core` (+ `$:/plugins/staticfiles`).
+- **Graph-Stack:** `flibbles/tw5-graph` (`graph` + `vis-network` + `relink`), **einzeln** als npm-Git-Dependency auf Release-Tags gepinnt (nicht ins Bundle kopiert). Ein Node-Launcher (`scripts/tw.js`) fügt alle Plugin-`plugins`-Ordner aus `node_modules` plattformübergreifend zu `TIDDLYWIKI_PLUGIN_PATH` zusammen (löst das alte `cross-env`-Einzeiler-Setup ab).
 
 `DnDWiki` selbst ist die **kopierbare Kampagnen-Vorlage**: nur pro-Wiki-Konfig + Datendatei-Vorlagen + (leerer) Content, **keine** Formatschicht (die liegt im Plugin).
 
@@ -15,7 +16,7 @@ Dieses Repository ist ein **TiddlyWiki5** (Node.js-Edition) Wiki für eine D&D-K
 
 - **`DnDWiki`** — kopierbare Kampagnen-Vorlage (Remote `WkoD/DnDWiki`), keine Kampagnen-Lore. Eine neue Kampagne entsteht durch **1:1-Kopie** dieses Repos.
 - **Kampagnen** (z. B. `DnDWiki-Vandalia`, `DnDWiki-Tyranny`) — je eine konkrete Kampagne = Kopie der Vorlage + eigener Content + eigene `Datum`/`Erfahrungspunkte`/pro-Wiki-Konfig.
-- **`TiddlyDnD-Plugins`** — Formatschicht (`dndwiki-core`) + `staticfiles` + felixhayashi/flibbles-Drittanbieter, **versioniert** (semver-Tags + GitHub-Releases). Die Formatschicht wird **ausschließlich dort** bearbeitet.
+- **`TiddlyDnD-Plugins`** — Formatschicht (`dndwiki-core` + `staticfiles`), **versioniert** (semver-Tags + GitHub-Releases). Die Formatschicht wird **ausschließlich dort** bearbeitet. Der Graph-Stack (`flibbles/tw5-graph`) liegt **nicht** hier, sondern wird einzeln release-gepinnt.
 
 **Kein `repo-sync.yml` mehr.** Statt Datei-Sync gilt: jedes Wiki **pinnt eine feste Plugin-Version** und aktualisiert sie **bewusst** (Pin `#1.0.0` → `#1.1.0` + `npm install`). Das Plugin-Repo kennt die Kampagnen nicht (skaliert beliebig, stabil/reproduzierbar).
 
@@ -45,8 +46,9 @@ Der produktive Build läuft über GitHub Actions:
 
 - `tiddlers/` – **flach**, keine Unterordner für Kategorien. Kategorisierung erfolgt ausschließlich über **Tags**, nicht über Verzeichnisstruktur.
   - Content-Tiddler: Dateiname = Titel, z. B. `Baile.tid`.
-  - Im Wiki liegen nur wenige `$__...`-Tiddler (pro-Wiki-Konfig: SiteTitle/SiteSubtitle/DefaultTiddlers/StoryList, tiddlymap saved views) + die Datendateien `Datum`/`Erfahrungspunkte`.
-  - Die Formatschicht (`$:/_my/...`, Hubs, tiddlymap-Schema) kommt aus dem Plugin `wkod/dndwiki-core` und ist **nicht** als Datei im Wiki.
+  - Im Wiki liegen nur wenige `$__...`-Tiddler (pro-Wiki-Konfig: SiteTitle/SiteSubtitle/DefaultTiddlers/StoryList) + die Datendateien `Datum`/`Erfahrungspunkte` + die **dünnen Graph-Views** `$:/graph/Default`(=Live)/`Kosmogramm`/`Weltkarte`/`Gegenstände` (nur Filter + Verweis auf das core-Template; per-Wiki, weil tw5-graphs Sidebar-Dropdown nur **reale** Tiddler listet — Shadows erscheinen dort nicht — und Weltkarte je Kampagne Hintergrund/Positionen tragen kann).
+  - Die Formatschicht (`$:/_my/...`, Hubs, tw5-graph-Schema + Graph-Templates) kommt aus dem Plugin `dndwiki-core` und ist **nicht** als Datei im Wiki.
+  - `$:/config/flibbles/graph/sidebar` (welcher Graph-View zuletzt offen war) ist **transient** und via `.gitignore` aus git gehalten (wie `$__StoryList`); ohne Datei ist der Default `$:/graph/Default` (Live).
 - `images/` – nach Kategorie sortiert, deckungsgleich mit den Content-Tags: `Person` (NPC-Portraits), `Ort`, `Ereignis`, `Organisation`, `Gegenstand`, `Karte`, `Spieler`, `Design`.
   - `images/Karte/maptool/` enthält Kampfkarten für ein externes VTT (RPTools MapTool) und wird **nicht** aus Tiddlern referenziert — rein externes Asset für den Spieltisch.
 - `data/Buch/` – In-World-Lore-PDFs.
@@ -57,7 +59,7 @@ Standard-`.tid`-Format (Feld-Header, Leerzeile, Fließtext). Relevante Felder:
 
 - `tags` – mehrere Tags getrennt durch Leerzeichen; mehrteilige Tag-Namen stehen in `[[doppelten eckigen Klammern]]`.
 - `bild` – Bilddateiname; wird vom eigenen Makro `$___my_Macro_Bild.js` gelesen und anhand des Typ-Tags (Person/Ort/Ereignis/…) zu `[img[images/<Tag>/<Datei>]]` aufgelöst.
-- `tmap.id` / `tmap.edges` – vom Plugin `felixhayashi/tiddlymap` genutzt, um Tiddler als Knoten/Kanten im interaktiven Beziehungsgraphen darzustellen.
+- **Beziehungsfelder** (Listenfelder, Titel-referenzierend) – tragen das Beziehungsnetz für den Graphen (`flibbles/tw5-graph`): `ort`, `mitglied`, `ehemals`, `anfuehrer`, `patron`, `unter`, `familie`, `allianz`, `freundschaft`, `feindschaft` (Person/Org/Gott) sowie `besitzer`/`erschaffer` (Gegenstände). Symmetrische (`familie`/`allianz`/`freundschaft`/`feindschaft`) stehen auf **beiden** Endpunkten. Jedes Feld ist ein Fields-EdgeType (`$:/config/flibbles/graph/edges/fields/<feld>`) + Relink-Feldtyp. Löst das alte `tmap.id`/`tmap.edges`-Modell ab (entfernt).
 - `datum` – In-World-Kalenderdatum (nicht das reale Sitzungsdatum), gerendert/berechnet über die eigenen Makros `datumkurz` / `datumlang` / `datumrechner`.
 - Fließtext nutzt durchgehend `[[WikiLinks]]` zur Verlinkung zwischen Personen/Orten/Organisationen – das ist der primäre Vernetzungsmechanismus neben den Tags. (Es gibt **kein** freelinks-Plugin; Verlinkung ist immer explizit.)
 
@@ -66,7 +68,7 @@ Standard-`.tid`-Format (Feld-Header, Leerzeile, Fließtext). Relevante Felder:
 Jeder Tiddler bekommt typischerweise zwei Arten von Tags:
 
 1. Typ-Tag (template-weit gültig): `Person`, `Ereignis`, `Ort`, `Organisation`, `Artefakt`, `Gegenstand`, `Buch`, `Gott`, `Material`, `Abenteuer`, `Karte`, `Spieler`, `Index`, `Information`.
-2. Fraktions-/Handlungsstrang-Tag als thematischer Hub — die konkreten Namen sind **kampagnenspezifisch** und stehen nicht hier (siehe die `CAMPAIGN.md` bzw. die Kategorie-Hub-Tiddler des jeweiligen Forks).
+2. Fraktions-/Handlungsstrang-Tag als thematischer Hub — die konkreten Namen sind **kampagnenspezifisch** und stehen nicht hier (siehe die `CAMPAIGN.md` bzw. die Kategorie-Hub-Tiddler des jeweiligen Wikis).
 
 ### Kampagnen-Konventionen (nicht offensichtlich, aber wichtig)
 
@@ -79,23 +81,24 @@ Jeder Tiddler bekommt typischerweise zwei Arten von Tags:
 
 ### Plugins (`tiddlywiki.info`, geliefert aus `TiddlyDnD-Plugins`)
 
-`tiddlywiki/tiddlyweb`, `tiddlywiki/filesystem`, `tiddlywiki/highlight` (offiziell, aus der npm-Engine), `wkod/dndwiki-core` (die **D&D-Formatschicht**, s. u.), `wkod/staticfiles` (Dev-Server, s. u.), `felixhayashi/tiddlymap` (Beziehungsgraph/Karten-Ansicht, genutzt über `tmap.id`/`tmap.edges`), `felixhayashi/hotzone`, `felixhayashi/topstoryview`, `flibbles/vis-network`. Themes: `tiddlywiki/vanilla`, `tiddlywiki/snowwhite`. Die Nicht-Offiziellen liegen alle im Repo `TiddlyDnD-Plugins` und werden per `TIDDLYWIKI_PLUGIN_PATH` gefunden.
+`tiddlywiki/tiddlyweb`, `tiddlywiki/filesystem`, `tiddlywiki/highlight` (offiziell, aus der npm-Engine), `dndwiki-core` (die **D&D-Formatschicht**, s. u.), `staticfiles` (Dev-Server, s. u.), `graph` + `vis-network` + `relink` (`flibbles/tw5-graph`-Stack: Beziehungsgraph, vis-network-Engine, Rename-Sicherheit). Themes: `tiddlywiki/vanilla`, `tiddlywiki/snowwhite`. Die Formatschicht (`dndwiki-core`, `staticfiles`) liegt im Repo `TiddlyDnD-Plugins`; der Graph-Stack wird einzeln als npm-Git-Dependency auf Release-Tags gepinnt. Ein Node-Launcher (`scripts/tw.js`) baut daraus `TIDDLYWIKI_PLUGIN_PATH` zusammen (plattformübergreifend). **Entfernt:** `felixhayashi/tiddlymap`, `felixhayashi/hotzone`, `felixhayashi/topstoryview`.
 
-### Dev-Server-Plugin (`$:/plugins/wkod/staticfiles`)
+### Dev-Server-Plugin (`$:/plugins/staticfiles`)
 
 Server-Plugin (jetzt in `TiddlyDnD-Plugins`, Feld `platform: server`) mit einem `module-type: route`-Modul, das im `--listen`-Node-Server die Ordner `images/` und `data/` unter `/images/…` bzw. `/data/…` ausliefert (mit `..`-Traversal-Schutz). Nötig, damit die relativen `[img[images/…]]`-Pfade aus dem `bild`-Makro **im lokalen Server** Bilder zeigen — der Standard-Server bedient sonst nur `/files/`. Durch `platform: server` schließt TiddlyWikis Offline-Save-Filter das Plugin **aus dem Build (`index.html`) aus**: die gebaute/deployte Seite bleibt unverändert (dort liegt `images/` ohnehin neben `index.html`). Reines Dev-Hilfsmittel.
 
-### Eigene Erweiterungen (`$:/_my/...`) — im Plugin `wkod/dndwiki-core`
+### Eigene Erweiterungen (`$:/_my/...`) — im Plugin `dndwiki-core`
 
 Die Formatschicht liegt **nicht** mehr lose im Wiki, sondern im Plugin
-`TiddlyDnD-Plugins → plugins/wkod/dndwiki-core/` (Ordner-Plugin, kein Build). Sie erscheint hier als read-only Shadow-Tiddler; **bearbeitet wird sie ausschließlich im Plugin-Repo**. Inhalt:
+`TiddlyDnD-Plugins → plugins/dndwiki-core/` (Ordner-Plugin, kein Build). Sie erscheint hier als read-only Shadow-Tiddler; **bearbeitet wird sie ausschließlich im Plugin-Repo**. Inhalt:
 
 - **Makros** (`$:/_my/Macro/*`): `Bild` (löst `bild`-Feld gegen `images/<Tag>/` auf), `DatumKurz`/`DatumLang`/`DatumRechner` (In-World-Kalender), `FormatLink`, `Library`, `SubLink`, `SubTiddler` (rendert `<Titel>/<Sub>`-Subtiddler), `TagLink`, `TotLink`.
-- **Filter** (`$:/_my/Filter/*`): `EreignisListe`, `Map_EdgeType`, `Multitag`, `SubTiddler`.
-- **ViewTemplates** (`$:/_my/ViewTemplate/*`): `Aktivitaet`, `Bild`, `Ereignis`, `Ereignisliste`, `Gegenstand`, `Inventar`, `Link`, `Organisation`, `Ort`, `Spieler`. Reihenfolge über `list-after`; reine Render-Infrastruktur.
+- **Filter** (`$:/_my/Filter/*`): `EreignisListe`, `Multitag`, `SubTiddler`. (`Map_EdgeType`/`edgetype` entfernt — Beziehungen laufen jetzt über Feld-Reverse-Suche `contains:`/`get`.)
+- **ViewTemplates** (`$:/_my/ViewTemplate/*`): `Aktivitaet`, `Bild`, `Connections` (dynamische Verbindungsliste aus den Beziehungsfeldern, unter dem Graphen), `EgoGraph` (eingebetteter 1-Hop-Beziehungsgraph für Person/Spieler/Org/Gott), `Ereignis`, `Ereignisliste`, `Gegenstand`, `Link`, `Ort` (nur noch Karte), `Spieler`. Reihenfolge über `list-after`; reine Render-Infrastruktur. (`Organisation`/`Inventar` entfernt — ersetzt durch `Connections`.)
 - **Snippets** (Tag `$:/tags/TextEditor/Snippet`): `OffenePunkte`, `SpoilerSpieler`.
 - **Styles**: `Border`, `Gegenstand`, `Tot`. **Tag-Template** `Tag_Ort`. **Template** `Template_Bild`. **App**: `RenameTag`.
-- **Index-/Hub-Tiddler** (Person, Ort, Organisation, Ereignis, …, Spieler, TBC/Abenteuer) und das **tiddlymap-Schema** (edge/nodeTypes) liegen ebenfalls im Plugin.
+- **Index-/Hub-Tiddler** (Person, Ort, Organisation, Ereignis, …, Spieler, TBC/Abenteuer) liegen ebenfalls im Plugin; die Typ-Tags tragen das `color`-Feld, aus dem der Graph die Knotenfarbe zieht.
+- **tw5-graph-Schema + Graph-Templates** (im Plugin): Fields-EdgeTypes (`$:/config/flibbles/graph/edges/fields/*`) + Relink-Feldtypen; die Graph-Templates `$:/dndwiki/graph/templates/dnd-graph` (Typfarben aus Tag-`color`, `shape=box`, keine Positionsspeicherung) und `…/dnd-ego`; der Ego-View `$:/dndwiki/graph/Ego`. Ersetzt das alte tiddlymap-`edge/nodeTypes`-Schema. Die **View-Definitionen** `$:/graph/Default`(Live)/`Kosmogramm`/`Weltkarte`/`Gegenstände` liegen bewusst **im Wiki** (dünn, per-Wiki), nicht im Plugin — s. Ordnerstruktur.
 
 Der überschriebene Core-Tiddler `$:/core/ui/ViewTemplate/body` bindet den Spieler-Sichtbarkeitsfilter in die Standard-Body-Anzeige ein (ebenfalls im Plugin).
 

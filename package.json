@@ -1,15 +1,17 @@
 {
-  "name": "dndwiki",
+  "name": "dndwiki-vandalia",
   "version": "1.0.0",
   "private": true,
-  "description": "DnDWiki – kopierbare Kampagnen-Vorlage fuer D&D-Wikis (TiddlyWiki5). Formatschicht/Plugins aus TiddlyDnD-Plugins.",
+  "description": "Vandalia – D&D-Kampagnen-Wiki (TiddlyWiki5). Formatschicht (dndwiki-core + staticfiles) aus TiddlyDnD-Plugins; Graph-Stack (flibbles) einzeln release-gepinnt.",
   "scripts": {
-    "start": "cross-env NODE_OPTIONS=--no-deprecation TIDDLYWIKI_PLUGIN_PATH=node_modules/tiddlydnd-plugins/plugins tiddlywiki . --listen",
-    "build": "cross-env NODE_OPTIONS=--no-deprecation TIDDLYWIKI_PLUGIN_PATH=node_modules/tiddlydnd-plugins/plugins tiddlywiki . --output ./twpage --build index"
+    "start": "node scripts/tw.js . --listen",
+    "build": "node scripts/tw.js . --output ./twpage --build index"
   },
   "devDependencies": {
-    "cross-env": "^7.0.3",
     "tiddlywiki": "5.4.0",
-    "tiddlydnd-plugins": "git+https://github.com/WkoD/TiddlyDnD-Plugins.git#1.0.1"
+    "tiddlydnd-plugins": "git+https://github.com/WkoD/TiddlyDnD-Plugins.git#1.1.0",
+    "tw5-graph": "git+https://github.com/flibbles/tw5-graph.git#v1.7.1",
+    "tw5-vis-network": "git+https://github.com/flibbles/tw5-vis-network.git#v10.6.3",
+    "tw5-relink": "git+https://github.com/flibbles/tw5-relink.git#v2.6.0"
   }
 }

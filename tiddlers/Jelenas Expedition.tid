@@ -3,7 +3,6 @@ datum: 1351-01-01.1351-07-01.1351-07-12
 modified: 20241219083646697
 tags: [[Andu Falas]] [[Arkhen's Invocatorium]] Ereignis Abenteuer
 title: Jelenas Expedition
-tmap.id: 390b52a4-3614-4661-80ab-152f9d2aad85
 type: text/vnd.tiddlywiki
 
 <b>Jahr:</b> <$macrocall $name="datumlang" datum="1351-01-01"/>

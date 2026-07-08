@@ -4,12 +4,11 @@
         "tiddlywiki/tiddlyweb",
         "tiddlywiki/filesystem",
         "tiddlywiki/highlight",
-        "wkod/dndwiki-core",
-        "wkod/staticfiles",
-        "felixhayashi/tiddlymap",
-        "felixhayashi/hotzone",
-        "felixhayashi/topstoryview",
-        "flibbles/vis-network"
+        "dndwiki-core",
+        "staticfiles",
+        "graph",
+        "vis-network",
+        "relink"
     ],
     "themes": [
         "tiddlywiki/vanilla",

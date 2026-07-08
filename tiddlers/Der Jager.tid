@@ -3,7 +3,6 @@ datum: 1350-09.1351-06-27
 modified: 20230926112038807
 tags: [[Ritter der schwarzen Sonne]] Ereignis [[Apostel von Tenebris]]
 title: Der Jäger
-tmap.id: d592b1a1-98fa-4979-9c6f-7610d7b30526
 type: text/vnd.tiddlywiki
 
 <b>Jahr:</b> <$macrocall $name="datumlang" datum="1350-09"/>

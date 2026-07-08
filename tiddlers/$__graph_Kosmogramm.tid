@@ -1,0 +1,9 @@
+caption: Kosmogramm
+edges.fields: [all[]] -[[tags]] -[[list]]
+edges.functions: [all[]] -[[links]] -[[transcludes]]
+filter: [tag[Gott]] [tag[Organisation]] [tag[Person]] [tag[Spieler]]
+template: $:/dndwiki/graph/templates/dnd-graph
+title: $:/graph/Kosmogramm
+type: application/json
+
+{}
