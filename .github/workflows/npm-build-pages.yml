@@ -26,10 +26,10 @@ jobs:
         echo '${{ github.event.repository.name }}' >> './tiddlers/$__SiteTitle.tid'
         echo $(TZ=Europe/Berlin date +'%Y-%m-%dT%H:%M:%S') >> './tiddlers/$__SiteSubtitle.tid'
     - name: Build TiddlyWiki master index.html
-      env:
-        TIDDLYWIKI_PLUGIN_PATH: node_modules/tiddlydnd-plugins/plugins
-        NODE_OPTIONS: --no-deprecation
-      run: npx tiddlywiki --output ./twpage --build index
+      # Node-Launcher scripts/tw.js setzt TIDDLYWIKI_PLUGIN_PATH aus ALLEN Plugin-Paketen
+      # (tiddlydnd-plugins + tw5-graph/vis-network/relink) + process.noDeprecation.
+      # NICHT `npx tiddlywiki` mit Bundle-only-Pfad — sonst fehlt der flibbles/graph-Stack.
+      run: npm run build
     - name: Copy resource directories
       run: |
         cp -rl ./data ./twpage/data
