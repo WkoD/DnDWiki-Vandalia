@@ -1,89 +1,26 @@
 # DnDWiki
 
-Ein **TiddlyWiki 5** (Node.js-Edition) für D&D-Kampagnen. Dieses Repo ist die
-**kopierbare Kampagnen-Vorlage**: es enthält nur pro-Wiki-Konfig, die Datendatei-Vorlagen
-(`Datum`, `Erfahrungspunkte`) und (leeren) Content in `tiddlers/` sowie Assets
-(`images/`, `data/`). Engine und Formatschicht kommen als Abhängigkeiten:
+Ein **TiddlyWiki 5** (Node.js-Edition) für D&D-Kampagnen, Inhalte auf Deutsch.
+Dieses Repo ist die Kampagne **Vandalia** (Details: siehe `CAMPAIGN.md`):
+pro-Wiki-Konfig, Datendateien (`Datum`, `Erfahrungspunkte`) und Content in
+`tiddlers/` sowie Assets (`images/`, `data/`). Engine und Formatschicht kommen als
+Abhängigkeiten:
 
-- **Engine:** offizielles [`tiddlywiki`](https://www.npmjs.com/package/tiddlywiki) aus npm
-  (kein eigener Fork mehr), in `package.json` gepinnt.
+- **Engine:** offizielles [`tiddlywiki`](https://www.npmjs.com/package/tiddlywiki)
+  aus npm, in `package.json` gepinnt.
 - **Formatschicht:** aus [`TiddlyDnD-Plugins`](https://github.com/WkoD/TiddlyDnD-Plugins),
-  **fest versioniert** gepinnt. Die D&D-Formatschicht ist dort das Plugin `dndwiki-core` (+ `staticfiles`).
-- **Graph-Stack:** `flibbles/tw5-graph` (`graph` + `vis-network` + `relink`), einzeln als npm-Git-Dependency
-  auf Release-Tags gepinnt (nicht im Bundle). Ein Node-Launcher (`scripts/tw.js`) fügt alle daraus zu `TIDDLYWIKI_PLUGIN_PATH` zusammen.
+  fest versioniert gepinnt - dort das Plugin `dndwiki-core` (+ `staticfiles`).
+- **Graph-Stack:** [`flibbles/tw5-graph`](https://github.com/flibbles/tw5-graph) +
+  [`tw5-vis-network`](https://github.com/flibbles/tw5-vis-network) +
+  [`tw5-relink`](https://github.com/flibbles/tw5-relink), einzeln als
+  npm-Git-Dependency auf Release-Tags gepinnt.
 
-> Ergänzende Dateien: `CLAUDE.md` (technische Detail-Doku), `CAMPAIGN.md` (kampagnenspezifisch).
+## Über dieses Repo
 
-## Repo-Familie
+Dieses Repo ist eine konkrete **Kampagne** - eine Kopie der `DnDWiki`-Vorlage mit
+eigenem Content. Für eine **neue** Kampagne die Vorlage nutzen:
+[github.com/WkoD/DnDWiki](https://github.com/WkoD/DnDWiki) (dort die
+Schritt-für-Schritt-Anleitung "Neue Kampagne einrichten").
 
-| Repo | Rolle |
-|------|-------|
-| **`DnDWiki`** | Kopierbare **Kampagnen-Vorlage** (ohne Kampagnen-Lore). |
-| **`DnDWiki-Vandalia`**, **`DnDWiki-Tyranny`** | Kampagnen = Kopie der Vorlage + eigener Content + eigene `Datum`/`Erfahrungspunkte`/Konfig. |
-| **`TiddlyDnD-Plugins`** | Formatschicht (`dndwiki-core`) + `staticfiles` + Drittanbieter, **versioniert** (semver-Tags/Releases). |
-
-**Neue Kampagne** = dieses Repo **1:1 kopieren**, Content füllen. Es müssen keine
-Ordner ausgeschlossen werden — Formatschicht/Plugins kommen aus dem Pin.
-
-## Lokale Entwicklung
-
-**Voraussetzung:** [Node.js](https://nodejs.org/).
-
-```bash
-npm install     # Engine (tiddlywiki@5.4.0) + TiddlyDnD-Plugins (gepinnt) holen
-npm start       # Server mit Live-Editing auf http://localhost:8080
-npm run build   # statische index.html nach ./twpage bauen (wie CI)
-```
-
-Im Browser gemachte Änderungen an **Content** werden als `.tid`-Dateien zurückgeschrieben.
-Die **Formatschicht** (Makros/ViewTemplates/Hubs) erscheint als read-only Shadow — sie wird
-**nicht hier**, sondern im Repo `TiddlyDnD-Plugins` bearbeitet (s. u.).
-
-Beide Skripte laufen über den Node-Launcher `scripts/tw.js`, der `TIDDLYWIKI_PLUGIN_PATH` aus allen
-Plugin-Paketen in `node_modules` (`tiddlydnd-plugins` + `tw5-graph`/`tw5-vis-network`/`tw5-relink`) plattformübergreifend zusammensetzt.
-
-**Bilder im Dev-Server:** Das Plugin `staticfiles` (aus `TiddlyDnD-Plugins`, `platform: server`)
-liefert `images/` und `data/` im `--listen`-Server aus. Es ist aus dem Offline-Build ausgeschlossen.
-
-### In VS Code arbeiten
-
-Die Multi-Root-Workspace-Datei `DnDWiki.code-workspace` (im übergeordneten Ordner) bündelt alle
-Repos und bietet pro Wiki einen Start-Button/Task (Ports: DnDWiki 8080 / Vandalia 8081 / Tyranny 8082).
-
-## Formatschicht ändern & Plugin-Version anheben (Versions-Bump)
-
-Die gemeinsame Formatschicht liegt **im Repo `TiddlyDnD-Plugins`**. Ablauf einer Änderung:
-
-1. Im Repo `TiddlyDnD-Plugins`: Format-Dateien unter `plugins/dndwiki-core/` im IDE bearbeiten,
-   `npm start` zur Vorschau. Dann die `version` in `plugins/dndwiki-core/plugin.info` erhöhen
-   (semver: patch=Fix, minor=neu+abwärtskompatibel, major=brechend).
-2. Committen, **taggen == Version** und Release setzen:
-   ```bash
-   git tag 1.1.0 && git push origin master 1.1.0
-   gh release create 1.1.0 --generate-notes
-   ```
-3. In **diesem** Wiki (und jeder Kampagne, die die neue Version will) den Pin in `package.json`
-   **bewusst** anheben und neu installieren:
-   ```jsonc
-   "tiddlydnd-plugins": "git+https://github.com/WkoD/TiddlyDnD-Plugins.git#1.1.0"
-   ```
-   ```bash
-   npm install
-   # npm cached Git-Tags aggressiv – wenn die neue Version lokal nicht gezogen wird:
-   rm -rf node_modules package-lock.json && npm install
-   ```
-   (In der CI/auf frischen Rechnern entfällt das – dort wird der Tag immer frisch geholt.)
-
-**Kein Auto-Sync:** Eine neue Plugin-Version erreicht ein Wiki erst durch diesen bewussten
-Pin-Bump — gewollte Stabilität und Reproduzierbarkeit (jeder Klon baut denselben Stand). Das
-Plugin-Repo kennt die Kampagnen nicht.
-
-## Deployment & CI (GitHub Actions)
-
-- **`npm-build-pages.yml`** — bei Push auf `master` oder manuell: `npm install` (holt Engine +
-  gepinnte Plugins), aktualisiert Titel/Zeitstempel-Tiddler, baut die öffentliche `index.html`
-  (mit gesetztem `TIDDLYWIKI_PLUGIN_PATH`), kopiert `data/` und `images/` dazu und deployt nach
-  `gh-pages`.
-
-Es gibt **keinen `repo-sync`-Workflow und kein `DISPATCH_PAT`-Secret mehr** — die gemeinsame
-Schicht kommt über den Plugin-Pin, nicht über Datei-Sync.
+Weitere Doku: `CLAUDE.md` (Entwicklung/Konventionen), `CAMPAIGN.md`
+(kampagnenspezifisch).
