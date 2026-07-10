@@ -5,6 +5,6 @@ edges.functions: links
 filter: [list[$:/StoryList]multitag[Gott,Organisation,Person,Spieler,Ort,Ereignis,Artefakt,Buch,Gegenstand,Material]]
 modified: 20260708122610910
 neighbors.incoming: 0
-template: $:/dndwiki/graph/templates/dnd-graph
+template: $:/plugins/dndwiki-core/graph/templates/dnd-graph
 title: $:/graph/Default
 type: application/json
