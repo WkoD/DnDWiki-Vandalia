@@ -41,6 +41,11 @@ oder aus dieser Datei planen:**
 - **Fraktionen / Häuser / Orte / NPCs:** Tiddler mit dem jeweiligen Typ-Tag. Startpunkte:
   `Index.tid` und die Kategorie-Hub-Tiddler `Person.tid`, `Ort.tid`, `Organisation.tid`,
   `Ereignis.tid`, `Abenteuer.tid`, ...
+- **Orte-Hierarchie (Ober-/Unterort):** kein eigenes Feld - implizit über `tags` kodiert.
+  Ein `Ort`-Tiddler ist mit seinem übergeordneten Gebiet/Kontinent vertaggt (z. B.
+  `Baile.tid: tags: [[Königreich von Vandalia]] [[Haus Eiree]] Ort`). Nicht jeder Ort hat
+  aktuell einen vollständigen Tag-Pfad bis zum Kontinent - im Zweifel Body-Text der
+  Orte gegenprüfen (siehe Backlog "Orte-Hierarchie prüfen und ggf. erweitern").
 - **Aktuelles In-World-Datum:** Body von `Datum.tid`.
 - **XP-Gesamtstand:** Body von `Erfahrungspunkte.tid`.
 - **Offene Plot-Fäden:** Suche nach dem `OffenePunkte`-Snippet in `Ereignis`-Tiddlern.

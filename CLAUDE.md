@@ -137,8 +137,9 @@ Standard-`.tid`-Format (Feld-Header, Leerzeile, Fließtext). Felder für Content
 - `tags` - mehrere Tags getrennt durch Leerzeichen; mehrteilige Tag-Namen stehen in `[[doppelten eckigen Klammern]]`.
 - `bild` - Bilddateiname; wird anhand des Typ-Tags (Person/Ort/Ereignis/...) zu einem Bild aus `images/<Tag>/` aufgelöst.
 - **Beziehungsfelder** (Listenfelder, Titel-referenzierend) - tragen das Beziehungsnetz für den Graphen: `ort`, `mitglied`, `ehemals`, `anfuehrer`, `patron`, `unter`, `familie`, `allianz`, `freundschaft`, `feindschaft` (Person/Org/Gott) sowie `besitzer`/`erschaffer` (Gegenstände). Symmetrische Felder (`familie`/`allianz`/`freundschaft`/`feindschaft`) stehen auf **beiden** Endpunkten.
-- `datum` - In-World-Kalenderdatum (nicht das reale Sitzungsdatum); wird für Kalenderanzeigen/-berechnungen genutzt.
+- `datum` - In-World-Kalenderdatum (nicht das reale Sitzungsdatum); wird für Kalenderanzeigen/-berechnungen genutzt. **Verstorben-Konvention:** Ein **Punkt irgendwo im `datum`-Wert** (z. B. `.1350-07` als Präfix, oder `1200.1351-04-14` als Geburt.Sterbedatum) markiert eine Person/Figur als verstorben - genutzt von `$:/_my/Style/Tot` (graut den Tiddler aus) und dem `totlink`-Makro (durchstreicht Links darauf); der Weltkarte-Graph-View blendet Personen mit Punkt-`datum` aktiv aus (`-[search:datum[.]]`).
 - Fließtext nutzt durchgehend `[[WikiLinks]]` zur expliziten Verlinkung zwischen Personen/Orten/Organisationen - das ist der primäre Vernetzungsmechanismus neben den Tags.
+- **Ereignis-Pflege:** Beim Anlegen oder inhaltlichen Bearbeiten eines `Ereignis`-Tiddlers prüfen, ob die darin (verlinkt oder unverlinkt) erwähnten Personen durch das Ereignis einen neuen, aktuelleren Aufenthaltsort erhalten - falls ja, das `ort`-Feld der betroffenen Personen-Tiddler im selben Zug mitpflegen (inkl. `modified`-Bump dort, siehe "Zeitstempel bei Tiddler-Bearbeitung").
 
 ### Zeitstempel bei Tiddler-Bearbeitung (`created`/`modified`)
 
