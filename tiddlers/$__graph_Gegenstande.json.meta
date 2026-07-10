@@ -6,6 +6,6 @@ filter: [tag[Artefakt]] [tag[Buch]] [tag[Gegenstand]] [tag[Material]] =[tag[Arte
 modified: 20260708122552183
 neighbors.incoming: 0
 neighbors.interedges: no
-template: $:/dndwiki/graph/templates/dnd-graph
+template: $:/plugins/dndwiki-core/graph/templates/dnd-graph
 title: $:/graph/Gegenstände
 type: application/json
