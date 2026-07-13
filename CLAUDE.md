@@ -138,7 +138,13 @@ Standard-`.tid`-Format (Feld-Header, Leerzeile, Fließtext). Felder für Content
 - `bild` - Bilddateiname; wird anhand des Typ-Tags (Person/Ort/Ereignis/...) zu einem Bild aus `images/<Tag>/` aufgelöst.
 - **Beziehungsfelder** (Listenfelder, Titel-referenzierend) - tragen das Beziehungsnetz für den Graphen: `ort`, `mitglied`, `ehemals`, `anfuehrer`, `patron`, `unter`, `familie`, `allianz`, `freundschaft`, `feindschaft` (Person/Org/Gott) sowie `besitzer`/`erschaffer` (Gegenstände). Symmetrische Felder (`familie`/`allianz`/`freundschaft`/`feindschaft`) stehen auf **beiden** Endpunkten.
 - `datum` - In-World-Kalenderdatum (nicht das reale Sitzungsdatum); wird für Kalenderanzeigen/-berechnungen genutzt. **Verstorben-Konvention:** Ein **Punkt irgendwo im `datum`-Wert** (z. B. `.1350-07` als Präfix, oder `1200.1351-04-14` als Geburt.Sterbedatum) markiert eine Person/Figur als verstorben.
-- Fließtext nutzt durchgehend `[[WikiLinks]]` zur expliziten Verlinkung zwischen Personen/Orten/Organisationen - das ist der primäre Vernetzungsmechanismus neben den Tags.
+- **Verlinkung:** Fließtext nutzt durchgehend `[[WikiLinks]]` zur expliziten Verlinkung zwischen Personen/Orten/Organisationen - das ist der primäre Vernetzungsmechanismus neben den Tags. Kein Freelinks-Plugin mehr im Einsatz -> jede Erwähnung eines existierenden Tiddler-Titels braucht einen echten Link. Präferenzreihenfolge (bevorzugt zuerst, Rest nur falls nötig):
+  1. Direkter Link `[[Titel]]` bei exaktem Vorkommen.
+  2. Bei Flexion/Deklination: Suffix außerhalb der Klammer ankleben (`[[Titel]]s`, `[[Titel]]er`, ...).
+  3. Passt der Suffix grammatikalisch nicht (Kasus-/Präpositionswechsel): minimaler Satzumbau, der die Grundform verlinkbar macht (Beispiel: "vom [[Königreich von Vandalia]]" statt "des [[Königreiches von Vandalia|Königreich von Vandalia]]").
+  4. `[[Alias|Titel]]` nur als letzte Option - echte Aliase/Decknamen oder bewusst abweichender Linktext.
+
+  Keine blinde Massenverlinkung: jede Erwähnung inhaltlich prüfen (echte Wiki-Entität vs. externe Referenz/Zitat/generisches Wort). Erwähnungen von noch nicht existierenden Tiddlern (dangling) nicht automatisch anlegen oder verlinken - dem DM zur Entscheidung vorlegen.
 - **Ereignis-Pflege:** Beim Anlegen oder inhaltlichen Bearbeiten eines `Ereignis`-Tiddlers prüfen, ob die darin (verlinkt oder unverlinkt) erwähnten Personen durch das Ereignis einen neuen, aktuelleren Aufenthaltsort erhalten - falls ja, das `ort`-Feld der betroffenen Personen-Tiddler im selben Zug mitpflegen (inkl. `modified`-Bump dort, siehe "Zeitstempel bei Tiddler-Bearbeitung").
 
 ### Zeitstempel bei Tiddler-Bearbeitung (`created`/`modified`)
