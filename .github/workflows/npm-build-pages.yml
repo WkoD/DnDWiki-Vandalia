@@ -25,6 +25,45 @@ jobs:
       run: |
         echo '${{ github.event.repository.name }}' >> './tiddlers/$__SiteTitle.tid'
         echo $(TZ=Europe/Berlin date +'%Y-%m-%dT%H:%M:%S') >> './tiddlers/$__SiteSubtitle.tid'
+    - name: Disable saving in the published (read-only) copy
+      # Nur zur CI-Build-Zeit erzeugt, landet nie im Git-Repo - lokales `npm start`
+      # bleibt dadurch unveraendert voll editierbar. Wichtig: die beiden per exaktem
+      # String-Vergleich ausgewerteten Tiddler (IsReadOnly, PageControlButtons/Visibility)
+      # duerfen KEIN abschliessendes Newline im Body haben (siehe printf statt cat<<EOF),
+      # sonst matcht TiddlyWiki's $reveal/Visibility-Check nicht mehr exakt.
+      run: |
+        printf 'title: $:/config/SaverFilter\ntype: text/vnd.tiddlywiki\n\n[[]] -[[]]' > './tiddlers/$__config_SaverFilter.tid'
+        printf 'title: $:/status/IsReadOnly\ntype: text/vnd.tiddlywiki\n\nyes' > './tiddlers/$__status_IsReadOnly.tid'
+        printf 'title: $:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/save-wiki\ntype: text/vnd.tiddlywiki\n\nhide' > './tiddlers/$__config_PageControlButtons_Visibility_$__core_ui_Buttons_save-wiki.tid'
+        cat > './tiddlers/$__config_PublishedReadOnlyStyles.tid' <<'EOF'
+        title: $:/config/PublishedReadOnlyStyles
+        tags: [[$:/tags/Stylesheet]]
+
+        \define button-selector(title)
+        button.$title$, .tc-drop-down button.$title$, div.$title$
+        \end
+
+        \define hide-edit-controls()
+        <$reveal state="$:/status/IsReadOnly" type="match" text="yes" default="yes">
+        <<button-selector tc-btn-\%24\%3A\%2Fcore\%2Fui\%2FButtons\%2Fclone>>`,`
+        <<button-selector tc-btn-\%24\%3A\%2Fcore\%2Fui\%2FButtons\%2Fdelete>>`,`
+        <<button-selector tc-btn-\%24\%3A\%2Fcore\%2Fui\%2FButtons\%2Fedit>>`,`
+        <<button-selector tc-btn-\%24\%3A\%2Fcore\%2Fui\%2FButtons\%2Fnew-here>>`,`
+        <<button-selector tc-btn-\%24\%3A\%2Fcore\%2Fui\%2FButtons\%2Fnew-journal-here>>`,`
+        <<button-selector tc-btn-\%24\%3A\%2Fcore\%2Fui\%2FButtons\%2Fimport>>`,`
+        <<button-selector tc-btn-\%24\%3A\%2Fcore\%2Fui\%2FButtons\%2Fmanager>>`,`
+        <<button-selector tc-btn-\%24\%3A\%2Fcore\%2Fui\%2FButtons\%2Fnew-image>>`,`
+        <<button-selector tc-btn-\%24\%3A\%2Fcore\%2Fui\%2FButtons\%2Fnew-journal>>`,`
+        <<button-selector tc-btn-\%24\%3A\%2Fcore\%2Fui\%2FButtons\%2Fnew-tiddler>> `{
+        	display: none;
+        }`
+        </$reveal>
+        \end
+
+        \rules only filteredtranscludeinline transcludeinline macrodef macrocallinline macrocallblock
+
+        <<hide-edit-controls>>
+        EOF
     - name: Build TiddlyWiki master index.html
       # Node-Launcher scripts/tw.js setzt TIDDLYWIKI_PLUGIN_PATH aus ALLEN Plugin-Paketen
       # (tiddlydnd-plugins + tw5-graph/vis-network/relink) + process.noDeprecation.

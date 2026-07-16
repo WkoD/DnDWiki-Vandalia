@@ -22,5 +22,24 @@ eigenem Content. Für eine **neue** Kampagne die Vorlage nutzen:
 [github.com/WkoD/DnDWiki](https://github.com/WkoD/DnDWiki) (dort die
 Schritt-für-Schritt-Anleitung "Neue Kampagne einrichten").
 
+## Bearbeitung
+
+Lokal mit Live-Editing bearbeiten:
+
+```bash
+npm install    # einmalig: Engine + Formatschicht + Graph-Stack holen
+npm start      # Server auf http://localhost:8080 mit Live-Editing starten
+```
+
+Im Browser gemachte Änderungen werden automatisch als `.tid`-Dateien in
+`tiddlers/` zurückgeschrieben - kein manuelles Speichern nötig. Details/Konventionen:
+`CLAUDE.md` -> "Befehle & CI".
+
+## Veröffentlichung
+
+Bei jedem Push auf `master` baut eine GitHub Action automatisch eine statische
+`index.html` und deployt sie nach `gh-pages` (GitHub Pages). Diese veröffentlichte
+Kopie ist **rein lesbar**.
+
 Weitere Doku: `CLAUDE.md` (Entwicklung/Konventionen), `CAMPAIGN.md`
 (kampagnenspezifisch).

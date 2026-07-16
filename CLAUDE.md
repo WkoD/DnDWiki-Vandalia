@@ -92,6 +92,18 @@ zurückgeschrieben; die Formatschicht erscheint nur als read-only Shadow.
 manuell - `npm install`, aktualisiert Titel/Zeitstempel-Tiddler, baut `index.html`,
 kopiert `data/`+`images/` dazu, deployt nach `gh-pages`.
 
+Die veröffentlichte GitHub-Pages-Kopie ist bewusst **nicht speicherbar/read-only**:
+Derselbe CI-Schritt legt zusätzlich vier Tiddler ausschließlich zur Build-Zeit an
+(nie im Git-Repo, `npm start`/`npm run build` lokal unberührt) - `$:/config/SaverFilter`
+(leer, damit nie "ungespeicherte Änderungen" gemeldet wird), `$:/status/IsReadOnly`
+(`yes`) und `$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/save-wiki`
+(`hide`, blendet den Speichern-Button aus) sowie eine eigene
+`$:/config/PublishedReadOnlyStyles`-CSS, die Edit/Clone/Delete/Neu-*/Import/Manager-
+Buttons ausblendet (Kopie der `tiddlyweb/readonly`-Plugin-Logik). Wichtig bei
+Änderungen an diesen drei Config-Tiddlern: Sie werden per exaktem String-Vergleich
+ausgewertet - kein abschließendes Newline im Body (daher `printf` statt
+`cat <<EOF` in der Workflow-Datei für diese drei).
+
 ## Architektur & Content-Modell
 
 ### Ordnerstruktur
