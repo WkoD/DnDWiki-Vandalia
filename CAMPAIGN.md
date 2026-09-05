@@ -54,7 +54,7 @@ oder aus dieser Datei planen:**
   Ein `Ort`-Tiddler ist mit seinem übergeordneten Gebiet/Kontinent vertaggt (z. B.
   `Baile.tid: tags: [[Königreich von Vandalia]] [[Haus Eiree]] Ort`). Nicht jeder Ort hat
   aktuell einen vollständigen Tag-Pfad bis zum Kontinent - im Zweifel Body-Text der
-  Orte gegenprüfen (siehe Backlog "Orte-Hierarchie prüfen und ggf. erweitern").
+  Orte gegenprüfen.
 - **Aktuelles In-World-Datum:** Body von `Datum.tid`.
 - **XP-Gesamtstand:** Body von `Erfahrungspunkte.tid`.
 - **Offene Plot-Fäden:** Suche nach dem `OffenePunkte`-Snippet in `Ereignis`-Tiddlern.

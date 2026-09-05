@@ -181,7 +181,7 @@ dieselbe Pflege manuell:
   Frameworkwechsel wie die tw5-graph-Migration, die Felder/Schema mechanisch
   über viele Tiddler umgeschrieben hat.
 - **Keine Ausnahme:** Batch-Aufgaben, die inhaltliche Entscheidungen **pro
-  Tiddler** treffen (z. B. Backlog "Link-Ergänzung als freelinks-Ersatz" oder
+  Tiddler** treffen (z. B. eine Verlinkungs-Durchsicht über viele Tiddler oder
   eine redundante Beziehungs-Kante entfernen), sind inhaltliche Änderungen -
   auch wenn sie viele Tiddler in einem Lauf betreffen. Dort `modified` je
   betroffenem Tiddler aktualisieren.
