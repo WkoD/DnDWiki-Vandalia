@@ -1,4 +1,5 @@
 caption: Gegenstände
+created: 20260708130142000
 edges.fields: [all[]] -[[tags]] -[[list]]
 edges.functions: [all[]] -[[links]] -[[transcludes]]
 filter: [[Artefakt]] [[Buch]] [[Gegenstand]] [[Material]] +[tagging[]] =>gegenstaende [(gegenstaende)] [(gegenstaende)get[besitzer]enlist-input[]] [(gegenstaende)get[erschaffer]enlist-input[]] [(gegenstaende)get[ehemals]enlist-input[]] +[unique[]]

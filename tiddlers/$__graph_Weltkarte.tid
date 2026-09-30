@@ -1,7 +1,9 @@
 caption: Weltkarte
+created: 20260708130142000
 edges.fields: ort
 edges.functions: [all[]] -[[links]] -[[transcludes]]
 filter: [tag[Ort]] [multitag[Gott,Person,Spieler,Organisation]] -[search:datum[.]]
+modified: 20260715214458000
 template: $:/plugins/dndwiki-core/graph/templates/dnd-graph
 title: $:/graph/Weltkarte
 type: application/json
