@@ -93,16 +93,16 @@ manuell - `npm install`, aktualisiert Titel/Zeitstempel-Tiddler, baut `index.htm
 kopiert `data/`+`images/` dazu, deployt nach `gh-pages`.
 
 Die veröffentlichte GitHub-Pages-Kopie ist bewusst **nicht speicherbar/read-only**:
-Derselbe CI-Schritt legt zusätzlich vier Tiddler ausschließlich zur Build-Zeit an
+Derselbe CI-Schritt legt zusätzlich zwei Tiddler ausschließlich zur Build-Zeit an
 (nie im Git-Repo, `npm start`/`npm run build` lokal unberührt) - `$:/config/SaverFilter`
-(leer, damit nie "ungespeicherte Änderungen" gemeldet wird), `$:/status/IsReadOnly`
-(`yes`) und `$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/save-wiki`
-(`hide`, blendet den Speichern-Button aus) sowie eine eigene
-`$:/config/PublishedReadOnlyStyles`-CSS, die Edit/Clone/Delete/Neu-*/Import/Manager-
-Buttons ausblendet (Kopie der `tiddlyweb/readonly`-Plugin-Logik). Wichtig bei
-Änderungen an diesen drei Config-Tiddlern: Sie werden per exaktem String-Vergleich
-ausgewertet - kein abschließendes Newline im Body (daher `printf` statt
-`cat <<EOF` in der Workflow-Datei für diese drei).
+(leer, damit nie "ungespeicherte Änderungen" gemeldet wird) und `$:/status/IsReadOnly`
+(`yes`). `IsReadOnly` ist der Schalter: `dndwiki-core` (ab 1.4.1) hängt daraufhin die
+Klasse `dnd-readonly` an den Seitencontainer und blendet Bearbeiten/Klonen/Löschen/
+Neu-*/Import/Manager sowie den Speichern-Knopf aus (dieselbe Knopfliste wie das
+`tiddlyweb`-Plugin, das im Offline-Build nicht enthalten ist). Lokal meldet der Server
+`IsReadOnly` = `no`, dort bleibt alles bearbeitbar. Wichtig: `IsReadOnly` wird per
+exaktem String-Vergleich ausgewertet - kein abschließendes Newline im Body (daher
+`printf` statt `cat <<EOF` in der Workflow-Datei).
 
 ## Architektur & Content-Modell
 
