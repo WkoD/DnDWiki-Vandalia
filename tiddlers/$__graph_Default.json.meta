@@ -7,5 +7,3 @@ modified: 20260710141739000
 template: $:/plugins/dndwiki-core/graph/templates/dnd-graph
 title: $:/graph/Default
 type: application/json
-
-{}
