@@ -109,11 +109,33 @@ ausgewertet - kein abschließendes Newline im Body (daher `printf` statt
 ### Ordnerstruktur
 
 - `tiddlers/` - **flach**, keine Unterordner für Kategorien. Kategorisierung erfolgt ausschließlich über **Tags**, nicht über Verzeichnisstruktur.
-  - Content-Tiddler: Dateiname = Titel, z. B. `Hafendorf.tid`.
+  - Content-Tiddler: Dateiname aus dem Titel, z. B. `Hafendorf.tid` - genaue Regeln unter "Dateiname und Dateiformat" unten.
   - System- und Datentiddler (`$`-Präfix, `Datum`, `Erfahrungspunkte`): siehe "System- und Datentiddler" unten.
   - Die Formatschicht (Makros, ViewTemplates, Hubs, tw5-graph-Schema) kommt aus dem Plugin `dndwiki-core` und liegt **nicht** als Datei im Wiki - dokumentiert im Repo `TiddlyDnD-Plugins`.
 - `images/` - nach Kategorie sortiert, deckungsgleich mit den Content-Tags: `Person` (NPC-Portraits), `Ort`, `Ereignis`, `Organisation`, `Gegenstand`, `Karte`, `Spieler`, `Design`. Kampagnenspezifische Unterordner zur reinen Datenablage (falls vorhanden): siehe `CAMPAIGN.md`.
 - `data/Buch/` - In-World-Lore-PDFs.
+
+### Dateiname und Dateiformat
+
+Tiddler-Dateien **immer so anlegen, wie TiddlyWiki sie beim Speichern selbst schreibt** -
+sonst ändert die erste Bearbeitung im Browser Dateiname oder Format, und im Diff steht eine
+Umbenennung statt der eigentlichen Änderung. Das gilt auch beim Anlegen im IDE oder per Skript.
+
+- **Dateiname** = Titel mit den Ersetzungen von TiddlyWiki: `/` `\` `:` `<` `>` `|` `?` `*` `"`
+  `^` `~` werden zu `_`, Umlaute und Sonderzeichen werden transliteriert. Beispiele:
+  `$:/graph/Gegenstände` -> `$__graph_Gegenstande`, `Gründung des Ordens von Hela` ->
+  `Grundung des Ordens von Hela`, `Straße nach Süden` -> `Strasse nach Suden`,
+  `Miehall/Karte` -> `Miehall_Karte`.
+- **Format** richtet sich allein nach dem Feld `type`: Wikitext (`text/vnd.tiddlywiki`, der
+  Standard) -> eine `.tid`-Datei; **jeder andere Typ** -> Inhaltsdatei plus `.meta` mit den
+  Feldern. Die Graph-Views (`type: application/json`) liegen daher als
+  `$__graph_<Name>.json` + `$__graph_<Name>.json.meta`.
+- **Fallstrick:** Eine `.json`-Datei **ohne** zugehörige `.meta` liest TiddlyWiki als Liste
+  mehrerer Tiddler, nicht als einen. Beide Dateien immer gemeinsam anlegen, umbenennen und
+  löschen.
+- Am sichersten erzeugt man die Dateien mit TiddlyWikis eigener Logik statt von Hand:
+  `$tw.utils.generateTiddlerFileInfo` (Name und Format) und `$tw.utils.saveTiddlerToFileSync`
+  (Schreiben), beide in `node_modules/tiddlywiki/core-server/filesystem.js`.
 
 ### System- und Datentiddler
 
