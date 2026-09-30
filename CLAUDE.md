@@ -126,7 +126,7 @@ Technische Tiddler mit fester, vom Format vorgegebener Funktion (kein Lore-Conte
 | `$:/DefaultTiddlers` | Liste der Tiddler, die beim Öffnen des Wikis automatisch im Story-River angezeigt werden. |
 | `$:/graph/Default` (Caption "Live") | Graph-View: aktuell offene Tiddler (`$:/StoryList`) der Haupttypen, inkl. automatischer `links`-Kanten (Wikilinks). |
 | `$:/graph/Kosmogramm` | Graph-View: alle `Gott`/`Organisation`/`Person`/`Spieler`-Tiddler mit ihren Beziehungsfeldern. |
-| `$:/graph/Weltkarte` | Graph-View: alle `Ort`-Tiddler plus alle Personen/Götter/Spieler mit gesetztem `ort`-Feld, verbunden über die `ort`-Kante. |
+| `$:/graph/Weltkarte` | Graph-View: alle `Ort`-Tiddler plus alle lebenden Personen/Götter/Spieler/Organisationen - mit und ohne `ort`-Feld -, verbunden über die `ort`-Kante. |
 | `$:/graph/Gegenstände` | Graph-View: `Artefakt`/`Buch`/`Gegenstand`/`Material`-Tiddler plus ihre über `besitzer`/`erschaffer`/`ehemals` verknüpften Besitzer/Erschaffer/ehemaligen Besitzer sowie über `komponente` verknüpfte Zutaten. |
 | `Datum` | Body = aktuelles In-World-Kalenderdatum als reiner Wert; vom DM direkt editiert. |
 | `Erfahrungspunkte` | Body = aktueller XP-Gesamtstand als reine Zahl; vom DM direkt editiert. |
@@ -149,7 +149,7 @@ Standard-`.tid`-Format (Feld-Header, Leerzeile, Fließtext). Felder für Content
 - `tags` - mehrere Tags getrennt durch Leerzeichen; mehrteilige Tag-Namen stehen in `[[doppelten eckigen Klammern]]`.
 - `bild` - Bilddateiname; wird anhand des Typ-Tags (Person/Ort/Ereignis/...) zu einem Bild aus `images/<Tag>/` aufgelöst.
 - **Beziehungsfelder** (Listenfelder, Titel-referenzierend) - tragen das Beziehungsnetz für den Graphen: `ort`, `mitglied`, `ehemals`, `anfuehrer`, `leiter`, `patron`, `mentor`, `unter`, `familie`, `allianz`, `bund`, `feindschaft` (Person/Org/Gott) sowie `besitzer`/`erschaffer`/`ehemals`/`komponente` (Gegenstände). Symmetrische Felder (`familie`/`allianz`/`bund`/`feindschaft`) stehen auf **beiden** Endpunkten und zeichnen eine Linie mit beidseitigem Pfeil. `leiter` ist der Zwischen-Rang zwischen `mitglied` und `anfuehrer` (z. B. Ratsführung), `mentor` die individuelle Lehrer/Schüler-Kante. `bund` (ab dndwiki-core 1.3.0, ersetzt das frühere `freundschaft`) deckt neben Freundschaft auch Schutz- und Zugehörigkeitsbeziehungen ohne Dienstverhältnis ab. `ehemals` bedeutet je nach Tiddler-Typ etwas anderes (wie auch `ort` typübergreifend verwendet wird): auf Person/Organisation/Gott ein ehemaliges Organisations-Mitglied, auf Gegenständen ein ehemaliger Besitzer (Person/Organisation). `komponente` ist gerichtet und verweist von einem herstellbaren Gegenstand (Trank/Tinktur/Artefakt) auf seine Zutaten-Gegenstände (kein Mengenfeld mehr - reine Existenz der Kante).
-- `datum` - In-World-Kalenderdatum (nicht das reale Sitzungsdatum); wird für Kalenderanzeigen/-berechnungen genutzt. **Verstorben-Konvention:** Ein **Punkt irgendwo im `datum`-Wert** (z. B. `.1350-07` als Präfix, oder `1200.1351-04-14` als Geburt.Sterbedatum) markiert eine Person/Figur als verstorben.
+- `datum` - In-World-Kalenderdatum (nicht das reale Sitzungsdatum); wird für Kalenderanzeigen/-berechnungen genutzt. **Verstorben-Konvention:** Ein **Punkt irgendwo im `datum`-Wert** (z. B. `.1350-07` als Präfix, oder `1200.1351-04-14` als Geburt.Sterbedatum) markiert eine Person/Figur als verstorben. Bei **Ereignissen** trennt der Punkt dagegen mehrere Zeitpunkte (`1351-06-27.1351-11-19`); ein Punkt am Ende markiert ein offenes Ende (`1351-11-25.1351-12-02.`). Ereignisse gelten daher nie als "tot".
 - **Verlinkung:** Fließtext nutzt durchgehend `[[WikiLinks]]` zur expliziten Verlinkung zwischen Personen/Orten/Organisationen - das ist der primäre Vernetzungsmechanismus neben den Tags. Kein Freelinks-Plugin mehr im Einsatz -> jede Erwähnung eines existierenden Tiddler-Titels braucht einen echten Link. Präferenzreihenfolge (bevorzugt zuerst, Rest nur falls nötig):
   1. Direkter Link `[[Titel]]` bei exaktem Vorkommen.
   2. Bei Flexion/Deklination: Suffix außerhalb der Klammer ankleben (`[[Titel]]s`, `[[Titel]]er`, ...).
@@ -195,6 +195,8 @@ Jeder Tiddler bekommt typischerweise zwei Arten von Tags:
    - **Ereignisse** - datierte/narrative Einträge: `Ereignis` (einzelner In-World-Vorfall, ggf. mehrere Zeitpunkte, siehe Tiddler-Format), `Abenteuer` (übergeordneter Handlungsstrang/Kapitel).
    - **Sonstiges** - Meta/Navigation: `Index` (Einstiegspunkt), `Information` (technische Tiddler wie `Datum`/`Erfahrungspunkte`, siehe oben).
 2. Fraktions-/Handlungsstrang-Tag als thematischer Hub - die konkreten Namen sind **kampagnenspezifisch** und stehen nicht hier (siehe die `CAMPAIGN.md` bzw. die Kategorie-Hub-Tiddler des jeweiligen Wikis).
+
+**Tag-Farben:** Ein Tiddler, der als Tag dient, bekommt die Farbe seines Typs automatisch (eine Organisation als Fraktions-Tag orange, ein Ort rot). Ein eigenes `color`-Feld ist nur nötig, wenn ein Tag bewusst abweichen soll - dann gewinnt es.
 
 ### Plugins (`tiddlywiki.info`, geliefert aus `TiddlyDnD-Plugins`)
 
