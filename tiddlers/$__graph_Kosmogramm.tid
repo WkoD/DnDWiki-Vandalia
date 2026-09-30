@@ -1,7 +1,9 @@
 caption: Kosmogramm
+created: 20260708130142000
 edges.fields: [all[]] -[[tags]] -[[list]]
 edges.functions: [all[]] -[[links]] -[[transcludes]]
 filter: [tag[Gott]] [tag[Organisation]] [tag[Person]] [tag[Spieler]]
+modified: 20260710141739000
 template: $:/plugins/dndwiki-core/graph/templates/dnd-graph
 title: $:/graph/Kosmogramm
 type: application/json
