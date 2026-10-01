@@ -278,7 +278,8 @@ Every tiddler typically gets two kinds of tags:
      `Location`, `Organisation`, `Deity`, `Player`, `Artifact`, `Item`, `Book`, `Material`, `Map`,
      `BattleMap`.
    - **Events** - dated/narrative entries: `Event` (a single in-world incident, possibly several
-     points in time, see tiddler format), `Adventure` (overarching story line/chapter).
+     points in time, see tiddler format), `Campaign` (marks an event as a chapter of the
+     campaign, played with the player characters; the hub `Campaign` is the pinned start page).
    - **Other** - meta/navigation: `Index` (entry point), `Information` (technical tiddlers such as
      `PlayerLevel`, see above).
 2. Faction/story line tag as thematic hub - the concrete names are **campaign-specific** and not

@@ -55,7 +55,7 @@ oder aus dieser Datei planen:**
 
 - **Fraktionen / Häuser / Orte / NPCs:** Tiddler mit dem jeweiligen Typ-Tag. Startpunkte:
   `Index` und die Kategorie-Hub-Tiddler `Person`, `Location`, `Organisation`, `Event`,
-  `Adventure`, ... (Shadows aus `dndwiki-core`).
+  `Campaign`, ... (Shadows aus `dndwiki-core`).
 - **Orte-Hierarchie (Ober-/Unterort):** kein eigenes Feld - implizit über `tags` kodiert.
   Ein Orts-Tiddler (Tag `Location`) ist mit seinem übergeordneten Gebiet/Kontinent vertaggt
   (z. B. `Baile.tid: tags: [[Königreich von Vandalia]] [[Haus Eiree]] Location`). Nicht jeder Ort hat
@@ -64,7 +64,7 @@ oder aus dieser Datei planen:**
 - **Spielerstufe:** Body von `PlayerLevel.tid`.
 - **Offene Plot-Fäden:** Suche nach dem Offene-Punkte-Snippet (`@@.tc-tiddler-frame`) in
   `Event`-Tiddlern.
-- **Kampagnenstruktur / Handlungsbögen:** `Adventure`-getaggte Tiddler.
+- **Kampagnenstruktur / Handlungsbögen:** `Campaign`-getaggte Tiddler.
 - **Spielercharaktere:** `Player`-getaggte Tiddler bzw. der `Player`-Hub.
 
 *Dann* konsistente Vorschläge machen, die an bestehende Tiddler/Tags anknüpfen
