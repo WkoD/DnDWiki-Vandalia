@@ -100,7 +100,9 @@ written back as `.tid` files; the format layer appears only as read-only shadows
 
 **CI** (`.github/workflows/npm-build-pages.yml`): on push to `master` or manually - `npm install`,
 updates the title/timestamp tiddlers, builds `index.html`, copies `data/` + `images/`, deploys to
-`gh-pages`.
+`gh-pages`. The build fails (nothing is deployed) if TiddlyWiki reports
+`Cannot find plugin` - for TiddlyWiki itself that is only a warning, and the page would go out
+without e.g. the format layer.
 
 The published GitHub Pages copy is deliberately **not savable/read-only**: the same CI step
 creates two tiddlers only at build time (never in the Git repo, local `npm start`/`npm run build`

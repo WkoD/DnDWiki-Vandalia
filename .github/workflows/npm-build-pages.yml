@@ -39,7 +39,16 @@ jobs:
       # The Node launcher scripts/tw.js sets TIDDLYWIKI_PLUGIN_PATH from ALL plugin packages
       # (tiddlydnd-plugins + tw5-graph/vis-network/relink) + process.noDeprecation.
       # NOT `npx tiddlywiki` with the bundle path only - the flibbles/graph stack would be missing.
-      run: npm run build
+      # A plugin from tiddlywiki.info that is not found is only a warning for TiddlyWiki, the
+      # build would go on without it (e.g. without the format layer) - so the step fails on it.
+      # bash = -eo pipefail: a failing build still fails the step despite the tee.
+      shell: bash
+      run: |
+        npm run build 2>&1 | tee build.log
+        if grep -q "Cannot find plugin" build.log; then
+          echo "::error::A plugin from tiddlywiki.info was not found - not deploying"
+          exit 1
+        fi
     - name: Copy resource directories
       run: |
         cp -rl ./data ./twpage/data
