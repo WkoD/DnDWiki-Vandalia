@@ -1,4 +1,4 @@
-# Zeilenenden normalisieren – verhindert CRLF/LF-Phantom-Diffs zwischen den Repos
+# Normalise line endings - prevents CRLF/LF phantom diffs between the repos
 *.tid   text eol=lf
 *.js    text eol=lf
 *.json  text eol=lf

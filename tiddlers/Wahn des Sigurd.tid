@@ -1,7 +1,7 @@
 created: 20230820184239325
-datum: 1329.1351-11-18
+date: 1329.1351-11-18
 modified: 20260713055236227
-tags: Ereignis Nordvolk Abenteuer
+tags: Event Nordvolk Adventure
 title: Wahn des Sigurd
 type: text/vnd.tiddlywiki
 
@@ -13,16 +13,16 @@ Die [[Krone des Wahnsinns]] versenkte [[Eoria]] im [[Vandenmeer]], doch durch Zu
 
 ---
 
-<b>Jahr:</b> <$macrocall $name="datumlang" datum="1351-11-18"/>
+<b>Jahr:</b> <$macrocall $name="datelong" date="1351-11-18"/>
 
 Die Abenteurer betraten den [[Sichelmondwald]] auf der Suche nach dem Hain. Der Wald war in Finsternis getaucht und [[Kipi]]s attackierten aus den Schatten. Mit Mühe erreichten die Abenteurer aber den Hain, der ihnen eine Zuflucht bot.
 
-<img src="images\Ereignis\Hain von Sigurd.jpg"/>
+<img src="images/event/Hain von Sigurd.jpg"/>
 
 Federn gleiteten sanft zwischen den Bäumen und Tiere trotteten friedlich. Im Hain war [[Sigurd den Okuvliga]] nach alten Gebräuchen vom [[Nordvolk]] begraben. Mittels Magie erweckte [[Ragna]] den Geist seines Vaters, um [[mehr über seine Mutter zu erfahren|Ragnas Geburt]]. Sein Vater gab ihm noch folgendes mit auf den Weg: Götter waren wankelmütig und grausam. Niemand kannte ihre Regeln außer ihnen selbst und niemand wusste, wann er gegen ihre Regeln verstoßen hatte, außer ihnen selbst. Sollte [[Ragna]] je vor den Göttern stehen, so sollte er auf ihre Füße spucken, für das was sie den Menschen antaten. Und er solle nicht ihren Boten trauen, so war es die oberste [[Valküre|Valküren]], die ihm [[Lena]] und den Verstand nahm. [[Ragna]] schnitzte eine Rune für das Grab seines Vaters.
 
 Im Gespräch mit einem sehr alten Hirsch erfuhren die Abenteurer, dass wahrscheinlich [[Eoria]] einst den schützenden Hain erschuf, als sie [[Sigurd den Okuvliga]] dort begrub. Sie hinterließ auch einen [[Traumfänger]] an einem der Bäume. Der [[Traumfänger]] enthielt unter anderem eine Anordnung von Runen, die an [[Klan Hyrda]] in [[Kattegat]] erinnerten. Der Hirsch erzählte auch von einer zweiten Frau mit rotem Haar. Sie roch nach Honig in Ketten und trug zwei Hämmer. Sie war es auch, die die Federn im Hain hinterließ.
 
-<img src="images\Ereignis\Traumfänger im Hain.jpg"/>
+<img src="images/event/Traumfänger im Hain.jpg"/>
 
 [[Liiri-Fjorir]] brannte eine Schneise durch den Wald, was den Abenteurern die Rückkehr an den Waldrand ermöglichte.

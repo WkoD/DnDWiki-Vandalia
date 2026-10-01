@@ -1,8 +1,8 @@
+component: Graufarn Löwengras
 created: 20200818075541264
 modified: 20260713005554675
-tags: Gegenstand
+tags: Item
 title: Trank der Regeneration
 type: text/vnd.tiddlywiki
-komponente: Graufarn Löwengras
 
 Eine orange Flüssigkeit, die über 3 Runden Gesundheit wiederherstellte. Die Regenerationsrate berechnete sich aus (1/4 Hitdice + Durchschnittswert eines Hitdice + Konstitutionsmodifikator) / 2.

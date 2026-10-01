@@ -26,19 +26,19 @@ jobs:
         echo '${{ github.event.repository.name }}' >> './tiddlers/$__SiteTitle.tid'
         echo $(TZ=Europe/Berlin date +'%Y-%m-%dT%H:%M:%S') >> './tiddlers/$__SiteSubtitle.tid'
     - name: Disable saving in the published (read-only) copy
-      # Nur zur CI-Build-Zeit erzeugt, landet nie im Git-Repo - lokales `npm start`
-      # bleibt dadurch unveraendert voll editierbar. IsReadOnly ist der Schalter: dndwiki-core
-      # (ab 1.4.1) blendet daraufhin Bearbeiten/Klonen/Loeschen/Neu/Import/Manager und den
-      # Speichern-Knopf aus. SaverFilter leer = nie "ungespeicherte Aenderungen".
-      # Wichtig: IsReadOnly wird per exaktem String-Vergleich ausgewertet und darf KEIN
-      # abschliessendes Newline im Body haben (daher printf statt cat<<EOF).
+      # Created only at CI build time, never lands in the Git repo - a local `npm start`
+      # stays fully editable. IsReadOnly is the switch: dndwiki-core (from 1.4.1) then hides
+      # edit/clone/delete/new/import/manager and the save button. Empty SaverFilter = never
+      # "unsaved changes".
+      # Important: IsReadOnly is compared as an exact string and must NOT have a trailing
+      # newline in the body (hence printf instead of cat<<EOF).
       run: |
         printf 'title: $:/config/SaverFilter\ntype: text/vnd.tiddlywiki\n\n[[]] -[[]]' > './tiddlers/$__config_SaverFilter.tid'
         printf 'title: $:/status/IsReadOnly\ntype: text/vnd.tiddlywiki\n\nyes' > './tiddlers/$__status_IsReadOnly.tid'
     - name: Build TiddlyWiki master index.html
-      # Node-Launcher scripts/tw.js setzt TIDDLYWIKI_PLUGIN_PATH aus ALLEN Plugin-Paketen
+      # The Node launcher scripts/tw.js sets TIDDLYWIKI_PLUGIN_PATH from ALL plugin packages
       # (tiddlydnd-plugins + tw5-graph/vis-network/relink) + process.noDeprecation.
-      # NICHT `npx tiddlywiki` mit Bundle-only-Pfad — sonst fehlt der flibbles/graph-Stack.
+      # NOT `npx tiddlywiki` with the bundle path only - the flibbles/graph stack would be missing.
       run: npm run build
     - name: Copy resource directories
       run: |

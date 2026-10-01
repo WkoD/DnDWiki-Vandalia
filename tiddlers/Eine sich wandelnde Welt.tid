@@ -1,7 +1,7 @@
 created: 20240427073917527
-datum: 1351-08-01
+date: 1351-08-01
 modified: 20260713055221398
-tags: Ereignis [[Andu Falas]]
+tags: Event [[Andu Falas]]
 title: Eine sich wandelnde Welt
 type: text/vnd.tiddlywiki
 
@@ -15,13 +15,13 @@ Die Ursache war im Fehlen sämtlicher äußeren Einflusse durch göttliche Wesen
 
 ---
 
-<b>Jahr:</b> <$macrocall $name="datumlang" datum="1351-11-10"/>
+<b>Jahr:</b> <$macrocall $name="datelong" date="1351-11-10"/>
 
 [[Hyrrs Rückkehr]] in die materielle Ebene stabilisierte Feuer und Lavaströme aus dem Erdinneren.
 
 ---
 
-<b>Jahr:</b> <$macrocall $name="datumlang" datum="1351-11-26"/>
+<b>Jahr:</b> <$macrocall $name="datelong" date="1351-11-26"/>
 
 [[Lagertha]] meldete sich bei [[Ragna]], dass der gigantische [[leuchtenden Amethysten|Meteor von Tenebris]] an der Küste stabiler war, seit [[Hyrr]] in die materielle Ebene gewechselt war. Das Artensterben sei zwar langsamer, doch es schritt noch immer voran. [[Frigg]] hatte inzwischen Nachforschungen angestellt und herausgefunden, dass einst den [[Tiergeister]]n Schamane oder andere Personen zur Seite standen, die als eine Art Anker in dieser Welt fungierten. Eventuell brauchte es nun neue Anker. [[Lagertha]] sah sich als Anker für [[Eikthyrnir]], jedoch erst wenn ihr Kind geboren sei. Sie stellte auch die Frage, ob eventuell [[Ragna]] als Anker für [[Hyrr]] fungierte, doch [[Hyrr]] berichtete, dass es eine andere Person sei, die er aber nicht preisgeben durfte.
 

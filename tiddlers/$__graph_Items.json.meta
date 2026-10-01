@@ -1,0 +1,9 @@
+caption: Gegenstände
+created: 20260708130142000
+edges.fields: [all[]] -[[tags]] -[[list]]
+edges.functions: [all[]] -[[links]] -[[transcludes]]
+filter: [[Artifact]] [[Book]] [[Item]] [[Material]] +[tagging[]] =>gegenstaende [(gegenstaende)] [(gegenstaende)get[owner]enlist-input[]] [(gegenstaende)get[creator]enlist-input[]] [(gegenstaende)get[former]enlist-input[]] +[unique[]]
+modified: 20260930204000000
+template: $:/plugins/dndwiki-core/graph/templates/dnd-graph
+title: $:/graph/Items
+type: application/json

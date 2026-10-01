@@ -1,7 +1,7 @@
 created: 20240501082523128
-datum: 1351-08-15.1351-11-12
+date: 1351-08-15.1351-11-12
 modified: 20260713055340090
-tags: Vinland Nordvolk Abenteuer Ereignis
+tags: Vinland Nordvolk Adventure Event
 title: Delegation aus Vinland
 type: text/vnd.tiddlywiki
 
@@ -18,9 +18,9 @@ Nach der Gründung des Triskel-Rates wurde [[Björn Solskin]] ein Platz darin an
 
 ---
 
-<b>Jahr:</b> <$macrocall $name="datumlang" datum="1351-11-12"/>
+<b>Jahr:</b> <$macrocall $name="datelong" date="1351-11-12"/>
 
-<img src="images\Ereignis\Ankunft aus Vinland.jpg"/>
+<img src="images/event/Ankunft aus Vinland.jpg"/>
 
 Einige Monate später folgte [[Sven Sigra]] und die Schamanin [[Revna]] mit Schiffen seiner Flotte, die die [[Frosttrolle|Bewohner des eisigen Nordens]] besiegt hatten. [[Ragna]] und ganz [[Kattegat]] empfingen die Schiffe mit der gebührenden Ehrerbietung, doch kam es zu einem Attentat auf [[Sven Sigra]] von einem seiner eigenen Männer. Das Attentat wurde verhindert und der Attentäter an Ort und Stelle gerichtet. [[Actrielle]] fand ein Armband mit einer Wolfskralle, das Erkennungsmerkmal der Rebellen.
 

@@ -1,7 +1,7 @@
 created: 20240427071711871
-datum: 1351-10-20.1351-10-30.1351-11-11
+date: 1351-10-20.1351-10-30.1351-11-11
 modified: 20260713060528923
-tags: Abenteuer Ereignis [[Haus Kemri]]
+tags: Adventure Event [[Haus Kemri]]
 title: Wiederaufbau des Leuchturms von Cair Di
 type: text/vnd.tiddlywiki
 
@@ -11,7 +11,7 @@ Bei der Trauer- und gleichzeitig Dankesfeier sagte [[Lynette Kemri]] zu [[Actrie
 
 ---
 
-<b>Jahr:</b> <$macrocall $name="datumlang" datum="1351-11-11"/>
+<b>Jahr:</b> <$macrocall $name="datelong" date="1351-11-11"/>
 
 [[Balseth]] und [[Theren]] teleportierten sich nach [[Cair Di]], um das [[Auge des Lichts]] zurückzubringen. Sie fanden die Stadt in Dunkelheit getränkt vor. [[Lynette Kemri]] bat sie, das Artefakt direkt zum Leuchturm zu bringen, da sie Angst um dessen Sicherheit hatte. Die beiden machten sich per Boot auf den Weg zum Leuchtturm und sollten dort [[Nazira]] treffen, die von [[Erin Llyod]] dort hingeschickt worden war. [[Dylan Tydewi]] begleitete mit seinen Rittern die Abenteurer, nachdem er die Genehmigung von [[Lynette Kemri]] bekommen hatte.
 

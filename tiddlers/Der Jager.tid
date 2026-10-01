@@ -1,11 +1,11 @@
 created: 20200804062244104
-datum: 1350-09.1351-06-27
+date: 1350-09.1351-06-27
 modified: 20260713055236227
-tags: [[Ritter der schwarzen Sonne]] Ereignis [[Apostel von Tenebris]]
+tags: [[Ritter der schwarzen Sonne]] Event [[Apostel von Tenebris]]
 title: Der Jäger
 type: text/vnd.tiddlywiki
 
-<b>Jahr:</b> <$macrocall $name="datumlang" datum="1350-09"/>
+<b>Jahr:</b> <$macrocall $name="datelong" date="1350-09"/>
 
 Nachdem [[Geron Sidellus]] die Spur der Abenteurer nach ihrer [[Flucht zum Brimsee]] verloren hatte, kehrte er zum [[Grenzposten Kahla]] zurück. Unfähig seine Männer zu rächen, wurde er immer unruhiger und sein Adjutant Sildur stachelte ihn immer weiter an. Schließlich legte er seinen Posten nieder und machte sich auf die Suche nach den Abenteurern. Sildur stellte ihm die Söldnerin [[Ingrid]] zur Seite, mit der er auf der Suche nach Hinweisen in die [[Hauptstadt Vandalia]] reiste. Er wurde nicht fündig und wunderte sich auch, dass das Königreich nicht aktiv nach den Abenteurern suchte, hatte er doch Beschreibungen für Steckbriefe geliefert. 
 
@@ -15,6 +15,6 @@ Einen weiteren Tip von [[Ingrid]] verfolgend bot sich [[Geron Sidellus]] als Sö
 
 ---
 
-<b>Jahr:</b> <$macrocall $name="datumlang" datum="1351-06-27"/>
+<b>Jahr:</b> <$macrocall $name="datelong" date="1351-06-27"/>
 
 Im Auftrag der Abenteurer lockte ihn [[Annika]] in [[Dun Eidean]] in eine Falle. In einem Lagerhaus gefesselt [[fand er sich den Abenteurern gegenüber|Das Ende der Jagd]].

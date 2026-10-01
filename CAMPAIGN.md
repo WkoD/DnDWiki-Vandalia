@@ -2,13 +2,14 @@
 
 Kampagnenspezifischer Kontext für Claude. **Strikt pointer-basiert**: nur stabile
 Meta-Infos und Zeiger auf die Wiki-Tiddler - **keine** aus Tiddlern ableitbaren Daten
-(Namen, XP-Zahlen, Datumswerte, Plot-Status), damit diese Datei nicht veraltet. Den
+(Namen, Spielerstufe, Datumswerte, Plot-Status), damit diese Datei nicht veraltet. Den
 echten Stand immer live aus den Tiddlern lesen.
 
 ## Identität
 
 **Vandalia** - homebrewtes Fantasy-Setting (D&D 5e), Kampagne auf Deutsch. Eigene Welt,
-eigene Fraktionen/Häuser/Götter; keine Vorlage aus einem offiziellen Abenteuer.
+eigene Fraktionen/Häuser/Götter; keine Vorlage aus einem offiziellen Abenteuer. Wiki-Sprache
+`de-DE`; Zeitrechnung nach dem Kalender von Harptos (Plugin `dndwiki-forgottenrealms`).
 
 ## Tisch-Meta (steht NICHT in Tiddlern)
 
@@ -18,20 +19,25 @@ eigene Fraktionen/Häuser/Götter; keine Vorlage aus einem offiziellen Abenteuer
 ## Konventionen (DM-Entscheidung)
 
 - **Session-Doku:** keine separaten Session-Log-Tiddler. Sitzungen werden als
-  Ergänzung an das jeweilige `Ereignis`-Tiddler angehängt - ein Ereignis-Tiddler
-  kann mehrere In-World-Zeitpunkte sammeln, getrennt durch `---` und mit
-  `<<datumlang ...>>`-Überschriften.
-- **Offene Punkte/Plot-Fäden:** das `OffenePunkte`-Snippet wird inline in
-  `Ereignis`-Tiddlern eingefügt (rot umrandete Callout-Box); wird
+  Ergänzung an das jeweilige Ereignis-Tiddler (Tag `Event`) angehängt - ein
+  Ereignis-Tiddler kann mehrere In-World-Zeitpunkte sammeln, getrennt durch `---` und
+  mit `<<datelong ...>>`-Überschriften.
+- **Offene Punkte/Plot-Fäden:** das Snippet „Offene Punkte“ (`open-items`) wird inline in
+  Ereignis-Tiddlern eingefügt (rot umrandete Callout-Box); wird
   entfernt/verkleinert, sobald der Strang aufgelöst ist. Kein zentraler Tracker.
-- **Karten zu Orten:** Orte haben oft einen begleitenden Karten-Tiddler
-  `<Name>_Karte.tid` (Tag `Karte`, `bild`-Feld) neben dem Haupt-Tiddler `<Name>.tid`.
-- **Spieler-Sichtbarkeit:** `$:/state/Spieler`-Umschaltung wird genutzt, um am
+- **Karten zu Orten:** Orte haben oft einen begleitenden Karten-Tiddler `<Name>/Map`
+  (Datei `<Name>_Map.tid`, Tag `Map`, Feld `image`) neben dem Haupt-Tiddler `<Name>.tid`,
+  bei Bedarf zusätzlich eine Kampfkarte `<Name>/BattleMap` (Tag `BattleMap`, Bild aus
+  `images/battlemap/`). Beide erscheinen im Ort als Tabs „Karte“ und „Kampfkarte“.
+- **Spieler-Sichtbarkeit:** der Spieler-Login auf dem `Player`-Hub
+  (`$:/state/dndwiki/player`) wird genutzt, um am
   Tisch zwischen DM- und Spieler-Perspektive zu wechseln (reine
   Render-Bequemlichkeit, kein Zugriffsschutz - das Repo ist öffentlich).
-- **Kampagnenspezifische Ordner/Assets:** `images/Karte/maptool/` enthält
-  Kampfkarten für ein externes VTT (RPTools MapTool); wird **nicht** aus
-  Tiddlern referenziert - rein externes Asset für den Spieltisch.
+- **Kampagnenspezifische Ordner/Assets:** `images/maptool/` enthält Screenshots aus dem
+  externen VTT (RPTools MapTool); wird **nicht** aus Tiddlern referenziert - rein externes
+  Asset für den Spieltisch. Kampfkarten, die im Wiki erscheinen sollen, liegen dagegen unter
+  `images/battlemap/` und werden über `<Ort>/BattleMap` eingebunden (z. B.
+  `Insel Avalon/BattleMap`; `Vengeance.png` liegt dort noch ohne Tiddler).
 - **Erzählstil (Tempus):** durchgängige Vergangenheitsform (Präteritum) als
   Chronik-Stil - auch für andauernde Eigenschaften/Fakten (z. B. "war ein
   Mensch" statt "ist ein Mensch"); impliziert **nicht** Tod/Nicht-Existenz.
@@ -48,18 +54,18 @@ eigene Fraktionen/Häuser/Götter; keine Vorlage aus einem offiziellen Abenteuer
 oder aus dieser Datei planen:**
 
 - **Fraktionen / Häuser / Orte / NPCs:** Tiddler mit dem jeweiligen Typ-Tag. Startpunkte:
-  `Index.tid` und die Kategorie-Hub-Tiddler `Person.tid`, `Ort.tid`, `Organisation.tid`,
-  `Ereignis.tid`, `Abenteuer.tid`, ...
+  `Index` und die Kategorie-Hub-Tiddler `Person`, `Location`, `Organisation`, `Event`,
+  `Adventure`, ... (Shadows aus `dndwiki-core`).
 - **Orte-Hierarchie (Ober-/Unterort):** kein eigenes Feld - implizit über `tags` kodiert.
-  Ein `Ort`-Tiddler ist mit seinem übergeordneten Gebiet/Kontinent vertaggt (z. B.
-  `Baile.tid: tags: [[Königreich von Vandalia]] [[Haus Eiree]] Ort`). Nicht jeder Ort hat
+  Ein Orts-Tiddler (Tag `Location`) ist mit seinem übergeordneten Gebiet/Kontinent vertaggt
+  (z. B. `Baile.tid: tags: [[Königreich von Vandalia]] [[Haus Eiree]] Location`). Nicht jeder Ort hat
   aktuell einen vollständigen Tag-Pfad bis zum Kontinent - im Zweifel Body-Text der
   Orte gegenprüfen.
-- **Aktuelles In-World-Datum:** Body von `Datum.tid`.
-- **XP-Gesamtstand:** Body von `Erfahrungspunkte.tid`.
-- **Offene Plot-Fäden:** Suche nach dem `OffenePunkte`-Snippet in `Ereignis`-Tiddlern.
-- **Kampagnenstruktur / Handlungsbögen:** `Abenteuer`-getaggte Tiddler.
-- **Spielercharaktere:** `Spieler`-getaggte Tiddler bzw. `Spieler.tid`.
+- **Spielerstufe:** Body von `PlayerLevel.tid`.
+- **Offene Plot-Fäden:** Suche nach dem Offene-Punkte-Snippet (`@@.tc-tiddler-frame`) in
+  `Event`-Tiddlern.
+- **Kampagnenstruktur / Handlungsbögen:** `Adventure`-getaggte Tiddler.
+- **Spielercharaktere:** `Player`-getaggte Tiddler bzw. der `Player`-Hub.
 
 *Dann* konsistente Vorschläge machen, die an bestehende Tiddler/Tags anknüpfen
 (explizite `[[WikiLinks]]` setzen).

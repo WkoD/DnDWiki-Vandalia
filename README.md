@@ -1,45 +1,43 @@
 # DnDWiki
 
-Ein **TiddlyWiki 5** (Node.js-Edition) für D&D-Kampagnen, Inhalte auf Deutsch.
-Dieses Repo ist die Kampagne **Vandalia** (Details: siehe `CAMPAIGN.md`):
-pro-Wiki-Konfig, Datendateien (`Datum`, `Erfahrungspunkte`) und Content in
-`tiddlers/` sowie Assets (`images/`, `data/`). Engine und Formatschicht kommen als
-Abhängigkeiten:
+A **TiddlyWiki 5** (Node.js edition) for D&D campaigns, content in German. This repo is the
+campaign **Vandalia** (details: see `CAMPAIGN.md`): per-wiki config, data tiddlers
+(`PlayerLevel`) and content in `tiddlers/` plus assets (`images/`, `data/`). Engine and format
+layer come as dependencies:
 
-- **Engine:** offizielles [`tiddlywiki`](https://www.npmjs.com/package/tiddlywiki)
-  aus npm, in `package.json` gepinnt.
-- **Formatschicht:** aus [`TiddlyDnD-Plugins`](https://github.com/WkoD/TiddlyDnD-Plugins),
-  fest versioniert gepinnt - dort das Plugin `dndwiki-core` (+ `staticfiles`).
-- **Graph-Stack:** [`flibbles/tw5-graph`](https://github.com/flibbles/tw5-graph) +
+- **Engine:** the official [`tiddlywiki`](https://www.npmjs.com/package/tiddlywiki) from npm,
+  pinned in `package.json`.
+- **Format layer:** from [`TiddlyDnD-Plugins`](https://github.com/WkoD/TiddlyDnD-Plugins), pinned
+  to a fixed version - the plugins `dndwiki-core`, `dndwiki-forgottenrealms` (Calendar of
+  Harptos) and `staticfiles`.
+- **Graph stack:** [`flibbles/tw5-graph`](https://github.com/flibbles/tw5-graph) +
   [`tw5-vis-network`](https://github.com/flibbles/tw5-vis-network) +
-  [`tw5-relink`](https://github.com/flibbles/tw5-relink), einzeln als
-  npm-Git-Dependency auf Release-Tags gepinnt.
+  [`tw5-relink`](https://github.com/flibbles/tw5-relink), each pinned to a release tag as an npm
+  Git dependency.
 
-## Über dieses Repo
+The wiki language is German (`$:/language` = `de-DE`); internal names (tags, fields) are English.
 
-Dieses Repo ist eine konkrete **Kampagne** - eine Kopie der `DnDWiki`-Vorlage mit
-eigenem Content. Für eine **neue** Kampagne die Vorlage nutzen:
-[github.com/WkoD/DnDWiki](https://github.com/WkoD/DnDWiki) (dort die
-Schritt-für-Schritt-Anleitung "Neue Kampagne einrichten").
+## About this repo
 
-## Bearbeitung
+This repo is a concrete **campaign** - a copy of the `DnDWiki` template with its own content. For
+a **new** campaign use the template: [github.com/WkoD/DnDWiki](https://github.com/WkoD/DnDWiki)
+(step-by-step guide "Setting up a new campaign" there).
 
-Lokal mit Live-Editing bearbeiten:
+## Editing
+
+Edit locally with live editing:
 
 ```bash
-npm install    # einmalig: Engine + Formatschicht + Graph-Stack holen
-npm start      # Server auf http://localhost:8080 mit Live-Editing starten
+npm install    # once: fetch engine + format layer + graph stack
+npm start      # server on http://localhost:8080 with live editing
 ```
 
-Im Browser gemachte Änderungen werden automatisch als `.tid`-Dateien in
-`tiddlers/` zurückgeschrieben - kein manuelles Speichern nötig. Details/Konventionen:
-`CLAUDE.md` -> "Befehle & CI".
+Changes made in the browser are written back automatically as `.tid` files in `tiddlers/` - no
+manual saving needed. Details/conventions: `CLAUDE.md` -> "Commands & CI".
 
-## Veröffentlichung
+## Publishing
 
-Bei jedem Push auf `master` baut eine GitHub Action automatisch eine statische
-`index.html` und deployt sie nach `gh-pages` (GitHub Pages). Diese veröffentlichte
-Kopie ist **rein lesbar**.
+On every push to `master` a GitHub Action builds a static `index.html` and deploys it to
+`gh-pages` (GitHub Pages). This published copy is **read-only**.
 
-Weitere Doku: `CLAUDE.md` (Entwicklung/Konventionen), `CAMPAIGN.md`
-(kampagnenspezifisch).
+More documentation: `CLAUDE.md` (development/conventions), `CAMPAIGN.md` (campaign-specific).

@@ -1,29 +1,29 @@
 created: 20220306132719580
-datum: 1351-07-01.1351-07-11.1351-11-10.1351-11-20
+date: 1351-07-01.1351-07-11.1351-11-10.1351-11-20
 modified: 20260713060528923
-tags: Abenteuer Ereignis [[Apostel von Tenebris]]
+tags: Adventure Event [[Apostel von Tenebris]]
 title: Der dunkle Turm
 type: text/vnd.tiddlywiki
 
-<b>Jahr:</b> <$macrocall $name="datumlang" datum="1351-07-01"/>
+<b>Jahr:</b> <$macrocall $name="datelong" date="1351-07-01"/>
 
 Bei der Verwendung des Zaubers Scrying gelang [[Theren]] ein Einblick in den dunklen Turm, als er versuchte, [[Shinfel Blightsworn]] zu finden. Er folgte ihr durch die Gänge und konnte durch ein Fenster eine verzerrte Landschaft von Bäumen erkennen. Einer großen Treppe folgend erreichte er einen zylindrischen Raum, in dessen Mitte ein großer, leuchtender [[Amethyst|Meteor von Tenebris]] stand, in dessen Inneren sich soetwas wie eine kleine Kreatur befand. [[Magisches Holz]] aus dem [[Briarwood]] formte eine Struktur um den Kristall, fast wie eine magische Formel.  [[Shinfel Blightsworn]] flüsterte: "Bald ist es soweit und wenn es vollbracht ist, dann wird mein Wunsch erfüllt" und erkannte kurze Zeit später den Eindringling. Die Verbindung des Zaubers wurde daraufhin getrennt.
 
 ---
 
-<b>Jahr:</b> <$macrocall $name="datumlang" datum="1351-07-11"/>
+<b>Jahr:</b> <$macrocall $name="datelong" date="1351-07-11"/>
 
 Später während einer langen Rast hatte [[Theren]] einen Traum von [[Shinfel Blightsworn]], damals noch in [[Arkhen's Invocatorium]]. Tränen liefen ihr Gesicht herunter und in ihren Armen hielt sie den leblosen Körper eines kleinen Kindes. Schmerz durchzog seinen Kopf, wodurch er aufwachte.
 
 ---
 
-<b>Jahr:</b> <$macrocall $name="datumlang" datum="1351-11-10"/>
+<b>Jahr:</b> <$macrocall $name="datelong" date="1351-11-10"/>
 
 Die Abenteurer verwendeten den [[Spiegel der Seelen]], um den [[schwarzen Turm|Zitadelle der Schatten]] zu finden. Das Ritual war kraftraubender als normal, doch [[Frigg]] konnte den Turm nördlich des [[Sichelmondwald]]es finden. Der Turm war allerdings nicht direkt dort, sondern in einer Zwischendimension, so dass er über den normalen Weg nicht zu betreten war.
 
 ---
 
-<b>Jahr:</b> <$macrocall $name="datumlang" datum="1351-11-10"/>
+<b>Jahr:</b> <$macrocall $name="datelong" date="1351-11-10"/>
 
 [[Al]] schloss einen Handel mit [[Theren]]. Im Gegenzug für die Kontrolle über das Herz des Zinnsoldaten gab [[Al]] Wissen über das [[Seelenprisma]]. Kurz darauf meldete sich [[Abigal Davenlow]] und berichtete von einem Durchbruch. Ein Prototyp sollte in wenigen Wochen bereitstehen.
 
