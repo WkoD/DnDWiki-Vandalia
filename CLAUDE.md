@@ -47,8 +47,7 @@ rm -rf node_modules package-lock.json && npm install
 
 Checklist for the bump:
 
-- Read the release notes. A major version may need a migration
-  (`TiddlyDnD-Plugins/scripts/migrate-<version>.js`, dry run first).
+- Read the release notes. They say whether a version needs a migration and how to do it.
 - If the release brings a new language, add it to the table "Languages" in `README.md`
   (in `DnDWiki`; campaigns take it over with the next template update if they want).
 - `npm install` (and every other `npm install`/`uninstall`/`ci` in the wiki) replaces an existing
