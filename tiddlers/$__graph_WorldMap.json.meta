@@ -2,7 +2,7 @@ caption: Weltkarte
 created: 20260708130142000
 edges.fields: location
 edges.functions: [all[]] -[[links]] -[[transcludes]]
-filter: [tag[Location]] [multitag[Deity,Person,Player,Organisation]] -[search:date[.]]
+filter: [tag[Location]] [multitag[Deity,Person,Player,Organisation]] -[dnd.dead[]]
 modified: 20260715214458000
 template: $:/plugins/dndwiki-core/graph/templates/dnd-graph
 title: $:/graph/WorldMap

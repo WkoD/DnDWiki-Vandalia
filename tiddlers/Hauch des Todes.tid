@@ -1,9 +1,11 @@
 created: 20191004124948628
-date: 1350-12-19.1351-08-09.1351-11-26.
-modified: 20260713055340090
+date: 1350-12-19, 1351-08-09, 1351-11-26, ..
+modified: 20261002150258888
 tags: [[Königreich von Vandalia]] Event Campaign
 title: Hauch des Todes
 type: text/vnd.tiddlywiki
+
+<<date "Valindra">>
 
 [[Ki-Ra]] bat die Abenteuer während ihrer Zeit in [[Cair Di]] um Hilfe bei der Beschattung einer verdächtigen Person im Austausch für einen Gefallen. Die Abenteurer folgten der Person in ein abgelegenes Haus, liefen in einem Untergrundlabor aber in eine Falle. Die gesuchte Person stellte sich als [[Valindra]] heraus und [[Theren]] musste mit ihr verhandeln, während der Rest in einem magischen Schlaf lag.
 
@@ -11,15 +13,11 @@ type: text/vnd.tiddlywiki
 
 Die Abenteurer berichteten [[Ki-Ra]] dann später, dass [[Valindra]] keine Spionin für das [[Königreich von Vandalia]] war.
 
-----
-
-<b>Jahr:</b> <$macrocall $name="datelong" date="1351-08-09"/>
+<<date "Wiedersehen mit Valindra">>
 
 [[Valindra]] tauchte in [[Tyrias Versteck]] erneut auf. Sie hatte sich dem Körper einer [[Sjach]] Drudin bemächtigt und konnte so unbemerkt mit den Abenteurern reisen. Zusammen mit [[Liiri-Einn]] und einigen Büchern verschwand sie.
 
-----
-
-<b>Jahr:</b> <$macrocall $name="datelong" date="1351-11-26"/>
+<<date "Valindras Bitte">>
 
 Mit einem unerwarteten Sending von [[Sakur]] an [[Balseth]] tauchte [[Valindra]] wieder auf. Sie wartete in einem von [[Tyria]]s versteckten Laboren, als [[Sakur]] und einige andere [[Sjach]] dieses am nordöstlichen Rand vom [[Brimsee]] fanden. Über [[Sakur]] ließ [[Valindra]] eine Nachricht an die Abenteurer kommen. Sie brauchte Hilfe im Kampf gegen Dunkelelfen, die einen Tempel im Süden vom [[Königreich von Vandalia]] bedrohten, und bot dafür das intakte Labor an. Auf die Frage, warum die Abenteurer helfen sollten, kam von ihr, dass sie ein gemeinsames Interesse sah, war doch ein Mitglied der Abenteurer selbst eine Dunkelelfe. [[Balseth]] antwortete, dass die Abenteurer sich auf den Weg machen würden, nachdem sie [[Tyrias Versteck]] aufgesucht hatten.
 

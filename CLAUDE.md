@@ -8,6 +8,9 @@ TiddlyWiki 5 (Node.js edition) for a D&D campaign. Internal names (tags, fields,
 tiddlers) are English; what readers see follows the wiki language (`$:/language`). The language
 of the campaign content itself is up to the campaign (see `CAMPAIGN.md`).
 
+Commit messages are English by default. If `CAMPAIGN.md` sets a different language for the
+campaign, commit messages use that language - check it before committing.
+
 ## Documentation - who covers what
 
 - **CLAUDE.md** (here): development support - rules, conventions, editing and release workflow.
@@ -203,12 +206,29 @@ Standard `.tid` format (field header, blank line, body). Fields of content tiddl
   The display names of these fields come from the language packs (e.g. `location` reads "Ort" in
   German) - in the relation list and on the graph edges. In edit mode TiddlyWiki shows the raw
   English field names.
-- `date` - in-world calendar date (not the real session date), format `YYYY-MM-DD`, optionally with
-  a time `YYYY-MM-DD-10:00`; also `YYYY` or `YYYY-MM`. **Deceased convention:** a **dot anywhere in
-  the `date` value** (e.g. `.1350-07` as prefix, or `1200.1351-04-14` as birth.death date) marks a
-  person/character as deceased. For **events** the dot separates several points in time instead
-  (`1351-06-27.1351-11-19`); a dot at the end marks an open end (`1351-11-25.1351-12-02.`). Events
-  therefore never count as "dead".
+- `date` - in-world calendar dates (not the real session date), one syntax for all types (details:
+  `README.md` of `TiddlyDnD-Plugins` -> "Dates"). Sections are separated by `,`, a span is
+  `start/end`, a point `YYYY`, `YYYY-MM`, `YYYY-MM-DD` or with a time `YYYY-MM-DD-10:00`; `.` is an
+  unknown start/end, `..` "since time immemorial"/"ongoing"; whitespace is ignored.
+  - **Events:** each section is a point or a span in time (`1351-07-05, 1351-07-22/1351-07-24`;
+    still going on: `1351-11-25/..`). `..` (or `.`) as a section of its own, first or last, means
+    the event began earlier or goes on, while that section stays what it is (`1351, 1352, ..`,
+    `.., 1351`). Only explicit spans are bars in the timeline. Events never count as "dead".
+  - **All other types** (person, organisation, location, deity, item, ...): the dates of their
+    existence. A single point is the start (`1322` = born 1322, alive); a span with an end marks
+    the tiddler as **deceased/destroyed** (`1200/1351-04-14`; only the death known: `./1339`;
+    both unknown: `./.`). An unknown side and an open end are shown as `????`.
+  - Below the tags every tiddler with dates shows a date line (right-aligned): an event the span
+    of its field (`????` without one), every other type its years of existence.
+- **Dated sections in event bodies:** the dates live only in `date`. In the body, `<<date>>` marks
+  where the next section begins (`<<date 3>>` names the section explicitly, `<<date "Caption">>`
+  adds a caption that also shows in the timeline and the event table). The placeholder draws the
+  rule, the date and the locations linked in its section - no `---` and no hand-written date
+  before it. **Every event starts with `<<date>>`**, also one with a single date or none (then
+  the heading reads `????`); an event with several sections gives every section a placeholder.
+  Text before the first `<<date>>` (an intro) belongs to the head of the event. Do not put `<<date>>` into a block hidden
+  from players.
+  `node scripts/check-dates.js <wiki folder>` in `TiddlyDnD-Plugins` checks the dates of a wiki.
 - `price` (items) - shown with the currency unit of the language pack.
 - `player` (on `Player` tiddlers) - name of the real player.
 - `link` - "see also" line under the tiddler, e.g. `[ext[Title|data/book/file.pdf]]`.
@@ -242,7 +262,7 @@ Dates are shown through the calendar engine of `dndwiki-core`. Which calendar ap
 `$:/config/dndwiki/calendar`:
 
 - **With a calendar** (e.g. the plugin `dndwiki-forgottenrealms` in `tiddlywiki.info`: Calendar
-  of Harptos): long form with month names, festivals and era ("1351 DR, 11. Flamerule (07)"),
+  of Harptos): month names, festivals and era ("11. Flamerule 1351 DR"),
   calculator and day difference on the `Calendar` hub. Festival days are day `days + 1`, ... of
   the preceding month (Midwinter = `1351-01-31`).
 - **Without a calendar:** dates appear as entered (`1351-07-11`), no calculator, no `Calendar` in

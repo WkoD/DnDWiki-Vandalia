@@ -1,15 +1,15 @@
 created: 20220218143034816
-date: 1351-06-27.1351-11-19.
-modified: 20250906133055281
+date: 1351-06-27, 1351-11-19, ..
+modified: 20261002143614211
 tags: Campaign Event [[Königreich von Vandalia]]
 title: Der falsche König
 type: text/vnd.tiddlywiki
 
+<<date "Informationen von Eoria">>
+
 Die Abenteurer erfuhren von [[Eoria]], dass es scheinbar einen falschen König gebe. Im [[Verhör von Geron|Das Ende der Jagd]] wurden die Hinweise konkreter, dass [[Catarina Langley]] dahinter stecken könnte.
 
----
-
-<b>Jahr:</b> <$macrocall $name="datelong" date="1351-11-19"/>
+<<date "Informationen vom Biestkönig">>
 
 Am Rand des [[Sichelmondwald]]es trafen die Abenteurer auf einen Trupp vom [[Biestvolk]]. [[Li-Ta]] erkannte sie und brachte sie zum Anführer der Truppe, dem [[Biestkönig]] Shu. Dieser begrüßte die Abenteurer und dankte ihnen für die [[vergangene Rettung|Einreise am Kahla-Grenzposten]] von [[Li-Ta]].
 

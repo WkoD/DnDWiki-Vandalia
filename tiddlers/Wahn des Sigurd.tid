@@ -1,9 +1,11 @@
 created: 20230820184239325
-date: 1329.1351-11-18
-modified: 20260713055236227
+date: 1329, 1351-11-18
+modified: 20261002134659414
 tags: Event Nordvolk Campaign
 title: Wahn des Sigurd
 type: text/vnd.tiddlywiki
+
+<<date>>
 
 [[Sigurd den Okuvliga]] hatte gegen die Gesetze [[Odin]]s verstoßen, worauf eigentlich der Tod stand. Die Strafe wurde allerdings geändert auf das Tragen der [[Krone des Wahnsinns]].
 
@@ -11,9 +13,7 @@ type: text/vnd.tiddlywiki
 
 Die [[Krone des Wahnsinns]] versenkte [[Eoria]] im [[Vandenmeer]], doch durch Zufall oder Schicksal fand sie ihren Weg einige Jahre später in die [[Festung Solis]], die, nach ihrer Versenkung, von [[Tyria]] als Basis benutzt wurde. Sie sollte dort [[weitere Verwendung|Tyrias Forschungsbericht]] finden.
 
----
-
-<b>Jahr:</b> <$macrocall $name="datelong" date="1351-11-18"/>
+<<date "Sigurds Grab im Sichelmondwald">>
 
 Die Abenteurer betraten den [[Sichelmondwald]] auf der Suche nach dem Hain. Der Wald war in Finsternis getaucht und [[Kipi]]s attackierten aus den Schatten. Mit Mühe erreichten die Abenteurer aber den Hain, der ihnen eine Zuflucht bot.
 

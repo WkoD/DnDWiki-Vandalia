@@ -1,15 +1,13 @@
 created: 20200818083229422
-date: 1350-06.1350-07-22.1350-11.1351-05-12.1351-06-23.1351-08-09.
+date: 1350-06, 1350-07-22, 1350-11, 1351-05-12, 1351-06-23, 1351-08-09, ..
 modified: 20260713060528923
 tags: Event Campaign Theren
 title: Therens Visionen
 type: text/vnd.tiddlywiki
 
+<<date>>
+
 Seit dem Verlassen von [[Faerun]] hatte [[Theren]] immer wieder Visionen.
-
----
-
-<b>Jahr:</b> <$macrocall $name="datelong" date="1350-06"/>
 
 Während dem [[Untergang der Cirdan]]
 
@@ -18,9 +16,7 @@ Es ist eine sternenklare Nacht und als dein Blick über den Himmel schweift kann
 Du drehst dich um und siehst eine schwarze Eule, die auf die zufliegt und auf einem verkohlten Baum landet. Sie starrt Richtung Mond, ohne dich weiter zu beachten. Du versucht den Ausdruck in ihren Augen zu deuten, als plötzlich das Licht wieder erscheint. Der dunkle Schleier am Himmel löst sich langsam auf und der Vollmond erstrahlt wieder auf das Land. Die Eule gibt einen kurzen Laut von sich, steigt auf und fliegt davon. Du streckst die Hand nach ihr und wachst schließlich auf.
 ```
 
----
-
-<b>Jahr:</b> <$macrocall $name="datelong" date="1350-07-22"/>
+<<date>>
 
 Auf einem [[Boot auf dem Brimsee|Flucht zum Brimsee]]
 
@@ -32,9 +28,7 @@ Du folgst der Eule und entdeckst so einen Gang, der von der Höhle abgeht. Es f�
 Eher du dich weiter umsehen kannst stößt ein Energiestrahl aus dem Stein direkt durch deinen Körper und reißt dich zu Boden. Die Eule, vielleicht erschrocken von den Ereignissen, hebt vom Baum ab und umkreist dich. Dein Bewustsein schwindet, doch du kannst immernoch die Laute von ihr vernehmen, fast als würde sie mit dir sprechen wollen. Fast kannst du es deuten, doch du wachst auf und dir wird erklärt, dass du gerade umgefallen und für ein paar Minuten bewusstlos warst.
 ```
 
----
-
-<b>Jahr:</b> <$macrocall $name="datelong" date="1350-11"/>
+<<date>>
 
 Auf dem [[Weg nach Baile|Ausflug nach Baile]]
 
@@ -42,25 +36,19 @@ Auf dem [[Weg nach Baile|Ausflug nach Baile]]
 Auf dem Weg nach [[Baile]] zusammen mit [[Actia]] hatte [[Theren]] eine Vision von einem unbekannten Mädchen, das zusammen mit Eulen auf einem Ast saß. "Wir werden uns schon bald treffen" sagte sie, bevor [[Theren]] aufwachte.
 <div style="clear:both;line-height:0px;"/>
 
----
-
-<b>Jahr:</b> <$macrocall $name="datelong" date="1351-05-12"/>
+<<date>>
 
 Während den [[Abenteuern in Baile|Ende der Sklaverei]]
 
 Erneut hatte [[Theren]] die Vision des großen [[Steins|Meteor von Tenebris]]. Umgeben von Dunkelheit sah er diesmal aber fast aus wie ein Podest. Er berührte den Stein unter sich, doch das Material war für ihn unbekannt, vielleicht sogar nicht einmal von dieser Welt. Als er sich darauf stellte, erkannte er, dass der Boden um ihn herum in 3 Teile geteilt war, die strahlenförmig von dem Stein aus in die Dunkelheit gingen. Ein Teil war von einer Schicht aus Schatten bedeckt, sich ständig bewegend. [[Al]] stand dort: "wir haben schon auf dich gewartet". Der zweite Teil war mit schwach leuchtenden Amethystenkristallen überwuchert, aus dessen Mitte ein einzelner Baum ragte. Mit einem aufgehellten Federkleid saß [[Atiesh]] auf einem der Äste. Den letzten Teil konnte er nicht erkennen, fast als könne er nicht in dessen Richtung blicken. Er unterhielt sich mit den Beiden und erfuhr so, dass 3 Wesen in seinem Körper vereint waren. Er ging davon aus, dass er auch eines dieser 3 Wesen sei, als ein Schock seine Beine durchzog und er auf die Knie fiel. Die schlanken Arme eines jungen Mädchens umgriffen ihn und legten sich um seinen Hals. Ihre Arme waren grau wie Asche und sie flüsterte: "Oh, nein, du bist das Gefäß. Dein Mitspracherecht hast du verwirkt, als du mir deine Seele übergabst. Dass du einen freien Willen hast, ist nur meiner Großzügigkeit zu verdanken. Doch keine Sorge, dein Wunsch wird erfüllt, so wie es unser Pakt vorsieht. "Bald…"
 
----
-
-<b>Jahr:</b> <$macrocall $name="datelong" date="1351-06-23"/>
+<<date>>
 
 In [[Dun Eidean]]
 
 Auf der Suche nach Antworten betete [[Theren]] am Schrein von [[Labelas Enoreht]], dem Gott des Wissens. Vielleicht könnte er so etwas finden, womit er seinen Pakt lösen könnte. Er erhielt eine weitere Vision, in dem 2 Gelehrte darum stritten, ob Erinnerungen oder Erfahrungen wichtiger seien. Als sich [[Theren]] auf die Seite der Erinnerungen stellte, gab sein Paktgeber zu erkennen, dass er für diese Aufführung verantwortlich war und nie ein Kontakt zu [[Labelas Enoreht]] bestand. Die beiden Gelehrten stellten sich als [[Atiesh]] und [[Al]] heraus. Da [[Theren]] der Argumentation von [[Atiesh]] gefolgt war, schien sie dadurch an Kraft gewonnen zu haben.
 
----
-
-<b>Jahr:</b> <$macrocall $name="datelong" date="1351-08-09"/>
+<<date>>
 
 In [[Tyrias Versteck]] während eines Bebens, das die Welt etwas verschoben zurückließ
 

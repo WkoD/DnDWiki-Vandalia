@@ -20,8 +20,9 @@ eigene Fraktionen/Häuser/Götter; keine Vorlage aus einem offiziellen Abenteuer
 
 - **Session-Doku:** keine separaten Session-Log-Tiddler. Sitzungen werden als
   Ergänzung an das jeweilige Ereignis-Tiddler (Tag `Event`) angehängt - ein
-  Ereignis-Tiddler kann mehrere In-World-Zeitpunkte sammeln, getrennt durch `---` und
-  mit `<<datelong ...>>`-Überschriften.
+  Ereignis-Tiddler kann mehrere In-World-Zeitpunkte sammeln: die Daten stehen im Feld
+  `date`, jeder Abschnitt im Text beginnt mit `<<date>>` (optional mit Beschriftung
+  `<<date "…">>`).
 - **Offene Punkte/Plot-Fäden:** das Snippet „Offene Punkte“ (`open-items`) wird inline in
   Ereignis-Tiddlern eingefügt (rot umrandete Callout-Box); wird
   entfernt/verkleinert, sobald der Strang aufgelöst ist. Kein zentraler Tracker.

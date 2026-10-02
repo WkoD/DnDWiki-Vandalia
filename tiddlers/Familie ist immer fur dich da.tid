@@ -1,9 +1,11 @@
 created: 20220306114705967
-date: 1351-06-28.1351-10-16.1351-11-14.1351-11-26.
-modified: 20260713060528923
+date: 1351-06-28, 1351-10-16, 1351-11-14, 1351-11-26, ..
+modified: 20261002143837630
 tags: Campaign Event Menzoberranzan
 title: Familie ist immer für dich da
 type: text/vnd.tiddlywiki
+
+<<date "Banbanzas Hilfe">>
 
 Bei ihrer [[Flucht|Das Ende der Jagd]] aus [[Dun Eidean]] erhielten die Abenteurer unerwartete Hilfe von  [[Banbanza]], dem Großvater von [[Actrielle]]. Er führte sie sicher an den Wachposten außerhalb der Stadt vorbei. Immernoch misstrauisch stellten sie ihm Fragen in einer Zone of Truth, um seine Absichten zu ergründen.
 
@@ -13,9 +15,7 @@ Bei ihrer [[Flucht|Das Ende der Jagd]] aus [[Dun Eidean]] erhielten die Abenteur
 
 Um die Bewegung der Dunkelelfen im Auge zu behalten kehrte [[Banbanza]] zu ihnen zurück. Mit Beweisen einer erfolglosen Verfolgung der Abenteurer und einigen Sending Schriftrollen zur Kommunikation machte er sich auf den Weg.
 
-----
-
-<b>Jahr:</b> <$macrocall $name="datelong" date="1351-10-16"/>
+<<date "Verbindung zu Banbanza">>
 
 [[Actrielle]] nahm mittels des Zauberspruchs Dream Verbindung zu [[Banbanza]] auf. Dieser konnte sie über den chaotischen Zustand der Dunkelelfen informieren, nachdem sie ihre Verbindung zu [[Lolth]] verloren hatten. Die Ordnung wurde aber langsam durch die Matronmutter [[Azurna]] wiederhergestellt, indem sie die Macht der [[leuchtenden Amethysten|Meteor von Tenebris]] anzapfte. Nicht alle Dunkelelfen waren mit dieser "korrupten" Energie einverstanden, doch der Großteil folgte ihr weiterhin.
 
@@ -23,15 +23,11 @@ In dieser Zeit entschlüsselte [[Theren]] die Schriftrolle, die sie einst [[von 
 
 Das Versteck der Dunkelelfen befand sich im Süden des Landes.
 
-----
-
-<b>Jahr:</b> <$macrocall $name="datelong" date="1351-11-14"/>
+<<date "Beschattung des Tempels">>
 
 Die Abenteurer heuerten die Scouts von [[Avalanche]] an, um die Dunkelelfen zu beschatten. Sie sollten den Tempel ausspähen und die Truppenbewegungen im Auge behalten. Falls nötig sollte auch Sabotage betrieben werden. [[Aderyn]] erklärte sich einverstanden und nahm auch nur Gold für Material, da sie sich in der Schuld der Abenteurer sah, die so abgegolten wurde. Die Scouts erhielten genug Gold für 1 Monat Beschattung und eine Anzahlung für einen zweiten, falls nötig. Über Dream informierte [[Actrielle]] auch [[Banbanza]] über die Scouts.
 
-----
-
-<b>Jahr:</b> <$macrocall $name="datelong" date="1351-11-26"/>
+<<date "Informationen von Avalanche">>
 
 [[Avalanche]] meldete sich mit neuen Informationen über die Dunkelelfen. Leider kamen die Scouts zu spät, den Tempel zu infiltrieren, und so war der Ritualstatus unbekannt. Die Matronmutter [[Azurna]] wurde nicht gesichtet, doch war der [[Orden der Wut]] anwesend. Immer wieder konnten sie auch Unstimmigkeiten zwischen den Dunkelelfen beobachten, was eventuell zu einem Schlagabtausch von Fraktionen innerhalb der Reihen führen könnte. Im nächsten Schritt wollten die Scouts einen der immer wieder vorkommenden Transporte vom Versteck der Dunkelelfen überfallen und das transportierte Material untersuchen. [[Actrielle]] riet aber von diesem Schritt ab.
 
