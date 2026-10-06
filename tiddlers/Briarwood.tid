@@ -1,11 +1,16 @@
 color: #ff2b2b
 created: 20171012082823338
 image: Briarwood.jpg
-modified: 20260713003228144
-tags: [[Andu Falas]] Location Briarwood
+location: [[Andu Falas]]
+modified: 20261006065515000
+tags: Location
 title: Briarwood
 type: text/vnd.tiddlywiki
 
 Ein Hartholzwald bestehend aus Ahorn-, Eiche und Hartnussbäumen. Dicht durchwachsen von Dornenbüschen und Beerensträuchern war der Wald abseits der Wege schwer zu durchschreiten. Der Wald war reich an Blau-, Rot- und Schwarzbeeren. Aus dem Herzen des Waldes entsprang der Silver Mist Run, der an den südlichen und östlichen, äußeren Rändern eine natürliche Grenze zwischen Wald und umliegenden Wiesen schuf. Ein alter Trampelpfad nahe [[Bur Hollow]] führte am Lauf des Flusses in den Wald hinein. Im Norden waren am Rand Holzfäller und Jäger aus [[Miehall]] unterwegs. [[Haus Eiree]], Verwalter der Länder nördlich des Briarwood, erließen vor langer Zeit ein Dekret, dass das Innere des Waldes tabu war.
 
 Die höheren Kreaturen des Waldes sahen sich selbst als [[Schützer des Briarwood]] und versuchten, das Gleichgewicht aufrechtzuerhalten. Tief im Wald befand sich auch das neue [[Zuhause|Festung im Briarwood]] der [[Sjach]].
+
+<<spot "Silver Mist Run">>
+
+Ein kleiner Fluss, der im Herzen des Waldes entsprang und gen Süden aus dem Wald verlief.

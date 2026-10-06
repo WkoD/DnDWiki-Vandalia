@@ -77,7 +77,7 @@ Optional, only if wanted - campaigns do not have to follow:
 campaign's `languages` and optional plugins such as `dndwiki-forgottenrealms`), the `package.json`
 structure (scripts/`devDependencies`/plugin pin - **keep `name`/`description`**), and new/changed
 generic standard wiki elements such as the base graph views
-`$:/graph/Default`|`Cosmogram`|`WorldMap`|`Items` (if not adapted in the campaign; keep the
+`$:/graph/Default`|`Cosmogram`|`Atlas`|`Items` (if not adapted in the campaign; keep the
 campaign's captions).
 
 **Never overwrite or discard blindly - campaign-owned:** all lore content in `tiddlers/`,
@@ -86,7 +86,7 @@ data, an own calendar (`$:/config/dndwiki/calendar` and its data tiddler), `imag
 fields `name`/`description` in `package.json`. For the following additionally check whether new
 template functionality can be **merged** instead of discarded unchecked: `README.md` and
 `CAMPAIGN.md` (e.g. new sections in the template skeleton) and standard wiki elements **adapted**
-in the campaign (e.g. an individualised `WorldMap` with background image/positions).
+in the campaign (e.g. an individualised `Atlas`).
 
 ## Commands & CI
 
@@ -130,7 +130,8 @@ Important: `IsReadOnly` is compared as an exact string - no trailing newline in 
     documented in the repo `TiddlyDnD-Plugins`.
 - `images/` - sorted by type, folder names in lower case, one per type tag: `person` (NPC
   portraits, also deities), `location`, `event`, `organisation`, `item` (artifacts, books, items,
-  materials), `map` (overview maps), `battlemap` (battle maps), `player`. Campaign-specific
+  materials), `player`; plus `map` (map images of locations, field `map`) and `battlemap`
+  (battle maps, field or spot parameter `battlemap`). Campaign-specific
   subfolders used only for storage (if any): see `CAMPAIGN.md`.
 - `data/book/` - in-world lore PDFs.
 
@@ -143,7 +144,7 @@ actual change. This also applies when creating them in the IDE or by script.
 - **File name** = title with TiddlyWiki's replacements: `/` `\` `:` `<` `>` `|` `?` `*` `"` `^` `~`
   become `_`, umlauts and special characters are transliterated. Examples: `$:/graph/Items` ->
   `$__graph_Items`, `Gründung des Ordens von Hela` -> `Grundung des Ordens von Hela`,
-  `Straße nach Süden` -> `Strasse nach Suden`, `Miehall/Map` -> `Miehall_Map`.
+  `Straße nach Süden` -> `Strasse nach Suden`, `TBC/Campaign` -> `TBC_Campaign`.
 - **Format** depends only on the field `type`: wikitext (`text/vnd.tiddlywiki`, the default) ->
   one `.tid` file; **any other type** -> content file plus `.meta` with the fields. The graph views
   (`type: application/json`) therefore live as `$__graph_<name>.json` + `$__graph_<name>.json.meta`.
@@ -163,9 +164,9 @@ Technical tiddlers with a fixed function given by the format (no lore content):
 | `$:/SiteSubtitle` | Subtitle. Empty in the template - the CI enters a timestamp at build time. |
 | `$:/DefaultTiddlers` | List of tiddlers shown in the story river when the wiki opens. |
 | `$:/language` | Active language, e.g. `$:/languages/de-DE` (needs `"languages"` in `tiddlywiki.info` for anything but en-GB). Supported languages: `README.md` -> "Languages". A language switch in the Control Panel during `npm start` writes this tiddler. |
-| `$:/graph/Default` (caption "Live") | Graph view: currently open tiddlers (`$:/StoryList`) of the main types, including automatic `links` edges (wiki links). |
+| `$:/graph/Default` (caption "Live") | Graph view: currently open tiddlers (`$:/StoryList`) of the main types, including automatic `links` edges (wiki links) and the function edges `rules` and `spots`. |
 | `$:/graph/Cosmogram` | Graph view: all `Deity`/`Organisation`/`Person`/`Player` tiddlers with their relation fields. |
-| `$:/graph/WorldMap` | Graph view: all `Location` tiddlers plus all living persons/deities/players/organisations - with and without a `location` field -, connected by the `location` edge. |
+| `$:/graph/Atlas` | Graph view: all `Location` tiddlers plus all living persons/deities/players/organisations - with and without a `location` field -, connected by the `location` edge and the function edges `rules` (leads a location) and `spots` (part of a location). The places of several worlds and planes, hence not "world map". |
 | `$:/graph/Items` | Graph view: `Artifact`/`Book`/`Item`/`Material` tiddlers plus their owners/creators/former owners linked by `owner`/`creator`/`former` and ingredients linked by `component`. |
 | `PlayerLevel` | Body = free text shown as is on the `Player` hub, e.g. `Level 13` or `13456 EXP`; edited directly by the DM. |
 | `$:/config/dndwiki/calendar` (optional) | Title of the calendar data tiddler. Set by the plugin `dndwiki-forgottenrealms` (Harptos) or by the wiki for an own calendar (see "Dates and calendar"). |
@@ -181,8 +182,9 @@ Gitignored (transient, per session/machine, not in git):
 | `$:/config/flibbles/graph/sidebar` | Remembers which graph view was last open in the sidebar. |
 
 The four graph views live in the wiki on purpose instead of the plugin: the sidebar dropdown only
-lists real tiddlers (shadows do not appear there), and e.g. the world map can carry its own
-background/positions per campaign.
+lists real tiddlers (shadows do not appear there), and e.g. the atlas can carry its own settings
+per campaign. The map of a location is no view of its own: it is a tab of the location (see
+"Maps of a location") and deliberately not in the dropdown.
 
 ### Tiddler format
 
@@ -194,7 +196,24 @@ Standard `.tid` format (field header, blank line, body). Fields of content tiddl
 - **Relation fields** (list fields referencing titles) - carry the relation network for the graph:
   `location`, `member`, `former`, `leader`, `officer`, `patron`, `mentor`, `under`, `family`,
   `alliance`, `bond`, `enmity` (person/organisation/deity) as well as
-  `owner`/`creator`/`former`/`component` (items). Symmetric fields (`family`/`alliance`/`bond`/
+  `owner`/`creator`/`former`/`component` (items).
+  - **`location`** on a person, player or deity: where they are most likely found - the most
+    precise place that is still true (someone in Baile has `Baile`, not the kingdom; someone who
+    moves between towns gets the region). One entry; more give a hint.
+  - **`location`** on an organisation: every place where it sits or is present (office,
+    informants, spies) - several entries, all equal; which one is the seat says the text. Named
+    spies are persons with `member` and `location`. A secret presence needs a tiddler of its own
+    locked for the players (e.g. a sub-organisation with `under`), because the player lock works
+    per tiddler, not per field entry.
+  - **`location`** on a location: it lies in that location ("liegt in", a place of its own within
+    a larger one). A part of a location ("Teil von", e.g. a tavern in a town, the base in a
+    forest) is instead a **spot** in the body of the larger location (see "Maps of a location");
+    who is in the part is found in the larger one. A location has exactly one parent - the
+    field or a spot, never both.
+  - **`leader`** pointing to a location: leads or controls it (shown as "Controls"), next to
+    `location` (sits/is present there).
+  - **Tags express no places**: no parent tags on locations, no place tags on events, persons or
+    organisations - the fields and spots carry this. Symmetric fields (`family`/`alliance`/`bond`/
   `enmity`) are set on **both** end points and draw a line with arrows on both sides. `officer` is
   the intermediate rank between `member` and `leader` (e.g. council leadership), `mentor` the
   individual teacher/student edge. `bond` covers friendship as well as protection and belonging
@@ -250,11 +269,26 @@ Standard `.tid` format (field header, blank line, body). Fields of content tiddl
 - **Event maintenance:** when creating or editing an `Event` tiddler, check whether the persons
   mentioned in it (linked or not) get a new, more recent whereabouts through the event - if so,
   update the `location` field of the affected person tiddlers in the same go (including the
-  `modified` bump there, see "Timestamps when editing tiddlers").
-- **Sub-tiddlers of a location:** `<location>/Map` (tag `Map`, overview map) and
-  `<location>/BattleMap` (tag `BattleMap`, battle map), each with `image` and optional text. The
-  location shows them as tabs after its relations; a sub-tiddler tagged with a player character
-  is hidden for other players like any tiddler.
+  `modified` bump there, see "Timestamps when editing tiddlers"). The same for the places of
+  organisations (`location`) and a change of who leads a location (`leader`). The places of an
+  event are the locations linked in its sections (or referenced with `<<spotlink>>`); the
+  event list of a location gathers them from all places within it.
+- **Maps of a location** - one tiddler per location, no sub-tiddlers:
+  - The tab "Map" (a location with a map image, spots or places within) shows a graph with the
+    spots and the places within at fixed positions - over the map image if there is one; the
+    positions are in the field `map-positions` (set by dragging in the tab with "Edit
+    positions" while `npm start` runs).
+  - `map` - the map image (`images/map/`).
+  - Spots - the places of interest, at the end of the body: `<<spot "Name">>` followed by its
+    text, up to the next spot. The name may hold links (`<<spot "Tempel von [[Chauntea]]">>`);
+    a spot whose plain name is a tiddler is joined to it (a location then is a part of this
+    one), `<<spot "Name" "Tiddler">>` joins another one. The body shows only the text before
+    the first spot; the spots appear in the tab "Map".
+  - `battlemap` - battle maps (`images/battlemap/`, several comma separated), one tab each;
+    battle maps of a spot: `<<spot "Name" battlemap:"a.jpg, b.jpg">>`.
+  - Referencing a spot from another text: `<<spotlink "Baile" "Schloss Baile">>` or with other
+    link text `<<spotlink "Miehall" "[[Trunkenen Eulenbären|Zum Trunkenen Eulenbären]]">>` -
+    not as `[[Baile#...]]`.
 
 ### Dates and calendar
 
@@ -296,8 +330,7 @@ Every tiddler typically gets two kinds of tags:
 
 1. **Type tag** (valid for every campaign), roughly in three categories:
    - **Data** - describe the state of the world, usually undated/long-lived: `Person`,
-     `Location`, `Organisation`, `Deity`, `Player`, `Artifact`, `Item`, `Book`, `Material`, `Map`,
-     `BattleMap`.
+     `Location`, `Organisation`, `Deity`, `Player`, `Artifact`, `Item`, `Book`, `Material`.
    - **Events** - dated/narrative entries: `Event` (a single in-world incident, possibly several
      points in time, see tiddler format), `Campaign` (marks an event as a chapter of the
      campaign, played with the player characters; the hub `Campaign` is the pinned start page).
@@ -305,6 +338,7 @@ Every tiddler typically gets two kinds of tags:
      `PlayerLevel`, see above).
 2. Faction/story line tag as thematic hub - the concrete names are **campaign-specific** and not
    listed here (see the `CAMPAIGN.md` or the category hub tiddlers of the respective wiki).
+   Never a location: places are fields and spots (see "Relation fields").
 
 Type tags are always the English internal names. On display they appear in the wiki language
 (`Location` reads "Ort" in German) - in headings, tag pills, lists and the search. A tag typed in

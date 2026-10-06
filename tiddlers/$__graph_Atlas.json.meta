@@ -1,9 +1,9 @@
-caption: Weltkarte
+caption: Atlas
 created: 20260708130142000
 edges.fields: location
 edges.functions: [all[]] -[[links]] -[[transcludes]]
 filter: [tag[Location]] [multitag[Deity,Person,Player,Organisation]] -[dnd.dead[]]
-modified: 20260715214458000
+modified: 20261006064738000
 template: $:/plugins/dndwiki-core/graph/templates/dnd-graph
-title: $:/graph/WorldMap
+title: $:/graph/Atlas
 type: application/json

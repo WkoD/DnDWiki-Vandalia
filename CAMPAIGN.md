@@ -26,10 +26,11 @@ eigene Fraktionen/Häuser/Götter; keine Vorlage aus einem offiziellen Abenteuer
 - **Offene Punkte/Plot-Fäden:** das Snippet „Offene Punkte“ (`open-items`) wird inline in
   Ereignis-Tiddlern eingefügt (rot umrandete Callout-Box); wird
   entfernt/verkleinert, sobald der Strang aufgelöst ist. Kein zentraler Tracker.
-- **Karten zu Orten:** Orte haben oft einen begleitenden Karten-Tiddler `<Name>/Map`
-  (Datei `<Name>_Map.tid`, Tag `Map`, Feld `image`) neben dem Haupt-Tiddler `<Name>.tid`,
-  bei Bedarf zusätzlich eine Kampfkarte `<Name>/BattleMap` (Tag `BattleMap`, Bild aus
-  `images/battlemap/`). Beide erscheinen im Ort als Tabs „Karte“ und „Kampfkarte“.
+- **Karten zu Orten:** keine Unter-Tiddler. Das Kartenbild steht im Feld `map` des Orts
+  (Bild aus `images/map/`), die Sehenswürdigkeiten als `<<spot "Name">>`-Abschnitte am Ende
+  seines Texts; beides erscheint im Tab „Karte“. Kampfkarten stehen im Feld `battlemap`
+  (Bild aus `images/battlemap/`) bzw. als Parameter `battlemap:"…"` am Spot. Die Bezirke
+  von `Cair Di` stehen als Hinweis (`''//Artisans Ward//''`) am Anfang der Spot-Texte.
 - **Spieler-Sichtbarkeit:** der Spieler-Login auf dem `Player`-Hub
   (`$:/state/dndwiki/player`) wird genutzt, um am
   Tisch zwischen DM- und Spieler-Perspektive zu wechseln (reine
@@ -37,8 +38,8 @@ eigene Fraktionen/Häuser/Götter; keine Vorlage aus einem offiziellen Abenteuer
 - **Kampagnenspezifische Ordner/Assets:** `images/maptool/` enthält Screenshots aus dem
   externen VTT (RPTools MapTool); wird **nicht** aus Tiddlern referenziert - rein externes
   Asset für den Spieltisch. Kampfkarten, die im Wiki erscheinen sollen, liegen dagegen unter
-  `images/battlemap/` und werden über `<Ort>/BattleMap` eingebunden (z. B.
-  `Insel Avalon/BattleMap`; `Vengeance.png` liegt dort noch ohne Tiddler).
+  `images/battlemap/` und werden über das Feld `battlemap` eingebunden (z. B. an
+  `Insel Avalon`; `Vengeance.png` liegt dort noch ungenutzt).
 - **Erzählstil (Tempus):** durchgängige Vergangenheitsform (Präteritum) als
   Chronik-Stil - auch für andauernde Eigenschaften/Fakten (z. B. "war ein
   Mensch" statt "ist ein Mensch"); impliziert **nicht** Tod/Nicht-Existenz.
@@ -57,11 +58,14 @@ oder aus dieser Datei planen:**
 - **Fraktionen / Häuser / Orte / NPCs:** Tiddler mit dem jeweiligen Typ-Tag. Startpunkte:
   `Index` und die Kategorie-Hub-Tiddler `Person`, `Location`, `Organisation`, `Event`,
   `Campaign`, ... (Shadows aus `dndwiki-core`).
-- **Orte-Hierarchie (Ober-/Unterort):** kein eigenes Feld - implizit über `tags` kodiert.
-  Ein Orts-Tiddler (Tag `Location`) ist mit seinem übergeordneten Gebiet/Kontinent vertaggt
-  (z. B. `Baile.tid: tags: [[Königreich von Vandalia]] [[Haus Eiree]] Location`). Nicht jeder Ort hat
-  aktuell einen vollständigen Tag-Pfad bis zum Kontinent - im Zweifel Body-Text der
-  Orte gegenprüfen.
+- **Orte-Hierarchie (Ober-/Unterort):** über das Feld `location` („liegt in“, z. B.
+  `Baile.tid: location: [[Königreich von Vandalia]]`) oder als Spot im Text des Oberorts
+  („Teil von“, z. B. der Riganstützpunkt im `Riganwald`). Tags drücken keine Orte aus.
+  Die Wurzeln sind die Ebenen, nebeneinander: `Materielle Ebene` (darin `Andu Falas`,
+  `Faerun`, `Vandenmeer`, …), `Ebene von Wasser und Eis`, `Ebene von Lava und Asche`
+  (Feuer und Erde), `Ebene von Fels und Donner` (Erde und Luft), `Graue Wüste`,
+  `Schattenwelt`, `Welt im Geiste`. Welche Orga einen Ort führt, steht in ihrem Feld
+  `leader` (z. B. `Haus Eiree` → `Baile`).
 - **Spielerstufe:** Body von `PlayerLevel.tid`.
 - **Offene Plot-Fäden:** Suche nach dem Offene-Punkte-Snippet (`@@.tc-tiddler-frame`) in
   `Event`-Tiddlern.
