@@ -129,11 +129,11 @@ Important: `IsReadOnly` is compared as an exact string - no trailing newline in 
     schema) comes from the plugin `dndwiki-core` and does **not** live as a file in the wiki -
     documented in the repo `TiddlyDnD-Plugins`.
 - `images/` - sorted by type, folder names in lower case, one per type tag: `person` (NPC
-  portraits, also deities), `location`, `event`, `organisation`, `item` (artifacts, books, items,
-  materials), `player`; plus `map` (map images of locations, field `map`) and `battlemap`
+  portraits, also deities), `location`, `event`, `organisation`, `item` (artifacts, items, materials,
+  whatever their category), `player`; plus `map` (map images of locations, field `map`) and `battlemap`
   (battle maps, field or spot parameter `battlemap`). Campaign-specific
   subfolders used only for storage (if any): see `CAMPAIGN.md`.
-- `data/book/` - in-world lore PDFs.
+- `data/book/` - in-world lore PDFs, embedded through the field `data` of a book.
 
 ### File name and file format
 
@@ -167,7 +167,7 @@ Technical tiddlers with a fixed function given by the format (no lore content):
 | `$:/graph/Default` (caption "Live") | Graph view: currently open tiddlers (`$:/StoryList`) of the main types, including automatic `links` edges (wiki links) and the function edges `rules` and `spots`. |
 | `$:/graph/Cosmogram` | Graph view: all `Deity`/`Organisation`/`Person`/`Player` tiddlers with their relation fields. |
 | `$:/graph/Atlas` | Graph view: all `Location` tiddlers plus all living persons/deities/players/organisations - with and without a `location` field -, connected by the `location` edge and the function edges `rules` (leads a location) and `spots` (part of a location). The places of several worlds and planes, hence not "world map". |
-| `$:/graph/Items` | Graph view: `Artifact`/`Book`/`Item`/`Material` tiddlers plus their owners/creators/former owners linked by `owner`/`creator`/`former` and ingredients linked by `component`. |
+| `$:/graph/Items` | Graph view: `Artifact`/`Item`/`Material` tiddlers (with every category) plus their owners/creators/former owners linked by `owner`/`creator`/`former`, their locations linked by `location` and ingredients linked by `component`. |
 | `PlayerLevel` | Body = free text shown as is on the `Player` hub, e.g. `Level 13` or `13456 EXP`; edited directly by the DM. |
 | `$:/config/dndwiki/calendar` (optional) | Title of the calendar data tiddler. Set by the plugin `dndwiki-forgottenrealms` (Harptos) or by the wiki for an own calendar (see "Dates and calendar"). |
 
@@ -196,7 +196,7 @@ Standard `.tid` format (field header, blank line, body). Fields of content tiddl
 - **Relation fields** (list fields referencing titles) - carry the relation network for the graph:
   `location`, `member`, `former`, `leader`, `officer`, `patron`, `mentor`, `under`, `family`,
   `alliance`, `bond`, `enmity` (person/organisation/deity) as well as
-  `owner`/`creator`/`former`/`component` (items).
+  `owner`/`creator`/`former`/`component`/`location` (items).
   - **`location`** on a person, player or deity: where they are most likely found - the most
     precise place that is still true (someone in Baile has `Baile`, not the kingdom; someone who
     moves between towns gets the region). One entry; more give a hint.
@@ -205,6 +205,11 @@ Standard `.tid` format (field header, blank line, body). Fields of content tiddl
     spies are persons with `member` and `location`. A secret presence needs a tiddler of its own
     locked for the players (e.g. a sub-organisation with `under`), because the player lock works
     per tiddler, not per field entry.
+  - **`location`** and **`owner`** on an item: an `Artifact` is unique and has one owner **or**
+    one location (where it lies, e.g. set into a lighthouse) - never both; when it passes from a
+    person to a place, the person moves to `former`. `Item` and `Material` exist several times:
+    several owners and several locations (for a material: where it is found), all equal. How
+    many there are says the text. More give a hint.
   - **`location`** on a location: it lies in that location ("liegt in", a place of its own within
     a larger one). A part of a location ("Teil von", e.g. a tavern in a town, the base in a
     forest) is instead a **spot** in the body of the larger location (see "Maps of a location");
@@ -249,6 +254,8 @@ Standard `.tid` format (field header, blank line, body). Fields of content tiddl
   from players.
   `node scripts/check-dates.js <wiki folder>` in `TiddlyDnD-Plugins` checks the dates of a wiki.
 - `price` (items) - shown with the currency unit of the language pack.
+- `data` (books) - file name of a PDF from `data/book/`, embedded below the body (instead of an
+  `<embed>` in the body).
 - `player` (on `Player` tiddlers) - name of the real player.
 - `link` - "see also" line under the tiddler, e.g. `[ext[Title|data/book/file.pdf]]`.
 - **Linking:** the body consistently uses `[[WikiLinks]]` for explicit links between
@@ -330,7 +337,12 @@ Every tiddler typically gets two kinds of tags:
 
 1. **Type tag** (valid for every campaign), roughly in three categories:
    - **Data** - describe the state of the world, usually undated/long-lived: `Person`,
-     `Location`, `Organisation`, `Deity`, `Player`, `Artifact`, `Item`, `Book`, `Material`.
+     `Location`, `Organisation`, `Deity`, `Player`, and for items exactly **one base type** -
+     `Artifact` (unique), `Item` (several of it exist), `Material` (raw material, ingredient) -
+     plus optional **categories** next to it: `Book`, `Consumable` (potions, tinctures),
+     `Equipment` (everything one can equip: weapons, armour, a bag of holding), or one of the
+     campaign (a tiddler tagged `$:/tags/dndwiki/ItemKind`). A unique book is `Artifact Book`,
+     a newspaper `Item Book`; plenty of items need no category.
    - **Events** - dated/narrative entries: `Event` (a single in-world incident, possibly several
      points in time, see tiddler format), `Campaign` (marks an event as a chapter of the
      campaign, played with the player characters; the hub `Campaign` is the pinned start page).
