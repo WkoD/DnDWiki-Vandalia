@@ -13,8 +13,9 @@ eigene Fraktionen/Häuser/Götter; keine Vorlage aus einem offiziellen Abenteuer
 
 ## Tisch-Meta (steht NICHT in Tiddlern)
 
-- **Spieler <-> Charakter:** <!-- reale Spielernamen <-> Charaktere; vom Nutzer zu ergänzen -->
 - **Hausregeln:** <!-- abweichende Regeln; vom Nutzer zu ergänzen -->
+
+Wer welche Figur spielt, steht im Feld `player` der Figuren (siehe unten), nicht hier.
 
 ## Konventionen (DM-Entscheidung)
 
@@ -22,7 +23,7 @@ eigene Fraktionen/Häuser/Götter; keine Vorlage aus einem offiziellen Abenteuer
   Ergänzung an das jeweilige Ereignis-Tiddler (Tag `Event`) angehängt - ein
   Ereignis-Tiddler kann mehrere In-World-Zeitpunkte sammeln: die Daten stehen im Feld
   `date`, jeder Abschnitt im Text beginnt mit `<<date>>` (optional mit Beschriftung
-  `<<date "…">>`).
+  `<<date "…">>`). Die Spielerfiguren, die dabei waren, stehen als Tags am Ereignis.
 - **Offene Punkte/Plot-Fäden:** das Snippet „Offene Punkte“ (`open-items`) wird inline in
   Ereignis-Tiddlern eingefügt (rot umrandete Callout-Box); wird
   entfernt/verkleinert, sobald der Strang aufgelöst ist. Kein zentraler Tracker.
@@ -31,10 +32,13 @@ eigene Fraktionen/Häuser/Götter; keine Vorlage aus einem offiziellen Abenteuer
   seines Texts; beides erscheint im Tab „Karte“. Kampfkarten stehen im Feld `battlemap`
   (Bild aus `images/battlemap/`) bzw. als Parameter `battlemap:"…"` am Spot. Die Bezirke
   von `Cair Di` stehen als Hinweis (`''//Artisans Ward//''`) am Anfang der Spot-Texte.
-- **Spieler-Sichtbarkeit:** der Spieler-Login auf dem `Player`-Hub
-  (`$:/state/dndwiki/player`) wird genutzt, um am
-  Tisch zwischen DM- und Spieler-Perspektive zu wechseln (reine
-  Render-Bequemlichkeit, kein Zugriffsschutz - das Repo ist öffentlich).
+- **Spieler-Sichtbarkeit:** Am Tisch wird über den Knopf „Sicht“ (Sidebar) zwischen der
+  öffentlichen Sicht, der Sicht eines Spielers und der DM-Sicht gewechselt. Was nur
+  einzelne Spieler kennen, trägt den Tag `Secret` mit ihren Figuren (`Theren Secret`);
+  Teile eines Texts werden mit `<<secret "Theren">>` bzw. `<$secret for="Theren">…</$secret>`
+  gesperrt. Die veröffentlichte Fassung bietet die DM-Sicht nicht an (kein
+  `$:/config/dndwiki/view/dm-published`). Reine Render-Bequemlichkeit, kein Zugriffsschutz -
+  das Repo ist öffentlich.
 - **Kampagnenspezifische Ordner/Assets:** `images/maptool/` enthält Screenshots aus dem
   externen VTT (RPTools MapTool); wird **nicht** aus Tiddlern referenziert - rein externes
   Asset für den Spieltisch. Kampfkarten, die im Wiki erscheinen sollen, liegen dagegen unter
@@ -69,8 +73,12 @@ oder aus dieser Datei planen:**
 - **Spielerstufe:** Body von `PlayerLevel.tid`.
 - **Offene Plot-Fäden:** Suche nach dem Offene-Punkte-Snippet (`@@.tc-tiddler-frame`) in
   `Event`-Tiddlern.
-- **Kampagnenstruktur / Handlungsbögen:** `Campaign`-getaggte Tiddler.
-- **Spielercharaktere:** `Player`-getaggte Tiddler bzw. der `Player`-Hub.
+- **Kampagnenstruktur / Handlungsbögen:** Ereignisse, an denen eine Spielerfigur als Tag
+  hängt (die Figuren, die dabei waren); Zeitstrahl und Tabelle am `Campaign`-Hub.
+- **Spielercharaktere:** `Player`-getaggte Tiddler (aktiv) und Tiddler mit Feld `player`
+  (früher gespielt, z. B. `Actia`), bzw. der `Player`-Hub. Das Feld `player` nennt den
+  realen Spieler.
+- **Geheimes:** `Secret`-getaggte Tiddler (Hub `Secret`, in der DM-Sicht vollständig).
 
 *Dann* konsistente Vorschläge machen, die an bestehende Tiddler/Tags anknüpfen
 (explizite `[[WikiLinks]]` setzen).

@@ -1,8 +1,0 @@
-caption: Datumsangabe
-created: 20230926110809657
-modified: 20230926111504833
-tags: $:/tags/TextEditor/Snippet
-title: Datumsangabe
-type: text/vnd.tiddlywiki
-
-<<date>>

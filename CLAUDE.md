@@ -202,9 +202,9 @@ Standard `.tid` format (field header, blank line, body). Fields of content tiddl
     moves between towns gets the region). One entry; more give a hint.
   - **`location`** on an organisation: every place where it sits or is present (office,
     informants, spies) - several entries, all equal; which one is the seat says the text. Named
-    spies are persons with `member` and `location`. A secret presence needs a tiddler of its own
-    locked for the players (e.g. a sub-organisation with `under`), because the player lock works
-    per tiddler, not per field entry.
+    spies are persons with `member` and `location`. A secret presence is an entry pointing to a
+    location tagged `Secret` or to a locked spot (see "Player characters, views and secrets"):
+    path, occupants and map leave it out for the views that do not see it.
   - **`location`** and **`owner`** on an item: an `Artifact` is unique and has one owner **or**
     one location (where it lies, e.g. set into a lighthouse) - never both; when it passes from a
     person to a place, the person moves to `former`. `Item` and `Material` exist several times:
@@ -250,13 +250,18 @@ Standard `.tid` format (field header, blank line, body). Fields of content tiddl
   rule, the date and the locations linked in its section - no `---` and no hand-written date
   before it. **Every event starts with `<<date>>`**, also one with a single date or none (then
   the heading reads `????`); an event with several sections gives every section a placeholder.
-  Text before the first `<<date>>` (an intro) belongs to the head of the event. Do not put `<<date>>` into a block hidden
-  from players.
-  `node scripts/check-dates.js <wiki folder>` in `TiddlyDnD-Plugins` checks the dates of a wiki.
+  Text before the first `<<date>>` (an intro) belongs to the head of the event. The block form
+  `<$date>…</$date>` (with `n`, `label`) has an end of its own; both forms count on together.
+  Inside an HTML element, a table or a `$list` only the block form counts (a hint says so).
+  `node scripts/check-dates.js <wiki folder>` in `TiddlyDnD-Plugins` checks the dates of a wiki
+  and the sections and locks of the bodies.
 - `price` (items) - shown with the currency unit of the language pack.
 - `data` (books) - file name of a PDF from `data/book/`, embedded below the body (instead of an
   `<embed>` in the body).
-- `player` (on `Player` tiddlers) - name of the real player.
+- `player` - name of the real player: on a `Player` tiddler (an active player character), and
+  kept on a figure someone played before (it then becomes a `Person`, its image moves to
+  `images/person/`). Both count as player characters for taking part and for secrets; only the
+  players of active characters are views to choose.
 - `link` - "see also" line under the tiddler, e.g. `[ext[Title|data/book/file.pdf]]`.
 - **Linking:** the body consistently uses `[[WikiLinks]]` for explicit links between
   persons/locations/organisations - this is the primary network mechanism next to the tags. No
@@ -289,8 +294,9 @@ Standard `.tid` format (field header, blank line, body). Fields of content tiddl
   - Spots - the places of interest, at the end of the body: `<<spot "Name">>` followed by its
     text, up to the next spot. The name may hold links (`<<spot "Tempel von [[Chauntea]]">>`);
     a spot whose plain name is a tiddler is joined to it (a location then is a part of this
-    one), `<<spot "Name" "Tiddler">>` joins another one. The body shows only the text before
-    the first spot; the spots appear in the tab "Map".
+    one), `<<spot "Name" "Tiddler">>` joins another one. The block form
+    `<$spot name="Name">…</$spot>` has an end of its own. The body shows the text without the
+    spots; the spots appear in the tab "Map".
   - `battlemap` - battle maps (`images/battlemap/`, several comma separated), one tab each;
     battle maps of a spot: `<<spot "Name" battlemap:"a.jpg, b.jpg">>`.
   - Referencing a spot from another text: `<<spotlink "Baile" "Schloss Baile">>` or with other
@@ -344,13 +350,37 @@ Every tiddler typically gets two kinds of tags:
      campaign (a tiddler tagged `$:/tags/dndwiki/ItemKind`). A unique book is `Artifact Book`,
      a newspaper `Item Book`; plenty of items need no category.
    - **Events** - dated/narrative entries: `Event` (a single in-world incident, possibly several
-     points in time, see tiddler format), `Campaign` (marks an event as a chapter of the
-     campaign, played with the player characters; the hub `Campaign` is the pinned start page).
+     points in time, see tiddler format). The hub `Campaign` is the pinned start page; there is
+     no tag `Campaign` - an event belongs to the campaign when a player character is tagged on it
+     (see below).
    - **Other** - meta/navigation: `Index` (entry point), `Information` (technical tiddlers such as
      `PlayerLevel`, see above).
 2. Faction/story line tag as thematic hub - the concrete names are **campaign-specific** and not
    listed here (see the `CAMPAIGN.md` or the category hub tiddlers of the respective wiki).
    Never a location: places are fields and spots (see "Relation fields").
+3. **Player characters** who took part - on events the characters that were there (`Theren
+   Ragna`), active or former (field `player`). This also makes the event a campaign event
+   (event table, timeline).
+4. **`Secret`** - locks the tiddler: only the DM and the players of the player characters tagged
+   on it see it (`Theren Secret`: Theren's player; `Secret` alone: the DM only).
+
+### Player characters, views and secrets
+
+The page control "View" (sidebar) switches between the public view, the view of one player and
+the view of the DM; the editable wiki opens as the DM, the published copy as public (the DM view
+there only with `$:/config/dndwiki/view/dm-published` = `yes` in `tiddlers/`). No access
+control - the repository holds everything. Details: `README.md` of `TiddlyDnD-Plugins` ->
+"Player characters, views and secrets".
+
+- A whole tiddler: tag `Secret` (plus the characters it is for).
+- Part of a body: `<<secret "Theren" "Actia">>` directly before or after a `<<date>>`/`<<spot>>`
+  locks that whole section (at the very start of the body: the text before the first marker);
+  `<$secret for="Theren Actia">…</$secret>` locks exactly what it encloses. No character: the DM
+  only. A locked section is missing everywhere for the views that do not see it (dates,
+  locations, spots, search).
+- Lock only with these: a `$list`/`<%if%>` of one's own on the view hides the text but not its
+  dates, locations and spots, and a transcluded secret tiddler shows wherever it is transcluded
+  (`check-dates.js` warns about both).
 
 Type tags are always the English internal names. On display they appear in the wiki language
 (`Location` reads "Ort" in German) - in headings, tag pills, lists and the search. A tag typed in
