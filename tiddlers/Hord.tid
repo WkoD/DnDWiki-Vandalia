@@ -1,10 +1,10 @@
 created: 20201207111914190
 date: 1325
-family: Hydi
 image: Hord.png
 location: Kattegat
 member: Nordvolk
-modified: 20260713005441203
+modified: 20261008071952000
+parent: Hydi
 tags: Person Nordvolk
 title: Hord
 type: text/vnd.tiddlywiki

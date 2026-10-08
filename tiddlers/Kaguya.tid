@@ -1,11 +1,11 @@
 bond: [[Lucy]]
 created: 20190511105143617
 date: 1339
-family: [[Shurelia]]
 image: Kaguya (portrait).jpg
 leader: Mondwächter
 location: [[Andu Falas]]
-modified: 20260715152119000
+modified: 20261008071952000
+parent: Shurelia
 tags: Person Mondwächter
 title: Kaguya
 type: text/vnd.tiddlywiki

@@ -1,9 +1,10 @@
 created: 20240501072758770
-family: [[Sven Sigra]] [[Lagertha]]
 image: Björn Solskin.jpg
 location: Kattegat
 member: Vinland
-modified: 20260715125428000
+modified: 20261008071952000
+parent: [[Sven Sigra]]
+sibling: Lagertha
 tags: Vinland Person
 title: Björn Solskin
 type: text/vnd.tiddlywiki

@@ -164,7 +164,7 @@ Technical tiddlers with a fixed function given by the format (no lore content):
 | `$:/SiteSubtitle` | Subtitle. Empty in the template - the CI enters a timestamp at build time. |
 | `$:/DefaultTiddlers` | List of tiddlers shown in the story river when the wiki opens. |
 | `$:/language` | Active language, e.g. `$:/languages/de-DE` (needs `"languages"` in `tiddlywiki.info` for anything but en-GB). Supported languages: `README.md` -> "Languages". A language switch in the Control Panel during `npm start` writes this tiddler. |
-| `$:/graph/Default` (caption "Live") | Graph view: currently open tiddlers (`$:/StoryList`) of the main types, including automatic `links` edges (wiki links) and the function edges `rules` and `spots`. |
+| `$:/graph/Default` (caption "Live") | Graph view: currently open tiddlers (`$:/StoryList`) of the main types, including automatic `links` edges (wiki links, grey) and the function edges `rules` and `spots`. |
 | `$:/graph/Cosmogram` | Graph view: all `Deity`/`Organisation`/`Person`/`Player` tiddlers with their relation fields. |
 | `$:/graph/Atlas` | Graph view: all `Location` tiddlers plus all living persons/deities/players/organisations - with and without a `location` field -, connected by the `location` edge and the function edges `rules` (leads a location) and `spots` (part of a location). The places of several worlds and planes, hence not "world map". |
 | `$:/graph/Items` | Graph view: `Artifact`/`Item`/`Material` tiddlers (with every category) plus their owners/creators/former owners linked by `owner`/`creator`/`former`, their locations linked by `location` and ingredients linked by `component`. |
@@ -194,9 +194,23 @@ Standard `.tid` format (field header, blank line, body). Fields of content tiddl
 - `image` - image file name(s), comma separated; resolved through the type tag
   (Person/Location/Event/...) to an image from `images/<folder>/`.
 - **Relation fields** (list fields referencing titles) - carry the relation network for the graph:
-  `location`, `member`, `former`, `leader`, `officer`, `patron`, `mentor`, `under`, `family`,
-  `alliance`, `bond`, `enmity` (person/organisation/deity) as well as
-  `owner`/`creator`/`former`/`component`/`location` (items).
+  `location`, `member`, `former`, `leader`, `officer`, `patron`, `mentor`, `under`, `parent`,
+  `ancestor`, `spouse`, `sibling`, `family`, `alliance`, `bond`, `enmity` (person/organisation/deity) as well
+  as `owner`/`creator`/`former`/`component`/`location` (items). Meaning, edge texts and axes:
+  `README.md` of `TiddlyDnD-Plugins` -> "Relations".
+  - **Direction:** the field lives on the dependent and points to what it depends on - the member
+    to its organisation, the child to its parent (`parent`), the student to the mentor
+    (`mentor`), the item to its creator, the potion to its ingredient (`component`), the part to
+    the whole. The way back (members, children, students) is never entered; graph and relation
+    list show it.
+  - **Only the highest of a kind:** `leader` includes `officer` and `member`, `officer` includes
+    `member`, `leader` on a location includes `location` there, `parent` includes `ancestor`. Enter only the highest; a lower
+    one next to it is neither drawn nor listed (a `location` next to a `leader` on the same place
+    gets a hint).
+  - **Family:** `parent` on the child (one entry per parent), `ancestor` for a line over several
+    generations, `spouse` and `sibling` (real siblings, also without a known parent) on both
+    ends, `family` for any other kin - cousins, uncles, adoption and foster families - or where
+    the text does not say which. A shared `parent` alone makes no siblings.
   - **`location`** on a person, player or deity: where they are most likely found - the most
     precise place that is still true (someone in Baile has `Baile`, not the kingdom; someone who
     moves between towns gets the region). One entry; more give a hint.
@@ -215,11 +229,12 @@ Standard `.tid` format (field header, blank line, body). Fields of content tiddl
     forest) is instead a **spot** in the body of the larger location (see "Maps of a location");
     who is in the part is found in the larger one. A location has exactly one parent - the
     field or a spot, never both.
-  - **`leader`** pointing to a location: leads or controls it (shown as "Controls"), next to
-    `location` (sits/is present there).
+  - **`leader`** pointing to a location: leads or controls it (shown as "Controls") and is
+    present there - no `location` to the same place.
   - **Tags express no places**: no parent tags on locations, no place tags on events, persons or
-    organisations - the fields and spots carry this. Symmetric fields (`family`/`alliance`/`bond`/
-  `enmity`) are set on **both** end points and draw a line with arrows on both sides. `officer` is
+    organisations - the fields and spots carry this. Symmetric fields (`spouse`/`sibling`/`family`/
+  `alliance`/`bond`/`enmity`) are set on **both** end points - deleting one tiddler must not lose
+  the relation for the other - and draw a line with arrows on both sides. `officer` is
   the intermediate rank between `member` and `leader` (e.g. council leadership), `mentor` the
   individual teacher/student edge. `bond` covers friendship as well as protection and belonging
   without service. `former` means something different depending on the tiddler type (like
@@ -227,9 +242,10 @@ Standard `.tid` format (field header, blank line, body). Fields of content tiddl
   organisation, on items a former owner (person/organisation). `component` is directed and points
   from a craftable item (potion/tincture/artifact) to its ingredient items (no quantity - the mere
   existence of the edge).
-  The display names of these fields come from the language packs (e.g. `location` reads "Ort" in
-  German) - in the relation list and on the graph edges. In edit mode TiddlyWiki shows the raw
-  English field names.
+  The display names come from the language packs - in the relation list a heading per direction
+  (`member`: "Mitglied von" / "Mitglieder"), on the graph edges a text read from the dependent
+  ("Mitglied von"; every relation its own edge). In edit mode TiddlyWiki shows the raw English
+  field names.
 - `date` - in-world calendar dates (not the real session date), one syntax for all types (details:
   `README.md` of `TiddlyDnD-Plugins` -> "Dates"). Sections are separated by `,`, a span is
   `start/end`, a point `YYYY`, `YYYY-MM`, `YYYY-MM-DD` or with a time `YYYY-MM-DD-10:00`; `.` is an

@@ -1,12 +1,14 @@
 bond: Agin
 created: 20201207112358150
 date: 1324
-family: [[Sven Sigra]] [[Ragna]] [[Björn Solskin]]
 image: Lagertha.jpg
 location: Kattegat
 member: Nordvolk Vinland
 mentor: Agin
-modified: 20260715125428000
+modified: 20261008071952000
+parent: [[Sven Sigra]]
+sibling: [[Björn Solskin]]
+spouse: Ragna
 tags: Person Nordvolk Vinland
 title: Lagertha
 type: text/vnd.tiddlywiki

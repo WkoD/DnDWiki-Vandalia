@@ -1,10 +1,11 @@
 created: 20190205103205245
 date: 1331
-family: [[Ailis Alba]] [[Robert Alba]]
 image: Tomas Alba.jpg
 location: [[Dun Eidean]]
 member: [[Haus Alba]]
-modified: 20260713003248177
+modified: 20261008071952000
+parent: [[Robert Alba]]
+sibling: [[Ailis Alba]]
 tags: Person [[Haus Alba]]
 title: Tomas Alba
 type: text/vnd.tiddlywiki
