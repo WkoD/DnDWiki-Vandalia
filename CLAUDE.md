@@ -30,8 +30,9 @@ Two separate version axes:
 
 - **Format layer** -> pin of `tiddlyrpg-plugins` in `devDependencies` (e.g. `#2.0.0`), versioned
   in the separate repo `TiddlyRPG-Plugins`. Optional content for D&D (the setting
-  `tiddlyrpg-setting-forgottenrealms`) -> pin of `tiddlyrpg-dnd` (e.g. `#1.0.0`), versioned on its
-  own in the repo `TiddlyRPG-DnD`; it needs the format layer.
+  `tiddlyrpg-setting-forgottenrealms`) -> pin of `tiddlyrpg-dnd` (e.g. `#2.0.0`), versioned in
+  the repo `TiddlyRPG-DnD`; it needs the format layer. For now both keep the same version - pin
+  both to the same one.
 - **Scaffold template** -> field `version` in `package.json`, set to the `TiddlyRPG` release
   version (e.g. `2.0.0`) - **no** campaign version of its own.
 
