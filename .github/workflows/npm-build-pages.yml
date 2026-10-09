@@ -19,7 +19,7 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: '24'
-    - name: Install dependencies (tiddlywiki + TiddlyDnD-Plugins)
+    - name: Install dependencies (tiddlywiki + TiddlyRPG-Plugins)
       run: npm install
     - name: Update master
       run: |
@@ -27,7 +27,7 @@ jobs:
         echo $(TZ=Europe/Berlin date +'%Y-%m-%dT%H:%M:%S') >> './tiddlers/$__SiteSubtitle.tid'
     - name: Disable saving in the published (read-only) copy
       # Created only at CI build time, never lands in the Git repo - a local `npm start`
-      # stays fully editable. IsReadOnly is the switch: dndwiki-core (from 1.4.1) then hides
+      # stays fully editable. IsReadOnly is the switch: tiddlyrpg-core (from 1.4.1) then hides
       # edit/clone/delete/new/import/manager and the save button. Empty SaverFilter = never
       # "unsaved changes".
       # Important: IsReadOnly is compared as an exact string and must NOT have a trailing
@@ -37,7 +37,7 @@ jobs:
         printf 'title: $:/status/IsReadOnly\ntype: text/vnd.tiddlywiki\n\nyes' > './tiddlers/$__status_IsReadOnly.tid'
     - name: Build TiddlyWiki master index.html
       # The Node launcher scripts/tw.js sets TIDDLYWIKI_PLUGIN_PATH from ALL plugin packages
-      # (tiddlydnd-plugins + tw5-graph/vis-network/relink) + process.noDeprecation.
+      # (tiddlyrpg-plugins + tw5-graph/vis-network/relink) + process.noDeprecation.
       # NOT `npx tiddlywiki` with the bundle path only - the flibbles/graph stack would be missing.
       # A plugin from tiddlywiki.info that is not found is only a warning for TiddlyWiki, the
       # build would go on without it (e.g. without the format layer) - so the step fails on it.

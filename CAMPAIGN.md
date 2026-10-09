@@ -9,7 +9,7 @@ echten Stand immer live aus den Tiddlern lesen.
 
 **Vandalia** - homebrewtes Fantasy-Setting (D&D 5e), Kampagne auf Deutsch. Eigene Welt,
 eigene Fraktionen/Häuser/Götter; keine Vorlage aus einem offiziellen Abenteuer. Wiki-Sprache
-`de-DE`; Zeitrechnung nach dem Kalender von Harptos (Plugin `dndwiki-forgottenrealms`).
+`de-DE`; Zeitrechnung nach dem Kalender von Harptos (Plugin `tiddlyrpg-setting-forgottenrealms`).
 
 ## Tisch-Meta (steht NICHT in Tiddlern)
 
@@ -37,7 +37,7 @@ Wer welche Figur spielt, steht im Feld `player` der Figuren (siehe unten), nicht
   einzelne Spieler kennen, trägt den Tag `Secret` mit ihren Figuren (`Theren Secret`);
   Teile eines Texts werden mit `<<secret "Theren">>` bzw. `<$secret for="Theren">…</$secret>`
   gesperrt. Die veröffentlichte Fassung bietet die DM-Sicht nicht an (kein
-  `$:/config/dndwiki/view/dm-published`). Reine Render-Bequemlichkeit, kein Zugriffsschutz -
+  `$:/config/tiddlyrpg/view/dm-published`). Reine Render-Bequemlichkeit, kein Zugriffsschutz -
   das Repo ist öffentlich.
 - **Kampagnenspezifische Ordner/Assets:** `images/maptool/` enthält Screenshots aus dem
   externen VTT (RPTools MapTool); wird **nicht** aus Tiddlern referenziert - rein externes
@@ -61,7 +61,7 @@ oder aus dieser Datei planen:**
 
 - **Fraktionen / Häuser / Orte / NPCs:** Tiddler mit dem jeweiligen Typ-Tag. Startpunkte:
   `Index` und die Kategorie-Hub-Tiddler `Person`, `Location`, `Organisation`, `Event`,
-  `Campaign`, ... (Shadows aus `dndwiki-core`).
+  `Campaign`, ... (Shadows aus `tiddlyrpg-core`).
 - **Orte-Hierarchie (Ober-/Unterort):** über das Feld `location` („liegt in“, z. B.
   `Baile.tid: location: [[Königreich von Vandalia]]`) oder als Spot im Text des Oberorts
   („Teil von“, z. B. der Riganstützpunkt im `Riganwald`). Tags drücken keine Orte aus.

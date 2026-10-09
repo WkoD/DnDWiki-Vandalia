@@ -1,11 +1,11 @@
 {
-    "description": "DnDWiki - campaign template (client-server). Format layer and plugins come from TiddlyDnD-Plugins (TIDDLYWIKI_PLUGIN_PATH).",
+    "description": "TiddlyRPG - campaign template (client-server). Format layer and plugins come from TiddlyRPG-Plugins (TIDDLYWIKI_PLUGIN_PATH).",
     "plugins": [
         "tiddlywiki/tiddlyweb",
         "tiddlywiki/filesystem",
         "tiddlywiki/highlight",
-        "dndwiki-core",
-        "dndwiki-forgottenrealms",
+        "tiddlyrpg-core",
+        "tiddlyrpg-setting-forgottenrealms",
         "staticfiles",
         "graph",
         "vis-network",

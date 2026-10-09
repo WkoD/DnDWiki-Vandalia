@@ -4,6 +4,6 @@ edges.fields: [all[]] -[[tags]] -[[list]]
 edges.functions: [all[]] -[[links]] -[[transcludes]]
 filter: [[Artifact]] [[Item]] [[Material]] +[tagging[]] =>gegenstaende [(gegenstaende)] [(gegenstaende)get[owner]enlist-input[]] [(gegenstaende)get[creator]enlist-input[]] [(gegenstaende)get[former]enlist-input[]] [(gegenstaende)get[location]enlist-input[]] +[unique[]]
 modified: 20261006154944000
-template: $:/plugins/dndwiki-core/graph/templates/dnd-graph
+template: $:/plugins/tiddlyrpg-core/graph/templates/trpg-graph
 title: $:/graph/Items
 type: application/json

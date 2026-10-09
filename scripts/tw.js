@@ -22,7 +22,8 @@ var nodeModules = path.join(__dirname, "..", "node_modules");
 // First-party bundle (wkod/*) + individually pinned third-party plugin repos.
 // Each entry contributes its `plugins` directory to the search path.
 var pluginPackages = [
-	"tiddlydnd-plugins", // wkod/dndwiki-core, wkod/dndwiki-forgottenrealms, wkod/staticfiles
+	"tiddlyrpg-plugins", // wkod/tiddlyrpg-core, wkod/staticfiles
+	"tiddlyrpg-dnd",     // wkod/tiddlyrpg-setting-forgottenrealms (optional: only if installed)
 	"tw5-graph",         // flibbles/graph (folder: plugins/graph)
 	"tw5-vis-network",   // flibbles/vis-network (folder: plugins/vis-network)
 	"tw5-relink"         // flibbles/relink (folder: plugins/relink)

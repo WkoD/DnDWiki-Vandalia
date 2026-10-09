@@ -1,4 +1,4 @@
-# DnDWiki
+# TiddlyRPG
 
 A **TiddlyWiki 5** (Node.js edition) for D&D campaigns, content in German. This repo is the
 campaign **Vandalia** (details: see `CAMPAIGN.md`): per-wiki config, data tiddlers
@@ -7,9 +7,10 @@ layer come as dependencies:
 
 - **Engine:** the official [`tiddlywiki`](https://www.npmjs.com/package/tiddlywiki) from npm,
   pinned in `package.json`.
-- **Format layer:** from [`TiddlyDnD-Plugins`](https://github.com/WkoD/TiddlyDnD-Plugins), pinned
-  to a fixed version - the plugins `dndwiki-core`, `dndwiki-forgottenrealms` (Calendar of
-  Harptos) and `staticfiles`.
+- **Format layer:** from [`TiddlyRPG-Plugins`](https://github.com/WkoD/TiddlyRPG-Plugins), pinned
+  to a fixed version - the plugins `tiddlyrpg-core` and `staticfiles`.
+- **D&D content:** from [`TiddlyRPG-DnD`](https://github.com/WkoD/TiddlyRPG-DnD), pinned the
+  same way - the setting `tiddlyrpg-setting-forgottenrealms` (Calendar of Harptos).
 - **Graph stack:** [`flibbles/tw5-graph`](https://github.com/flibbles/tw5-graph) +
   [`tw5-vis-network`](https://github.com/flibbles/tw5-vis-network) +
   [`tw5-relink`](https://github.com/flibbles/tw5-relink), each pinned to a release tag as an npm
@@ -19,8 +20,8 @@ The wiki language is German (`$:/language` = `de-DE`); internal names (tags, fie
 
 ## About this repo
 
-This repo is a concrete **campaign** - a copy of the `DnDWiki` template with its own content. For
-a **new** campaign use the template: [github.com/WkoD/DnDWiki](https://github.com/WkoD/DnDWiki)
+This repo is a concrete **campaign** - a copy of the `TiddlyRPG` template with its own content. For
+a **new** campaign use the template: [github.com/WkoD/TiddlyRPG](https://github.com/WkoD/TiddlyRPG)
 (step-by-step guide "Setting up a new campaign" there).
 
 ## Editing

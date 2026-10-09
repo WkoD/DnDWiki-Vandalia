@@ -4,6 +4,6 @@ edges.fields: [all[]] -[[tags]] -[[list]]
 edges.functions: links rules spots
 filter: [list[$:/StoryList]multitag[Deity,Organisation,Person,Player,Location,Event,Artifact,Book,Item,Material]]
 modified: 20261006064738000
-template: $:/plugins/dndwiki-core/graph/templates/dnd-graph
+template: $:/plugins/tiddlyrpg-core/graph/templates/trpg-graph
 title: $:/graph/Default
 type: application/json
