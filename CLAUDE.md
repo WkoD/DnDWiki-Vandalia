@@ -29,8 +29,9 @@ only reads `tiddlers/`).
 Two separate version axes:
 
 - **Format layer** -> pin of `tiddlyrpg-plugins` in `devDependencies` (e.g. `#2.0.0`), versioned
-  in the separate repo `TiddlyRPG-Plugins`. Optional content for D&D (the setting
-  `tiddlyrpg-setting-forgottenrealms`) -> pin of `tiddlyrpg-dnd` (e.g. `#2.0.0`), versioned in
+  in the separate repo `TiddlyRPG-Plugins`. Optional content for D&D (the ruleset
+  `tiddlyrpg-ruleset-dnd5e2014`, the setting `tiddlyrpg-setting-forgottenrealms`) -> pin of
+  `tiddlyrpg-dnd` (e.g. `#2.0.0`), versioned in
   the repo `TiddlyRPG-DnD`; it needs the format layer. For now both keep the same version - pin
   both to the same one.
 - **Scaffold template** -> field `version` in `package.json`, set to the `TiddlyRPG` release
@@ -78,7 +79,8 @@ Optional, only if wanted - campaigns do not have to follow:
 
 **Can be taken over:** **`CLAUDE.md`** (completely - only general conventions, no campaign data),
 `scripts/tw.js`, `.gitignore`, `.gitattributes`, `.github/workflows/`, `tiddlywiki.info` (keep the
-campaign's `languages` and optional plugins such as `tiddlyrpg-setting-forgottenrealms`), the `package.json`
+campaign's `languages` and optional plugins such as `tiddlyrpg-ruleset-dnd5e2014` and
+`tiddlyrpg-setting-forgottenrealms`), the `package.json`
 structure (scripts/`devDependencies`/plugin pin - **keep `name`/`description`** and optional
 packages such as `tiddlyrpg-dnd`), and new/changed
 generic standard wiki elements such as the base graph views
@@ -87,7 +89,9 @@ campaign's captions).
 
 **Never overwrite or discard blindly - campaign-owned:** all lore content in `tiddlers/`,
 per-wiki config (SiteTitle/SiteSubtitle/DefaultTiddlers, `$:/language`), `PlayerLevel` with real
-data, an own calendar (`$:/config/tiddlyrpg/calendar` and its data tiddler), `images/`, `data/`, the
+data, an own calendar or currency (`$:/config/tiddlyrpg/calendar`, `.../currency` and their
+data tiddlers), the choice of ruleset and setting and the rules language
+(`$:/config/tiddlyrpg/ruleset`, `.../setting`, `.../rules/...`), `images/`, `data/`, the
 fields `name`/`description` in `package.json`. For the following additionally check whether new
 template functionality can be **merged** instead of discarded unchecked: `README.md` and
 `CAMPAIGN.md` (e.g. new sections in the template skeleton) and standard wiki elements **adapted**
@@ -175,6 +179,9 @@ Technical tiddlers with a fixed function given by the format (no lore content):
 | `$:/graph/Items` | Graph view: `Artifact`/`Item`/`Material` tiddlers (with every category) plus their owners/creators/former owners linked by `owner`/`creator`/`former`, their locations linked by `location` and ingredients linked by `component`. |
 | `PlayerLevel` | Body = free text shown as is on the `Player` hub, e.g. `Level 13` or `13456 EXP`; edited directly by the DM. |
 | `$:/config/tiddlyrpg/calendar` (optional) | Title of the calendar data tiddler. Set by the plugin `tiddlyrpg-setting-forgottenrealms` (Harptos, package `tiddlyrpg-dnd`) or by the wiki for an own calendar (see "Dates and calendar"). |
+| `$:/config/tiddlyrpg/currency` (optional) | Title of the currency data tiddler. Set by `tiddlyrpg-setting-forgottenrealms` (the coins of Faerûn) or by the wiki for an own currency. |
+| `$:/config/tiddlyrpg/ruleset`, `.../setting` (optional) | The active ruleset and campaign setting (plugin title or `none`); without them the only or first installed one is active. Written by Control Panel -> Settings -> TiddlyRPG. |
+| `$:/config/tiddlyrpg/rules/display/...`, `.../input/...` (optional) | The rules language: in which language rules terms are shown and written (`mode`: `wiki`, `all` with `language`, `domain` with `domain/<name>`). Written by Control Panel -> Settings -> TiddlyRPG -> "Rules language"; see "Rules terms". |
 
 The captions of the graph views are plain text of the wiki (tw5-graph shows them untranslated):
 English in the template, each campaign may use its own language.
@@ -267,7 +274,8 @@ Standard `.tid` format (field header, blank line, body). Fields of content tiddl
     of its field (`????` without one), every other type its years of existence.
 - **Dated sections in event bodies:** the dates live only in `date`. In the body, `<<date>>` marks
   where the next section begins (`<<date 3>>` names the section explicitly, `<<date "Caption">>`
-  adds a caption that also shows in the timeline and the event table). The placeholder draws the
+  adds a caption that also shows in the timeline and the event table; the caption is wikitext -
+  links and macros work, other quotes inside: `<<date "Fight at <<unit '30 ft'>>">>`). The placeholder draws the
   rule, the date and the locations linked in its section - no `---` and no hand-written date
   before it. **Every event starts with `<<date>>`**, also one with a single date or none (then
   the heading reads `????`); an event with several sections gives every section a placeholder.
@@ -276,7 +284,9 @@ Standard `.tid` format (field header, blank line, body). Fields of content tiddl
   Inside an HTML element, a table or a `$list` only the block form counts (a hint says so).
   `node scripts/check-wiki.js <wiki folder>` in `TiddlyRPG-Plugins` checks the dates of a wiki
   and the sections and locks of the bodies.
-- `price` (items) - shown with the currency unit of the language pack.
+- `price` (items) - with a currency a number and a coin (`price: 50 gp`, `price: 3 gp 5 sp`;
+  coin ids as in the currency data, shown with the labels of the rules language), without one a
+  plain number. A price that does not fit gets a hint below the title.
 - `data` (books) - file name of a PDF from `data/book/`, embedded below the body (instead of an
   `<embed>` in the body).
 - `player` - name of the real player: on a `Player` tiddler (an active player character), and
@@ -337,6 +347,25 @@ Dates are shown through the calendar engine of `tiddlyrpg-core`. Which calendar 
   the `Information` list.
 
 An own calendar is a copied data tiddler - see `README.md` -> "Calendar".
+
+### Rules terms
+
+With a ruleset (e.g. `tiddlyrpg-ruleset-dnd5e2014`), rules terms in the text are written as
+macros, so they follow the rules language of the wiki (see `CAMPAIGN.md` for the choice of the
+campaign) - never as plain text when the term matters:
+
+- `<<unit "228 cm">>` (lengths and weights, converted), `<<unit 60 range>>` (a number without
+  unit counts in the "written in" language; a kind such as `range`, `height`, `size`, `travel`
+  chooses the unit), `<<dice "4d6">>`, `<<damage "1d8 slashing">>`, `<<term wis save>>`, coins
+  `<<unit "3 gp 5 sp">>`. The words of every language are read (`<<damage "1W8 Hieb">>`).
+- Shortcuts of the ruleset and setting: `<<wis save>>`, `<<ac>>`, `<<ft 30>>`, `<<gp 50>>` - the
+  hub "Ruleset" lists them. They exist only with their plugin.
+- Since lengths share one domain, the "written in" language applies to sizes and distances
+  alike: write a value in the other system with its unit.
+- What a macro does not understand, a macro nothing defines (a typo, a shortcut without its
+  plugin) and a price without coin give a hint below the title (not in the published copy);
+  `check-wiki.js` in `TiddlyRPG-Plugins` reports them for the whole wiki.
+- Details: `README.md` of `TiddlyRPG-Plugins` -> "Rules terms in the text", "Rules language".
 
 ### Timestamps when editing tiddlers (`created`/`modified`)
 
@@ -416,8 +445,9 @@ should deliberately differ - then it wins.
 
 `tiddlywiki/tiddlyweb`, `tiddlywiki/filesystem`, `tiddlywiki/highlight` (official, from the npm
 engine), `tiddlyrpg-core` (format layer), `staticfiles` (dev server), `graph` + `vis-network` +
-`relink` (`flibbles/tw5-graph` stack), optionally `tiddlyrpg-setting-forgottenrealms` (Calendar of
-Harptos, from the package `tiddlyrpg-dnd`, repo `TiddlyRPG-DnD`). Language packs of TiddlyWiki
+`relink` (`flibbles/tw5-graph` stack), optionally `tiddlyrpg-ruleset-dnd5e2014` (rules terms of
+D&D 5e) and `tiddlyrpg-setting-forgottenrealms` (Calendar of Harptos, coins of Faerûn), both from
+the package `tiddlyrpg-dnd`, repo `TiddlyRPG-DnD`. Language packs of TiddlyWiki
 under `"languages"`. Contents/documentation of the plugins: see `CLAUDE.md` and `README.md` in
 `TiddlyRPG-Plugins` and `TiddlyRPG-DnD`. The launcher `scripts/tw.js` lists the packages whose
 `plugins` folders it searches; a package that is not installed is skipped.

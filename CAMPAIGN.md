@@ -9,7 +9,15 @@ echten Stand immer live aus den Tiddlern lesen.
 
 **Vandalia** - homebrewtes Fantasy-Setting (D&D 5e), Kampagne auf Deutsch. Eigene Welt,
 eigene Fraktionen/Häuser/Götter; keine Vorlage aus einem offiziellen Abenteuer. Wiki-Sprache
-`de-DE`; Zeitrechnung nach dem Kalender von Harptos (Plugin `tiddlyrpg-setting-forgottenrealms`).
+`de-DE`; Zeitrechnung nach dem Kalender von Harptos, Münzen von Faerûn (Plugin
+`tiddlyrpg-setting-forgottenrealms`). Regelsystem D&D 5e, Regeln von 2014 (Plugin
+`tiddlyrpg-ruleset-dnd5e2014`).
+
+**Regelsprache** (Control-Panel → Einstellungen → TiddlyRPG → Regelsprache): Regelbegriffe erscheinen
+englisch wie im Regelbuch am Tisch (ft, lb, d6, WIS, gp), nur Monats- und Festnamen deutsch
+(Wiki-Sprache); geschrieben wird englisch. Eine Zahl ohne Einheit in `<<unit>>` ist also Fuß,
+Pfund oder Meile. Größen von Personen stehen mit Einheit (`<<unit "228 cm">>`), Preise mit
+Münze (`price: 50 gp`).
 
 ## Tisch-Meta (steht NICHT in Tiddlern)
 

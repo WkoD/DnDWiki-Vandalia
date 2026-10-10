@@ -5,6 +5,7 @@
         "tiddlywiki/filesystem",
         "tiddlywiki/highlight",
         "tiddlyrpg-core",
+        "tiddlyrpg-ruleset-dnd5e2014",
         "tiddlyrpg-setting-forgottenrealms",
         "staticfiles",
         "graph",
