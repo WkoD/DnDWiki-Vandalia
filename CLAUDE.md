@@ -91,7 +91,7 @@ campaign's captions).
 per-wiki config (SiteTitle/SiteSubtitle/DefaultTiddlers, `$:/language`), `PlayerLevel` with real
 data, an own calendar or currency (`$:/config/tiddlyrpg/calendar`, `.../currency` and their
 data tiddlers), the choice of ruleset and setting and the rules language
-(`$:/config/tiddlyrpg/ruleset`, `.../setting`, `.../rules/...`), `images/`, `data/`, the
+(`$:/config/tiddlyrpg/ruleset`, `.../setting`, `.../rules/...`, `.../date/order`), `images/`, `data/`, the
 fields `name`/`description` in `package.json`. For the following additionally check whether new
 template functionality can be **merged** instead of discarded unchecked: `README.md` and
 `CAMPAIGN.md` (e.g. new sections in the template skeleton) and standard wiki elements **adapted**
@@ -179,8 +179,9 @@ Technical tiddlers with a fixed function given by the format (no lore content):
 | `$:/graph/Items` | Graph view: `Artifact`/`Item`/`Material` tiddlers (with every category) plus their owners/creators/former owners linked by `owner`/`creator`/`former`, their locations linked by `location` and ingredients linked by `component`. |
 | `PlayerLevel` | Body = free text shown as is on the `Player` hub, e.g. `Level 13` or `13456 EXP`; edited directly by the DM. |
 | `$:/config/tiddlyrpg/calendar` (optional) | Title of the calendar data tiddler. Set by the plugin `tiddlyrpg-setting-forgottenrealms` (Harptos, package `tiddlyrpg-dnd`) or by the wiki for an own calendar (see "Dates and calendar"). |
-| `$:/config/tiddlyrpg/currency` (optional) | Title of the currency data tiddler. Set by `tiddlyrpg-setting-forgottenrealms` (the coins of Faerûn) or by the wiki for an own currency. |
+| `$:/config/tiddlyrpg/currency` (optional) | Title of the currency data tiddler. Set by `tiddlyrpg-setting-forgottenrealms` (the coins of the Forgotten Realms) or by the wiki for an own currency. |
 | `$:/config/tiddlyrpg/ruleset`, `.../setting` (optional) | The active ruleset and campaign setting (plugin title or `none`); without them the only or first installed one is active. Written by Control Panel -> Settings -> TiddlyRPG. |
+| `$:/config/tiddlyrpg/date/order` (optional) | Order of day and month in dates: `dm` ("5. Flamerule 1351"), `md` ("Flamerule 5, 1351"); empty or missing: as in the wiki language. Written by Control Panel -> Settings -> TiddlyRPG -> "Dates". |
 | `$:/config/tiddlyrpg/rules/display/...`, `.../input/...` (optional) | The rules language: in which language rules terms are shown and written (`mode`: `wiki`, `all` with `language`, `domain` with `domain/<name>`). Written by Control Panel -> Settings -> TiddlyRPG -> "Rules language"; see "Rules terms". |
 
 The captions of the graph views are plain text of the wiki (tw5-graph shows them untranslated):
@@ -446,7 +447,7 @@ should deliberately differ - then it wins.
 `tiddlywiki/tiddlyweb`, `tiddlywiki/filesystem`, `tiddlywiki/highlight` (official, from the npm
 engine), `tiddlyrpg-core` (format layer), `staticfiles` (dev server), `graph` + `vis-network` +
 `relink` (`flibbles/tw5-graph` stack), optionally `tiddlyrpg-ruleset-dnd5e2014` (rules terms of
-D&D 5e) and `tiddlyrpg-setting-forgottenrealms` (Calendar of Harptos, coins of Faerûn), both from
+D&D 5e) and `tiddlyrpg-setting-forgottenrealms` (Calendar of Harptos, coins of the Forgotten Realms), both from
 the package `tiddlyrpg-dnd`, repo `TiddlyRPG-DnD`. Language packs of TiddlyWiki
 under `"languages"`. Contents/documentation of the plugins: see `CLAUDE.md` and `README.md` in
 `TiddlyRPG-Plugins` and `TiddlyRPG-DnD`. The launcher `scripts/tw.js` lists the packages whose

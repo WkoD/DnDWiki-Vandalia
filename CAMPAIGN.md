@@ -9,7 +9,7 @@ echten Stand immer live aus den Tiddlern lesen.
 
 **Vandalia** - homebrewtes Fantasy-Setting (D&D 5e), Kampagne auf Deutsch. Eigene Welt,
 eigene Fraktionen/Häuser/Götter; keine Vorlage aus einem offiziellen Abenteuer. Wiki-Sprache
-`de-DE`; Zeitrechnung nach dem Kalender von Harptos, Münzen von Faerûn (Plugin
+`de-DE`; Zeitrechnung nach dem Kalender von Harptos, Münzen der Forgotten Realms (Plugin
 `tiddlyrpg-setting-forgottenrealms`). Regelsystem D&D 5e, Regeln von 2014 (Plugin
 `tiddlyrpg-ruleset-dnd5e2014`).
 
