@@ -182,7 +182,7 @@ Technical tiddlers with a fixed function given by the format (no lore content):
 | `$:/config/tiddlyrpg/currency` (optional) | Title of the currency data tiddler. Set by `tiddlyrpg-setting-forgottenrealms` (the coins of the Forgotten Realms) or by the wiki for an own currency. |
 | `$:/config/tiddlyrpg/ruleset`, `.../setting` (optional) | The active ruleset and campaign setting (plugin title or `none`); without them the only or first installed one is active. Written by Control Panel -> Settings -> TiddlyRPG. |
 | `$:/config/tiddlyrpg/date/order` (optional) | Order of day and month in dates: `dm` ("5. Flamerule 1351"), `md` ("Flamerule 5, 1351"); empty or missing: as in the wiki language. Written by Control Panel -> Settings -> TiddlyRPG -> "Campaign setting options". |
-| `$:/config/tiddlyrpg/rules/ruleset/...`, `.../rules/setting/...` (optional) | The rules language, apart for the ruleset (units, dice, damage, terms) and the campaign setting (names of months and coins): below each `display/...` and `input/...` with `mode` (`wiki`, `all` with `language`, `domain` with `domain/<name>`). Written by Control Panel -> Settings -> TiddlyRPG -> "Ruleset options" and "Campaign setting options"; see "Rules terms". |
+| `$:/config/tiddlyrpg/rules/ruleset/...`, `.../rules/setting/...` (optional) | The rules language, apart for the ruleset (units, dice, damage, terms) and the campaign setting (names of months and coins), the language their terms are shown in: below each `mode` (`wiki`, `all` with `language`, `domain` with `domain/<name>`). Written by Control Panel -> Settings -> TiddlyRPG -> "Ruleset options" and "Campaign setting options"; see "Rules terms". |
 
 The captions of the graph views are plain text of the wiki (tw5-graph shows them untranslated):
 English in the template, each campaign may use its own language.
@@ -355,14 +355,15 @@ With a ruleset (e.g. `tiddlyrpg-ruleset-dnd5e2014`), rules terms in the text are
 macros, so they follow the rules language of the wiki (see `CAMPAIGN.md` for the choice of the
 campaign) - never as plain text when the term matters:
 
-- `<<unit "228 cm">>` (lengths and weights, converted), `<<unit 60 range>>` (a number without
-  unit counts in the "written in" language; a kind such as `range`, `height`, `size`, `travel`
-  chooses the unit), `<<dice "4d6">>`, `<<damage "1d8 slashing">>`, `<<term wis save>>`, coins
-  `<<unit "3 gp 5 sp">>`. The words of every language are read (`<<damage "1W8 Hieb">>`).
-- Shortcuts of the ruleset and setting: `<<wis save>>`, `<<ac>>`, `<<ft 30>>`, `<<gp 50>>` - the
-  hub "Ruleset" lists them. They exist only with their plugin.
-- Since lengths share one domain, the "written in" language applies to sizes and distances
-  alike: write a value in the other system with its unit.
+- `<<unit "228 cm">>` (lengths and weights, converted), `<<unit "60 ft" range>>` (a kind such as
+  `range` or `travel` chooses the display), `<<dice "4d6">>`, `<<damage "1d8 slashing">>`,
+  `<<term wis save>>`, coins `<<unit "3 gp 5 sp">>`. The words of every language are read
+  (`<<damage "1W8 Hieb">>`).
+- A number always carries its unit - `<<unit 60>>` is not read, also not with a kind - so what a
+  text means never depends on a setting. Write the value as the source has it (`228 cm` for a
+  person described in centimetres, `60 ft` from the rulebook).
+- Shortcuts of the ruleset and setting: `<<wis save>>`, `<<ac>>`, `<<ft 30>>`, `<<ft 60 range>>`,
+  `<<gp 50>>` - the hub "Ruleset" lists them. They exist only with their plugin.
 - What a macro does not understand, a macro nothing defines (a typo, a shortcut without its
   plugin) and a price without coin give a hint below the title (not in the published copy);
   `check-wiki.js` in `TiddlyRPG-Plugins` reports them for the whole wiki.
