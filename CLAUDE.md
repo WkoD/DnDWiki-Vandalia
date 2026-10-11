@@ -14,7 +14,9 @@ campaign, commit messages use that language - check it before committing.
 ## Documentation - who covers what
 
 - **CLAUDE.md** (here): development support - rules, conventions, editing and release workflow.
-- **README.md**: what the project is, how a new campaign is set up, supported languages.
+- **README.md**: what the project is, how a new campaign is set up, supported languages, the
+  license. Its section between the lines `<!-- wiki -->` and `<!-- /wiki -->` also shows in the
+  wiki (ControlPanel -> License, see "License").
 - **CAMPAIGN.md**: campaign-specific context - an empty skeleton in the template, every
   campaign maintains its own copy (not distributed between repos).
 
@@ -78,7 +80,8 @@ Optional, only if wanted - campaigns do not have to follow:
    template version.
 
 **Can be taken over:** **`CLAUDE.md`** (completely - only general conventions, no campaign data),
-`scripts/tw.js`, `.gitignore`, `.gitattributes`, `.github/workflows/`, `tiddlywiki.info` (keep the
+`scripts/tw.js`, `.gitignore`, `.gitattributes`, `.github/workflows/`,
+`tiddlers/license/tiddlywiki.files`, `tiddlywiki.info` (keep the
 campaign's `languages` and optional plugins such as `tiddlyrpg-ruleset-dnd5e2014` and
 `tiddlyrpg-setting-forgottenrealms`), the `package.json`
 structure (scripts/`devDependencies`/plugin pin - **keep `name`/`description`** and optional
@@ -92,7 +95,7 @@ per-wiki config (SiteTitle/SiteSubtitle/DefaultTiddlers, `$:/language`), `Player
 data, an own calendar or currency (`$:/config/tiddlyrpg/calendar`, `.../currency` and their
 data tiddlers), the choice of ruleset and setting and the rules language
 (`$:/config/tiddlyrpg/ruleset`, `.../setting`, `.../rules/...`, `.../date/order`), `images/`, `data/`, the
-fields `name`/`description` in `package.json`. For the following additionally check whether new
+fields `name`/`description`/`license` in `package.json`, `LICENSE`. For the following additionally check whether new
 template functionality can be **merged** instead of discarded unchecked: `README.md` and
 `CAMPAIGN.md` (e.g. new sections in the template skeleton) and standard wiki elements **adapted**
 in the campaign (e.g. an individualised `Atlas`).
@@ -130,7 +133,9 @@ Important: `IsReadOnly` is compared as an exact string - no trailing newline in 
 ### Folder structure
 
 - `tiddlers/` - **flat**, no subfolders for categories. Categorisation is done only through
-  **tags**, not through the directory structure.
+  **tags**, not through the directory structure. One exception, no content: `tiddlers/license/`
+  holds only a `tiddlywiki.files` that loads `LICENSE` and `README.md` of the repo (see
+  "License").
   - Content tiddlers: file name from the title, e.g. `Hafendorf.tid` - exact rules under
     "File name and file format" below.
   - System and data tiddlers (`$` prefix, `PlayerLevel`): see "System and data tiddlers" below.
@@ -178,6 +183,7 @@ Technical tiddlers with a fixed function given by the format (no lore content):
 | `$:/graph/Atlas` | Graph view: all `Location` tiddlers plus all living persons/deities/players/organisations - with and without a `location` field -, connected by the `location` edge and the function edges `rules` (leads a location) and `spots` (part of a location). The places of several worlds and planes, hence not "world map". |
 | `$:/graph/Items` | Graph view: `Artifact`/`Item`/`Material` tiddlers (with every category) plus their owners/creators/former owners linked by `owner`/`creator`/`former`, their locations linked by `location` and ingredients linked by `component`. |
 | `PlayerLevel` | Body = free text shown as is on the `Player` hub, e.g. `Level 13` or `13456 EXP`; edited directly by the DM. |
+| `$:/tiddlyrpg/license`, `$:/tiddlyrpg/license/notice` | The license of the wiki content for ControlPanel -> License: the file `LICENSE` and the section of `README.md` between `<!-- wiki -->` and `<!-- /wiki -->`. No `.tid` files - loaded from the files by `tiddlers/license/tiddlywiki.files`; change the files, not the tiddlers (see "License"). |
 | `$:/config/tiddlyrpg/calendar` (optional) | Title of the calendar data tiddler. Set by the plugin `tiddlyrpg-setting-forgottenrealms` (Harptos, package `tiddlyrpg-dnd`) or by the wiki for an own calendar (see "Dates and calendar"). |
 | `$:/config/tiddlyrpg/currency` (optional) | Title of the currency data tiddler. Set by `tiddlyrpg-setting-forgottenrealms` (the coins of the Forgotten Realms) or by the wiki for an own currency. |
 | `$:/config/tiddlyrpg/ruleset`, `.../setting` (optional) | The active ruleset and campaign setting (plugin title or `none`); without them the only or first installed one is active. Written by Control Panel -> Settings -> TiddlyRPG. |
@@ -294,7 +300,10 @@ Standard `.tid` format (field header, blank line, body). Fields of content tiddl
   kept on a figure someone played before (it then becomes a `Person`, its image moves to
   `images/person/`). Both count as player characters for taking part and for secrets; only the
   players of active characters are views to choose.
-- `link` - "see also" line under the tiddler, e.g. `[ext[Title|data/book/file.pdf]]`.
+- `source` - where the images of the tiddler come from, free wikitext shown below it as
+  "Source: …": a link, the author, a license, several of them (`source: [[Fandom|https://...]],
+  CC BY-SA`). The views that see the tiddler see it; no `<<secret>>` in it. `check-wiki.js`
+  warns about a field `link` (not shown).
 - **Linking:** the body consistently uses `[[WikiLinks]]` for explicit links between
   persons/locations/organisations - this is the primary network mechanism next to the tags. No
   freelinks plugin -> every mention of an existing tiddler title needs a real link. Order of
@@ -451,3 +460,30 @@ the package `tiddlyrpg-dnd`, repo `TiddlyRPG-DnD`. Language packs of TiddlyWiki
 under `"languages"`. Contents/documentation of the plugins: see `CLAUDE.md` and `README.md` in
 `TiddlyRPG-Plugins` and `TiddlyRPG-DnD`. The launcher `scripts/tw.js` lists the packages whose
 `plugins` folders it searches; a package that is not installed is skipped.
+
+Every plugin brings its tabs "readme" and "license" itself (from the `README.md` and `LICENSE` of
+its repo); ControlPanel -> License lists every plugin with its license. A third-party plugin
+without a tab "license" shows "not stated" there unless `$:/config/tiddlyrpg/licenses` names it
+(see `CLAUDE.md` of `TiddlyRPG-Plugins` -> "Readme and license of a plugin").
+
+### License
+
+The license of the wiki content lives **once**, in the repo root, and shows in the wiki under
+ControlPanel -> License (also in the published copy):
+
+- `LICENSE` - the license text (`"license"` in `package.json` with its SPDX name). The template:
+  CC0 1.0.
+- `README.md`, section "License" between the lines `<!-- wiki -->` and `<!-- /wiki -->` - what
+  the reader should know: the license in one sentence and, for content of others, their notice.
+  Only Markdown the format layer reads (headings, paragraphs, lists, tables, code, bold, links;
+  `README.md` of `TiddlyRPG-Plugins` -> "Licenses in the wiki"); no wikitext, it is not parsed.
+- `tiddlers/license/tiddlywiki.files` loads both as `$:/tiddlyrpg/license` and
+  `$:/tiddlyrpg/license/notice` - taken over from the template, never edited per campaign.
+- A campaign with content of Wizards of the Coast (D&D, the Forgotten Realms, an official
+  adventure) is fan content: the Fan Content Policy wants it free for everyone to use without
+  credit - hence CC0 for the own content, not CC-BY or GPL - and its notice word for word in the
+  section: "[Title] is unofficial Fan Content permitted under the Fan Content Policy. Not
+  approved/endorsed by Wizards. Portions of the materials used are property of Wizards of the
+  Coast. ©Wizards of the Coast LLC." Never logos; text, maps and images copied from a book are
+  not covered by it.
+- Where the images of a tiddler come from: the field `source` (see "Tiddler format").

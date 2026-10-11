@@ -41,4 +41,22 @@ manual saving needed. Details/conventions: `CLAUDE.md` -> "Commands & CI".
 On every push to `master` a GitHub Action builds a static `index.html` and deploys it to
 `gh-pages` (GitHub Pages). This published copy is **read-only**.
 
+## License
+
+Own content: CC0 1.0 Universal (`LICENSE`). The campaign uses content of Wizards of the Coast
+and is fan content under their Fan Content Policy. The part below shows in the wiki as well
+(ControlPanel -> License).
+
+<!-- wiki -->
+Was in diesem Wiki eigene Arbeit ist, steht unter
+[CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/deed.de) (`LICENSE`): frei
+für alle, auch ohne Namensnennung. Inhalte anderer bleiben bei ihren Rechteinhabern; woher die
+Bilder eines Eintrags stammen, steht, wo bekannt, in seiner Zeile „Quelle“.
+
+DnDWiki-Vandalia is unofficial Fan Content permitted under the
+[Fan Content Policy](https://company.wizards.com/en/legal/fancontentpolicy). Not approved/endorsed
+by Wizards. Portions of the materials used are property of Wizards of the Coast. ©Wizards of the
+Coast LLC.
+<!-- /wiki -->
+
 More documentation: `CLAUDE.md` (development/conventions), `CAMPAIGN.md` (campaign-specific).
