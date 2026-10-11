@@ -356,7 +356,7 @@ macros, so they follow the rules language of the wiki (see `CAMPAIGN.md` for the
 campaign) - never as plain text when the term matters:
 
 - `<<unit "228 cm">>` (lengths and weights, converted), `<<unit "60 ft" range>>` (a kind such as
-  `range` or `travel` chooses the display), `<<dice "4d6">>`, `<<damage "1d8 slashing">>`,
+  `range`, `distance` or `size` chooses the display), `<<dice "4d6">>`, `<<damage "1d8 slashing">>`,
   `<<term wis save>>`, coins `<<unit "3 gp 5 sp">>`. The words of every language are read
   (`<<damage "1W8 Hieb">>`).
 - A number always carries its unit - `<<unit 60>>` is not read, also not with a kind - so what a
