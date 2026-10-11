@@ -362,10 +362,8 @@ campaign) - never as plain text when the term matters:
 - A number always carries its unit - `<<unit 60>>` is not read, also not with a kind - so what a
   text means never depends on a setting. Write the value as the source has it (`228 cm` for a
   person described in centimetres, `60 ft` from the rulebook).
-- Shortcuts of the ruleset and setting: `<<wis save>>`, `<<ac>>`, `<<ft 30>>`, `<<ft 60 range>>`,
-  `<<gp 50>>` - the hub "Ruleset" lists them. They exist only with their plugin.
-- What a macro does not understand, a macro nothing defines (a typo, a shortcut without its
-  plugin) and a price without coin give a hint below the title (not in the published copy);
+- What a macro does not understand, a macro nothing defines (a typo) and a price
+  without coin give a hint below the title (not in the published copy);
   `check-wiki.js` in `TiddlyRPG-Plugins` reports them for the whole wiki.
 - Details: `README.md` of `TiddlyRPG-Plugins` -> "Rules terms in the text", "Rules language".
 

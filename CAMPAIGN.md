@@ -17,7 +17,7 @@ eigene Fraktionen/Häuser/Götter; keine Vorlage aus einem offiziellen Abenteuer
 Kampagnenwelt Einstellungen): Regelbegriffe erscheinen englisch wie im Regelbuch am Tisch (ft,
 lb, d6, WIS), ebenso die Münzen (gp); nur Monats- und Festnamen deutsch (Wiki-Sprache).
 Zahlen stehen in `<<unit>>` immer mit Einheit, so wie die Quelle sie nennt: Größen von
-Personen in cm (`<<unit "228 cm">>`), Regelmaße in Fuß (`<<ft 60 range>>`), Preise mit Münze
+Personen in cm (`<<unit "228 cm">>`), Regelmaße in Fuß (`<<unit "60 ft" range>>`), Preise mit Münze
 (`price: 50 gp`).
 
 ## Tisch-Meta (steht NICHT in Tiddlern)
