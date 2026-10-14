@@ -294,7 +294,7 @@ Standard `.tid` format (field header, blank line, body). Fields of content tiddl
   before it. **Every event starts with `<<date>>`**, also one with a single date or none (then
   the heading reads `????`); an event with several sections gives every section a placeholder.
   Text before the first `<<date>>` (an intro) belongs to the head of the event. The block form
-  `<$date>…</$date>` (with `n`, `label`) has an end of its own; both forms count on together.
+  `<$date>…</$date>` (with `section`, `label`) has an end of its own; both forms count on together.
   Inside an HTML element, a table or a `$list` only the block form counts (a hint says so).
   `node scripts/check-wiki.js <wiki folder>` in `TiddlyRPG-Plugins` checks the dates of a wiki
   and the sections and locks of the bodies.
