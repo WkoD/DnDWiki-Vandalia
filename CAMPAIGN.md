@@ -36,11 +36,12 @@ Wer welche Figur spielt, steht im Feld `player` der Figuren (siehe unten), nicht
 - **Offene Punkte/Plot-Fäden:** das Snippet „Offene Punkte“ (`open-items`) wird inline in
   Ereignis-Tiddlern eingefügt (rot umrandete Callout-Box); wird
   entfernt/verkleinert, sobald der Strang aufgelöst ist. Kein zentraler Tracker.
-- **Karten zu Orten:** keine Unter-Tiddler. Das Kartenbild steht im Feld `map` des Orts
-  (Bild aus `images/map/`), die Sehenswürdigkeiten als `<<spot "Name">>`-Abschnitte am Ende
-  seines Texts; beides erscheint im Tab „Karte“. Kampfkarten stehen im Feld `battlemap`
-  (Bild aus `images/battlemap/`) bzw. als Parameter `battlemap:"…"` am Spot. Die Bezirke
-  von `Cair Di` stehen als Hinweis (`''//Artisans Ward//''`) am Anfang der Spot-Texte.
+- **Karten zu Orten:** keine Unter-Tiddler. Die Karten stehen im Feld `map` des Orts (Bilder
+  aus `images/map/`, Kampfkarten eingeschlossen; ab zwei Karten je ein Reiter mit dem
+  Dateinamen), die Sehenswürdigkeiten als `<<spot "Name">>`-Abschnitte am Ende seines Texts;
+  sie erscheinen unter den Karten. Ein Spot ohne eigenen Tiddler trägt Bilder und Karten als
+  Parameter (`image:"…"` aus `images/location/`, `map:"…"`). Die Bezirke von `Cair Di` stehen
+  als Hinweis (`''//Artisans Ward//''`) am Anfang der Spot-Texte.
 - **Spieler-Sichtbarkeit:** Am Tisch wird über den Knopf „Sicht“ (Sidebar) zwischen der
   öffentlichen Sicht, der Sicht eines Spielers und der DM-Sicht gewechselt. Was nur
   einzelne Spieler kennen, trägt den Tag `Secret` mit ihren Figuren (`Theren Secret`);
@@ -51,8 +52,8 @@ Wer welche Figur spielt, steht im Feld `player` der Figuren (siehe unten), nicht
 - **Kampagnenspezifische Ordner/Assets:** `images/maptool/` enthält Screenshots aus dem
   externen VTT (RPTools MapTool); wird **nicht** aus Tiddlern referenziert - rein externes
   Asset für den Spieltisch. Kampfkarten, die im Wiki erscheinen sollen, liegen dagegen unter
-  `images/battlemap/` und werden über das Feld `battlemap` eingebunden (z. B. an
-  `Insel Avalon`; `Vengeance.png` liegt dort noch ungenutzt).
+  `images/map/` und werden über das Feld `map` eingebunden (`Vengeance.png` liegt dort noch
+  ungenutzt).
 - **Erzählstil (Tempus):** durchgängige Vergangenheitsform (Präteritum) als
   Chronik-Stil - auch für andauernde Eigenschaften/Fakten (z. B. "war ein
   Mensch" statt "ist ein Mensch"); impliziert **nicht** Tod/Nicht-Existenz.

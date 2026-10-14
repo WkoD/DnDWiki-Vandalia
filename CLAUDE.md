@@ -144,8 +144,9 @@ Important: `IsReadOnly` is compared as an exact string - no trailing newline in 
     documented in the repo `TiddlyRPG-Plugins`.
 - `images/` - sorted by type, folder names in lower case, one per type tag: `person` (NPC
   portraits, also deities), `location`, `event`, `organisation`, `item` (artifacts, items, materials,
-  whatever their category), `player`; plus `map` (map images of locations, field `map`) and `battlemap`
-  (battle maps, field or spot parameter `battlemap`). Campaign-specific
+  whatever their category), `player`, `information`; plus `map` (maps of locations and spots,
+  battle maps among them: field `map`, spot parameter `map`). Images of a spot (parameter
+  `image`) are in `location`. Campaign-specific
   subfolders used only for storage (if any): see `CAMPAIGN.md`.
 - `data/book/` - in-world lore PDFs, embedded through the field `data` of a book.
 
@@ -211,7 +212,8 @@ Standard `.tid` format (field header, blank line, body). Fields of content tiddl
 
 - `tags` - several tags separated by spaces; tag names with spaces in `[[double square brackets]]`.
 - `image` - image file name(s), comma separated; resolved through the type tag
-  (Person/Location/Event/...) to an image from `images/<folder>/`.
+  (Person/Location/Event/Information/...) to an image from `images/<folder>/`. Several show as
+  tabs named after the files, so a file name is a caption (`Kipi (Hirschform).jpg`).
 - **Relation fields** (list fields referencing titles) - carry the relation network for the graph:
   `location`, `member`, `former`, `leader`, `officer`, `patron`, `mentor`, `under`, `parent`,
   `ancestor`, `spouse`, `sibling`, `family`, `alliance`, `bond`, `enmity` (person/organisation/deity) as well
@@ -330,19 +332,21 @@ Standard `.tid` format (field header, blank line, body). Fields of content tiddl
   event are the locations linked in its sections (or referenced with `<<spotlink>>`); the
   event list of a location gathers them from all places within it.
 - **Maps of a location** - one tiddler per location, no sub-tiddlers:
-  - The tab "Map" (a location with a map image, spots or places within) shows a graph with the
+  - The map (a location with a map image, spots or places within) shows a graph with the
     spots and the places within at fixed positions - over the map image if there is one; the
     positions are in the field `map-positions` (set by dragging in the tab with "Edit
     positions" while `npm start` runs).
-  - `map` - the map image (`images/map/`).
+  - `map` - the maps (`images/map/`, several comma separated, battle maps among them). The
+    first carries the graph; with two or more each is a tab named after its file.
   - Spots - the places of interest, at the end of the body: `<<spot "Name">>` followed by its
     text, up to the next spot. The name may hold links (`<<spot "Tempel von [[Chauntea]]">>`);
     a spot whose plain name is a tiddler is joined to it (a location then is a part of this
     one), `<<spot "Name" "Tiddler">>` joins another one. The block form
     `<$spot name="Name">…</$spot>` has an end of its own. The body shows the text without the
-    spots; the spots appear in the tab "Map".
-  - `battlemap` - battle maps (`images/battlemap/`, several comma separated), one tab each;
-    battle maps of a spot: `<<spot "Name" battlemap:"a.jpg, b.jpg">>`.
+    spots; the spots appear below the maps.
+  - Images and maps of a spot without a tiddler of its own:
+    `<<spot "Name" image:"a.jpg, b.jpg" map:"c.jpg">>` - below its heading, as tabs from two on,
+    then its text. A spot joined to a tiddler shows none: put them into that tiddler.
   - Referencing a spot from another text: `<<spotlink "Baile" "Schloss Baile">>` or with other
     link text `<<spotlink "Miehall" "[[Trunkenen Eulenbären|Zum Trunkenen Eulenbären]]">>` -
     not as `[[Baile#...]]`.
