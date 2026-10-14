@@ -377,6 +377,10 @@ campaign) - never as plain text when the term matters:
   `range`, `distance` or `size` chooses the display), `<<dice "4d6">>`, `<<damage "1d8 slashing">>`,
   `<<term wis variant:"save">>`, coins `<<unit "3 gp 5 sp">>`. The words of every language are read
   (`<<damage "1W8 Hieb">>`).
+- `<<term>>` takes the id of a term: abilities (`<<term wis variant:"save">>`), conditions
+  (`<<term charmed>>`), actions (`<<term bonus-action>>`), rests, skills, senses, creature types,
+  sizes, alignments, schools of magic, languages. The hub `Ruleset` lists every id with what it
+  shows.
 - A number always carries its unit - `<<unit 60>>` is not read, also not with a kind - so what a
   text means never depends on a setting. Write the value as the source has it (`228 cm` for a
   person described in centimetres, `60 ft` from the rulebook).
