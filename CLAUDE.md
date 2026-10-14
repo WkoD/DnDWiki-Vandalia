@@ -276,9 +276,12 @@ Standard `.tid` format (field header, blank line, body). Fields of content tiddl
   - **All other types** (person, organisation, location, deity, item, ...): the dates of their
     existence. A single point is the start (`1322` = born 1322, alive); a span with an end marks
     the tiddler as **deceased/destroyed** (`1200/1351-04-14`; only the death known: `./1339`;
-    both unknown: `./.`). An unknown side and an open end are shown as `????`.
+    both unknown: `./.`). An unknown side and an open end are shown as `????`. Several sections
+    are phases, each but the last with an end, and the last one decides: `./1351-08-04, 1355` =
+    died 1351, back since 1355 (alive); `./1351, ./1380` = back at an unknown time, dead again
+    in 1380.
   - Below the tags every tiddler with dates shows a date line (right-aligned): an event the span
-    of its field (`????` without one), every other type its years of existence.
+    of its field (`????` without one), every other type the years of its last phase.
 - **Dated sections in event bodies:** the dates live only in `date`. In the body, `<<date>>` marks
   where the next section begins (`<<date 3>>` names the section explicitly, `<<date "Caption">>`
   adds a caption that also shows in the timeline and the event table; the caption is wikitext -
