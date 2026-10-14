@@ -213,7 +213,9 @@ Standard `.tid` format (field header, blank line, body). Fields of content tiddl
 - `tags` - several tags separated by spaces; tag names with spaces in `[[double square brackets]]`.
 - `image` - image file name(s), comma separated; resolved through the type tag
   (Person/Location/Event/Information/...) to an image from `images/<folder>/`. Several show as
-  tabs named after the files, so a file name is a caption (`Kipi (Hirschform).jpg`).
+  tabs named after the files, so a file name is a caption (`Kipi (Hirschform).jpg`). An image in
+  the body: `<<image "Aufbruch.png">>` (folder of the type), several comma separated as tabs,
+  `folder:"event"` for another folder - never `<img src="images/...">`.
 - **Relation fields** (list fields referencing titles) - carry the relation network for the graph:
   `location`, `member`, `former`, `leader`, `officer`, `patron`, `mentor`, `under`, `parent`,
   `ancestor`, `spouse`, `sibling`, `family`, `alliance`, `bond`, `enmity` (person/organisation/deity) as well
