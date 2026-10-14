@@ -5,10 +5,10 @@ tags: Event Stahlblutklan Ragna
 title: Schmied der Schmiede
 type: text/vnd.tiddlywiki
 
-<<date "Auftrag">>
+<<date label:"Auftrag">>
 
 Die Abenteurer konnten nach längerer Suche den Meisterschmied [[Owen Kupferauge]] in der kleinen Zwergensiedlung nahe der neuen [[Stahlbluthalle]] finden. [[Ragna]] übergab ihm 2 [[Leviathanschuppe]]n und ein Stück [[Magisches Holz]] für die Konstruktion eines Hammers.
 
-<<date "Fertigstellung">>
+<<date label:"Fertigstellung">>
 
 Einen Monat später wurde [[Frostbringer]] in den <<spotlink "Miehall" "[[Trunkenen Eulenbären|Zum Trunkenen Eulenbären]]">> geliefert und [[Ragna]] holte ihn sich dort ab.

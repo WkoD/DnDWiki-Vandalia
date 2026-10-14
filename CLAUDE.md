@@ -287,9 +287,9 @@ Standard `.tid` format (field header, blank line, body). Fields of content tiddl
   - Below the tags every tiddler with dates shows a date line (right-aligned): an event the span
     of its field (`????` without one), every other type the years of its last phase.
 - **Dated sections in event bodies:** the dates live only in `date`. In the body, `<<date>>` marks
-  where the next section begins (`<<date 3>>` names the section explicitly, `<<date "Caption">>`
+  where the next section begins (`<<date 3>>` names the section explicitly, `<<date label:"Caption">>`
   adds a caption that also shows in the timeline and the event table; the caption is wikitext -
-  links and macros work, other quotes inside: `<<date "Fight at <<unit '30 ft'>>">>`). The placeholder draws the
+  links and macros work, other quotes inside: `<<date label:"Fight at <<unit '30 ft'>>">>`). The placeholder draws the
   rule, the date and the locations linked in its section - no `---` and no hand-written date
   before it. **Every event starts with `<<date>>`**, also one with a single date or none (then
   the heading reads `????`); an event with several sections gives every section a placeholder.
@@ -343,7 +343,7 @@ Standard `.tid` format (field header, blank line, body). Fields of content tiddl
   - Spots - the places of interest, at the end of the body: `<<spot "Name">>` followed by its
     text, up to the next spot. The name may hold links (`<<spot "Tempel von [[Chauntea]]">>`);
     a spot whose plain name is a tiddler is joined to it (a location then is a part of this
-    one), `<<spot "Name" "Tiddler">>` joins another one. The block form
+    one), `<<spot "Name" tiddler:"Tiddler">>` joins another one. The block form
     `<$spot name="Name">…</$spot>` has an end of its own. The body shows the text without the
     spots; the spots appear below the maps.
   - Images and maps of a spot without a tiddler of its own:
@@ -373,9 +373,9 @@ With a ruleset (e.g. `tiddlyrpg-ruleset-dnd5e2014`), rules terms in the text are
 macros, so they follow the rules language of the wiki (see `CAMPAIGN.md` for the choice of the
 campaign) - never as plain text when the term matters:
 
-- `<<unit "228 cm">>` (lengths and weights, converted), `<<unit "60 ft" range>>` (a kind such as
+- `<<unit "228 cm">>` (lengths and weights, converted), `<<unit "60 ft" kind:"range">>` (a kind such as
   `range`, `distance` or `size` chooses the display), `<<dice "4d6">>`, `<<damage "1d8 slashing">>`,
-  `<<term wis save>>`, coins `<<unit "3 gp 5 sp">>`. The words of every language are read
+  `<<term wis variant:"save">>`, coins `<<unit "3 gp 5 sp">>`. The words of every language are read
   (`<<damage "1W8 Hieb">>`).
 - A number always carries its unit - `<<unit 60>>` is not read, also not with a kind - so what a
   text means never depends on a setting. Write the value as the source has it (`228 cm` for a
