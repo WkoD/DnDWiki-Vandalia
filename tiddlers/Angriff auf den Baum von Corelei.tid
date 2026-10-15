@@ -1,6 +1,6 @@
 created: 20250904104023463
 date: 1351-11-26, 1351-12-06, 1351-12-08/1351-12-09
-modified: 20261012202157717
+modified: 20261015095950000
 tags: Event [[Boten der Nacht]] Actrielle Balseth Ragna Theren
 title: Angriff auf den Baum von Corelei
 type: text/vnd.tiddlywiki
@@ -39,11 +39,13 @@ Am Baum von [[Corelei]] fanden sie riesige Risse im Boden und ein unheimliches v
 
 [[Yami]] stand am Baum und schien ein Ritual zu vollziehen. Der Nebel war hier noch dichter und griff die Abenteurer körperlich und geistig an. [[Amarok]] hielt, geschwächt vom Kampf, mit einer Barriere einen Teil um sich frei, wo die Abenteurer Zuflucht fanden. Die Medusa [[Philia]] stand unter [[Ito]]s Bann am Stamm, ihr versteinernder Blick richtete sich gegen die Abenteurer und [[Amarok]]. Langsam arbeiteten sie sich bis zum Baum vor, belagert von [[Kipi]] und Kreaturen aus dem Nebel. Mit letzter Kraft erreichte [[Amarok]] den Stamm, erlag dort aber seinen Verletzungen.
 
-[[Balseth]] hörte die Stimme von [[Corelei]] und rammte das [[Schwert der Sterne]] in den Stamm. Licht brach aus dem Baum, den Ästen, Wurzeln und Pflanzen und durchdrang den Nebel. Die [[Boten der Nacht]] wurden geschwächt, getroffene [[Kipi]] sogar vollständig zerstört. [[Ito]] nahm [[Philia]] als Geisel und wollte sich in Sicherheit bringen, doch die Abenteurer retteten sie, und [[Ragna]] brach ihm das rechte Handgelenk. Dennoch konnten [[Ito]] und [[Yami]] durch den Spalt in der Erde entkommen.
+<<quest "Suche nach dem Schwert der Sterne" status:"complete">>[[Balseth]] hörte die Stimme von [[Corelei]] und rammte das [[Schwert der Sterne]] in den Stamm.
+
+Licht brach aus dem Baum, den Ästen, Wurzeln und Pflanzen und durchdrang den Nebel. Die [[Boten der Nacht]] wurden geschwächt, getroffene [[Kipi]] sogar vollständig zerstört. [[Ito]] nahm [[Philia]] als Geisel und wollte sich in Sicherheit bringen, doch die Abenteurer retteten sie, und [[Ragna]] brach ihm das rechte Handgelenk. Dennoch konnten [[Ito]] und [[Yami]] durch den Spalt in der Erde entkommen.
 
 Der Wald wandelte sich zurück: Die Spalten schlossen sich, die Amethysten lösten sich auf, das Grün kehrte zurück. Jede Blüte strahlte ein kleines, wärmendes Licht, doch einige schienen zu überhitzen und vertrockneten. Unter [[Amarok]]s Körper wuchs ein Bett aus dunklen Blumen, Wölfe sammelten sich aus dem Unterholz und begannen zu heulen. [[Lorelei]] formte sich aus Ranken, ging zu einer Wurzel von [[Corelei]]s Baum und legte ihre Hand darauf. Sie hatte das Buch von [[Al]] inzwischen gelesen und erklärte, dass eine Dryade das Schwert als Teil ihrer selbst aufnehmen konnte, dafür aber alles aufgab, was sie ausmachte, um die Macht des Schwertes bis zu ihrem Tod zu kontrollieren. [[Corelei]]s Geist war fort. [[Lorelei]] spürte die Wirkung des Lichts auch außerhalb des Gesehenen: Nicht alle Wurzeln hatten die Energie überlebt, doch eine Fläche vom See bis zum Anfang des [[Riganwald]]s nördlich von [[Baile]] und vom Grenzposten im Westen bis nach [[Feirme]] im Osten zeigte die Macht des Schwertes. [[Baile]], [[Miehall]] und die Festung lagen im geschützten Bereich. Es war die Zone, von der [[Al]] im [[Tiergeist des Winters]] gesprochen hatte.
 
-[[Amarok]]s Körper verfiel in dunkle Partikel, nach denen die Wölfe schnappten. Zurück blieb ein faustgroßer, leuchtender Amethyst. Ein Wolf nahm ihn in sein Maul, die Wölfe blickten kurz zu den Abenteurern und verschwanden damit im Wald. [[Theren]] konnte vorher noch den Stein analysieren: Er war zu 99,999 % das gleiche wie andere [[Amethysten|Meteor von Tenebris]], aber verändert, vielleicht von selbst oder von außen, um ihn mit dieser Welt kompatibel zu machen. Er hatte keine schädliche Wirkung auf die Welt oder ihre Bewohner.
+<<quest "Das Herz von Amarok">>[[Amarok]]s Körper verfiel in dunkle Partikel, nach denen die Wölfe schnappten. Zurück blieb ein faustgroßer, leuchtender Amethyst. Ein Wolf nahm ihn in sein Maul, die Wölfe blickten kurz zu den Abenteurern und verschwanden damit im Wald. [[Theren]] konnte vorher noch den Stein analysieren: Er war zu 99,999 % das gleiche wie andere [[Amethysten|Meteor von Tenebris]], aber verändert, vielleicht von selbst oder von außen, um ihn mit dieser Welt kompatibel zu machen. Er hatte keine schädliche Wirkung auf die Welt oder ihre Bewohner.
 
 Kurz darauf traf [[Nadarr]] ein, gefolgt von [[Balor]] und Mitgliedern der Söldnerfraktion, verletzt und mit beschädigten Rüstungen. Sie hatten am <<spotlink "Briarwood" "Pflanzplatz">> gegen die Urform der [[Boten der Nacht]] gekämpft und die Abenteurer erst jetzt eingeholt. Die Kinder der Medusa waren in Sicherheit und hatten ihnen den Weg gezeigt. Die gerettete [[Philia]] war derweil noch nicht wieder zu Bewusstsein gekommen. 
 

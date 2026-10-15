@@ -33,9 +33,14 @@ Wer welche Figur spielt, steht im Feld `player` der Figuren (siehe unten), nicht
   Ereignis-Tiddler kann mehrere In-World-Zeitpunkte sammeln: die Daten stehen im Feld
   `date`, jeder Abschnitt im Text beginnt mit `<<date>>` (optional mit Beschriftung
   `<<date label:"…">>`). Die Spielerfiguren, die dabei waren, stehen als Tags am Ereignis.
-- **Offene Punkte/Plot-Fäden:** das Snippet „Offene Punkte“ (`open-items`) wird inline in
-  Ereignis-Tiddlern eingefügt (rot umrandete Callout-Box); wird
-  entfernt/verkleinert, sobald der Strang aufgelöst ist. Kein zentraler Tracker.
+- **Offene Punkte/Plot-Fäden:** Quest-Marker in Ereignis-Tiddlern markieren die Stellen, die
+  einen Quest betreffen - die markierte Stelle ist die Erzählung, nichts steht doppelt.
+  `<<quest "Name">>` am Absatzanfang gilt für den Absatz; `<$quest name="Name">…</$quest>` für
+  mehrere Absätze, für Listenpunkte und für einen Bereich innerhalb eines Absatzes.
+  `status:"complete"` bzw. `"failed"` steht nur dort, wo der ganze Quest endet; Teilschritte
+  bekommen einen Marker ohne Status. Ein Tiddler mit dem Namen (Tag `Quest`, Spieler-Tags der
+  Beteiligten, Body = Planungstext) macht ihn zum Quest, ohne Tiddler ist er ein Gerücht. Ein
+  Marker im Marker eines anderen Quests verbindet die beiden.
 - **Karten zu Orten:** keine Unter-Tiddler. Die Karten stehen im Feld `map` des Orts (Bilder
   aus `images/map/`, Kampfkarten eingeschlossen; ab zwei Karten je ein Reiter mit dem
   Dateinamen), die Sehenswürdigkeiten als `<<spot "Name">>`-Abschnitte am Ende seines Texts;
@@ -58,8 +63,7 @@ Wer welche Figur spielt, steht im Feld `player` der Figuren (siehe unten), nicht
   Chronik-Stil - auch für andauernde Eigenschaften/Fakten (z. B. "war ein
   Mensch" statt "ist ein Mensch"); impliziert **nicht** Tod/Nicht-Existenz.
   Ausnahmen, die im Ursprungstempus bleiben: wörtliche Rede/Zitate, primäre
-  In-World-Dokumente (Tagebücher, Briefe, Ich-Perspektive-"Visionen"), rot
-  umrandete TBC-Callout-Boxen (`@@.tc-tiddler-frame ... @@`), sowie
+  In-World-Dokumente (Tagebücher, Briefe, Ich-Perspektive-"Visionen") sowie
   Trivia-Quiz-Frage/Antwort-Blöcke (wie zitierter Spielkarten-Text behandelt).
   Ich-Perspektive-Tabellen wie Personality Traits/Ideals/Bonds/Flaws sind
   **nicht** ausgenommen - werden trotz Ich-Form ins Präteritum gesetzt.
@@ -81,8 +85,8 @@ oder aus dieser Datei planen:**
   `Schattenwelt`, `Welt im Geiste`. Welche Orga einen Ort führt, steht in ihrem Feld
   `leader` (z. B. `Haus Eiree` → `Baile`).
 - **Spielerstufe:** Body von `PlayerLevel.tid`.
-- **Offene Plot-Fäden:** Suche nach dem Offene-Punkte-Snippet (`@@.tc-tiddler-frame`) in
-  `Event`-Tiddlern.
+- **Offene Plot-Fäden:** Quest-Marker (`<<quest`, `<$quest`) in `Event`-Tiddlern und die
+  `Quest`-getaggten Tiddler mit ihrem Planungstext.
 - **Kampagnenstruktur / Handlungsbögen:** Ereignisse, an denen eine Spielerfigur als Tag
   hängt (die Figuren, die dabei waren); Zeitstrahl und Tabelle am `Campaign`-Hub.
 - **Spielercharaktere:** `Player`-getaggte Tiddler (aktiv) und Tiddler mit Feld `player`

@@ -1,6 +1,6 @@
 created: 20220306125042895
 date: 1351-07-05, 1351-07-09, 1351-07-22/1351-07-24
-modified: 20261007170724251
+modified: 20261015095950000
 tags: Event [[Matriarchat von Menzoberranzan]] Actrielle Balseth Ragna Theren
 title: Schild der Götter
 type: text/vnd.tiddlywiki
@@ -19,7 +19,7 @@ Da das Ritual zu diesem Zeitpunkt noch nicht durchgeführt werden konnte, schick
 
 <<date label:"Artefaktsuche">>
 
-In [[Cair Di]] besuchten die Abenteurer [[Tristan Newin]] und fragten nach Artefakten, die möglicherweise für das Ritual genutzt werden könnten. Er konnte ihnen vom [[Auge des Lichts]] und vom [[Schwert der Sterne]] erzählen, aber keine großartigen Hinweise auf deren Verbleib geben.
+<<quest "Suche nach dem Auge des Lichts">><<quest "Suche nach dem Schwert der Sterne">>In [[Cair Di]] besuchten die Abenteurer [[Tristan Newin]] und fragten nach Artefakten, die möglicherweise für das Ritual genutzt werden könnten. Er konnte ihnen vom [[Auge des Lichts]] und vom [[Schwert der Sterne]] erzählen, aber keine großartigen Hinweise auf deren Verbleib geben.
 
 <<date label:"Das Ritual">>
 

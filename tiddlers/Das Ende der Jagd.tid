@@ -1,20 +1,20 @@
 created: 20220218132231705
 date: 1351-06-27
-modified: 20261007170724251
+modified: 20261015095950000
 tags: Event [[Ritter der schwarzen Sonne]] Actrielle Balseth Ragna Theren
 title: Das Ende der Jagd
 type: text/vnd.tiddlywiki
 
 <<date>>
 
-[[Eoria]] hielt ihr [[Versprechen|Ende der Sklaverei]] und [[Annika]] führte die Abenteurer zu einem gefesselten [[Geron Sidellus]] in einem Lagerhaus in [[Dun Eidean]]. Auf dem Weg erzählte [[Annika]] [[Ragna]] den ersten Teil einer [[alten Geschichte zu seinem Vater|Ragnas Geburt]].
+<<quest "Die Schamanin Eoria">>[[Eoria]] hielt ihr [[Versprechen|Ende der Sklaverei]] und [[Annika]] führte die Abenteurer zu einem gefesselten [[Geron Sidellus]] in einem Lagerhaus in [[Dun Eidean]]. <<quest "Ragnas Herkunft">>Auf dem Weg erzählte [[Annika]] [[Ragna]] den ersten Teil einer [[alten Geschichte zu seinem Vater|Ragnas Geburt]].
 
 Seiner Waffen und Kräfte beraubt war [[Geron Sidellus]] bereit für den Tod. Auf der Suche nach mehr Informationen bereiteten die Abenteurer ihm aber kein schnelles Ende, sondern [[Theren]] zeigte ihm, dass sie bereits viel über die [[Ritter der schwarzen Sonne]] erfahren hatten. Beeindruckt stellte sich [[Geron Sidellus]] seinen Fragen:
 
-* [[Geron Sidellus]] erzählte vom [[Angriff auf die Sjach]] und dass der Klan aus heutiger Sicht durchaus eine Bedrohung für das [[Königshaus von Vandalia]] sein könnte. Er erwähnte auch die beiden anderen Ritterkommandanten, die beim Angriff beteiligt waren: [[Sabrina Aincrad]] und [[Micheal Aurelius]].
-* Die [[Ritter der schwarzen Sonne]] waren schon immer dem König unterstellt und sorgten für die Sicherheit vom [[Königreich von Vandalia]] aus den Schatten heraus.
+* <$quest name="Suche nach den Rittern der schwarzen Sonne">[[Geron Sidellus]] erzählte vom [[Angriff auf die Sjach]] und dass der Klan aus heutiger Sicht durchaus eine Bedrohung für das [[Königshaus von Vandalia]] sein könnte. Er erwähnte auch die beiden anderen Ritterkommandanten, die beim Angriff beteiligt waren: [[Sabrina Aincrad]] und [[Micheal Aurelius]].</$quest>
+* <$quest name="Suche nach den Rittern der schwarzen Sonne">Die [[Ritter der schwarzen Sonne]] waren schon immer dem König unterstellt und sorgten für die Sicherheit vom [[Königreich von Vandalia]] aus den Schatten heraus.</$quest>
 * Die Erwähnung der Schamaninnen überraschte ihn, da er vorher noch nichts über sie gehört hatte. Das Schicksal von [[Ingrid]] rückte die Aussage aber in ein neues Licht.
-* Als der falsche König zur Sprache kam, verwies er auf [[Catarina Langley]]. Seit dem [[Attentat auf den König]] war sie es, die die Befehle des Königs an die [[Ritter der schwarzen Sonne]] weiterleitete.
+* <$quest name="Der falsche König"><$quest name="Großkanzlerin Catarina Langley">Als der falsche König zur Sprache kam, verwies er auf [[Catarina Langley]]. Seit dem [[Attentat auf den König]] war sie es, die die Befehle des Königs an die [[Ritter der schwarzen Sonne]] weiterleitete.</$quest></$quest>
 * Über das [[Attentat auf den König]] hatte er keine neuen Informationen.
 * Über den [[Biestkönig]] hatte er keine neuen Informationen.
 

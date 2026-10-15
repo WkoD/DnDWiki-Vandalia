@@ -1,6 +1,6 @@
 created: 20250904080522443
 date: 1351-11-25/1351-11-26, 1351-12-01/..
-modified: 20261012165630000
+modified: 20261015095950000
 tags: Event Biestvolk [[Haus Alba]] [[Haus Eiree]] Actrielle
 title: Vandalischer Bürgerkrieg
 type: text/vnd.tiddlywiki
@@ -9,7 +9,7 @@ type: text/vnd.tiddlywiki
 
 Die Truppen an den Grenzen verteilt sah der [[Biestkönig]] die Chance, das [[Königshaus von Vandalia]] zu stürzen. Er griff mit einer kleinen aber mobilen Armee den Verteidigungsring um die [[Hauptstadt Vandalia]] an. Begleitet wurde er auch von Truppen von [[Haus Eiree]], unter der Führung von [[Aideen Eiree]] und [[Ultar]], sowie [[Nichny]] Kriegern unter der Führung von [[Li-Ta]]. Kurz vor der ersten Schlacht konnte [[Nu-Han]] mit dem geretteten Arnold Armstrong dazustoßen.
 
-Die erste Schlacht fand gegen [[Armin Armstrong]], General der Hauptstadt statt. Das [[Biestvolk]] konnte seine Truppen zurück drängen und schließlich auch Misstrauen zum König in ihm säen, gestützt durch dessen Vater Arnold Armstrong. Der General zog sich mit seinen verbliebenen Truppen zur Hauptstadt zurück, um dem nachzugehen.
+<<quest "Der falsche König">>Die erste Schlacht fand gegen [[Armin Armstrong]], General der Hauptstadt statt. Das [[Biestvolk]] konnte seine Truppen zurück drängen und schließlich auch Misstrauen zum König in ihm säen, gestützt durch dessen Vater Arnold Armstrong. Der General zog sich mit seinen verbliebenen Truppen zur Hauptstadt zurück, um dem nachzugehen.
 
 In der zweiten Schlacht stellte sich Baron [[Robert Alba]] mit seinen Greifenreitern in den Weg vom [[Biestvolk]]. Ihre Mobilität setzte den Rebellen stark zu und [[Li-Ta]] geriet in Gefangenschaft. Der [[Biestkönig]] selbst stellte sich dem Baron entgegen und nach einem heftigen Schlagabtausch teilte der [[Biestkönig]] eine gewisse Information mit ihm. Der Baron zog sich darauf zur Verwunderung der anderen aus dem Kampfgeschehen mit seinen Greifenreitern zurück, inklusive der Gefangenen [[Li-Ta]]. Die Armee des [[Biestkönig]]s navigierte danach an den übrigen Feinden vorbei Richtung Hauptstadt.
 
@@ -22,8 +22,3 @@ Da die äußere Verteidigung hielt, gab es keine schnelle Entscheidung des Krieg
 <<date label:"Bürgerkrieg">>
 
 Im ganzen Land kam es weiter zu Scharmützeln zwischen lokalen Truppen und Rebellen. Das [[Biestvolk]] nutzte dabei die Wälder, während auf den Straßen der König die Oberhand behielt. [[Haus Eiree]] griff als Verbündeter des [[Biestkönig]]s den [[Grenzposten Briar]] an. [[Haus Alba]] versuchte derweil, die Kontrolle in seinem Gebiet wiederherzustellen, während Truppen vom [[Grenzposten Rigan]] Richtung [[Hauptstadt Vandalia]] marschierten. [[Haus Kemri]], geschwächt durch die Angriffe der [[Boten der Nacht]], hielt sich vorerst abseits, während auch hier die königlichen Truppen auf dem Rückweg vom [[Grenzposten Kahla]] waren. Die Lage schränkte Handel und Versorgung weiter ein, die bereits unter den Angriffen dunkler Kreaturen litten. [[Katherina Kemri|Katie Moss]] soll ebenfalls in den Rängen des Königs aufgetaucht sein.
-
-@@.tc-tiddler-frame
-@@width:100%;border: 3px solid red;
-Als [[Armin Armstrong]] von der Gefangenschaft seines Vaters erfuhr, entstand Misstrauen gegenüber den Befehlen des Königs und er wollte in der Hauptstadt mehr darüber erfahren.
-@@

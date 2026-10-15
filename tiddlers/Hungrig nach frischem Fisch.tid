@@ -1,15 +1,10 @@
 created: 20200814105520902
 date: 1350-10, ..
-modified: 20261007170724251
+modified: 20261015095950000
 tags: Event Tiergeister Ragna
 title: Hungrig nach frischem Fisch
 type: text/vnd.tiddlywiki
 
 <<date>>
 
-[[Nehalennia]] bat [[Ragna]] in der [[Welt im Geiste]] nach frischem Fisch.
-
-@@.tc-tiddler-frame
-@@width:100%;border: 3px solid red;
-Dieser Wunsch [[Nehalennia]]s war plötzlich wieder möglich, da [[Ragna]] [[Tiergeister]] in die [[Materielle Ebene]] ziehen wollte. [[Leif Odgerson]] lernte unter [[Frigg]], so dass er mit [[Nehalennia]] Kontakt aufnehmen konnte.
-@@
+<<quest "Ragna und die Tiergeister">>[[Nehalennia]] bat [[Ragna]] in der [[Welt im Geiste]] nach frischem Fisch. Offen blieb, wie man ihn frisch zur Ebene des Wassers bringen konnte.

@@ -1,6 +1,6 @@
 created: 20190729120812736
 date: 1336
-modified: 20261006065515000
+modified: 20261015095950000
 tags: [[Haus Kemri]] Event Avalon
 title: Tod von Baron Kemri
 type: text/vnd.tiddlywiki
@@ -8,6 +8,8 @@ type: text/vnd.tiddlywiki
 <<date>>
 
 In [[Cair Di]] war der Baron vom [[Haus Kemri]] sehr beliebt bei seinem Volk, da er sich für bessere Lebensumstände in den Armenbezirken und Frieden einsetzte. Banditen und [[Hazim'Tor]] griffen damals wild um sich und die Friedensbemühungen des Barons zeigten keine Verbesserung der Situation. Die Schwester des Barons [[Dilwyn Kemri]] stand ihrem Bruder in diesen Zeiten beratend zur Seite, kritisierte aber auch seine weiche Art. Das Scheitern des Barons, die ihm anvertrauten Gebiete zu sichern, legten die anderen Häuser von [[Cair Di]] als Schwäche aus und der Einfluss von [[Haus Kemri]] schwand. Kritik wurde auch an der Mutter des Barons lauter, warum sie vor ihrem Tod den Baron und nicht seine fähigere Schwester als Nachfolger bestimmt hatte.
+
+<$quest name="Fehde zwischen Haus Kemri und Avalon">
 
 [[Nazira]] hatte zu der Zeit als Mitglied von [[Zodiac]] für [[Ian Bangor]] eine Kiste in die Stadt geschmuggelt und sie an [[Sir Gregory]], Leibwache von [[Haus Kemri]] übergeben. Die Kiste schien eine Menge Geld gekostet zu haben und die Stabilität deutete darauf hin, dass der Inhalt empfindlich war. Neugierig verfolgte [[Nazira]] die Kiste nach der Übergabe bis zu den <<spotlink "Cair Di" "[[Quartieren der Leibwache|Quartiere der Leibwache]]">>. Die Kiste enthielt ein Gift. [[Sir Gregory]], angestachelt durch [[Ian Bangor]], hoffte mit dem Tod des Barons den drohenden Untergang von [[Haus Kemri]] abzuwenden.
 
@@ -18,6 +20,8 @@ Wenige Stunden nach der Tat wurden die Besitztümer von [[Haus Bangor]] durch Ke
 Die Tochter [[Katherina|Katie Moss]], zusammen mit ihrem Vater im brennenden Haus, konnte unbemerkt durch einen geheimen Tunnel entkommen und aus der Stadt fliehen. Sie fiel letztendlich in die Hände von [[Jirelle]] und schloss sich den Piraten von [[Avalon]] als [[Katie Moss]] an. Viele sahen den Brand als durch Bangor selbst ausgelöst und auch als Schuldeingeständnis. Die ehemaligen Partner des Hauses wandten sich entweder gegen sie oder verließen die Stadt, aus Angst selbst mit reingezogen zu werden. Die Besitztümer von [[Haus Bangor]] wurden von [[Haus Kemri]] beschlagnahmt und standen seither leer. 
 
 Nach dem Tod ihres Bruders übernahm [[Dilwyn Kemri]] notgedrungen als neues Oberhaupt der Familie den Vorsitz der großen Häuser und damit die Macht in der Stadt, da ihr verschiedener Bruder keine Kinder hatte. Sie versprach, das Andenken ihres Bruders aufrecht zu erhalten, doch Stück für Stück schaffte sie die Hilfen für die Armen ab und konzentrierte sich darauf, die Macht wieder unter [[Haus Kemri]] zu schaffen, damit sich so ein Unglück nie wieder ereignen könnte. Die anderen Häuser fügten sich schnell und sie konnte auch die Banditen und [[Hazim'Tor]] zurückschlagen.
+
+</$quest>
 
 [[Sir Gregory]], von Schuld über seine Taten geplagt, suchte nach einer Nachfolgerin, welche er in [[Lady Arwen]] fand. Sobald sie bereit sei, würde er sein Verbrechen offenbaren und seine gerechte Strafe akzeptieren.
 

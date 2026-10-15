@@ -1,6 +1,6 @@
 created: 20250904090118053
 date: 1351-11-26/1351-12-01
-modified: 20261007170724251
+modified: 20261015095950000
 tags: Event Tiergeister Actrielle Balseth Ragna Theren
 title: Tiergeist des Winters
 type: text/vnd.tiddlywiki
@@ -11,7 +11,11 @@ type: text/vnd.tiddlywiki
 
 [[Theren]] antwortete, dass sie sich auf den Weg dorthin machten und dass die kaputte Nebelmaschine oder ein ähnlicher Schildzauber nützlich wären, [[Tyrias Versteck]] vor anderen Gästen zu verbergen, die eventuell nach der Ursache der Kälte suchten.
 
-Nachdem die Abenteurer sich ausgerüstet hatten, reisten sie zu [[Tyrias Versteck]]. Das innere der Festung war bereits in eine eisige Schicht gehüllt und nur ein langsam schwächer werdender Schild schützte den Wald davor. [[Abigal Davenlow]] gab den Prototypen vom [[Seelenprisma]] an [[Theren]] und erzählte ihre bisherigen Erkenntnisse. Die Energie im Eis hatte Besitz von Überresten von [[Tyria]]s Experimenten genommen, welche als Wächter vor [[Silmeria]] standen. Die Abenteurer kämpften sich durch die stärker werdenden Wellen von Gegnern und [[Theren]] erreichte schließlich mit dem [[Seelenprisma]] [[Silmeria]]s Körper.
+Nachdem die Abenteurer sich ausgerüstet hatten, reisten sie zu [[Tyrias Versteck]]. Das innere der Festung war bereits in eine eisige Schicht gehüllt und nur ein langsam schwächer werdender Schild schützte den Wald davor.
+
+<<quest "Prototyp des Seelenprismas">>[[Abigal Davenlow]] gab den Prototypen vom [[Seelenprisma]] an [[Theren]] und erzählte ihre bisherigen Erkenntnisse.
+
+Die Energie im Eis hatte Besitz von Überresten von [[Tyria]]s Experimenten genommen, welche als Wächter vor [[Silmeria]] standen. Die Abenteurer kämpften sich durch die stärker werdenden Wellen von Gegnern und [[Theren]] erreichte schließlich mit dem [[Seelenprisma]] [[Silmeria]]s Körper.
 
 Die Abenteurer fanden sich plötzlich an einem anderen Ort wieder. Die Umgebung wirkte nicht echt und scheinbar sollte dort ein Spiel stattfinden. [[Al]] kam dazu und stellte sich als Gastgeber vor. 
 
@@ -33,20 +37,28 @@ Er erklärte, dass beim Bau des Prototypen leider etwas schief gegangen war, und
 ** Ein im Königreich immer häufiger auftretendes Material aus einer anderen Welt, welches viel Energie in sich trägt und doch schädlich für native Organismen der [[materiellen Ebene|Materielle Ebene]] ist. ''> Was sind die leuchtende Amethysten?''
 ** Dieser Froschmensch-Anführer führt sein Gefolge im Auftrag der Nekromantin [[Ellid]] in den [[Briarwood]] gegen die Dryaden. Er hofft damit, die Schmach von seinem Rauswurf aus dem [[Biestvolk]] zu überdecken, hat aber am Ende keinen Erfolg. ''> Wer ist [[Gruuak]]?''
 ** Diese Organisation ist für den großen Brand im Schloss von [[Haus Eiree]] verantwortlich, der auch das Leben des letzten Barons kostet. Diesen Abweichler zu beseitigen löst aber keine Probleme, da seine einst konservative Tochter nach dem Tod ihres Vaters sich ebenfalls gegen den König stellt.  ''> Wer sind die [[Ritter der schwarzen Sonne]]?''
-** Die Blutline der vandalischen Könige ist über die Jahrhunderte und durch viele Hochzeiten in mehreren Adelshäusern verteilt, auf Grund ihrer Abstammung hat aber diese Person den höchsten Anspruch auf den Thron des Königreichs. ''> Wer ist der Sohn des letzten Königs?''
+** <$quest name="Der falsche König">Die Blutline der vandalischen Könige ist über die Jahrhunderte und durch viele Hochzeiten in mehreren Adelshäusern verteilt, auf Grund ihrer Abstammung hat aber diese Person den höchsten Anspruch auf den Thron des Königreichs. ''> Wer ist der Sohn des letzten Königs?''</$quest>
 * Schicksal der [[Valküren]]
 ** Da sie ein Gesetz der Götter gebrochen hat droht der obersten Valküre der Tod. Diese beiden [[Valküren]] setzen sich jedoch gegen die Todesstrafe ihrer großen Schwester ein. ''> Wer sind [[Silmeria]] und [[Hrist]]?''
 ** Statt der Todesstrafe und im Hinblick auf ihre Loyalität, wird die oberste Valküre mit ihren zwei Schwestern in die [[Materielle Ebene]] verbannt. Dort soll sie diese Personen ausfindig machen, die den Glauben an die nordischen Götter für ihre eigenen Zwecke nutzen. ''> Wer sind die Schamaninnen?''
 ** Die oberste Valküre verliert bei ihrer Verbannung nicht nur einen großen Teil ihrer Kräfte sondern auch diese Fähigkeit, einst von Göttern und Sterblichen gleichermaßen geliebt und vielleicht sogar die Ursache, die zu ihrem Bruch der Gesetze der Götter geführt hat. ''> Was ist die Stimme der obersten Valküre?''
 ** Dieses Gesetz bricht die oberste Valküre, was als Strafe den Tod mit sich zieht. ''> Was ist das Verbot, sich in Sterblichen zu verlieben?''
 * Trivia über die Abenteurer
-** In der Hand dieser Person liegt die Seele von [[Actrielle]]s Mutter. ''> Wer ist die Matronmutter [[Azurna]]?''
+** <$quest name="Azurnas Ritual">In der Hand dieser Person liegt die Seele von [[Actrielle]]s Mutter. ''> Wer ist die Matronmutter [[Azurna]]?''</$quest>
 ** Diese Person schickt den Wanderer nach [[Kattegat]], der auf Ragnas Rücken das erste Tattoo und damit den Bund zu [[Hyrr]] schafft. ''> Wer ist Ragnas Mutter?''
-** Dieser [[Sjach]] kennt einen Hinweis zum letzten Teil der Rüstung von [[Tiamat]]. ''> Wer ist [[Balor]]?''
-** Dieses Mitglied der Gruppe stammt aus einer anderen Welt. ''> Wer ist [[Atiesh]]?''
+** <$quest name="Suche nach der Rüstung des Tiamat">Dieser [[Sjach]] kennt einen Hinweis zum letzten Teil der Rüstung von [[Tiamat]]. ''> Wer ist [[Balor]]?''</$quest>
+** <$quest name="Die geheimnisvolle Eule Atiesh">Dieses Mitglied der Gruppe stammt aus einer anderen Welt. ''> Wer ist [[Atiesh]]?''</$quest>
 
-[[Theren]] weigerte sich selbst Antworten zu geben und half stattdessen zusammen mit [[Ragna]] den anderen beiden. [[Balseth]] ging als Sieger hervor, gefolgt von [[Actrielle]]. [[Al]] gab als Preis eine Frage, die er ohne Gegenleistung beantworten würde. Obwohl [[Actrielle]] nur zweite war, durfte auch sie eine Frage stellen, allerdings mit Einschränkungen auf die Qualität der Antwort. Sie stellte die Frage, "Wie kann die Matronmutter [[Azurna]] am besten aufgehalten werden" und bekam als Antwort die Signatur eines Teleportzirkels, zu dem sie sich fortan teleportieren könnte. Was sich dahinter verbarg, gab [[Al]] nicht preis. [[Balseth]] stellte die Frage: "Wie kann die Energie vom [[Schwert der Sterne]] nutzbar gemacht werden, um eine schützende Zone wie die vom [[Auge des Lichts]] zu erzeugen." [[Al]] gab ihm daraufhin den Bauplan für eine entsprechende Konstruktion, die das erreichen könnte. Um eine Katastrophe wie in der [[Nabaal Wüste]] zu verhindern, könnte die zu schützende Zone allerdings nur entweder den [[Briarwood]], das Gebiet von [[Haus Eiree]] oder jeweils einen zusammenhängenden Teil von beiden bedecken. Für [[Theren]] gab es Pläne zur Verbesserung vom [[Seelenprisma]].
+[[Theren]] weigerte sich selbst Antworten zu geben und half stattdessen zusammen mit [[Ragna]] den anderen beiden. [[Balseth]] ging als Sieger hervor, gefolgt von [[Actrielle]]. [[Al]] gab als Preis eine Frage, die er ohne Gegenleistung beantworten würde.
+
+<<quest "Azurnas Ritual">>Obwohl [[Actrielle]] nur zweite war, durfte auch sie eine Frage stellen, allerdings mit Einschränkungen auf die Qualität der Antwort. Sie stellte die Frage, "Wie kann die Matronmutter [[Azurna]] am besten aufgehalten werden" und bekam als Antwort die Signatur eines Teleportzirkels, zu dem sie sich fortan teleportieren könnte. Was sich dahinter verbarg, gab [[Al]] nicht preis.
+
+[[Balseth]] stellte die Frage: "Wie kann die Energie vom [[Schwert der Sterne]] nutzbar gemacht werden, um eine schützende Zone wie die vom [[Auge des Lichts]] zu erzeugen." [[Al]] gab ihm daraufhin den Bauplan für eine entsprechende Konstruktion, die das erreichen könnte. Um eine Katastrophe wie in der [[Nabaal Wüste]] zu verhindern, könnte die zu schützende Zone allerdings nur entweder den [[Briarwood]], das Gebiet von [[Haus Eiree]] oder jeweils einen zusammenhängenden Teil von beiden bedecken. Für [[Theren]] gab es Pläne zur Verbesserung vom [[Seelenprisma]].
 
 Die Abenteurer fanden sich im Versteck wieder, als bekannte Gesichter auf sie zuliefen. Der Sturm hatte sich gelegt und das Eis in der Festung begann sich langsam aufzulösen. Eine Barriere gab es aber nicht mehr, die reparierte Nebelmaschine von [[Tyria]] war in den letzten Stunden des Sturms zerstört worden. Laut den anderen waren die Abenteurer einen halben Tag in den Tiefen, bevor der Suchtrupp sich auf den Weg machte. [[Balseth]] hielt ein kleines Buch, geschrieben in der Sprache der [[Sjach]], mit den Informationen von [[Al]]. Es beschrieb den Weg, mit dem [[Schwert der Sterne]] und den Dryaden vom [[Briarwood]] eine Barriere zu schaffen, viel mehr verstand er aber nicht. Mit Hilfe von [[Theren]] wurde klar, dass das Wurzelnetzwerk der Dryaden Teil davon war und [[Corelei]] und [[Lorelei]] helfen konnten. [[Actrielle]] hielt einen Zettel mit der Signatur eines Teleportzirkels in den Händen, der sie instinktiv befähigte, sich dorthin zu teleportieren, allerdings ohne Wissen, was dort lauerte. Das Eis um [[Silmeria]] schmolz und [[Actrielle]] verwendete den [[Seelenbeutel]], um die Energie von [[Hati]] einzufangen. [[Silmeria]] besaß nur vage Erinnerungen an ihren langen Schlaf. Sie bedankte sich für ihre Rettung, verwies bei allen Fragen zur [[Krone des Wahnsinns]] oder den [[Boten der Nacht]] aber an ihre Schwester [[Lenneth]]. [[Ragna]] sagte sie, dass er nie ein Anker für [[Tiergeister]] sein würde, er wohl aber anderen helfen könne, diese Verbindung zu errichten. [[Actrielle]] gab ihr den Beutel mit [[Hati]]s Energie, bevor sich [[Silmeria]] auf den Weg nach [[Baile]] machte, um [[Sabrina]] und ihre Verbindung zu [[Eoria]] zu beobachten. [[Balseth]] gab ihr noch ein Schreiben mit, so dass sie Zuflucht in der [[Festung im Briarwood]] finden könne. [[Anyoo]] folgte [[Silmeria]] und [[Balseth]] gab ihr das Buch von [[Al]] mit, bevor er mit den anderen Abenteurern Richtung [[Eoria]] aufbrach.
 
-[[Abigal Davenlow]], [[Paol Tirin Sionha]] und [[Sariell Nabaal]] machten sich auf den Rückweg nach [[Kattegat]]. [[Theren]] gab ihnen die Anleitung von [[Al]] zur Verbesserung des [[Seelenprisma]]s, gab sie aber als seine eigene Schöpfung aus, um [[Al]]s Mitwirken geheimzuhalten. Von [[Ragna]] erhielten sie ebenfalls [[Runen I - IV]] zum Kopieren und einen Beißring in Form eines Hirsches für [[Ragna]]s Baby. Ein Trupp aus [[Kattegat]] sollte weiter ein Auge auf [[Tyrias Versteck]] halten.
+[[Abigal Davenlow]], [[Paol Tirin Sionha]] und [[Sariell Nabaal]] machten sich auf den Rückweg nach [[Kattegat]]. [[Theren]] gab ihnen die Anleitung von [[Al]] zur Verbesserung des [[Seelenprisma]]s, gab sie aber als seine eigene Schöpfung aus, um [[Al]]s Mitwirken geheimzuhalten.
+
+<<quest "Runen I - IV zurückbekommen">>Von [[Ragna]] erhielten sie ebenfalls [[Runen I - IV]] zum Kopieren und einen Beißring in Form eines Hirsches für [[Ragna]]s Baby.
+
+Ein Trupp aus [[Kattegat]] sollte weiter ein Auge auf [[Tyrias Versteck]] halten.

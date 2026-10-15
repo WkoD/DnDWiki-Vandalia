@@ -1,6 +1,6 @@
 created: 20220306114705967
 date: 1351-06-28, 1351-10-16, ..
-modified: 20261012193351777
+modified: 20261015095950000
 tags: Event [[Matriarchat von Menzoberranzan]] Actrielle
 title: Familie ist immer für dich da
 type: text/vnd.tiddlywiki
@@ -17,19 +17,8 @@ Um die Bewegung der Dunkelelfen im Auge zu behalten kehrte [[Banbanza]] zu ihnen
 
 <<date label:"Verbindung zu Banbanza">>
 
-[[Actrielle]] nahm mittels des Zauberspruchs Dream Verbindung zu [[Banbanza]] auf. Dieser konnte sie über den chaotischen Zustand der Dunkelelfen informieren, nachdem sie ihre Verbindung zu [[Lolth]] verloren hatten. Die Ordnung wurde aber langsam durch die Matronmutter [[Azurna]] wiederhergestellt, indem sie die Macht der [[leuchtenden Amethysten|Meteor von Tenebris]] anzapfte. Nicht alle Dunkelelfen waren mit dieser "korrupten" Energie einverstanden, doch der Großteil folgte ihr weiterhin.
+<<quest "Azurnas Ritual">>[[Actrielle]] nahm mittels Magie eine Verbindung zu [[Banbanza]] auf. Dieser konnte sie über den chaotischen Zustand der Dunkelelfen informieren, nachdem sie ihre Verbindung zu [[Lolth]] verloren hatten. Die Ordnung wurde aber langsam durch die Matronmutter [[Azurna]] wiederhergestellt, indem sie die Macht der [[leuchtenden Amethysten|Meteor von Tenebris]] anzapfte. Nicht alle Dunkelelfen waren mit dieser "korrupten" Energie einverstanden, doch der Großteil folgte ihr weiterhin.
 
-In dieser Zeit entschlüsselte [[Theren]] die Schriftrolle, die sie einst [[von den Dunkelelfen erbeutet|Schild der Götter]] hatten. In ihr war ein Plan, einen alten Tempel im Süden vom [[Königreich von Vandalia]] zu besetzten und dort Seelenenergie abzuzapfen. Informationen von [[Banbanza]] und aus [[Tyrias Versteck]] gaben den ungefähren Ort des Tempels preis.
+<<quest "Azurnas Ritual">>In dieser Zeit entschlüsselte [[Theren]] die Schriftrolle, die sie einst [[von den Dunkelelfen erbeutet|Schild der Götter]] hatten. In ihr war ein Plan, einen alten Tempel im Süden vom [[Königreich von Vandalia]] zu besetzten und dort Seelenenergie abzuzapfen. Informationen von [[Banbanza]] und aus [[Tyrias Versteck]] gaben den ungefähren Ort des Tempels preis.
 
 Das Versteck der Dunkelelfen befand sich im Süden des Landes.
-
-@@.tc-tiddler-frame
-@@width:100%;border: 3px solid red;
-Die Dunkelelfen versuchen einen uralten Tempel für ihre Zwecke zu verwenden. Noch brauchen sie einige Zeit, für Vorbereitungen.
-
-Die Scouts von [[Avalanche]] beschatten die Dunkelelfen. Sie sollen nach Truppen ausschau halten und wenn möglich einen Lageplan des Tempels erstellen. Teleportzirkel wären auch gut. Sollte ein Ritual gestartet werden, sollen sie Sabotage betreiben, wenn möglich. Die Scouts agieren in 2 6er Gruppen und haben Message Schriftrollen, um Statusupdates zu geben.
-
-[[Al]] verriet, dass [[Azurna]] die Seele von [[Actrielle]] im Besitz hat.
-
-[[Actrielle]] erhielt die Signatur für einen Teleportzirkel, der helfen könnte, [[Azurna]]s Plan zu verhindern. Mehr hat [[Al]] dazu aber nicht verraten.
-@@
