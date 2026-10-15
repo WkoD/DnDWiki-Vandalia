@@ -334,8 +334,7 @@ Standard `.tid` format (field header, blank line, body). Fields of content tiddl
   players of active characters are views to choose.
 - `source` - where the images of the tiddler come from, free wikitext shown below it as
   "Source: …": a link, the author, a license, several of them (`source: [[Fandom|https://...]],
-  CC BY-SA`). The views that see the tiddler see it; no `<<secret>>` in it. A field `link` (not
-  shown) gets a hint.
+  CC BY-SA`). The views that see the tiddler see it; no `<<secret>>` in it.
 - **Linking:** the body consistently uses `[[WikiLinks]]` for explicit links between
   persons/locations/organisations - this is the primary network mechanism next to the tags. No
   freelinks plugin -> every mention of an existing tiddler title needs a real link. Order of
