@@ -31,10 +31,12 @@ Edit locally with live editing:
 ```bash
 npm install    # once: fetch engine + format layer + graph stack
 npm start      # server on http://localhost:8080 with live editing
+npm run check  # check every tiddler: errors and hints
 ```
 
 Changes made in the browser are written back automatically as `.tid` files in `tiddlers/` - no
-manual saving needed. Details/conventions: `CLAUDE.md` -> "Commands & CI".
+manual saving needed. While editing, errors and hints stand below the title of a tiddler (not in
+the published copy). Details/conventions: `CLAUDE.md` -> "Commands & CI", "Checks".
 
 ## Publishing
 

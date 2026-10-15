@@ -106,6 +106,7 @@ in the campaign (e.g. an individualised `Atlas`).
 npm install                 # fetch the engine (tiddlywiki) + TiddlyRPG-Plugins (pinned), optionally TiddlyRPG-DnD
 npm start                   # local server with live editing (default port 8080)
 npm run build               # build a static index.html into ./twpage (like the CI)
+npm run check               # check every tiddler: the errors and hints below the titles (see "Checks")
 ```
 
 Both scripts set `TIDDLYWIKI_PLUGIN_PATH` automatically through the launcher `scripts/tw.js`
@@ -113,8 +114,9 @@ Both scripts set `TIDDLYWIKI_PLUGIN_PATH` automatically through the launcher `sc
 written back as `.tid` files; the format layer appears only as read-only shadows.
 
 **CI** (`.github/workflows/npm-build-pages.yml`): on push to `master` or manually - `npm install`,
-updates the title/timestamp tiddlers, builds `index.html`, copies `data/` + `images/`, deploys to
-`gh-pages`. The build fails (nothing is deployed) if TiddlyWiki reports
+updates the title/timestamp tiddlers, builds `index.html`, runs `npm run check -- --github` (its
+messages as annotations; the step may fail, the deploy goes on), copies `data/` + `images/`,
+deploys to `gh-pages`. The build fails (nothing is deployed) if TiddlyWiki reports
 `Cannot find plugin` - for TiddlyWiki itself that is only a warning, and the page would go out
 without e.g. the format layer.
 
@@ -296,8 +298,8 @@ Standard `.tid` format (field header, blank line, body). Fields of content tiddl
   Text before the first `<<date>>` (an intro) belongs to the head of the event. The block form
   `<$date>…</$date>` (with `section`, `label`) has an end of its own; both forms count on together.
   Inside an HTML element, a table or a `$list` only the block form counts (a hint says so).
-  `node scripts/check-wiki.js <wiki folder>` in `TiddlyRPG-Plugins` checks the dates of a wiki
-  and the sections and locks of the bodies.
+  `npm run check` checks the dates of the wiki and the sections and locks of the bodies (see
+  "Checks").
 - **Quests and rumours** - what is open (a task, a lead, a hint for the players) is **marked in
   the event** where it came up, never kept as a note or a box of its own. The marked text is the
   story itself, so nothing is written twice and every marker has the date of its section.
@@ -319,8 +321,8 @@ Standard `.tid` format (field header, blank line, body). Fields of content tiddl
   - A quest for some characters only: tag `Secret` and their tags on the quest tiddler. A rumour
     has no tiddler: lock it in the event with `<<secret>>` or `<$secret>`.
   - Rename a quest tiddler in the editor; a rumour on its own page ("Rename") - both rewrite every
-    marker. `check-wiki.js` hints at a quest tiddler without a marker and at two names one letter
-    apart.
+    marker. A quest tiddler without a marker and two names one letter apart get a hint (see
+    "Checks").
 - `price` (items) - with a currency a number and a coin (`price: 50 gp`, `price: 3 gp 5 sp`;
   coin ids as in the currency data, shown with the labels of the rules language), without one a
   plain number. A price that does not fit gets a hint below the title.
@@ -332,8 +334,8 @@ Standard `.tid` format (field header, blank line, body). Fields of content tiddl
   players of active characters are views to choose.
 - `source` - where the images of the tiddler come from, free wikitext shown below it as
   "Source: …": a link, the author, a license, several of them (`source: [[Fandom|https://...]],
-  CC BY-SA`). The views that see the tiddler see it; no `<<secret>>` in it. `check-wiki.js`
-  warns about a field `link` (not shown).
+  CC BY-SA`). The views that see the tiddler see it; no `<<secret>>` in it. A field `link` (not
+  shown) gets a hint.
 - **Linking:** the body consistently uses `[[WikiLinks]]` for explicit links between
   persons/locations/organisations - this is the primary network mechanism next to the tags. No
   freelinks plugin -> every mention of an existing tiddler title needs a real link. Order of
@@ -408,9 +410,30 @@ campaign) - never as plain text when the term matters:
   text means never depends on a setting. Write the value as the source has it (`228 cm` for a
   person described in centimetres, `60 ft` from the rulebook).
 - What a macro does not understand, a macro nothing defines (a typo) and a price
-  without coin give a hint below the title (not in the published copy);
-  `check-wiki.js` in `TiddlyRPG-Plugins` reports them for the whole wiki.
+  without coin are errors below the title (see "Checks").
 - Details: `README.md` of `TiddlyRPG-Plugins` -> "Rules terms in the text", "Rules language".
+
+### Checks
+
+`tiddlyrpg-core` checks the content with one set of rules (list with ids and levels: `README.md`
+of `TiddlyRPG-Plugins` -> "Checks"):
+
+- Below the title of a tiddler stand its **errors** (broken or not working as meant: a date that
+  cannot be read, a relation field naming a missing tiddler, a macro nothing defines) and
+  **hints** (fine, but better with: no image, a dead link, a symmetric relation on one side
+  only) - in the editable wiki only, never in the published copy. Hovering one shows the id of
+  its rule.
+- `npm run check` reports them for every tiddler in the view of the DM, plus the files in
+  `images/` the wiki names, each with its id; exit code 1 if there is an error. Themes after `--`
+  run only their rules: `npm run check -- relations links`.
+- After a batch of content changes run `npm run check` and look at the new messages. Errors are
+  fixed; hints are candidates - judge each (a dangling link is a decision of the DM, see
+  "Linking"), do not fix them blindly.
+- A message that is right as it is gets switched off at the tiddler: the field `trpg-noerror`
+  (errors) or `trpg-noinfo` (hints) with the ids of the rules, e.g. `trpg-noinfo:
+  relations/leaders` on an organisation led by a council; present but empty, it switches off
+  every message of its level. Only on a decision of the DM - an unwanted message is a reason to
+  look at the rule, not to silence it.
 
 ### Timestamps when editing tiddlers (`created`/`modified`)
 
@@ -477,7 +500,7 @@ control - the repository holds everything. Details: `README.md` of `TiddlyRPG-Pl
   locations, spots, search).
 - Lock only with these: a `$list`/`<%if%>` of one's own on the view hides the text but not its
   dates, locations and spots, and a transcluded secret tiddler shows wherever it is transcluded
-  (`check-wiki.js` warns about both).
+  (both are errors below the title, see "Checks").
 
 Type tags are always the English internal names. On display they appear in the wiki language
 (`Location` reads "Ort" in German) - in headings, tag pills, lists and the search. A tag typed in

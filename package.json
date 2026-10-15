@@ -6,7 +6,8 @@
   "description": "Vandalia – D&D-Kampagnen-Wiki (TiddlyWiki5).",
   "scripts": {
     "start": "node scripts/tw.js . --listen",
-    "build": "node scripts/tw.js . --output ./twpage --build index"
+    "build": "node scripts/tw.js . --output ./twpage --build index",
+    "check": "node node_modules/tiddlyrpg-plugins/scripts/check-wiki.js ."
   },
   "devDependencies": {
     "tiddlywiki": "5.4.1",

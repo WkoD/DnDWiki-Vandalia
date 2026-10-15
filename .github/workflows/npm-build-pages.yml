@@ -49,6 +49,12 @@ jobs:
           echo "::error::A plugin from tiddlywiki.info was not found - not deploying"
           exit 1
         fi
+    - name: Check the content (reports only, never stops the deploy)
+      # The checks of tiddlyrpg-core over every tiddler - the errors and hints the editable wiki
+      # shows below the titles - as annotations of the run (--github). Exit code 1 on an error:
+      # the step may fail, the deploy goes on.
+      continue-on-error: true
+      run: npm run check -- --github
     - name: Copy resource directories
       run: |
         cp -rl ./data ./twpage/data
