@@ -1,6 +1,6 @@
 created: 20250904090118053
 date: 1351-11-26/1351-12-01
-modified: 20261015095950000
+modified: 20261015141536000
 tags: Event Tiergeister Actrielle Balseth Ragna Theren
 title: Tiergeist des Winters
 type: text/vnd.tiddlywiki
@@ -37,17 +37,17 @@ Er erklärte, dass beim Bau des Prototypen leider etwas schief gegangen war, und
 ** Ein im Königreich immer häufiger auftretendes Material aus einer anderen Welt, welches viel Energie in sich trägt und doch schädlich für native Organismen der [[materiellen Ebene|Materielle Ebene]] ist. ''> Was sind die leuchtende Amethysten?''
 ** Dieser Froschmensch-Anführer führt sein Gefolge im Auftrag der Nekromantin [[Ellid]] in den [[Briarwood]] gegen die Dryaden. Er hofft damit, die Schmach von seinem Rauswurf aus dem [[Biestvolk]] zu überdecken, hat aber am Ende keinen Erfolg. ''> Wer ist [[Gruuak]]?''
 ** Diese Organisation ist für den großen Brand im Schloss von [[Haus Eiree]] verantwortlich, der auch das Leben des letzten Barons kostet. Diesen Abweichler zu beseitigen löst aber keine Probleme, da seine einst konservative Tochter nach dem Tod ihres Vaters sich ebenfalls gegen den König stellt.  ''> Wer sind die [[Ritter der schwarzen Sonne]]?''
-** <$quest name="Der falsche König">Die Blutline der vandalischen Könige ist über die Jahrhunderte und durch viele Hochzeiten in mehreren Adelshäusern verteilt, auf Grund ihrer Abstammung hat aber diese Person den höchsten Anspruch auf den Thron des Königreichs. ''> Wer ist der Sohn des letzten Königs?''</$quest>
+** <<quest "Der falsche König">>Die Blutline der vandalischen Könige ist über die Jahrhunderte und durch viele Hochzeiten in mehreren Adelshäusern verteilt, auf Grund ihrer Abstammung hat aber diese Person den höchsten Anspruch auf den Thron des Königreichs. ''> Wer ist der Sohn des letzten Königs?''
 * Schicksal der [[Valküren]]
 ** Da sie ein Gesetz der Götter gebrochen hat droht der obersten Valküre der Tod. Diese beiden [[Valküren]] setzen sich jedoch gegen die Todesstrafe ihrer großen Schwester ein. ''> Wer sind [[Silmeria]] und [[Hrist]]?''
 ** Statt der Todesstrafe und im Hinblick auf ihre Loyalität, wird die oberste Valküre mit ihren zwei Schwestern in die [[Materielle Ebene]] verbannt. Dort soll sie diese Personen ausfindig machen, die den Glauben an die nordischen Götter für ihre eigenen Zwecke nutzen. ''> Wer sind die Schamaninnen?''
 ** Die oberste Valküre verliert bei ihrer Verbannung nicht nur einen großen Teil ihrer Kräfte sondern auch diese Fähigkeit, einst von Göttern und Sterblichen gleichermaßen geliebt und vielleicht sogar die Ursache, die zu ihrem Bruch der Gesetze der Götter geführt hat. ''> Was ist die Stimme der obersten Valküre?''
 ** Dieses Gesetz bricht die oberste Valküre, was als Strafe den Tod mit sich zieht. ''> Was ist das Verbot, sich in Sterblichen zu verlieben?''
 * Trivia über die Abenteurer
-** <$quest name="Azurnas Ritual">In der Hand dieser Person liegt die Seele von [[Actrielle]]s Mutter. ''> Wer ist die Matronmutter [[Azurna]]?''</$quest>
+** <<quest "Azurnas Ritual">>In der Hand dieser Person liegt die Seele von [[Actrielle]]s Mutter. ''> Wer ist die Matronmutter [[Azurna]]?''
 ** Diese Person schickt den Wanderer nach [[Kattegat]], der auf Ragnas Rücken das erste Tattoo und damit den Bund zu [[Hyrr]] schafft. ''> Wer ist Ragnas Mutter?''
-** <$quest name="Suche nach der Rüstung des Tiamat">Dieser [[Sjach]] kennt einen Hinweis zum letzten Teil der Rüstung von [[Tiamat]]. ''> Wer ist [[Balor]]?''</$quest>
-** <$quest name="Die geheimnisvolle Eule Atiesh">Dieses Mitglied der Gruppe stammt aus einer anderen Welt. ''> Wer ist [[Atiesh]]?''</$quest>
+** <<quest "Suche nach der Rüstung des Tiamat">>Dieser [[Sjach]] kennt einen Hinweis zum letzten Teil der Rüstung von [[Tiamat]]. ''> Wer ist [[Balor]]?''
+** <<quest "Die geheimnisvolle Eule Atiesh">>Dieses Mitglied der Gruppe stammt aus einer anderen Welt. ''> Wer ist [[Atiesh]]?''
 
 [[Theren]] weigerte sich selbst Antworten zu geben und half stattdessen zusammen mit [[Ragna]] den anderen beiden. [[Balseth]] ging als Sieger hervor, gefolgt von [[Actrielle]]. [[Al]] gab als Preis eine Frage, die er ohne Gegenleistung beantworten würde.
 
