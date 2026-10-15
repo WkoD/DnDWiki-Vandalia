@@ -35,8 +35,10 @@ Wer welche Figur spielt, steht im Feld `player` der Figuren (siehe unten), nicht
   `<<date label:"…">>`). Die Spielerfiguren, die dabei waren, stehen als Tags am Ereignis.
 - **Offene Punkte/Plot-Fäden:** Quest-Marker in Ereignis-Tiddlern markieren die Stellen, die
   einen Quest betreffen - die markierte Stelle ist die Erzählung, nichts steht doppelt.
-  `<<quest "Name">>` am Absatzanfang gilt für den Absatz; `<$quest name="Name">…</$quest>` für
-  mehrere Absätze, für Listenpunkte und für einen Bereich innerhalb eines Absatzes.
+  `<<quest "Name">>` am Absatzanfang gilt für den Absatz, am Anfang eines Listenpunkts
+  (`* <<quest "Name">>Text`) für den Listenpunkt; `<$quest name="Name">…</$quest>` für mehrere
+  Absätze. Hausregel: keine Marker mitten im Text - betrifft ein Quest nur einen Teil eines
+  Absatzes, wird der Absatz geteilt.
   `status:"complete"` bzw. `"failed"` steht nur dort, wo der ganze Quest endet; Teilschritte
   bekommen einen Marker ohne Status. Ein Tiddler mit dem Namen (Tag `Quest`, Spieler-Tags der
   Beteiligten, Body = Planungstext) macht ihn zum Quest, ohne Tiddler ist er ein Gerücht. Ein
