@@ -369,7 +369,9 @@ Standard `.tid` format (field header, blank line, body). Fields of content tiddl
     a spot whose plain name is a tiddler is joined to it (a location then is a part of this
     one), `<<spot "Name" tiddler:"Tiddler">>` joins another one. The block form
     `<$spot name="Name">…</$spot>` has an end of its own. The body shows the text without the
-    spots; the spots appear below the maps.
+    spots; the spots appear below the maps. A spot joined to a tiddler has no text of its own:
+    the map, `<<spotlink>>` and the relation list lead to the tiddler, so its text goes there (a
+    hint below the title says so; nothing of it shows in the tiddler by itself).
   - Images and maps of a spot without a tiddler of its own:
     `<<spot "Name" image:"a.jpg, b.jpg" map:"c.jpg">>` - below its heading, as tabs from two on,
     then its text. A spot joined to a tiddler shows none: put them into that tiddler.
