@@ -159,7 +159,7 @@ actual change. This also applies when creating them in the IDE or by script.
 - **File name** = title with TiddlyWiki's replacements: `/` `\` `:` `<` `>` `|` `?` `*` `"` `^` `~`
   become `_`, umlauts and special characters are transliterated. Examples: `$:/graph/Items` ->
   `$__graph_Items`, `Gründung des Ordens von Hela` -> `Grundung des Ordens von Hela`,
-  `Straße nach Süden` -> `Strasse nach Suden`, `TBC/Campaign` -> `TBC_Campaign`.
+  `Straße nach Süden` -> `Strasse nach Suden`.
 - **Format** depends only on the field `type`: wikitext (`text/vnd.tiddlywiki`, the default) ->
   one `.tid` file; **any other type** -> content file plus `.meta` with the fields. The graph views
   (`type: application/json`) therefore live as `$__graph_<name>.json` + `$__graph_<name>.json.meta`.
@@ -298,6 +298,29 @@ Standard `.tid` format (field header, blank line, body). Fields of content tiddl
   Inside an HTML element, a table or a `$list` only the block form counts (a hint says so).
   `node scripts/check-wiki.js <wiki folder>` in `TiddlyRPG-Plugins` checks the dates of a wiki
   and the sections and locks of the bodies.
+- **Quests and rumours** - what is open (a task, a lead, a hint for the players) is **marked in
+  the event** where it came up, never kept as a note or a box of its own. The marked text is the
+  story itself, so nothing is written twice and every marker has the date of its section.
+  Details: `README.md` of `TiddlyRPG-Plugins` -> "Quests".
+  - `<<quest "Name">>` at the start of a paragraph or list item (`* <<quest "Name">>Text`) marks
+    that paragraph; ordinary text may stand between markers, one dated section can hold several.
+    The block form `<$quest name="Name">` (blank line after the tag) marks several paragraphs.
+    Only in a dated section of an event.
+  - Where something ends: `status:"complete"` or `status:"failed"` on that marker. A later
+    marker without status opens the quest again.
+  - A tiddler of the name tagged `Quest` makes it a quest - its body is the text for the
+    planning, nothing else (no date, status or log: those come from the markers). Without a
+    tiddler the name is a rumour, a collection of hints.
+  - Two quests that meet at one place: stack the markers (`<<quest "A">><<quest "B">>Text`) -
+    they are linked, both ways. No parent and child.
+  - Link the places, persons and things in the marked paragraph: the relations, the graph of
+    the quest and the maps of locations take them from there (the maps only from the newest
+    marker).
+  - A quest for some characters only: tag `Secret` and their tags on the quest tiddler. A rumour
+    has no tiddler: lock it in the event with `<<secret>>` or `<$secret>`.
+  - Rename a quest tiddler in the editor; a rumour on its own page ("Rename") - both rewrite every
+    marker. `check-wiki.js` hints at a quest tiddler without a marker and at two names one letter
+    apart.
 - `price` (items) - with a currency a number and a coin (`price: 50 gp`, `price: 3 gp 5 sp`;
   coin ids as in the currency data, shown with the labels of the rules language), without one a
   plain number. A price that does not fit gets a hint below the title.
@@ -425,6 +448,8 @@ Every tiddler typically gets two kinds of tags:
      points in time, see tiddler format). The hub `Campaign` is the pinned start page; there is
      no tag `Campaign` - an event belongs to the campaign when a player character is tagged on it
      (see below).
+   - **Quests** - `Quest`: the planning of a quest whose markers stand in events (see "Quests and
+     rumours" in "Tiddler format").
    - **Other** - meta/navigation: `Index` (entry point), `Information` (technical tiddlers such as
      `PlayerLevel`, see above).
 2. Faction/story line tag as thematic hub - the concrete names are **campaign-specific** and not
