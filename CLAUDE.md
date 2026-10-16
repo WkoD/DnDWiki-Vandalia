@@ -259,7 +259,10 @@ Standard `.tid` format (field header, blank line, body). Fields of content tiddl
   - **Tags express no places**: no parent tags on locations, no place tags on events, persons or
     organisations - the fields and spots carry this. Symmetric fields (`spouse`/`sibling`/`family`/
   `alliance`/`bond`/`enmity`) are set on **both** end points - deleting one tiddler must not lose
-  the relation for the other - and draw a line with arrows on both sides. `officer` is
+  the relation for the other - and draw a line with arrows on both sides. Saving in the editor
+  in the browser writes, takes out and renames the other end by itself (switch under
+  ControlPanel -> Settings -> TiddlyRPG -> Editor); a file written by hand needs both ends set
+  by hand. `officer` is
   the intermediate rank between `member` and `leader` (e.g. council leadership), `mentor` the
   individual teacher/student edge. `bond` covers friendship as well as protection and belonging
   without service. `former` means something different depending on the tiddler type (like
