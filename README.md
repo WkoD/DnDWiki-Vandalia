@@ -1,6 +1,6 @@
-# TiddlyRPG
+# DnDWiki-Vandalia
 
-A **TiddlyWiki 5** (Node.js edition) for D&D campaigns, content in German. This repo is the
+A **TiddlyWiki 5** (Node.js edition) for a D&D campaign, content in German. This repo is the
 campaign **Vandalia** (details: see `CAMPAIGN.md`): per-wiki config, data tiddlers
 (`PlayerLevel`) and content in `tiddlers/` plus assets (`images/`, `data/`). Engine and format
 layer come as dependencies:
@@ -10,7 +10,8 @@ layer come as dependencies:
 - **Format layer:** from [`TiddlyRPG-Plugins`](https://github.com/WkoD/TiddlyRPG-Plugins), pinned
   to a fixed version - the plugins `tiddlyrpg-core` and `staticfiles`.
 - **D&D content:** from [`TiddlyRPG-DnD`](https://github.com/WkoD/TiddlyRPG-DnD), pinned the
-  same way - the setting `tiddlyrpg-setting-forgottenrealms` (Calendar of Harptos).
+  same way - the ruleset `tiddlyrpg-ruleset-dnd5e2014` (D&D 5e, rules of 2014) and the setting
+  `tiddlyrpg-setting-forgottenrealms` (Calendar of Harptos, coins of the Forgotten Realms).
 - **Graph stack:** [`flibbles/tw5-graph`](https://github.com/flibbles/tw5-graph) +
   [`tw5-vis-network`](https://github.com/flibbles/tw5-vis-network) +
   [`tw5-relink`](https://github.com/flibbles/tw5-relink), each pinned to a release tag as an npm
@@ -37,6 +38,10 @@ npm run check  # check every tiddler: errors and hints
 Changes made in the browser are written back automatically as `.tid` files in `tiddlers/` - no
 manual saving needed. While editing, errors and hints stand below the title of a tiddler (not in
 the published copy). Details/conventions: `CLAUDE.md` -> "Commands & CI", "Checks".
+
+How to use the wiki - the hubs, writing tiddlers, relations, locations, events, views and
+secrets: `README.md` of `TiddlyRPG-Plugins` -> "Using the wiki", also in the wiki itself under
+ControlPanel -> Plugins -> `tiddlyrpg-core` -> readme.
 
 ## Publishing
 
