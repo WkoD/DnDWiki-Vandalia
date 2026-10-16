@@ -73,9 +73,10 @@ intended stability/reproducibility.
 
 Optional, only if wanted - campaigns do not have to follow:
 
-1. `git remote add template https://github.com/WkoD/TiddlyRPG.git` (once)
-2. `git fetch template --tags`
-3. `git diff template/<own version>..template/<new version> -- scripts .gitignore .gitattributes .github tiddlywiki.info package.json CLAUDE.md`
+1. `git remote add upstream https://github.com/WkoD/TiddlyRPG.git` (once)
+2. `git fetch upstream --tags`
+3. `git diff <own version>..<new version> -- scripts .gitignore .gitattributes .github tiddlywiki.info package.json CLAUDE.md`
+   (the versions are tags of the template, e.g. `2.0.0..2.1.0`)
 4. Take over the **scaffold + `CLAUDE.md`**, then set `version` in `package.json` to the new
    template version.
 
@@ -104,13 +105,13 @@ in the campaign (e.g. an individualised `Atlas`).
 
 ```bash
 npm install                 # fetch the engine (tiddlywiki) + TiddlyRPG-Plugins (pinned), optionally TiddlyRPG-DnD
-npm start                   # local server with live editing (default port 8080)
+npm start                   # local server with live editing (port 8080; another: npm start -- port=8081)
 npm run build               # build a static index.html into ./twpage (like the CI)
 npm run check               # check every tiddler: the errors and hints below the titles (see "Checks")
 ```
 
 Both scripts set `TIDDLYWIKI_PLUGIN_PATH` automatically through the launcher `scripts/tw.js`
-(built cross-platform from all `node_modules/*/plugins`). Content changes made in the browser are
+(built cross-platform from the `plugins` folders of the packages it lists, see "Plugins"). Content changes made in the browser are
 written back as `.tid` files; the format layer appears only as read-only shadows.
 
 **CI** (`.github/workflows/npm-build-pages.yml`): on push to `master` or manually - `npm install`,
@@ -123,7 +124,7 @@ without e.g. the format layer.
 The published GitHub Pages copy is deliberately **not savable/read-only**: the same CI step
 creates two tiddlers only at build time (never in the Git repo, local `npm start`/`npm run build`
 unaffected) - `$:/config/SaverFilter` (empty, so "unsaved changes" is never reported) and
-`$:/status/IsReadOnly` (`yes`). `IsReadOnly` is the switch: `tiddlyrpg-core` (from 1.4.1) then adds
+`$:/status/IsReadOnly` (`yes`). `IsReadOnly` is the switch: `tiddlyrpg-core` then adds
 the class `trpg-readonly` to the page container and hides edit/clone/delete/new-*/import/manager
 and the save button (the same button list as the `tiddlyweb` plugin, which is not part of the
 offline build). Locally the server reports `IsReadOnly` = `no`, everything stays editable there.
@@ -183,7 +184,7 @@ Technical tiddlers with a fixed function given by the format (no lore content):
 | `$:/language` | Active language, e.g. `$:/languages/de-DE` (needs `"languages"` in `tiddlywiki.info` for anything but en-GB). Supported languages: `README.md` -> "Languages". A language switch in the Control Panel during `npm start` writes this tiddler. |
 | `$:/graph/Default` (caption "Live") | Graph view: currently open tiddlers (`$:/StoryList`) of the main types, including automatic `links` edges (wiki links, grey) and the function edges `rules` and `spots`. |
 | `$:/graph/Cosmogram` | Graph view: all `Deity`/`Organisation`/`Person`/`Player` tiddlers with their relation fields. |
-| `$:/graph/Atlas` | Graph view: all `Location` tiddlers plus all living persons/deities/players/organisations - with and without a `location` field -, connected by the `location` edge and the function edges `rules` (leads a location) and `spots` (part of a location). The places of several worlds and planes, hence not "world map". |
+| `$:/graph/Atlas` | Graph view: all `Location` tiddlers plus all persons/deities/players/organisations - with and without a `location` field -, without the dead and destroyed, connected by the `location` edge and the function edges `rules` (leads a location) and `spots` (part of a location). The places of several worlds and planes, hence not "world map". |
 | `$:/graph/Items` | Graph view: `Artifact`/`Item`/`Material` tiddlers (with every category) plus their owners/creators/former owners linked by `owner`/`creator`/`former`, their locations linked by `location` and ingredients linked by `component`. |
 | `PlayerLevel` | Body = free text shown as is on the `Player` hub, e.g. `Level 13` or `13456 EXP`; edited directly by the DM. |
 | `$:/tiddlyrpg/license`, `$:/tiddlyrpg/license/notice` | The license of the wiki content for ControlPanel -> License: the file `LICENSE` and the section of `README.md` between `<!-- wiki -->` and `<!-- /wiki -->`. No `.tid` files - loaded from the files by `tiddlers/license/tiddlywiki.files`; change the files, not the tiddlers (see "License"). |
@@ -191,6 +192,8 @@ Technical tiddlers with a fixed function given by the format (no lore content):
 | `$:/config/tiddlyrpg/currency` (optional) | Title of the currency data tiddler. Set by `tiddlyrpg-setting-forgottenrealms` (the coins of the Forgotten Realms) or by the wiki for an own currency. |
 | `$:/config/tiddlyrpg/ruleset`, `.../setting` (optional) | The active ruleset and campaign setting (plugin title or `none`); without them the only or first installed one is active. Written by Control Panel -> Settings -> TiddlyRPG. |
 | `$:/config/tiddlyrpg/date/order` (optional) | Order of day and month in dates: `dm` ("5. Flamerule 1351"), `md` ("Flamerule 5, 1351"); empty or missing: as in the wiki language. Written by Control Panel -> Settings -> TiddlyRPG -> "Campaign setting options". |
+| `$:/config/tiddlyrpg/editor/symmetric` (optional) | Whether saving in the editor writes the other end of a symmetric relation (on by default). Written by Control Panel -> Settings -> TiddlyRPG -> Editor. |
+| `$:/config/tiddlyrpg/view/dm-published` (optional) | `yes`: the published copy offers the view of the DM as well (see "Player characters, views and secrets"). |
 | `$:/config/tiddlyrpg/rules/ruleset/...`, `.../rules/setting/...` (optional) | The rules language, apart for the ruleset (units, dice, damage, terms) and the campaign setting (names of months and coins), the language their terms are shown in: below each `mode` (`wiki`, `all` with `language`, `domain` with `domain/<name>`). Written by Control Panel -> Settings -> TiddlyRPG -> "Ruleset options" and "Campaign setting options"; see "Rules terms". |
 
 The captions of the graph views are plain text of the wiki (tw5-graph shows them untranslated):
@@ -361,8 +364,9 @@ Standard `.tid` format (field header, blank line, body). Fields of content tiddl
   event are the locations linked in its sections (or referenced with `<<spotlink>>`); the
   event list of a location gathers them from all places within it.
 - **Maps of a location** - one tiddler per location, no sub-tiddlers:
-  - The map (a location with a map image, spots or places within) shows a graph with the
-    spots and the places within at fixed positions - over the map image if there is one; the
+  - The map (every location has it, also one without a map image, spots or places within) shows
+    a graph with the spots and the places within at fixed positions - over the map image if
+    there is one; the
     positions are in the field `map-positions` (set by dragging in the tab with "Edit
     positions" while `npm start` runs).
   - `map` - the maps (`images/map/`, several comma separated, battle maps among them). The
@@ -453,16 +457,15 @@ When editing **outside** TiddlyWiki (IDE, Claude, scripts) the same care applies
   tiddlers (body, relation/graph fields, other fields such as `tags`/`image`/`date`, a changed
   graph view filter line etc.): set `modified` to the real current timestamp. `created` stays.
 - **Exception - no timestamp change:** technical mass changes without an editorial decision about
-  the content of individual tiddlers, e.g. a framework change like the tw5-graph migration or the
-  2.0 migration to English internal names, which rewrote fields/schema mechanically across many
-  tiddlers.
+  the content of individual tiddlers, e.g. a framework change like the switch to tw5-graph or a
+  rename of fields or tags that rewrites many tiddlers mechanically.
 - **No exception:** batch tasks that make content decisions **per tiddler** (e.g. a linking review
   across many tiddlers, or removing a redundant relation edge) are content changes - even if they
   touch many tiddlers in one run. Update `modified` on each affected tiddler there.
 
 ### Tag vocabulary
 
-Every tiddler typically gets two kinds of tags:
+A tiddler gets up to four kinds of tags:
 
 1. **Type tag** (valid for every campaign), roughly in three categories:
    - **Data** - describe the state of the world, usually undated/long-lived: `Person`,
@@ -478,8 +481,8 @@ Every tiddler typically gets two kinds of tags:
      (see below).
    - **Quests** - `Quest`: the planning of a quest whose markers stand in events (see "Quests and
      rumours" in "Tiddler format").
-   - **Other** - meta/navigation: `Index` (entry point), `Information` (technical tiddlers such as
-     `PlayerLevel`, see above).
+   - **Other** - meta/navigation: `Index` (carried by the type hubs; the hub `Index` lists
+     them), `Information` (technical tiddlers such as `PlayerLevel`, see above).
 2. Faction/story line tag as thematic hub - the concrete names are **campaign-specific** and not
    listed here (see the `CAMPAIGN.md` or the category hub tiddlers of the respective wiki).
    Never a location: places are fields and spots (see "Relation fields").

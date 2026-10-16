@@ -27,7 +27,7 @@ jobs:
         echo $(TZ=Europe/Berlin date +'%Y-%m-%dT%H:%M:%S') >> './tiddlers/$__SiteSubtitle.tid'
     - name: Disable saving in the published (read-only) copy
       # Created only at CI build time, never lands in the Git repo - a local `npm start`
-      # stays fully editable. IsReadOnly is the switch: tiddlyrpg-core (from 1.4.1) then hides
+      # stays fully editable. IsReadOnly is the switch: tiddlyrpg-core then hides
       # edit/clone/delete/new/import/manager and the save button. Empty SaverFilter = never
       # "unsaved changes".
       # Important: IsReadOnly is compared as an exact string and must NOT have a trailing

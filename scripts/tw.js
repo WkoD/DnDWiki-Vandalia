@@ -5,9 +5,8 @@
  * Assembles TIDDLYWIKI_PLUGIN_PATH from the individually pinned plugin
  * packages in node_modules (each ships its plugins under <pkg>/plugins),
  * joined with the OS-specific path delimiter (";" on Windows, ":" elsewhere)
- * — which is what TiddlyWiki's boot splits on. This replaces the old inline
- * `cross-env TIDDLYWIKI_PLUGIN_PATH=...` that hard-coded a single bundle path
- * and a single delimiter.
+ * — which is what TiddlyWiki's boot splits on. A package that is not installed
+ * is skipped.
  *
  * Also suppresses Node's DEP0169 (url.parse) warning that TiddlyWiki's core
  * server still triggers — the cross-platform equivalent of NODE_OPTIONS=--no-deprecation.
@@ -23,7 +22,7 @@ var nodeModules = path.join(__dirname, "..", "node_modules");
 // Each entry contributes its `plugins` directory to the search path.
 var pluginPackages = [
 	"tiddlyrpg-plugins", // wkod/tiddlyrpg-core, wkod/staticfiles
-	"tiddlyrpg-dnd",     // wkod/tiddlyrpg-setting-forgottenrealms (optional: only if installed)
+	"tiddlyrpg-dnd",     // wkod/tiddlyrpg-ruleset-dnd5e2014, wkod/tiddlyrpg-setting-forgottenrealms (optional)
 	"tw5-graph",         // flibbles/graph (folder: plugins/graph)
 	"tw5-vis-network",   // flibbles/vis-network (folder: plugins/vis-network)
 	"tw5-relink"         // flibbles/relink (folder: plugins/relink)
