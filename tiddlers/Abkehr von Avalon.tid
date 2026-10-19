@@ -1,10 +1,20 @@
 created: 20261012185715141
-date: 1351-11-15
-modified: 20261015095950000
-tags: Event Avalon
+date: 1351-11-15, 1351-12-16, 1351-12-17
+modified: 20261019150034101
+tags: Event Avalon Actrielle Balseth Ragna Theren
 title: Abkehr von Avalon
 type: text/vnd.tiddlywiki
 
 <<date label:"Katie Moss wendet sich ab">>
 
-<<quest "Fehde zwischen Haus Kemri und Avalon">>Die Abenteurer erfuhren, dass sich [[Katie Moss]] von den Piraten von [[Avalon]] abgekehrt hatte und in den Rängen der Armee vom [[Königreich von Vandalia]] gesehen wurde. Seitdem waren die Piraten gespalten. [[Zaabok]], der [[Jirelle]] folgte, erzählte den Abenteurern [[bei einem Treffen|Hauch des Todes]] am [[Brimsee]] davon.
+[[Katie Moss]] hatte ihre Gefangene [[Lady Arwen]] lange versteckt, doch [[Jirelle]] fand es schließlich heraus. Das führte zum Konflikt zwischen beiden und war der finale Auslöser für [[Katie Moss]]' Abkehr. Nach ihrem Verschwinden schickte [[Jirelle]] [[Hector Ariss]] mit [[Lady Arwen]] zurück nach [[Cair Di]].
+
+<<date label:"Informationen von Zaabok">>
+
+Am <<spotlink "Brimsee" "Labor am Brimsee">> erzählte [[Zaabok]] mehr: [[Jirelle]] hatte sich seit der Abkehr auf die [[Insel Avalon]] zurückgezogen. Zu ihr hielten [[Vestelle]], [[Hanibal]], [[Kapitän Madoc]] und ein Großteil der Crew, während [[Flam Beutelstricker]] und [[Vernon Roche]] mit [[Katie Moss]] gegangen waren. [[Hector Ariss]] und [[Zaabok]] wollten mehr tun als nur herumsitzen und zogen los.
+
+<<quest "Fehde zwischen Haus Kemri und Avalon">><<quest "Der falsche König">>Bei einer Rast im Labor wirkte [[Theren]] Scrying auf [[Katie Moss]]. Sie stand im Thronsaal der [[Hauptstadt Vandalia]] und wurde von einer unbekannten Stimme für ihre Verdienste gelobt: "Es würde sicher einen Nutzen für Katharina Kemri geben." Das passte zu Berichten, dass [[Katie Moss]] in der Armee des Königs gesehen wurde.
+
+<<date label:"Warnung an Lynette">>
+
+<<quest "Fehde zwischen Haus Kemri und Avalon">>Beim Empfang im <<spotlink "Cair Di" "Kemri Anwesen im Grand Ward">> erzählten die Abenteurer [[Lynette Kemri]] im Geheimen von [[Katie Moss]]' Bündnis mit dem König. Echte Beweise konnten sie nicht liefern.

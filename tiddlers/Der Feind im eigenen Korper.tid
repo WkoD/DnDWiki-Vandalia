@@ -1,7 +1,7 @@
 created: 20210305103941294
-date: 1351-06-04, 1351-09, ..
-modified: 20261015095950000
-tags: Event Sjach Balseth
+date: 1351-06-04, 1351-09, 1351-12-16, ..
+modified: 20261019125318329
+tags: Event Sjach Balseth Actrielle
 title: Der Feind im eigenen Körper
 type: text/vnd.tiddlywiki
 
@@ -14,3 +14,7 @@ type: text/vnd.tiddlywiki
 <<quest "Die Sjach Geschwister">>[[Raiann]] wurde mit ihren Geschwistern [[Balasar]] und [[Liiri-Drir]] wiedervereint, die ebenfalls mit den Nachwirkungen von [[Tyria]]s Einfluss kämpften. [[Die Heilung|Der Feind im eigenen Körper]] von [[Balasar]]s Arm kam nicht voran und [[Liiri-Drir]] wurde im Klan noch immer nicht gut aufgenommen. Auch zeigte sich ihr Körper als [[instabil|Konflikte im Klan der Sjach]] und auf lange Sicht würde er wohl kollabieren. Die [[Sjach]] hatten keine andere Wahl, als Hilfe von außen zu suchen. Dazu gesellte sich jetzt [[Raiann]], welche psychisch durch [[Tyria]] schwer mitgenommen war. Alle drei wohnten weiterhin in einem kleinen Außenposten nahe des Waldrands unter Beobachtung. [[Balseth]] nutzte die Gelegenheit, die drei über die vergangenen Ereignisse mit [[Tyria]] und das Überleben von [[Liiri-Einn]] und [[Liiri-Fjorir]] zu informieren. [[Liiri-Drir]] zeigte sich hier etwas hin und hergerissen zwischen ihrem Klan und ihren neuen "Schwestern". Ihr Wunsch war es, alle zu schützen.
 
 <<quest "Die Sjach Geschwister">>Was es mit dem Arm auf sich hatte, blieb unklar. [[Theren]]s Forschungen ergaben, dass eine Transformationskammer von [[Tyria]] die Verwandlung eventuell rückgängig machen könnte.
+
+<<date label:"Die Kammer">>
+
+<<quest "Die Sjach Geschwister">>Im <<spotlink "Brimsee" "Labor am Brimsee">> fanden die Abenteurer zusammen mit [[Sakur]] eine Kammer, die der gesuchten Transformationskammer von [[Tyria]] nahekam. Wie sie genau funktionierte, musste erst untersucht werden. [[Actrielle]] schickte die Kammer per Teleport zur [[Festung im Briarwood]], zusammen mit einem Brief von [[Balseth]] an [[Naatuja]], sie vorsichtig zu untersuchen.
