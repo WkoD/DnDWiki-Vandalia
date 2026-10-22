@@ -30,14 +30,14 @@ only reads `tiddlers/`).
 
 Two separate version axes:
 
-- **Format layer** -> pin of `tiddlyrpg-plugins` in `devDependencies` (e.g. `#2.0.0`), versioned
+- **Format layer** -> pin of `tiddlyrpg-plugins` in `devDependencies` (e.g. `#2.1.0`), versioned
   in the separate repo `TiddlyRPG-Plugins`. Optional content for D&D (the ruleset
-  `tiddlyrpg-ruleset-dnd5e2014`, the setting `tiddlyrpg-setting-forgottenrealms`) -> pin of
-  `tiddlyrpg-dnd` (e.g. `#2.0.0`), versioned in
+  `tiddlyrpg-ruleset-dnd5e2014`, the setting `tiddlyrpg-setting-forgottenrealms`, the content
+  package of the SRD 5.1) -> pin of `tiddlyrpg-dnd` (e.g. `#2.1.0`), versioned in
   the repo `TiddlyRPG-DnD`; it needs the format layer. For now both keep the same version - pin
   both to the same one.
 - **Scaffold template** -> field `version` in `package.json`, set to the `TiddlyRPG` release
-  version (e.g. `2.0.0`) - **no** campaign version of its own.
+  version (e.g. `2.1.0`) - **no** campaign version of its own.
 
 ### Raising the format layer version (pin bump)
 
@@ -46,7 +46,7 @@ see its `CLAUDE.md` -> "Publishing a new version". Here (and in every campaign t
 version) only the deliberate pin bump, once a new version is released:
 
 ```jsonc
-"tiddlyrpg-plugins": "git+https://github.com/WkoD/TiddlyRPG-Plugins.git#2.0.0"
+"tiddlyrpg-plugins": "git+https://github.com/WkoD/TiddlyRPG-Plugins.git#2.1.0"
 ```
 ```bash
 npm install
@@ -148,7 +148,7 @@ Important: `IsReadOnly` is compared as an exact string - no trailing newline in 
     documented in the repo `TiddlyRPG-Plugins`.
 - `images/` - sorted by type, folder names in lower case, one per type tag: `person` (NPC
   portraits, also deities), `location`, `event`, `organisation`, `item` (artifacts, items, materials,
-  whatever their category), `player`, `information`; plus `map` (maps of locations and spots,
+  whatever their category), `player`, `creature`, `spell`, `information`; plus `map` (maps of locations and spots,
   battle maps among them: field `map`, spot parameter `map`). Images of a spot (parameter
   `image`) are in `location`. Campaign-specific
   subfolders used only for storage (if any): see `CAMPAIGN.md`.
@@ -183,10 +183,10 @@ Technical tiddlers with a fixed function given by the format (no lore content):
 | `$:/SiteSubtitle` | Subtitle. Empty in the template - the CI enters a timestamp at build time. |
 | `$:/DefaultTiddlers` | List of tiddlers shown in the story river when the wiki opens. |
 | `$:/language` | Active language, e.g. `$:/languages/de-DE` (needs `"languages"` in `tiddlywiki.info` for anything but en-GB). Supported languages: `README.md` -> "Languages". A language switch in the Control Panel during `npm start` writes this tiddler. |
-| `$:/graph/Default` (caption "Live") | Graph view: currently open tiddlers (`$:/StoryList`) of the main types, including automatic `links` edges (wiki links, grey) and the function edges `rules` and `spots`. |
-| `$:/graph/Cosmogram` | Graph view: all `Deity`/`Organisation`/`Person`/`Player` tiddlers with their relation fields. |
-| `$:/graph/Atlas` | Graph view: all `Location` tiddlers plus all persons/deities/players/organisations - with and without a `location` field -, without the dead and destroyed, connected by the `location` edge and the function edges `rules` (leads a location) and `spots` (part of a location). The places of several worlds and planes, hence not "world map". |
-| `$:/graph/Items` | Graph view: `Artifact`/`Item`/`Material` tiddlers (with every category) plus their owners/creators/former owners linked by `owner`/`creator`/`former`, their locations linked by `location` and ingredients linked by `component`. |
+| `$:/graph/Default` (caption "Live") | Graph view: currently open tiddlers (`$:/StoryList`) of the main types (spells and creatures among them), including automatic `links` edges (wiki links, grey) and the function edges `rules` and `spots`. |
+| `$:/graph/Cosmogram` | Graph view: all `Deity`/`Organisation`/`Person`/`Player`/`Creature` tiddlers with their relation fields (a person points to its kind with `creature`). |
+| `$:/graph/Atlas` | Graph view: all `Location` tiddlers plus all persons/deities/players/organisations/creatures - with and without a `location` field -, without the dead and destroyed, connected by the `location` edge and the function edges `rules` (leads a location) and `spots` (part of a location). The places of several worlds and planes, hence not "world map". |
+| `$:/graph/Items` | Graph view: `Artifact`/`Item`/`Material` tiddlers (with every category) plus their owners/creators/former owners linked by `owner`/`creator`/`former`, their locations linked by `location`, ingredients linked by `component`, base items linked by `base` and spells linked by `spells`. |
 | `PlayerLevel` | Body = free text shown as is on the `Player` hub, e.g. `Level 13` or `13456 EXP`; edited directly by the DM. |
 | `$:/tiddlyrpg/license`, `$:/tiddlyrpg/license/notice` | The license of the wiki content for ControlPanel -> License: the file `LICENSE` and the section of `README.md` between `<!-- wiki -->` and `<!-- /wiki -->`. No `.tid` files - loaded from the files by `tiddlers/license/tiddlywiki.files`; change the files, not the tiddlers (see "License"). |
 | `$:/config/tiddlyrpg/calendar` (optional) | Title of the calendar data tiddler. Set by the plugin `tiddlyrpg-setting-forgottenrealms` (Harptos, package `tiddlyrpg-dnd`) or by the wiki for an own calendar (see "Dates and calendar"). |
@@ -224,8 +224,9 @@ Standard `.tid` format (field header, blank line, body). Fields of content tiddl
   `folder:"event"` for another folder - never `<img src="images/...">`.
 - **Relation fields** (list fields referencing titles) - carry the relation network for the graph:
   `location`, `member`, `former`, `leader`, `officer`, `patron`, `mentor`, `under`, `parent`,
-  `ancestor`, `spouse`, `sibling`, `family`, `alliance`, `bond`, `enmity` (person/organisation/deity) as well
-  as `owner`/`creator`/`former`/`component`/`location` (items). Meaning, edge texts and axes:
+  `ancestor`, `spouse`, `sibling`, `family`, `alliance`, `bond`, `enmity` (person/organisation/deity),
+  `creature` (person/player/creature), `owner`/`creator`/`former`/`component`/`location`/`base`
+  (items) and `spells` (items, persons, player characters, creatures). Meaning, edge texts and axes:
   `README.md` of `TiddlyRPG-Plugins` -> "Relations".
   - **Direction:** the field lives on the dependent and points to what it depends on - the member
     to its organisation, the child to its parent (`parent`), the student to the mentor
@@ -260,6 +261,15 @@ Standard `.tid` format (field header, blank line, body). Fields of content tiddl
     field or a spot, never both.
   - **`leader`** pointing to a location: leads or controls it (shown as "Controls") and is
     present there - no `location` to the same place.
+  - **`creature`** on a person, player character or creature: its kind (`Mizu` -> `Fukuro`, a
+    form of a creature -> the creature). The kind is a tiddler tagged `Creature` - a race,
+    beast or monster, its body and its values; nothing of it is inherited.
+  - **`location`** on a creature: where its kind lives - several entries, all equal.
+  - **`base`** on an item: the item it is made on (`Frostbringer` -> `Warhammer`). Choosing it in
+    the editor copies the values of the rules of the base item into the empty fields, once;
+    nothing stays linked, the price never comes along.
+  - **`spells`**: the spells an item holds or casts, a person or creature knows - each a tiddler
+    tagged `Spell`.
   - **Tags express no places**: no parent tags on locations, no place tags on events, persons or
     organisations - the fields and spots carry this. Symmetric fields (`spouse`/`sibling`/`family`/
   `alliance`/`bond`/`enmity`) are set on **both** end points - deleting one tiddler must not lose
@@ -332,7 +342,31 @@ Standard `.tid` format (field header, blank line, body). Fields of content tiddl
     "Checks").
 - `price` (items) - with a currency a number and a coin (`price: 50 gp`, `price: 3 gp 5 sp`;
   coin ids as in the currency data, shown with the labels of the rules language), without one a
-  plain number. A price that does not fit gets a hint below the title.
+  plain number; a range with a dash or "to" (`price: 50-100 gp`). A price that does not fit gets
+  a hint below the title.
+- **Values of the rules** (with a ruleset that defines them, e.g. `tiddlyrpg-ruleset-dnd5e2014`):
+  the fields the ruleset gives a type - an item `category`, `rarity`, `damage`, `range`, `ac`,
+  `weight` ...; a spell `level`, `school`, `casting-time` ...; a creature `size`, `hp`, `str` ...
+  `cha`, `cr` ...; a person `height`, `weight`. They show as a block like a stat block between
+  image and body; the form of the editor offers the fields of the type. The hub `Ruleset` and
+  the README of the ruleset list them.
+  - Write the value as the field reads it - ids or terms, units, dice: `category: weapon,
+    martial, melee, versatile`, `damage: 1d8 slashing`, `range: 20/60 ft`, `hp: 2d8 + 2`,
+    `speed: walk 30 ft, fly 60 ft`. What the field does not read is an error below the title.
+  - Never write what the rules derive (ability modifiers, average hit points, proficiency bonus
+    and XP from the challenge rating, saving throws, skills, passive Perception): it is shown
+    by itself; a written value replaces it and is only for a value that really differs.
+  - A value goes into its field, not into the body: what the block shows is not repeated in the
+    text. A named ability with its own rules (a cone, a save, once per rest) stays text in the
+    body, with `<<unit>>`/`<<term>>`.
+  - Lock values for the views that may not see them with `secret-fields` (see "Player
+    characters, views and secrets").
+- **Content packages** (e.g. the SRD 5.1 of `tiddlyrpg-dnd`): items, spells and creatures of the
+  ruleset, offered in the editable wiki (a missing link, the button "Content" of the editor, every
+  relation picker, the search, the hub `Content`) and taken one at a time. A taken entry is an
+  ordinary tiddler of the wiki with the tag of its package (`SRD 5.1 English`) and `source`; edit
+  it like any other. Its text stays in the language of the package. A published wiki with taken
+  entries of the SRD 5.1 carries its attribution (see "License").
 - `data` (books) - file name of a PDF from `data/book/`, embedded below the body (instead of an
   `<embed>` in the body).
 - `player` - name of the real player: on a `Player` tiddler (an active player character), and
@@ -414,7 +448,8 @@ campaign) - never as plain text when the term matters:
   (`<<damage "1W8 Hieb">>`).
 - `<<term>>` takes the id of a term: abilities (`<<term wis variant:"save">>`), conditions
   (`<<term charmed>>`), actions (`<<term bonus-action>>`), rests, skills, senses, creature types,
-  sizes, alignments, schools of magic, languages. The hub `Ruleset` lists every id with what it
+  sizes, alignments, schools of magic, languages, item categories with their traits
+  (`<<term "armor medium">>`: "medium armor"). The hub `Ruleset` lists every id with what it
   shows.
 - A number always carries its unit - `<<unit 60>>` is not read, also not with a kind - so what a
   text means never depends on a setting. Write the value as the source has it (`228 cm` for a
@@ -472,10 +507,13 @@ A tiddler gets up to four kinds of tags:
    - **Data** - describe the state of the world, usually undated/long-lived: `Person`,
      `Location`, `Organisation`, `Deity`, `Player`, and for items exactly **one base type** -
      `Artifact` (unique), `Item` (several of it exist), `Material` (raw material, ingredient) -
-     plus optional **categories** next to it: `Book`, `Consumable` (potions, tinctures),
+     plus optional **categories** next to it (with a ruleset the field `category` says the kind
+     in its terms, and a hint names the category it belongs to): `Book`, `Consumable` (potions, tinctures),
      `Equipment` (everything one can equip: weapons, armour, a bag of holding), or one of the
      campaign (a tiddler tagged `$:/tags/tiddlyrpg/ItemKind`). A unique book is `Artifact Book`,
-     a newspaper `Item Book`; plenty of items need no category.
+     a newspaper `Item Book`; plenty of items need no category. `Spell` (a spell),
+     `Creature` (a kind: a race, beast or monster - a single being is a `Person` with
+     `creature`).
    - **Events** - dated/narrative entries: `Event` (a single in-world incident, possibly several
      points in time, see tiddler format). The hub `Campaign` is the pinned start page; there is
      no tag `Campaign` - an event belongs to the campaign when a player character is tagged on it
@@ -507,6 +545,10 @@ control - the repository holds everything. Details: `README.md` of `TiddlyRPG-Pl
   `<$secret for="Theren Actia">…</$secret>` locks exactly what it encloses. No character: the DM
   only. A locked section is missing everywhere for the views that do not see it (dates,
   locations, spots, search).
+- Values of the rules: `secret-fields` lists the fields to lock (`secret-fields: rarity
+  cursed`); `all`, or the field empty, locks the whole block and the price. What derives from a
+  locked value is locked with it. Visible like `Secret`: the DM and the players of the tagged
+  player characters.
 - Lock only with these: a `$list`/`<%if%>` of one's own on the view hides the text but not its
   dates, locations and spots, and a transcluded secret tiddler shows wherever it is transcluded
   (both are errors below the title, see "Checks").
@@ -524,9 +566,11 @@ should deliberately differ - then it wins.
 
 `tiddlywiki/tiddlyweb`, `tiddlywiki/filesystem`, `tiddlywiki/highlight` (official, from the npm
 engine), `tiddlyrpg-core` (format layer), `staticfiles` (dev server), `graph` + `vis-network` +
-`relink` (`flibbles/tw5-graph` stack), optionally `tiddlyrpg-ruleset-dnd5e2014` (rules terms of
-D&D 5e) and `tiddlyrpg-setting-forgottenrealms` (Calendar of Harptos, coins of the Forgotten Realms), both from
-the package `tiddlyrpg-dnd`, repo `TiddlyRPG-DnD`. Language packs of TiddlyWiki
+`relink` (`flibbles/tw5-graph` stack), optionally `tiddlyrpg-ruleset-dnd5e2014` (rules terms and
+fields of D&D 5e) and `tiddlyrpg-setting-forgottenrealms` (Calendar of Harptos, coins of the
+Forgotten Realms), both from the package `tiddlyrpg-dnd`, repo `TiddlyRPG-DnD`, which also brings
+the content package of the SRD 5.1 (offered while the wiki runs on `npm start`, nothing to list
+in `tiddlywiki.info`). Language packs of TiddlyWiki
 under `"languages"`. Contents/documentation of the plugins: see `CLAUDE.md` and `README.md` in
 `TiddlyRPG-Plugins` and `TiddlyRPG-DnD`. The launcher `scripts/tw.js` lists the packages whose
 `plugins` folders it searches; a package that is not installed is skipped.
@@ -556,4 +600,12 @@ ControlPanel -> License (also in the published copy):
   approved/endorsed by Wizards. Portions of the materials used are property of Wizards of the
   Coast. ©Wizards of the Coast LLC." Never logos; text, maps and images copied from a book are
   not covered by it.
+- A campaign that takes entries of the SRD 5.1 (from the content package of `tiddlyrpg-dnd`)
+  publishes material under CC-BY-4.0: the section also carries the attribution of page 1 of the
+  SRD 5.1 word for word - "This work includes material taken from the System Reference Document
+  5.1 (“SRD 5.1”) by Wizards of the Coast LLC and available at
+  https://dnd.wizards.com/resources/systems-reference-document. The SRD 5.1 is licensed under the
+  Creative Commons Attribution 4.0 International License available at
+  https://creativecommons.org/licenses/by/4.0/legalcode." - from the first taken entry on. The
+  field `source` of each entry stays as well.
 - Where the images of a tiddler come from: the field `source` (see "Tiddler format").

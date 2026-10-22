@@ -2,8 +2,8 @@ caption: Kosmogramm
 created: 20260708130142000
 edges.fields: [all[]] -[[tags]] -[[list]]
 edges.functions: [all[]] -[[links]] -[[transcludes]]
-filter: [tag[Deity]] [tag[Organisation]] [tag[Person]] [tag[Player]]
-modified: 20260710141739000
+filter: [tag[Deity]] [tag[Organisation]] [tag[Person]] [tag[Player]] [tag[Creature]]
+modified: 20261022192622767
 template: $:/plugins/tiddlyrpg-core/graph/templates/trpg-graph
 title: $:/graph/Cosmogram
 type: application/json
