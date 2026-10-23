@@ -6,8 +6,9 @@ creator: Steelhandklan
 damage: 1d6 bludgeoning
 damage-versatile: 1d8 bludgeoning
 image: Stab des Baumeisters.jpeg
-modified: 20261023193422648
+modified: 20261023210219259
 owner: Theren
+rarity: uncommon
 recharge: 1d6
 recharge-on: long-rest
 spell-attack-bonus: +1

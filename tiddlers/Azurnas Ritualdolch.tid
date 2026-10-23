@@ -5,9 +5,10 @@ charges: 3
 created: 20261012210710341
 damage: 1d4 piercing
 former: Azurna
-modified: 20261023195949448
+modified: 20261023210219259
 owner: Actrielle
 range: 20/60 ft
+rarity: rare
 recharge: 1d4 - 1
 recharge-on: long-rest
 tags: Artifact Equipment

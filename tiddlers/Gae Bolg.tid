@@ -1,12 +1,14 @@
 base: Spear
+bonus: +3
 category: weapon, simple, melee, spear, thrown, versatile
 created: 20191004131846296
 damage: 1d6 piercing
 damage-versatile: 1d8 piercing
 former: [[William Eiree]]
-modified: 20261023175151930
+modified: 20261023205544896
 owner: [[Aideen Eiree]]
 range: 20/60 ft
+rarity: legendary
 tags: [[Haus Eiree]] Artifact Equipment
 title: Gae Bolg
 type: text/vnd.tiddlywiki

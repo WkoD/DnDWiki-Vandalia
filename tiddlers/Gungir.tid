@@ -1,10 +1,12 @@
 base: Javelin
+bonus: +3
 category: weapon, simple, melee, spear, thrown
 created: 20190209114649458
 damage: 1d6 piercing
-modified: 20261023175151930
+modified: 20261023205544896
 owner: Silmeria
 range: 30/120 ft
+rarity: legendary
 tags: Valküren Artifact Equipment
 title: Gungir
 type: text/vnd.tiddlywiki

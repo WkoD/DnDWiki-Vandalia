@@ -1,10 +1,12 @@
 base: Longsword
+bonus: +3
 category: weapon, martial, melee, sword, versatile
 created: 20190209112449446
 damage: 1d8 slashing
 damage-versatile: 1d10 slashing
-modified: 20261023175151930
+modified: 20261023205544896
 owner: Hrist
+rarity: legendary
 tags: Valküren Artifact Equipment
 title: Mistilteinn
 type: text/vnd.tiddlywiki

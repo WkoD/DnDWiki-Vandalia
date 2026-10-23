@@ -1,10 +1,12 @@
 base: [[Light hammer]]
+bonus: +3
 category: weapon, simple, melee, hammer, light, thrown
 created: 20190511080155088
 damage: 1d6 bludgeoning
-modified: 20261023175151930
+modified: 20261023205544896
 owner: Lenneth
 range: 20/60 ft
+rarity: legendary
 tags: Valküren Artifact Equipment
 title: Mjolnir
 type: text/vnd.tiddlywiki

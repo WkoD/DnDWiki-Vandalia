@@ -1,9 +1,11 @@
 base: Rapier
+bonus: +1
 category: weapon, martial, melee, sword, finesse
 created: 20200308163259405
 damage: 1d8 piercing
-modified: 20261023175151930
+modified: 20261023205648076
 owner: [[Melina Alousi]]
+rarity: uncommon
 tags: Artifact Equipment
 title: Parmalae
 type: text/vnd.tiddlywiki
