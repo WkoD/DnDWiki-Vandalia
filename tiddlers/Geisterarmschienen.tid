@@ -1,16 +1,14 @@
+ability: con
+ability-score: +2
 created: 20190205140555164
 creator: Hyrr Nehalennia Eikthyrnir
 date: 1350-10
-modified: 20261006162933008
+modified: 20261023203220659
 owner: Ragna
 tags: Tiergeister Artifact Equipment
 title: Geisterarmschienen
 type: text/vnd.tiddlywiki
 
-Armschienen, die [[Ragna]] plötzlich nach einem Zusammentreffen mit [[Nehalennia]] und [[Hyrr]] in der [[Welt im Geiste]] besaß. Sie waren in einem Spiraldesign gefertigt. Nur [[Ragna]] konnte ihre Macht nutzen und sollte er sie verlieren, konnte er sie in einer ein stündigen Meditation während einer langen Rast beschwören.
+Armschienen, die [[Ragna]] plötzlich nach einem Zusammentreffen mit [[Nehalennia]] und [[Hyrr]] in der [[Welt im Geiste]] besaß. Sie waren in einem Spiraldesign gefertigt. Nur [[Ragna]] konnte ihre Macht nutzen und sollte er sie verlieren, konnte er sie in einer einstündigen Meditation während einer <<term long-rest>> beschwören. Die Verbindung gab ihm außerdem eine besondere Fähigkeit im Kampf.
 
-!!! Effekte
-
-* Drei oder mehr verbundene [[Tiergeister]]
-
-Der Träger erhielt +2 CON und die Fähigkeit "Wut der Geister". Damit war es möglich, im Rage Status für jedes Mal, wenn tatsächlicher Schaden genommen wurde, einen Charge (maximal 5) zu laden und bei einem Angriff diese als Bonusaktion für zusätzlichen ''Force'' Schaden zu benutzen (1d4 x Chargelevel). Alle Charges verloren ihre Wirkung, wenn der Rage Status endete.
+<<effect "Wut der Geister">> Mit drei oder mehr verbundenen [[Tiergeistern|Tiergeister]] erhielt der Träger den Bonus auf <<term con>> und die Fähigkeit "Wut der Geister". Damit war es möglich, im Rage Status für jedes Mal, wenn tatsächlicher Schaden genommen wurde, einen Charge (maximal 5) zu laden und bei einem Angriff diese als <<term bonus-action>> für zusätzlichen Schaden zu benutzen (<<damage "1d4 force">> x Chargelevel). Alle Charges verloren ihre Wirkung, wenn der Rage Status endete.

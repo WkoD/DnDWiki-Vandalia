@@ -1,11 +1,15 @@
+category: wondrous-item
 created: 20220620183722999
 former: Os
-modified: 20261015144547499
+modified: 20261023203220659
 owner: Actrielle
+range: 60 ft
 tags: Artifact Equipment
 title: Seelenbeutel
 type: text/vnd.tiddlywiki
 
-Ein kleiner Beutel aus unbekanntem Leder. Er war leer und es war unmöglich, etwas Materielles hineinzutun.
+Ein kleiner Beutel aus unbekanntem Leder. Er war leer und es war unmöglich, etwas Materielles hineinzutun, es fiel einfach unten durch, als hätte der Beutel ein Loch.
 
-Wenn eine Kreatur im Umkreis von 60ft starb, dann konnte die Reaktion aufgewendet werden, um die Energie der Kreatur im Seelenbeutel zu fangen. War die Kreatur schwächer als der Anwender, gelang der Fang sofort, andernfalls musste ein Arcana Check mit DC10 + Kreaturenstärke geschafft werden. Sobald der Beutel gefüllt war, konnte eine Aktion aufgewendet werden, um die HP einer beliebigen Kreatur im Umkreis von 60ft um 1d8 * Kreaturenstärke zu heilen. Die Energie wurde dabei vollständig verbraucht. Im Beutel konnte sich immer nur die Energie einer Kreatur befinden. Sollte er bereits gefüllt sein, wurde die vorherige Energie automatisch freigelassen.
+<<effect "Seelenfang">> Wenn eine Kreatur in Reichweite starb, dann konnte die <<term reaction>> aufgewendet werden, um die Energie der Kreatur im Seelenbeutel zu fangen. War die Kreatur schwächer als der Anwender, gelang der Fang sofort, andernfalls musste ein <<term arcana>> Check mit <<term dc>> 10 + <<term cr>> der Kreatur geschafft werden. Im Beutel konnte sich immer nur die Energie einer Kreatur befinden. Sollte er bereits gefüllt sein, wurde die vorherige Energie automatisch freigelassen.
+
+<<effect "Seelenheilung">> Sobald der Beutel gefüllt war, konnte eine <<term action>> aufgewendet werden, um die <<term hp>> einer beliebigen Kreatur in Reichweite um <<dice "1d8">> × <<term cr>> der Kreatur zu heilen. Die Energie wurde dabei vollständig verbraucht.

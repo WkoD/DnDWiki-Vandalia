@@ -1,13 +1,22 @@
+base: Warhammer
+bonus: +2
+category: weapon, martial, melee, hammer, thrown, versatile
 component: Leviathanschuppe [[Magisches Holz]]
 created: 20201203102024337
 creator: [[Owen Kupferauge]]
+damage: 1d8 bludgeoning plus 1d8 cold
+damage-versatile: 1d10 bludgeoning plus 1d8 cold
 date: 1351-05
-modified: 20261006162933008
+modified: 20261023203220659
 owner: Ragna
+range: 15/30 ft
 tags: Artifact Nordvolk Stahlblutklan Equipment
 title: Frostbringer
 type: text/vnd.tiddlywiki
+weight: 2 lb
 
-Ein Warhammer +2, den sich [[Ragna]] anfertigen ließ. Der Hammer machte 1d8 bludgeon und 1d8 cold DMG. Spektrale Ketten verbanden den Hammer mit seinem Träger und als Angriff konnte der Hammer so einmal pro Runde bei einer Reichweite von 15/30ft auf Gegner geschleudert werden. Die Ketten selbst interagierten nicht mit anderen Kreaturen und konnten auch nicht gesehen werden. Als Bonus Action konnte der Hammer wieder in die eigenen Hände zurückgezogen werden, solange er sich auf der gleichen Ebene wie der Träger befand.
+Ein Warhammer, den sich [[Ragna]] anfertigen ließ.
 
-Der Hammer konnte einmalig pro Rage als Aktion die Wut des Trägers in den Schrei des Leviathans bündeln. Dabei machten alle Kreaturen in einem 20ft cone einen WIS save gegen den DC 10 + Rage DMG oder waren frightened. Dabei bekam jede Kreatur DISADV auf Ability Checks und HIT, solange sie den Träger des Hammers im Sichtfeld hatte. Außerdem konnte sie nicht willentlich näher an den Träger des Hammers treten. Der save wurde am Ende jedes Zuges wiederholt.
+<<effect "Spektrale Ketten">> Spektrale Ketten verbanden den Hammer mit seinem Träger, und als Angriff konnte der Hammer so einmal pro Runde auf Gegner geschleudert werden. Die Ketten selbst interagierten nicht mit anderen Kreaturen und konnten auch nicht gesehen werden. Als <<term bonus-action>> konnte der Hammer wieder in die eigenen Hände zurückgezogen werden, solange er sich auf der gleichen Ebene wie der Träger befand.
+
+<<effect "Schrei des Leviathans">> Einmal pro Rage konnte der Träger als <<term action>> seine Wut in den Schrei des Leviathans bündeln. Alle Kreaturen in einem Kegel von <<unit "20 ft">> machten einen <<term wis variant:"save">> gegen <<term dc>> 10 + Rage Damage oder waren <<term frightened>>. Dabei bekam jede Kreatur <<term disadvantage>> auf jeden <<term ability-check>> und jeden <<term attack-roll>>, solange sie den Träger des Hammers im Sichtfeld hatte. Außerdem konnte sie nicht willentlich näher an den Träger des Hammers treten. Der <<term saving-throw>> wurde am Ende jedes Zuges wiederholt.

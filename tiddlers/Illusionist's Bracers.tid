@@ -1,9 +1,15 @@
+attunement: yes
+category: wondrous-item
+classes: spellcaster
 created: 20261012210710332
 former: Azurna
-modified: 20261012210710332
+modified: 20261023203220659
 owner: Theren
+rarity: very-rare
 tags: Artifact Equipment
 title: Illusionist's Bracers
 type: text/vnd.tiddlywiki
 
-Schmale, mit Spinnenseide umwickelte Schienen aus Drow-Arbeit. Wer sie trug, konnte beim Wirken eines Cantrips mit einer Bonusaktion denselben Cantrip ein zweites Mal wirken.
+Schmale, mit Spinnenseide umwickelte Schienen aus Drow-Arbeit.
+
+<<effect "Zweiter Cantrip">> Wirkte der Träger einen <<term cantrip>>, konnte er im selben Zug mit einer <<term bonus-action>> denselben <<term cantrip>> ein zweites Mal wirken.

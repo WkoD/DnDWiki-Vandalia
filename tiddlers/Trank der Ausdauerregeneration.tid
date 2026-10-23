@@ -1,8 +1,11 @@
+category: potion
 created: 20200818070507106
-modified: 20261011210549000
+modified: 20261023200256159
 price: 350 gp
 tags: Item Consumable
 title: Trank der Ausdauerregeneration
 type: text/vnd.tiddlywiki
 
-Eine elektrisierte, blaue Flüssigkeit, die verbrauchte Ausdauer und damit Fähigkeiten wieder herstellte. Eine Kreatur konnte damit einen Spellslot bis Level 3 oder eine Klassenfähigkeit bis Level 5 regenerieren.
+Eine elektrisierte, blaue Flüssigkeit, die verbrauchte Ausdauer und damit Fähigkeiten wieder herstellte.
+
+<<effect "Ausdauer">> Eine Kreatur konnte damit einen <<term spell-slot variant:"level" value:3>> oder niedriger, oder eine Klassenfähigkeit bis Level 5 regenerieren.

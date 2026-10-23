@@ -1,9 +1,11 @@
+category: focus, arcane
 component: [[Aspektbund]]
 created: 20201203100026202
 creator: Actia Selune
 date: 1351-05-16
-modified: 20261006162933008
+modified: 20261023193422648
 owner: Actrielle
+spells: [[Guiding Bolt]] Sleep [[Misty Step]] Moonbeam Daylight Revivify Confusion [[Guardian of Faith]] Mislead Dream
 tags: Artifact Equipment
 title: Mondkristall
 type: text/vnd.tiddlywiki
@@ -12,10 +14,4 @@ Ein weiß leuchtender Kristall, den [[Actrielle]] als arkanen Fokus einsetzte. U
 
 Der Kristall zeigte die aktuelle Phase des Mondes, unabhängig davon, ob man ihn sehen konnte oder nicht.
 
-Der Mondkristall gab dem Träger den Segen von [[Selune]]. Für [[Actrielle]] bedeutete dies die Fähigkeit "Daywalker", was ihre Sunlight Sensitivity als Dunkelelf vollständig ausglich. Weiterhin erhielt sie Zugriff auf eine Liste weiterer mondbasierter Zauber auf bestimmten Sorcerer Leveln:
-
-* ''Level 1:'' Guiding Bolt und Sleep
-* ''Level 3:'' Misty Step und Moonbeam
-* ''Level 5:'' Daylight und Revivify
-* ''Level 7:'' Confusion und Guardian of Faith
-* ''Level 9:'' Mislead und Dream
+<<effect "Segen von [[Selune]]">> Der Mondkristall gab dem Träger den Segen von [[Selune]]. Für [[Actrielle]] bedeutete dies die Fähigkeit "Daywalker", was ihre Sunlight Sensitivity als Dunkelelf vollständig ausglich. Weiterhin erhielt sie Zugriff auf eine Liste weiterer mondbasierter Zauber.

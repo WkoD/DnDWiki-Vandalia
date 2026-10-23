@@ -1,12 +1,16 @@
+ac: +2
+base: Shield
+category: shield
 created: 20211128112414616
 creator: [[Boris der Zwerg]]
 date: 1351-06-26
-modified: 20261006162933008
+modified: 20261023193422648
 owner: Actrielle
 tags: [[Haus Alba]] Artifact Equipment
 title: Schildfried
 type: text/vnd.tiddlywiki
+weight: 6 lb
 
 Ein Schild, den [[Actrielle]] für sich hatte anfertigen lassen. [[Boris der Zwerg]], ein angehender Tüftler aus [[Dun Eidean]] schuf diesen Schild nach einigen Experimenten.
 
-Der Schild konnte als Aktion in den Boden gerammt werden. Ausfahrbare Spikes sorgten für einen sicheren Halt und boten [[Actrielle]] Halfcover in einem gewissen Radius.
+<<effect "Verankerung">> Der Schild konnte als <<term action>> in den Boden gerammt werden. Ausfahrbare Spikes sorgten für einen sicheren Halt und boten [[Actrielle]] <<term cover variant:"half">> in einem gewissen Radius.

@@ -1,9 +1,12 @@
+category: potion
 component: Graufarn Heilkraut
 created: 20200818075047491
-modified: 20261006162933008
+modified: 20261023203220659
 price: 50 gp
 tags: Item Consumable
 title: Trank der Heilung
 type: text/vnd.tiddlywiki
 
-Ein roter Trank, der Gesundheit wiederherstellte. Die Gesundheit berechnete sich aus 1/4 Hitdice + Durchschnittswert eines Hitdice + Konstitutionsmodifikator.
+Ein roter Trank, der Gesundheit wiederherstellte.
+
+<<effect "Heilung">> Die Gesundheit berechnete sich aus 1/4 <<term hit-dice>> + Durchschnittswert eines <<term hit-dice>> + <<term con>>-Modifikator.

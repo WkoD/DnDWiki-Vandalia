@@ -1,8 +1,13 @@
+base: Longsword
+category: weapon, martial, melee, sword, versatile
 created: 20190209112449446
-modified: 20261006162933008
+damage: 1d8 slashing
+damage-versatile: 1d10 slashing
+modified: 20261023175151930
 owner: Hrist
 tags: Valküren Artifact Equipment
 title: Mistilteinn
 type: text/vnd.tiddlywiki
+weight: 3 lb
 
 Ein Schwert aus der nordischen Mythologie, das der Sage nach niemals stumpf wurde.

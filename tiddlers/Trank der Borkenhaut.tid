@@ -1,8 +1,12 @@
+category: potion
 created: 20200818070737290
-modified: 20261011210549000
+duration: 1 minute
+modified: 20261023203220659
 price: 250 gp
 tags: Item Consumable
 title: Trank der Borkenhaut
 type: text/vnd.tiddlywiki
 
-Der Trank härtete die Haut mit einer borkenartigen, natürlichen Rüstung. Eine Kreatur bekam damit +2 AC für 1 Minute.
+Der Trank härtete die Haut mit einer borkenartigen, natürlichen Rüstung.
+
+<<effect "Borkenhaut">> Eine Kreatur bekam damit +2 <<term ac>>.

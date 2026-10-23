@@ -1,0 +1,18 @@
+{
+    "domain": "ItemCategory",
+    "extends": true,
+    "entries": [
+        {
+            "id": "tattoo",
+            "for": [
+                "wondrous-item"
+            ]
+        },
+        {
+            "id": "totem",
+            "for": [
+                "wondrous-item"
+            ]
+        }
+    ]
+}

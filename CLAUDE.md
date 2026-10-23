@@ -34,8 +34,9 @@ Two separate version axes:
   in the separate repo `TiddlyRPG-Plugins`. Optional content for D&D (the ruleset
   `tiddlyrpg-ruleset-dnd5e2014`, the setting `tiddlyrpg-setting-forgottenrealms`, the content
   package of the SRD 5.1) -> pin of `tiddlyrpg-dnd` (e.g. `#2.1.0`), versioned in
-  the repo `TiddlyRPG-DnD`; it needs the format layer. For now both keep the same version - pin
-  both to the same one.
+  the repo `TiddlyRPG-DnD`; it needs the format layer. For now both keep the same major and
+  minor version - pin both to the same `x.y`; the patch level is each one's own, a fix is
+  released alone (`tiddlyrpg-dnd#2.2.1` next to `tiddlyrpg-plugins#2.2.0`).
 - **Scaffold template** -> field `version` in `package.json`, set to the `TiddlyRPG` release
   version (e.g. `2.1.0`) - **no** campaign version of its own.
 
@@ -448,7 +449,7 @@ campaign) - never as plain text when the term matters:
   (`<<damage "1W8 Hieb">>`).
 - `<<term>>` takes the id of a term: abilities (`<<term wis variant:"save">>`), conditions
   (`<<term charmed>>`), actions (`<<term bonus-action>>`), rests, skills, senses, creature types,
-  sizes, alignments, schools of magic, languages, item categories with their traits
+  sizes, alignments, schools of magic, languages, item categories with their properties
   (`<<term "armor medium">>`: "medium armor"). The hub `Ruleset` lists every id with what it
   shows.
 - A number always carries its unit - `<<unit 60>>` is not read, also not with a kind - so what a

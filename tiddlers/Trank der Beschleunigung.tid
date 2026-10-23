@@ -1,8 +1,10 @@
+category: potion
 created: 20201203092919260
-modified: 20261006162933008
+modified: 20261023175151930
 price: 400 gp
+spells: Haste
 tags: Item Consumable
 title: Trank der Beschleunigung
 type: text/vnd.tiddlywiki
 
-Ein magischer Trank, der den Effekt von Haste verlieh.
+Ein magischer Trank, der den Anwender beschleunigte.

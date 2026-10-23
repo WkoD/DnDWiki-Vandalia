@@ -1,0 +1,15 @@
+category: wondrous-item, totem
+created: 20261023184831766
+creator: Ragna
+modified: 20261023184831766
+tags: Item Equipment
+title: Totem der Nehalennia
+type: text/vnd.tiddlywiki
+
+Ein Totem, in das [[Ragna]] die Kräfte von [[Nehalennia]], dem [[Tiergeist|Tiergeister]] des Wassers und Eises, einband.
+
+<<effect "Gezeitenwelle">> Der Träger schlug als <<term action>> die Hände flach zusammen, und eine Welle aus Wasser schoss aus den Fingerspitzen in die Richtung, in die sie zeigten. Die Welle bewegte sich als Würfel von <<unit "5 ft">> über <<unit "15 ft">> nach vorn; jede getroffene Kreatur musste einen <<term str variant:"save">> machen, sonst erlitt sie <<damage "1d6 cold">> und wurde <<unit "5 ft">> zurückgeworfen.
+
+<<effect "Arktischer Schleier">> Der Träger konnte als <<term action>> innerhalb von <<unit "50 ft" kind:"range">> einen Würfel von <<unit "5 ft">> festlegen, in dem kleine Nadeln aus Eis erschienen. Der Bereich wurde schwer durchsichtig: Fernkampfangriffe hindurch hatten <<term disadvantage>>. Jede Kreatur, die hindurchging, erlitt <<damage "2d4 cold">>. Orkanstarker Wind konnte die Nadeln wegwehen und fügte dabei jeder getroffenen Kreatur <<damage "2d4 cold">> zu. Die Eisnadeln schmolzen nach 2 Runden.
+
+<<effect "Zustandsmanipulation">> Der Träger konnte als <<term bonus-action>> innerhalb von <<unit "50 ft" kind:"range">> eine Kugel mit bis zu <<unit "25 ft">> Durchmesser bestimmen und darin den Aggregatzustand von Wasser und ähnlichen Flüssigkeiten zwischen fest, flüssig und gasförmig ändern. Mit jeder Aktion ging dabei nur der ganze Bereich von einem Zustand in den nächsten über. Das Eis hielt <<dice "1d4">> Runden.

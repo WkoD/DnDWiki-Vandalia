@@ -1,13 +1,13 @@
+category: wondrous-item
 created: 20191106152230254
 image: Mask of many Faces.jpg
-modified: 20261006162933008
+modified: 20261023203220659
 owner: Actrielle
+spells: [[Disguise Self]]
 tags: Artifact Equipment
 title: Maske der tausend Gesichter
 type: text/vnd.tiddlywiki
 
-Eine Maske die dem Träger erlaubte, die Gestalt zu verschleiern.
+Eine Maske, die dem Träger erlaubte, die Gestalt zu verschleiern.
 
-!!! Effekte
-
-Der Träger konnte Disguise Self unbegrenzt einsetzen. Wenn jemand versuchte, die Verkleidung zu durchschauen, musste er einen DC8+CHA oder INT+Proficiency (wenn Skill Performance oder Persuasion oder Deception vorhanden war) überwinden.
+<<effect "Tausend Gesichter">> Der Träger konnte Disguise Self unbegrenzt einsetzen. Wenn jemand versuchte, die Verkleidung zu durchschauen, musste er einen <<term dc>> von 8 + <<term cha>> oder <<term int>> + <<term pb>> (wenn <<term performance>>, <<term persuasion>> oder <<term deception>> vorhanden war) überwinden.

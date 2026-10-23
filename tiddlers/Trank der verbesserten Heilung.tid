@@ -1,8 +1,11 @@
+category: potion
 created: 20200818075439182
-modified: 20261006162933008
+modified: 20261023203220659
 price: 200 gp
 tags: Item Consumable
 title: Trank der verbesserten Heilung
 type: text/vnd.tiddlywiki
 
-Ein roter Trank, der Gesundheit wiederherstellte. Die Gesundheit berechnete sich aus 1/2 Hitdice + Durchschnittswert eines Hitdice + Konstitutionsmodifikator.
+Ein roter Trank, der mehr Gesundheit wiederherstellte.
+
+<<effect "Heilung">> Die Gesundheit berechnete sich aus 1/2 <<term hit-dice>> + Durchschnittswert eines <<term hit-dice>> + <<term con>>-Modifikator.

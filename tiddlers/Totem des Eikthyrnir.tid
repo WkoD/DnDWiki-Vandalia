@@ -1,0 +1,15 @@
+category: wondrous-item, totem
+created: 20261023184831766
+creator: Ragna
+modified: 20261023203220659
+tags: Item Equipment
+title: Totem des Eikthyrnir
+type: text/vnd.tiddlywiki
+
+Ein Totem, in das [[Ragna]] die Kräfte von [[Eikthyrnir]], dem [[Tiergeist|Tiergeister]] der Gravitation und Schwerkraft, einband.
+
+<<effect "Macht">> Machte der Träger einen Nahkampfangriff, konnte er seine <<term reaction>> verwenden, um zusätzlich <<damage "1d4 force">> zu verursachen.
+
+<<effect "Unbewegliches Objekt">> Versuchte ein äußerer Einfluss, den Träger von seiner Position zu bewegen, konnte er seine <<term reaction>> aufwenden und wurde bis zum Beginn seines nächsten Zugs nicht bewegt.
+
+<<effect "Schwerkraftkontrolle">> Der Träger konnte als <<term bonus-action>> die Schwerkraft für eine Kreatur oder ein Objekt in Sichtweite innerhalb von <<unit "30 ft" kind:"range">> anpassen. Senkte er sie, bewegte sich das Ziel mit doppelter Geschwindigkeit und halbem Gewicht; erhöhte er sie, nur mit halber Geschwindigkeit und doppeltem Gewicht. Eine Kreatur musste einen <<term con variant:"save">> machen, sonst wirkte der Effekt bis zum Ende ihres nächsten Zugs. Eine Kreatur konnte den <<term saving-throw>> absichtlich verfehlen, Objekte verfehlten ihn immer.

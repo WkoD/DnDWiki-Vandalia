@@ -1,8 +1,13 @@
+base: Longbow
+category: weapon, martial, ranged, bow, ammunition, heavy, two-handed, arrow
 created: 20220218130111801
-modified: 20261006162933008
+damage: 2d8 force
+modified: 20261023175151930
 owner: [[Geron Sidellus]]
+range: 150/600 ft
 tags: Artifact Equipment
 title: Langbogen der Macht
 type: text/vnd.tiddlywiki
+weight: 2 lb
 
-Ein Langbogen, welcher 2d8 force Dmg austeilte.
+Ein magischer Langbogen.

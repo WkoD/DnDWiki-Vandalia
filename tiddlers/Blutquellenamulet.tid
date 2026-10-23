@@ -1,9 +1,17 @@
+attunement: yes
+category: wondrous-item
+charges: 1
+classes: sorcerer
 created: 20210305093627469
-modified: 20261006162933008
+modified: 20261023203220659
 owner: Actrielle
+recharge-on: long-rest
+spell-attack-bonus: +1
+spell-dc-bonus: +1
 tags: Artifact Equipment
 title: Blutquellenamulet
 type: text/vnd.tiddlywiki
 
-Ein Amulet +1 mit einer klaren Flüssigkeit. Solange das Amulett getragen wurde, erhielt ein Sorcerer +1 auf seine Spell Attack und +1 auf seinen Spell DC.
-Wurde Blut drauf getropft, dann aktivierte sich ein besonderer Effekt. In einer kurzen Rast konnte ein Hitdice (Würfel+CON Modifier) eingesetzt werden, um die Hälfte seines Wertes (abgerundet) als Sorcerypoints zu regenerieren. Diese Fähigkeit konnte danach nach einer langen Rast erneut eingesetzt werden.
+Ein Amulet mit einer klaren Flüssigkeit. Wurde Blut darauf getropft, aktivierte sich ein besonderer Effekt.
+
+<<effect "Blutquelle">> In einer <<term short-rest>> konnte ein <<term hit-dice>> (Würfel + <<term con>>-Modifikator) eingesetzt werden, um die Hälfte seines Wertes (abgerundet) als Sorcerypoints zu regenerieren.

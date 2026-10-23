@@ -1,8 +1,16 @@
+attunement: yes
+category: wondrous-item, tattoo
 created: 20241112184018905
-modified: 20260713004811338
+modified: 20261023204840409
 owner: Ragna
-tags: Artifact
+rarity: uncommon
+recharge-on: long-rest
+tags: Artifact Equipment
 title: Rabentattoo
 type: text/vnd.tiddlywiki
 
-Ein Tattoo, das den Effekt des Eldritch Claw Tattoos hatte.
+<<effect "Tätowierung">> Um sich auf das Tattoo einzustimmen, hielt der Träger die besondere Nadel während der ganzen <<term attunement>> an die Stelle seiner Haut, an der das Tattoo erscheinen sollte. Am Ende verwandelte sich die Nadel in die Tinte, aus der das Tattoo entstand. Endete die Einstimmung, verschwand das Tattoo und die Nadel lag wieder beim Träger.
+
+<<effect "Magische Schläge">> Solange das Tattoo auf seiner Haut war, galten die waffenlosen Angriffe des Trägers als magisch, wenn es darum ging, <<term resistance>> oder <<term immunity>> gegen nichtmagische Angriffe zu überwinden. Außerdem erhielt er mit ihnen +1 auf <<term attack-roll>> und Schaden.
+
+<<effect "Unheimlicher Hieb">> Als <<term bonus-action>> konnte der Träger das Tattoo für <<unit "1 minute">> aufladen. Solange erreichte jeder seiner Nahkampfangriffe, mit einer Waffe oder waffenlos, ein Ziel in bis zu <<unit "15 ft">> Entfernung, weil Ranken aus Tinte zum Ziel schossen, und verursachte bei einem Treffer zusätzlich <<damage "1d6 force">>. Danach ließ sich der Hieb erst nach einer <<term long-rest>> wieder nutzen.

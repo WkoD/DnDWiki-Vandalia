@@ -1,14 +1,18 @@
+base: Shortsword
+bonus: +1
+category: weapon, martial, melee, sword, finesse, light, thrown
 created: 20191106152008528
+damage: 1d6 psychic
 date: 855
 former: [[Cedric Llyod]]
-modified: 20261006162933008
+modified: 20261023193422648
 owner: Balseth
+range: 20/60 ft
 tags: Artifact Equipment
 title: Schattenklinge
 type: text/vnd.tiddlywiki
+weight: 2 lb
 
 Ein Schwert, dessen Klinge in Schatten gehüllt war, wenn man es zog. Seine Besitzer ließen sich bis zum ersten Anführer der Assassinengilde [[Zodiac]] zurückverfolgen.
 
-!!! Effekte
-
-Es zählte als Shortsword +1, das psychic DMG statt piercing DMG machte. Es besaß außerdem die thrown (20/60) Eigenschaft. Wenn der Träger die Klinge warf oder fallen ließ, konnte er seine BA einsetzen, um das Schwert in seine Hand zurückzubeschwören.
+<<effect "Rückruf">> Wenn der Träger die Klinge warf oder fallen ließ, konnte er seine <<term bonus-action>> einsetzen, um das Schwert in seine Hand zurückzubeschwören.

@@ -1,12 +1,23 @@
+base: Quarterstaff
+category: weapon, simple, melee, versatile, staff
+charges: 8
 created: 20200417064500414
 creator: Steelhandklan
+damage: 1d6 bludgeoning
+damage-versatile: 1d8 bludgeoning
 image: Stab des Baumeisters.jpeg
-modified: 20261006162933008
+modified: 20261023193422648
 owner: Theren
+recharge: 1d6
+recharge-on: long-rest
+spell-attack-bonus: +1
+spell-damage-bonus: +1
+spells: [[Mage Armor]] [[Shield (Spell)]]
 tags: Stahlblutklan Artifact Equipment
 title: Stab des Baumeisters
 type: text/vnd.tiddlywiki
+weight: 4 lb
 
-Ein Quarterstaff +1 (Zauber), im Zwergischen auch als //"Tharkun Al Zahar"// bekannt und früher vom [[Steelhandklan]] Baumeister und Magier Loghatin Silberbart getragen.
+Ein Quarterstaff, im Zwergischen auch als //"Tharkun Al Zahar"// bekannt und früher vom [[Steelhandklan]] Baumeister und Magier Loghatin Silberbart getragen. In ihn war der Kristall //"Zuyn Al Zahar"// eingesetzt, der Zauber des Baumeisters.
 
-In ihn war der Kristall //"Zuyn Al Zahar"// eingesetzt, der Zauber des Baumeisters. Er bekam dadurch die Eigenschaften eines Quarterstaffs of Defense, mit 8 Ladungen, von denen sich pro Lange Rast 1d6 regenerierten. Mit 1 Ladung ließ sich Mage Armor und mit 2 Ladungen Shield zaubern.
+<<effect "Zauber des Baumeisters">> Der Stab bekam durch den Kristall die Eigenschaften eines Quarterstaffs of Defense. Mit 1 Ladung ließ sich Mage Armor und mit 2 Ladungen Shield zaubern.

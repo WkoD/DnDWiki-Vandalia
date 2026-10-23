@@ -1,8 +1,11 @@
+category: potion
 component: Holusrose Weidekraut
 created: 20200818080045278
-modified: 20261006162933008
+duration: 10 minutes
+modified: 20261023175151930
+spells: [[Enlarge/Reduce]]
 tags: Item Consumable
 title: Trank des Wachstums
 type: text/vnd.tiddlywiki
 
-Eine orange Flüssigkeit, die die trinkende Kreatur für 10min um eine Größenstufe vergrößerte.
+Eine orange Flüssigkeit, die die trinkende Kreatur um eine Größenstufe vergrößerte.

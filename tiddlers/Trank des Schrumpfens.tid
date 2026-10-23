@@ -1,8 +1,11 @@
+category: potion
 component: Holusrose Graufarn
 created: 20200818075827766
-modified: 20261006162933008
+duration: 10 minutes
+modified: 20261023175151930
+spells: [[Enlarge/Reduce]]
 tags: Item Consumable
 title: Trank des Schrumpfens
 type: text/vnd.tiddlywiki
 
-Eine blaue Flüssigkeit, die die trinkende Kreatur für 10min um eine Größenstufe verkleinerte.
+Eine blaue Flüssigkeit, die die trinkende Kreatur um eine Größenstufe verkleinerte.

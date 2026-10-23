@@ -1,8 +1,12 @@
+base: Rapier
+category: weapon, martial, melee, sword, finesse
 created: 20200308163259405
-modified: 20261006162933008
+damage: 1d8 piercing
+modified: 20261023175151930
 owner: [[Melina Alousi]]
 tags: Artifact Equipment
 title: Parmalae
 type: text/vnd.tiddlywiki
+weight: 2 lb
 
 Ein kunstvoll geschmiedeter Degen. Er besaß eine dünne Schneide aus purem Silber und beim Schwingen erschienen blau leuchtende Runen darauf.

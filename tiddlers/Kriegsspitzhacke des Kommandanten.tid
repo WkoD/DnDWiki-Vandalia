@@ -1,12 +1,17 @@
+base: [[War pick]]
+bonus: +1
+category: weapon, martial, melee
 created: 20200417064218861
 creator: Steelhandklan
+damage: 1d8 + 1d4 fire
 image: Kriegsspitzhacke des Kommandanten.png
-modified: 20261006162933008
+modified: 20261023175151930
 owner: Balseth
 tags: Stahlblutklan Artifact Equipment
 title: Kriegsspitzhacke des Kommandanten
 type: text/vnd.tiddlywiki
+weight: 2 lb
 
-Eine Warpick + 1, im zwergischen auch als //"Felekburk Al Bad"// bekannt und früher vom [[Steelhandklan]] Kommandanten Ingbert Goldzahn getragen.
+Eine Warpick, im zwergischen auch als //"Felekburk Al Bad"// bekannt und früher vom [[Steelhandklan]] Kommandanten Ingbert Goldzahn getragen.
 
-In die Warpick war der Kristall //"Rhun Al Bad"// eingesetzt, die Rune des Kommandanten. Dadurch bekam sie die Eigenschaften einer Magma Warpick und ihre Schadensart veränderte sich auf 1d8 + 1d4 + 1 fire DMG.
+In die Warpick war der Kristall //"Rhun Al Bad"// eingesetzt, die Rune des Kommandanten. Dadurch bekam sie die Eigenschaften einer Magma Warpick.

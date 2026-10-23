@@ -1,8 +1,11 @@
+category: potion
 component: Weidekraut Venenuss
 created: 20200818070833408
-modified: 20261006162933008
+modified: 20261023203220659
 tags: Item Consumable
 title: Trank des Gegengifts
 type: text/vnd.tiddlywiki
 
-Ein Trank, der Vergiftungen gegen die Konstitution lindern konnte. Eine vergiftete Kreatur konnte bei Einnahme den Rettungswurf wiederholen und dabei +5 auf das Würfelergebnis addieren.
+Ein Trank, der Vergiftungen gegen die Konstitution lindern konnte.
+
+<<effect "Gegengift">> Eine vergiftete Kreatur konnte bei Einnahme den <<term saving-throw>> wiederholen und dabei +5 auf das Würfelergebnis addieren.

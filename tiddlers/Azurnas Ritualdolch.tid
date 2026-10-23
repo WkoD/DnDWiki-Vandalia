@@ -1,11 +1,20 @@
+base: Dagger
+bonus: +2
+category: weapon, simple, melee, finesse, light, thrown
+charges: 3
 created: 20261012210710341
+damage: 1d4 piercing
 former: Azurna
-modified: 20261012210710341
+modified: 20261023195949448
 owner: Actrielle
+range: 20/60 ft
+recharge: 1d4 - 1
+recharge-on: long-rest
 tags: Artifact Equipment
 title: Azurnas Ritualdolch
 type: text/vnd.tiddlywiki
+weight: 1 lb
 
-Ein schmaler +2 Dolch mit einer Rinne bis zum Knauf. Als Waffe ein ganz gewöhnlicher Dolch mit 1d4+2 piercing, jedoch war er nicht für Kämpfe entworfen.
+Ein schmaler Dolch mit einer Rinne bis zum Knauf, der nicht für Kämpfe entworfen war.
 
-Er hatte 3 Ladungen, nach einer Long Rest kamen 1d4-1 davon zurück. Mit einer Bonusaktion konnte eine Ladung verbraucht werden, um sich selbst 3d6 Schaden zuzufügen und dafür einen verbrauchten Zauberplatz des Grades 3 oder niedriger zurückzuholen.
+<<effect "Blutopfer">> Mit einer <<term bonus-action>> konnte eine Ladung verbraucht werden, um sich selbst <<dice "3d6">> Schaden zuzufügen und dafür einen verbrauchten <<term spell-slot variant:"level" value:3>> oder niedriger zurückzuholen.

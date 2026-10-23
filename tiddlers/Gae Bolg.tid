@@ -1,9 +1,15 @@
+base: Spear
+category: weapon, simple, melee, spear, thrown, versatile
 created: 20191004131846296
+damage: 1d6 piercing
+damage-versatile: 1d8 piercing
 former: [[William Eiree]]
-modified: 20261006162933008
+modified: 20261023175151930
 owner: [[Aideen Eiree]]
+range: 20/60 ft
 tags: [[Haus Eiree]] Artifact Equipment
 title: Gae Bolg
 type: text/vnd.tiddlywiki
+weight: 3 lb
 
 Ein magischer Speer, dessen Spitze der Legende nach immer das Herz des Gegners durchstieß. Er befand sich im Besitz von [[Haus Eiree]] seit [[William Eiree]] ihn in der [[Schlacht um den Briarwood]] führte.

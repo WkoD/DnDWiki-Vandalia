@@ -1,8 +1,13 @@
+base: [[Light hammer]]
+category: weapon, simple, melee, hammer, light, thrown
 created: 20190511080155088
-modified: 20261006162933008
+damage: 1d6 bludgeoning
+modified: 20261023175151930
 owner: Lenneth
+range: 20/60 ft
 tags: Valküren Artifact Equipment
 title: Mjolnir
 type: text/vnd.tiddlywiki
+weight: 2 lb
 
 Zwillingshämmer aus der nordischen Mythologie. Sie sollten in der Lage sein, Berge zu ebnen und die Macht der Blitze zu lenken.

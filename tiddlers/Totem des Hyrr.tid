@@ -1,0 +1,15 @@
+category: wondrous-item, totem
+created: 20261023184831766
+creator: Ragna
+modified: 20261023203220659
+tags: Item Equipment
+title: Totem des Hyrr
+type: text/vnd.tiddlywiki
+
+Ein Totem, in das [[Ragna]] die Kräfte von [[Hyrr]], dem [[Tiergeist|Tiergeister]] des Feuers und der Flammen, einband.
+
+<<effect "Wegweisendes Licht">> Der Träger dachte an eine Person oder einen Gegenstand, den er gesehen hatte, und schickte einen brennenden Raben als Fernkampfangriff los, der sein Ziel innerhalb von <<unit "90 ft" kind:"range">> selbst suchte. Bei einem Treffer erlitt das Ziel <<damage "1d8 fire">>.
+
+<<effect "Schild der Flammen">> Wurde der Träger angegriffen, konnte er sich als <<term reaction>> in eine Aura aus Flammen hüllen. Der Angreifer erlitt <<damage "1d4 fire">>, danach erlosch die Flamme.
+
+<<effect "Illusion der Hitze">> Der Träger konnte im Umkreis von <<unit "30 ft">> eine optische Illusion in einem Raum von <<unit "5 ft">> erschaffen. Jede körperliche Berührung zeigte ihre wahre Natur; eine Kreatur konnte sie mit einem Wurf auf <<term int variant:"name">> (<<term investigation>>) gegen <<term dc>> 13 durchschauen (EX <<term dc>> 15).

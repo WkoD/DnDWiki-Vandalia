@@ -1,12 +1,17 @@
+ac: +2
+base: Shield
+bonus: +1
+category: shield
 created: 20200417064008990
 creator: Steelhandklan
 image: Schild des Beschützers.jpg
-modified: 20261006162933008
+modified: 20261023203220659
 owner: Ragna
 tags: Stahlblutklan Artifact Equipment
 title: Schild des Beschützers
 type: text/vnd.tiddlywiki
+weight: 6 lb
 
-Ein Schild + , im zwergischen auch als //"Rond Al Arkul"// bekannt und früher vom [[Steelhandklan]] Wächter Barbatos Stahlhaut getragen.
+Ein Schild, im zwergischen auch als //"Rond Al Arkul"// bekannt und früher vom [[Steelhandklan]] Wächter Barbatos Stahlhaut getragen. In das Schild war der Kristall //"Kan Al Arkul"// eingepasst, das Auge des Beschützers.
 
-In das Schild war der Kristall //"Kan Al Arkul"// eingepasst, das Auge des Beschützers. Der Schild erhielt dadurch die Fähigkeit eines Sentinel Shields. (ADV auf Initiativ- und Wisdom (Perception) Würfe.)
+<<effect "Auge des Beschützers">> Der Schild erhielt durch den Kristall die Fähigkeit eines Sentinel Shields: <<term advantage>> auf <<term initiative>> und auf Würfe auf <<term wis variant:"name">> (<<term perception>>).

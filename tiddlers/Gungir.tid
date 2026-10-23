@@ -1,8 +1,13 @@
+base: Javelin
+category: weapon, simple, melee, spear, thrown
 created: 20190209114649458
-modified: 20261006162933008
+damage: 1d6 piercing
+modified: 20261023175151930
 owner: Silmeria
+range: 30/120 ft
 tags: Valküren Artifact Equipment
 title: Gungir
 type: text/vnd.tiddlywiki
+weight: 2 lb
 
 Ein Speer aus der nordischen Mythologie, der der Sage nach sein Ziel immer traf, unabhängig von den Fähigkeiten des Trägers.
