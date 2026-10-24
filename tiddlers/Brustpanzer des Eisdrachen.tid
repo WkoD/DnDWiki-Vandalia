@@ -1,0 +1,21 @@
+ac: 17
+base: [[Splint Armor]]
+bonus: +1
+category: armor, heavy
+created: 20261024084246565
+creator: Sjach [[Haus Eiree]]
+date: 850
+former: [[Balor der Weise]]
+modified: 20261024084246565
+owner: Balseth
+rarity: rare
+stealth: disadvantage
+strength-min: 15
+tags: Sjach Artifact Equipment
+title: Brustpanzer des Eisdrachen
+type: text/vnd.tiddlywiki
+weight: 60 lb
+
+Ein schwarzer Brustpanzer, der mit Symbolen vom Kriegerklan der [[Sjach]] verziert war. Dünne weiße Linien verliefen an den Seiten entlang. Er gehörte zur [[Rüstung des Tiamat|Suche nach der Rüstung des Tiamat]] und wurde von [[Theren]] in einem [[Labor|Der verlassene Leuchtturm]] von [[Tyria]] gefunden.
+
+<<effect "Atem des Eisdrachen">> Die Breath Weapon des Trägers wurde durch den Brustpanzer verstärkt und stieg im Schaden jeweils um einen zusätzlichen <<dice "1d6">> auf Level 6 (<<dice "4d6">>), Level 11 (<<dice "6d6">>) und Level 16 (<<dice "8d6">>). Außerdem konnte zusätzlich zur eigenen Breath Weapon auch <<damage "cold">> (<<term con variant:"save">>) als Element benutzt werden. Nachdem die Breath Weapon benutzt wurde, wurde <<dice "1d6">> gewürfelt. Bei einer 5 oder 6 konnte die Breath Weapon als <<term action>> erneut eingesetzt werden, sonst war eine <<term short-rest>> oder <<term long-rest>> nötig.

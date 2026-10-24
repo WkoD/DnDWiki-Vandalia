@@ -1,0 +1,19 @@
+ability: str
+ability-max: 20
+ability-score: +1
+category: armor, heavy
+created: 20261024084246565
+creator: Sjach [[Haus Eiree]]
+date: 850
+former: [[Balor der Weise]]
+modified: 20261024084246565
+owner: Balseth
+rarity: rare
+recharge-on: long-rest
+tags: Sjach Artifact Equipment
+title: Beinschienen des Blitzdrachen
+type: text/vnd.tiddlywiki
+
+Schwarze Beinschienen, die mit Symbolen vom Kriegerklan der [[Sjach]] verziert waren. Dünne blaue Linien verliefen über die Seiten. Sie gehörten zur [[Rüstung des Tiamat|Suche nach der Rüstung des Tiamat]] und wurden in der [[Festung im Briarwood|Migration der Sjach]] gefunden.
+
+<<effect "Lightning Dash">> Der Träger konnte einmalig einen <<term dash>> von <<unit "15 ft">> als <<term bonus-action>> ausführen, bei dem sein Körper und seine Ausrüstung in eine Blitzform wechselten. Zwischen Start- und Endpunkt war es damit möglich, durch Öffnungen von mindestens <<unit "1 ft">> zu gelangen, und jede Kreatur, die durchquert wurde, erhielt <<damage "1d10 lightning">> oder bei einem <<term dex variant:"save">> (<<term dc value:15>>) die Hälfte. Die Fähigkeit konnte nach einer <<term long-rest>> erneut verwendet werden.

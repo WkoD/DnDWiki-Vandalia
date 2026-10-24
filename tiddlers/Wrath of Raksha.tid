@@ -7,7 +7,7 @@ damage: 1d8 acid
 damage-versatile: 1d10 acid
 former: [[Raksha der Schlächter]]
 image: Wrath of Raksha.jpg
-modified: 20261023210219259
+modified: 20261024084246565
 owner: Balseth
 rarity: rare
 tags: Artifact Sjach Equipment
@@ -15,7 +15,7 @@ title: Wrath of Raksha
 type: text/vnd.tiddlywiki
 weight: 4 lb
 
-Diese mehrere hundert Jahre alte Axt wurde von [[Raksha der Schlächter]] selbst geführt. Selbst nach all dieser Zeit war sie noch immer von dem Hass ihres einstigen Meisters durchtränkt. Durch die Axt floss die gleiche Art Energie, die auch durch den Rest der [[Rüstung des Tiamat]] floss, was sie zu einem Teil davon machte.
+Diese mehrere hundert Jahre alte Axt wurde von [[Raksha dem Schlächter|Raksha der Schlächter]] selbst geführt. Selbst nach all dieser Zeit war sie noch immer von dem Hass ihres einstigen Meisters durchtränkt. Durch die Axt floss die gleiche Art Energie, die auch durch den Rest der [[Rüstung des Tiamat|Suche nach der Rüstung des Tiamat]] floss, was sie zu einem Teil davon machte.
 
 <<effect "Säureexplosion">> Starb ein Gegner durch einen Angriff mit der Axt, zerfetzte eine Säureexplosion seine Leiche: Jede Kreatur im Umkreis von <<unit "5 ft">> außer dem Träger erlitt <<damage "1d6 acid">>.
 

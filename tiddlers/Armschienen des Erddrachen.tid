@@ -1,0 +1,19 @@
+ability: con
+ability-max: 20
+ability-score: +1
+category: armor, heavy
+created: 20261024084246565
+creator: Sjach [[Haus Eiree]]
+date: 850
+former: [[Balor der Weise]]
+modified: 20261024084246565
+owner: Balseth
+rarity: rare
+recharge-on: long-rest
+tags: Sjach Artifact Equipment
+title: Armschienen des Erddrachen
+type: text/vnd.tiddlywiki
+
+Schwarze Armschienen, die mit Symbolen vom Kriegerklan der [[Sjach]] verziert waren. Dünne grün-braune Linien verliefen über die Seiten. Sie gehörten zur [[Rüstung des Tiamat|Suche nach der Rüstung des Tiamat]] und wurden in der [[Festung im Briarwood|Geheimnisse der Festung im Wald]] gefunden.
+
+<<effect "Earthen Wall">> Der Träger konnte einmalig eine Mauer aus Gestein als <<term action>> erschaffen. Die Mauer konnte dabei maximal <<unit "100 ft³">> umfassen (zum Beispiel <<unit "10x10x1 ft">> oder <<unit "10x5x2 ft">>) und musste stabil mit dem Boden verbunden sein. Gestein musste in der Nähe vorhanden sein, damit die Magie in den Armschienen daraus das Gestein für die Mauer kopieren konnte, und dieses kopierte Gestein blieb für <<unit "10 minutes">> erhalten, bevor es sich wieder auflöste. Die Fähigkeit konnte nach einer <<term long-rest>> erneut verwendet werden.

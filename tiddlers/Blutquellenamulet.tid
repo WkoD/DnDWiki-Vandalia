@@ -13,6 +13,6 @@ tags: Artifact Equipment
 title: Blutquellenamulet
 type: text/vnd.tiddlywiki
 
-Ein Amulet mit einer klaren Flüssigkeit. Wurde Blut darauf getropft, aktivierte sich ein besonderer Effekt.
+Ein Amulett mit einer klaren Flüssigkeit. Wurde Blut darauf getropft, aktivierte sich ein besonderer Effekt.
 
-<<effect "Blutquelle">> In einer <<term short-rest>> konnte ein <<term hit-dice>> (Würfel + <<term con>>-Modifikator) eingesetzt werden, um die Hälfte seines Wertes (abgerundet) als Sorcerypoints zu regenerieren.
+<<effect "Blutquelle">> In einer <<term short-rest>> konnte ein <<term hit-dice>> (Würfel + <<term con>>-Modifikator) eingesetzt werden, um die Hälfte seines Wertes (abgerundet) als Sorcery Points zu regenerieren.

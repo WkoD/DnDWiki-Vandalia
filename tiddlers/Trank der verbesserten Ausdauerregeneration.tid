@@ -6,6 +6,6 @@ tags: Item Consumable
 title: Trank der verbesserten Ausdauerregeneration
 type: text/vnd.tiddlywiki
 
-Eine elektrisierte, fast pulsierende blaue Flüssigkeit, die verbrauchte Ausdauer und damit Fähigkeiten wieder herstellte.
+Eine elektrisierte, fast pulsierende blaue Flüssigkeit, die verbrauchte Ausdauer und damit Fähigkeiten wiederherstellte.
 
-<<effect "Ausdauer">> Eine Kreatur konnte damit einen <<term spell-slot variant:"level" value:5>> oder niedriger, oder eine Klassenfähigkeit bis Level 10 regenerieren.
+<<effect "Ausdauer">> Eine Kreatur konnte damit einen <<term spell-slot variant:"level" value:5>> oder niedriger oder eine Klassenfähigkeit bis Level 10 regenerieren.

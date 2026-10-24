@@ -1,7 +1,7 @@
 category: focus, arcane
 created: 20261012210710340
 former: [[Zyn Dondar]] [[Taltana Dondar]]
-modified: 20261023210219259
+modified: 20261024092258478
 owner: Theren
 rarity: rare
 tags: Artifact Equipment
@@ -10,4 +10,4 @@ type: text/vnd.tiddlywiki
 
 Der Ehering von [[Zyn Dondar]], umgearbeitet zu einem Fokus für [[Taltana Dondar]].
 
-<<effect "Zornmarken">> Wer ihn trug, sammelte eine Zornmarke, sobald ihn ein Angriff traf, höchstens eine pro Runde und höchstens 5. Die Zornmarken erlaubten einen Zauber in Höhe der gesammelten Marken zu wirken, maximal Grad 5. Nach dem Wirken war eine <<term long-rest>> nötig, bevor der Effekt erneut genutzt werden konnte und alle Marken verfielen dabei.
+<<effect "Zornmarken">> Wer ihn trug, sammelte eine Zornmarke, sobald ihn ein Angriff traf, höchstens eine pro Runde und höchstens 5. Mit den Zornmarken ließ sich ein Zauber wirken wie mit einem <<term spell-slot>>, dessen Grad der Zahl der gesammelten Marken entsprach, höchstens wie mit einem <<term spell-slot variant:"level" value:5>>. Nach dem Wirken war eine <<term long-rest>> nötig, bevor der Effekt erneut genutzt werden konnte, und alle Marken verfielen dabei.
