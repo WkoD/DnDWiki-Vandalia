@@ -197,6 +197,7 @@ Technical tiddlers with a fixed function given by the format (no lore content):
 | `$:/config/tiddlyrpg/editor/symmetric` (optional) | Whether saving in the editor writes the other end of a symmetric relation (on by default). Written by Control Panel -> Settings -> TiddlyRPG -> Editor. |
 | `$:/config/tiddlyrpg/view/dm-published` (optional) | `yes`: the published copy offers the view of the DM as well (see "Player characters, views and secrets"). |
 | `$:/config/tiddlyrpg/rules/ruleset/...`, `.../rules/setting/...` (optional) | The rules language, apart for the ruleset (units, dice, damage, terms) and the campaign setting (names of months and coins), the language their terms are shown in: below each `mode` (`wiki`, `all` with `language`, `domain` with `domain/<name>`). Written by Control Panel -> Settings -> TiddlyRPG -> "Ruleset options" and "Campaign setting options"; see "Rules terms". |
+| `$:/config/tiddlyrpg/rules/highlight` (optional) | How the rules macros (`<<unit>>`, `<<dice>>`, `<<damage>>`, `<<term>>`) stand out in the text: `underline` (dotted; the default, also without the tiddler) or `none`. Written by Control Panel -> Settings -> TiddlyRPG -> "Ruleset options" -> "Highlight". |
 
 The captions of the graph views are plain text of the wiki (tw5-graph shows them untranslated):
 English in the template, each campaign may use its own language.
