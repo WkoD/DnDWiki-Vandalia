@@ -149,7 +149,7 @@ Important: `IsReadOnly` is compared as an exact string - no trailing newline in 
     documented in the repo `TiddlyRPG-Plugins`.
 - `images/` - sorted by type, folder names in lower case, one per type tag: `person` (NPC
   portraits, also deities), `location`, `event`, `organisation`, `item` (artifacts, items, materials,
-  whatever their category), `player`, `creature`, `spell`, `information`; plus `map` (maps of locations and spots,
+  whatever their category), `player`, `creature`, `spell`, `information` (folks too); plus `map` (maps of locations and spots,
   battle maps among them: field `map`, spot parameter `map`). Images of a spot (parameter
   `image`) are in `location`. Campaign-specific
   subfolders used only for storage (if any): see `CAMPAIGN.md`.
@@ -227,7 +227,7 @@ Standard `.tid` format (field header, blank line, body). Fields of content tiddl
 - **Relation fields** (list fields referencing titles) - carry the relation network for the graph:
   `location`, `member`, `former`, `leader`, `officer`, `patron`, `mentor`, `under`, `parent`,
   `ancestor`, `spouse`, `sibling`, `family`, `alliance`, `bond`, `enmity` (person/organisation/deity),
-  `creature` (person/player/creature), `owner`/`creator`/`former`/`component`/`location`/`base`
+  `creature` and `folk` (person/player/creature), `owner`/`creator`/`former`/`component`/`location`/`base`
   (items) and `spells` (items, persons, player characters, creatures). Meaning, edge texts and axes:
   `README.md` of `TiddlyRPG-Plugins` -> "Relations".
   - **Direction:** the field lives on the dependent and points to what it depends on - the member
@@ -264,8 +264,12 @@ Standard `.tid` format (field header, blank line, body). Fields of content tiddl
   - **`leader`** pointing to a location: leads or controls it (shown as "Controls") and is
     present there - no `location` to the same place.
   - **`creature`** on a person, player character or creature: its kind (`Mizu` -> `Fukuro`, a
-    form of a creature -> the creature). The kind is a tiddler tagged `Creature` - a race,
-    beast or monster, its body and its values; nothing of it is inherited.
+    form of a creature -> the creature). The kind is a tiddler tagged `Creature` - a beast, a
+    monster, a being with a stat block - its body and its values; nothing of it is inherited.
+  - **`folk`** on a person, player character or creature: the folk it belongs to (`Ki-Ra` ->
+    `Nichny`), a tiddler tagged `Information Folk`. Only where it tells something - not on
+    every human; a half-elf may name two. A folk is no creature: a warrior of the folk with
+    values is a `Creature` with `folk`.
   - **`location`** on a creature: where its kind lives - several entries, all equal.
   - **`base`** on an item: the item it is made on (`Frostbringer` -> `Warhammer`). Choosing it in
     the editor copies the values of the rules of the base item into the empty fields, once;
@@ -349,7 +353,8 @@ Standard `.tid` format (field header, blank line, body). Fields of content tiddl
 - **Values of the rules** (with a ruleset that defines them, e.g. `tiddlyrpg-ruleset-dnd5e2014`):
   the fields the ruleset gives a type - an item `category`, `rarity`, `damage`, `range`, `ac`,
   `weight` ...; a spell `level`, `school`, `casting-time` ...; a creature `size`, `hp`, `str` ...
-  `cha`, `cr` ...; a person `height`, `weight`. They show as a block like a stat block between
+  `cha`, `cr` ...; a person `height`, `weight`; a folk `size`, `speed`, `senses`, `languages`.
+  They show as a block like a stat block between
   image and body; the form of the editor offers the fields of the type. The hub `Ruleset` and
   the README of the ruleset list them.
   - Write the value as the field reads it - ids or terms, units, dice: `category: weapon,
@@ -512,10 +517,10 @@ A tiddler gets up to four kinds of tags:
      plus optional **categories** next to it (with a ruleset the field `category` says the kind
      in its terms, and a hint names the category it belongs to): `Book`, `Consumable` (potions, tinctures),
      `Equipment` (everything one can equip: weapons, armour, a bag of holding), or one of the
-     campaign (a tiddler tagged `$:/tags/tiddlyrpg/ItemKind`). A unique book is `Artifact Book`,
+     campaign (a tiddler tagged `$:/tags/tiddlyrpg/Category`). A unique book is `Artifact Book`,
      a newspaper `Item Book`; plenty of items need no category. `Spell` (a spell),
-     `Creature` (a kind: a race, beast or monster - a single being is a `Person` with
-     `creature`).
+     `Creature` (a kind of being with a stat block: a beast, a monster - a single being is a
+     `Person` with `creature`; a folk is no creature, see `Folk` below).
    - **Events** - dated/narrative entries: `Event` (a single in-world incident, possibly several
      points in time, see tiddler format). The hub `Campaign` is the pinned start page; there is
      no tag `Campaign` - an event belongs to the campaign when a player character is tagged on it
@@ -523,7 +528,8 @@ A tiddler gets up to four kinds of tags:
    - **Quests** - `Quest`: the planning of a quest whose markers stand in events (see "Quests and
      rumours" in "Tiddler format").
    - **Other** - meta/navigation: `Index` (carried by the type hubs; the hub `Index` lists
-     them), `Information` (technical tiddlers such as `PlayerLevel`, see above).
+     them), `Information` (technical tiddlers such as `PlayerLevel`, see above; with the
+     category `Folk` a folk - humans, elves, a people of the campaign: `Information Folk`).
 2. Faction/story line tag as thematic hub - the concrete names are **campaign-specific** and not
    listed here (see the `CAMPAIGN.md` or the category hub tiddlers of the respective wiki).
    Never a location: places are fields and spots (see "Relation fields").
