@@ -270,7 +270,8 @@ Standard `.tid` format (field header, blank line, body). Fields of content tiddl
     `Nichny`), a tiddler tagged `Information Folk`. Only where it tells something - not on
     every human; a half-elf may name two. A folk is no creature: a warrior of the folk with
     values is a `Creature` with `folk`.
-  - **`location`** on a creature: where its kind lives - several entries, all equal.
+  - **`location`** on a creature or a folk: where its kind or the folk lives - several entries,
+    all equal; the place lists them as "Creatures" and "Folks".
   - **`base`** on an item: the item it is made on (`Frostbringer` -> `Warhammer`). Choosing it in
     the editor copies the values of the rules of the base item into the empty fields, once;
     nothing stays linked, the price never comes along.
