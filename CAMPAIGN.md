@@ -86,7 +86,7 @@ oder aus dieser Datei planen:**
   (Feuer und Erde), `Ebene von Fels und Donner` (Erde und Luft), `Graue Wüste`,
   `Schattenwelt`, `Welt im Geiste`. Welche Orga einen Ort führt, steht in ihrem Feld
   `leader` (z. B. `Haus Eiree` → `Baile`).
-- **Spielerstufe:** Body von `PlayerLevel.tid`.
+- **Spielerstufe:** das Feld `xp` jeder Spielfigur; die Stufe ergibt sich daraus.
 - **Offene Plot-Fäden:** Quest-Marker (`<<quest`, `<$quest`) in `Event`-Tiddlern und die
   `Quest`-getaggten Tiddler mit ihrem Planungstext.
 - **Kampagnenstruktur / Handlungsbögen:** Ereignisse, an denen eine Spielerfigur als Tag

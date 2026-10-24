@@ -93,8 +93,7 @@ generic standard wiki elements such as the base graph views
 campaign's captions).
 
 **Never overwrite or discard blindly - campaign-owned:** all lore content in `tiddlers/`,
-per-wiki config (SiteTitle/SiteSubtitle/DefaultTiddlers, `$:/language`), `PlayerLevel` with real
-data, an own calendar or currency (`$:/config/tiddlyrpg/calendar`, `.../currency` and their
+per-wiki config (SiteTitle/SiteSubtitle/DefaultTiddlers, `$:/language`), an own calendar or currency (`$:/config/tiddlyrpg/calendar`, `.../currency` and their
 data tiddlers), the choice of ruleset and setting and the rules language
 (`$:/config/tiddlyrpg/ruleset`, `.../setting`, `.../rules/...`, `.../date/order`), `images/`, `data/`, the
 fields `name`/`description`/`license` in `package.json`, `LICENSE`. For the following additionally check whether new
@@ -143,7 +142,7 @@ Important: `IsReadOnly` is compared as an exact string - no trailing newline in 
   "License").
   - Content tiddlers: file name from the title, e.g. `Hafendorf.tid` - exact rules under
     "File name and file format" below.
-  - System and data tiddlers (`$` prefix, `PlayerLevel`): see "System and data tiddlers" below.
+  - System and data tiddlers (`$` prefix): see "System and data tiddlers" below.
   - The format layer (macros, view templates, hubs, language packs, calendar engine, tw5-graph
     schema) comes from the plugin `tiddlyrpg-core` and does **not** live as a file in the wiki -
     documented in the repo `TiddlyRPG-Plugins`.
@@ -188,7 +187,6 @@ Technical tiddlers with a fixed function given by the format (no lore content):
 | `$:/graph/Cosmogram` | Graph view: all `Deity`/`Organisation`/`Person`/`Player`/`Creature` tiddlers with their relation fields (a person points to its kind with `creature`). |
 | `$:/graph/Atlas` | Graph view: all `Location` tiddlers plus all persons/deities/players/organisations/creatures - with and without a `location` field -, without the dead and destroyed, connected by the `location` edge and the function edges `rules` (leads a location) and `spots` (part of a location). The places of several worlds and planes, hence not "world map". |
 | `$:/graph/Items` | Graph view: `Artifact`/`Item`/`Material` tiddlers (with every category) plus their owners/creators/former owners linked by `owner`/`creator`/`former`, their locations linked by `location`, ingredients linked by `component`, base items linked by `base` and spells linked by `spells`. |
-| `PlayerLevel` | Body = free text shown as is on the `Player` hub, e.g. `Level 13` or `13456 EXP`; edited directly by the DM. |
 | `$:/tiddlyrpg/license`, `$:/tiddlyrpg/license/notice` | The license of the wiki content for ControlPanel -> License: the file `LICENSE` and the section of `README.md` between `<!-- wiki -->` and `<!-- /wiki -->`. No `.tid` files - loaded from the files by `tiddlers/license/tiddlywiki.files`; change the files, not the tiddlers (see "License"). |
 | `$:/config/tiddlyrpg/calendar` (optional) | Title of the calendar data tiddler. Set by the plugin `tiddlyrpg-setting-forgottenrealms` (Harptos, package `tiddlyrpg-dnd`) or by the wiki for an own calendar (see "Dates and calendar"). |
 | `$:/config/tiddlyrpg/currency` (optional) | Title of the currency data tiddler. Set by `tiddlyrpg-setting-forgottenrealms` (the coins of the Forgotten Realms) or by the wiki for an own currency. |
@@ -354,7 +352,10 @@ Standard `.tid` format (field header, blank line, body). Fields of content tiddl
 - **Values of the rules** (with a ruleset that defines them, e.g. `tiddlyrpg-ruleset-dnd5e2014`):
   the fields the ruleset gives a type - an item `category`, `rarity`, `damage`, `range`, `ac`,
   `weight` ...; a spell `level`, `school`, `casting-time` ...; a creature `size`, `hp`, `str` ...
-  `cha`, `cr` ...; a person `height`, `weight`; a folk `size`, `speed`, `senses`, `languages`.
+  `cha`, `cr` ...; a person `height`, `weight`; a player character `xp` - its level and the XP of
+  the next level derive from it, never written (`player-level`, `xp-next`), and its card in the hub
+  `Player` shows the level; a former character keeps its last `xp`; a folk `size`, `speed`,
+  `senses`, `languages`.
   They show as a block like a stat block between
   image and body; the form of the editor offers the fields of the type. The hub `Ruleset` and
   the README of the ruleset list them.
@@ -529,7 +530,7 @@ A tiddler gets up to four kinds of tags:
    - **Quests** - `Quest`: the planning of a quest whose markers stand in events (see "Quests and
      rumours" in "Tiddler format").
    - **Other** - meta/navigation: `Index` (carried by the type hubs; the hub `Index` lists
-     them), `Information` (technical tiddlers such as `PlayerLevel`, see above; with the
+     them), `Information` (background and technical tiddlers; with the
      category `Folk` a folk - humans, elves, a people of the campaign: `Information Folk`).
 2. Faction/story line tag as thematic hub - the concrete names are **campaign-specific** and not
    listed here (see the `CAMPAIGN.md` or the category hub tiddlers of the respective wiki).

@@ -1,8 +1,8 @@
 # DnDWiki-Vandalia
 
 A **TiddlyWiki 5** (Node.js edition) for a D&D campaign, content in German. This repo is the
-campaign **Vandalia** (details: see `CAMPAIGN.md`): per-wiki config, data tiddlers
-(`PlayerLevel`) and content in `tiddlers/` plus assets (`images/`, `data/`). Engine and format
+campaign **Vandalia** (details: see `CAMPAIGN.md`): per-wiki config and content
+in `tiddlers/` plus assets (`images/`, `data/`). Engine and format
 layer come as dependencies:
 
 - **Engine:** the official [`tiddlywiki`](https://www.npmjs.com/package/tiddlywiki) from npm,
