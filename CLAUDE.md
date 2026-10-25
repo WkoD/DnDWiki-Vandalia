@@ -387,8 +387,8 @@ Standard `.tid` format (field header, blank line, body). Fields of content tiddl
     body, with `<<unit>>`/`<<term>>`.
   - Lock values for the views that may not see them with `secret-fields` (see "Player
     characters, views and secrets").
-- **Content packages** (e.g. the SRD 5.1 of `tiddlyrpg-dnd`): items, spells and creatures of the
-  ruleset, offered in the editable wiki (a missing link, the button "Content" of the editor, every
+- **Content packages** (e.g. the SRD 5.1 of `tiddlyrpg-dnd`): items, spells, creatures, classes,
+  folks, traits, languages, feats and the glossary of the ruleset, offered in the editable wiki (a missing link, the button "Content" of the editor, every
   relation picker, the search, the hub `Content`) and taken one at a time. A taken entry is an
   ordinary tiddler of the wiki with the tag of its package (`SRD 5.1 English`) and `source`; edit
   it like any other. Its text stays in the language of the package. A published wiki with taken
