@@ -1,9 +1,9 @@
 attunement: yes
 category: wondrous-item, focus, arcane
 charges: 1
-classes: sorcerer
+classes: Sorcerer
 created: 20210305093627469
-modified: 20261023205744807
+modified: 20261025121552588
 owner: Actrielle
 rarity: uncommon
 recharge-on: long-rest

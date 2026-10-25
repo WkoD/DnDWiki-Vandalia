@@ -1,12 +1,12 @@
 attunement: yes
 base: Quarterstaff
 category: weapon, simple, melee, versatile, staff
-classes: cleric
+classes: Cleric
 created: 20200105171140655
 damage: 1d6 bludgeoning
 damage-versatile: 1d8 bludgeoning
 image: Stab von Grovetender.png
-modified: 20261023210219259
+modified: 20261025121552588
 owner: Actrielle
 rarity: rare
 tags: Artifact Equipment

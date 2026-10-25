@@ -1,0 +1,11 @@
+color: #ff80ff
+created: 20261025121552588
+modified: 20261025121552588
+tags: Index $:/tags/tiddlyrpg/Category
+tiddlyrpg-bases: Artifact Item
+title: Tätowierung
+type: text/vnd.tiddlywiki
+
+Magische Tätowierungen, deren Kraft in der Haut ihres Trägers lag.
+
+{{ || Item }}

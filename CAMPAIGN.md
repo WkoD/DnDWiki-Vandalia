@@ -87,6 +87,8 @@ oder aus dieser Datei planen:**
   `Schattenwelt`, `Welt im Geiste`. Welche Orga einen Ort führt, steht in ihrem Feld
   `leader` (z. B. `Haus Eiree` → `Baile`).
 - **Spielerstufe:** das Feld `xp` jeder Spielfigur; die Stufe ergibt sich daraus.
+- **Klassen und Völker der Figuren:** die Felder `classes` und `folk`; Unterklassen und Wahlen,
+  die nicht im SRD stehen, sind eigene Tiddler mit Tag `Information Class`.
 - **Offene Plot-Fäden:** Quest-Marker (`<<quest`, `<$quest`) in `Event`-Tiddlern und die
   `Quest`-getaggten Tiddler mit ihrem Planungstext.
 - **Kampagnenstruktur / Handlungsbögen:** Ereignisse, an denen eine Spielerfigur als Tag
