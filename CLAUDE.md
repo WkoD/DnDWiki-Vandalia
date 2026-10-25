@@ -185,7 +185,7 @@ Technical tiddlers with a fixed function given by the format (no lore content):
 | `$:/language` | Active language, e.g. `$:/languages/de-DE` (needs `"languages"` in `tiddlywiki.info` for anything but en-GB). Supported languages: `README.md` -> "Languages". A language switch in the Control Panel during `npm start` writes this tiddler. |
 | `$:/graph/Default` (caption "Live") | Graph view: currently open tiddlers (`$:/StoryList`) of the main types (spells and creatures among them), including automatic `links` edges (wiki links, grey) and the function edges `rules` and `spots`. |
 | `$:/graph/Cosmogram` | Graph view: all `Deity`/`Organisation`/`Person`/`Player`/`Creature` tiddlers with their relation fields (a person points to its kind with `creature`). |
-| `$:/graph/Atlas` | Graph view: all `Location` tiddlers plus all persons/deities/players/organisations/creatures - with and without a `location` field -, without the dead and destroyed, connected by the `location` edge and the function edges `rules` (leads a location) and `spots` (part of a location). The places of several worlds and planes, hence not "world map". |
+| `$:/graph/Atlas` | Graph view: all `Location` tiddlers plus all persons/deities/players/organisations/creatures/folks - with and without a `location` field -, without the dead and destroyed, connected by the `location` edge and the function edges `rules` (leads a location) and `spots` (part of a location). The places of several worlds and planes, hence not "world map". |
 | `$:/graph/Items` | Graph view: `Artifact`/`Item`/`Material` tiddlers (with every category) plus their owners/creators/former owners linked by `owner`/`creator`/`former`, their locations linked by `location`, ingredients linked by `component`, base items linked by `base` and spells linked by `spells`. |
 | `$:/tiddlyrpg/license`, `$:/tiddlyrpg/license/notice` | The license of the wiki content for ControlPanel -> License: the file `LICENSE` and the section of `README.md` between `<!-- wiki -->` and `<!-- /wiki -->`. No `.tid` files - loaded from the files by `tiddlers/license/tiddlywiki.files`; change the files, not the tiddlers (see "License"). |
 | `$:/config/tiddlyrpg/calendar` (optional) | Title of the calendar data tiddler. Set by the plugin `tiddlyrpg-setting-forgottenrealms` (Harptos, package `tiddlyrpg-dnd`) or by the wiki for an own calendar (see "Dates and calendar"). |
@@ -352,9 +352,10 @@ Standard `.tid` format (field header, blank line, body). Fields of content tiddl
 - **Values of the rules** (with a ruleset that defines them, e.g. `tiddlyrpg-ruleset-dnd5e2014`):
   the fields the ruleset gives a type - an item `category`, `rarity`, `damage`, `range`, `ac`,
   `weight` ...; a spell `level`, `school`, `casting-time` ...; a creature `size`, `hp`, `str` ...
-  `cha`, `cr` ...; a person `height`, `weight`; a player character `xp` - its level and the XP of
-  the next level derive from it, never written (`player-level`, `xp-next`), and its card in the hub
-  `Player` shows the level; a former character keeps its last `xp`; a folk `size`, `speed`,
+  `cha`, `cr` ...; a person `height`, `weight`; a person or player character `xp` (a whole number, thousands may
+  be separated) - its level and the XP of the next level derive from it, never written
+  (`player-level`, `xp-next`), and the card in the hub `Player` shows the level; a former
+  character keeps its last `xp`; a folk `size`, `speed`,
   `senses`, `languages`.
   They show as a block like a stat block between
   image and body; the form of the editor offers the fields of the type. The hub `Ruleset` and
