@@ -225,7 +225,8 @@ Standard `.tid` format (field header, blank line, body). Fields of content tiddl
 - **Relation fields** (list fields referencing titles) - carry the relation network for the graph:
   `location`, `member`, `former`, `leader`, `officer`, `patron`, `mentor`, `under`, `parent`,
   `ancestor`, `spouse`, `sibling`, `family`, `alliance`, `bond`, `enmity` (person/organisation/deity),
-  `creature`, `folk` and `classes` (person/player/creature), `owner`/`creator`/`former`/`component`/`location`/`base`
+  `creature`, `folk`, `classes`, `feats` and `languages` (person/player/creature; `languages`
+  also a folk), `owner`/`creator`/`former`/`component`/`location`/`base`
   (items), `spells` (items, persons, player characters, creatures, classes) and `classes` (spells:
   who casts it; items: attunement by). Meaning, edge texts and axes:
   `README.md` of `TiddlyRPG-Plugins` -> "Relations".
@@ -366,10 +367,12 @@ Standard `.tid` format (field header, blank line, body). Fields of content tiddl
   `cha`, `cr` ...; a person `height`, `weight`; a person or player character `xp` (a whole number, thousands may
   be separated) - its level and the XP of the next level derive from it, never written
   (`character-level`, `xp-next`), and the card in the hub `Player` shows the level, the folk
-  and the classes; a former character keeps its last `xp`; `character-background` the
-  background as free text, only where it is given; a folk `size`, `speed`,
-  `senses`, `languages`, `ability-bonuses`; a class `hit-die`, `saving-throws`,
-  `spellcasting-ability`.
+  and the classes; a former character keeps its last `xp`; `class-levels` the level of each
+  class (`class-levels: Fighter 5, Rogue 8`) - only for several classes or without XP, then
+  the level is their sum; `character-background` the background as free text, only where it is
+  given; a folk `size`, `speed`, `senses`, `ability-bonuses`; a class `hit-die`,
+  `saving-throws`, `spellcasting-ability`; a language `language-type`, `script`; a feat
+  `prerequisites`.
   They show as a block like a stat block between
   image and body; the form of the editor offers the fields of the type. The hub `Ruleset` and
   the README of the ruleset list them.
@@ -471,9 +474,11 @@ campaign) - never as plain text when the term matters:
   (`<<damage "1W8 Hieb">>`).
 - `<<term>>` takes the id of a term: abilities (`<<term wis variant:"save">>`), conditions
   (`<<term charmed>>`), actions (`<<term bonus-action>>`), rests, skills, senses, creature types,
-  sizes, alignments, schools of magic, languages, item categories with their properties
+  sizes, alignments, schools of magic, kinds of languages, item categories with their properties
   (`<<term "armor medium">>`: "medium armor"). The hub `Ruleset` lists every id with what it
-  shows.
+  shows. A term an entry of the glossary explains (`Information Glossary` with `term: <id>`, an
+  entry of the content package or a tiddler of the campaign) links to it. A language is no term
+  but an entry: `[[Common (Language)]]`.
 - A number always carries its unit - `<<unit 60>>` is not read, also not with a kind - so what a
   text means never depends on a setting. Write the value as the source has it (`228 cm` for a
   person described in centimetres, `60 ft` from the rulebook).
@@ -548,7 +553,9 @@ A tiddler gets up to four kinds of tags:
    - **Other** - meta/navigation: `Index` (carried by the type hubs; the hub `Index` lists
      them), `Information` (background and technical tiddlers; with the
      category `Folk` a folk - humans, elves, a people of the campaign: `Information Folk`; with
-     the category `Class` a class, subclass or lasting choice: `Information Class`).
+     the category `Class` a class, subclass or lasting choice: `Information Class`; `Trait` a
+     trait of a folk, `Feat` a feat, `Language` a language, `Glossary` the explanation of a term
+     of the ruleset).
 2. Faction/story line tag as thematic hub - the concrete names are **campaign-specific** and not
    listed here (see the `CAMPAIGN.md` or the category hub tiddlers of the respective wiki).
    Never a location: places are fields and spots (see "Relation fields").
