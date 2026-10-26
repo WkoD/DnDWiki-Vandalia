@@ -479,6 +479,18 @@ campaign) - never as plain text when the term matters:
   shows. A term an entry of the glossary explains (`Information Glossary` with `term: <id>`, an
   entry of the content package or a tiddler of the campaign) links to it. A language is no term
   but an entry: `[[Common (Language)]]`.
+- A formula - how a value is computed, shown, never computed - is one macro: the value of
+  `<<term>>` (`<<term dc value:"10 + cr">>`: "DC 10 + CR") or, without a term before it, `<<dice>>`
+  (`<<dice "1d8 * cr">>`, `<<dice "1/4 hit-dice + hit-dice:average + con:mod">>`). It holds
+  numbers, dice, `+ - * /` and brackets (write `*`, it shows as `×`), ids of terms with a
+  variant after a colon (`con:mod`, `str:score`) and names in single quotes. Any other word is an
+  error: a word of the campaign that is no term stays text outside the formula. Two alternatives
+  are two formulas (`<<term dc value:"8 + cha:mod + pb">> or <<term dc value:"8 + int:mod + pb">>`).
+- A feature or a column of the table of a class (an entry with a text of its own: class, trait,
+  feat, glossary) is no term but a name in that entry: `<<rule "Rage" entry:"Barbarian">>`, in a
+  formula `'Rage Damage|Barbarian'`. It links to the place in the class. Always name the entry,
+  so a name a later entry brings too stays clear; a name that is itself an entry needs none
+  (`<<rule "Breath Weapon">>`). The button "Rules" of the editor offers the names with their entry.
 - A number always carries its unit - `<<unit 60>>` is not read, also not with a kind - so what a
   text means never depends on a setting. Write the value as the source has it (`228 cm` for a
   person described in centimetres, `60 ft` from the rulebook).
