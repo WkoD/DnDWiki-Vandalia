@@ -1,7 +1,7 @@
 category: weapon, simple, melee
 created: 20261012210710342
 former: [[Elar'vil Dykur]]
-modified: 20261023210219259
+modified: 20261026132956217
 owner: [[Tristan Newin]]
 rarity: uncommon
 tags: Artifact Equipment
@@ -10,4 +10,4 @@ type: text/vnd.tiddlywiki
 
 In [[Cair Di]] tauschten die Abenteurer die Handwickel bei [[Tristan Newin]] gegen die [[Bracers of Defense]].
 
-<<effect "Elementare Schläge">> Die Handwickel galten als monk weapon. Unbewaffnete Angriffe richteten damit <<damage "force">> statt <<damage "bludgeoning">> an, dazu <<dice "1d6">> zufälligen elementaren Schaden, der bei jedem Treffer neu gewürfelt wurde: 1 Acid, 2 Cold, 3 Fire, 4 Lightning, 5 Thunder, 6 Poison.
+<<effect "Elementare Schläge">> Die Handwickel galten als monk weapon. Unbewaffnete Angriffe richteten damit <<damage "force">> statt <<damage "bludgeoning">> an, dazu <<dice "1d6">> zufälligen elementaren Schaden, der bei jedem Treffer neu gewürfelt wurde: 1 <<damage "acid">>, 2 <<damage "cold">>, 3 <<damage "fire">>, 4 <<damage "lightning">>, 5 <<damage "thunder">>, 6 <<damage "poison">>.

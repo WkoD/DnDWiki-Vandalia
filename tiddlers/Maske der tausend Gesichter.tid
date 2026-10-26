@@ -1,7 +1,7 @@
 category: wondrous-item
 created: 20191106152230254
 image: Mask of many Faces.jpg
-modified: 20261023210219259
+modified: 20261026132956217
 owner: Actrielle
 rarity: uncommon
 spells: [[Disguise Self]]
@@ -11,4 +11,4 @@ type: text/vnd.tiddlywiki
 
 Eine Maske, die dem Träger erlaubte, die Gestalt zu verschleiern.
 
-<<effect "Tausend Gesichter">> Der Träger konnte Disguise Self unbegrenzt einsetzen. Wenn jemand versuchte, die Verkleidung zu durchschauen, musste er einen <<term dc>> von 8 + <<term cha>> oder <<term int>> + <<term pb>> (wenn <<term performance>>, <<term persuasion>> oder <<term deception>> vorhanden war) überwinden.
+<<effect "Tausend Gesichter">> Der Träger konnte Disguise Self unbegrenzt einsetzen. Wenn jemand versuchte, die Verkleidung zu durchschauen, musste er einen <<term dc value:"8 + cha:mod + pb">> oder <<term dc value:"8 + int:mod + pb">> (wenn <<term performance>>, <<term persuasion>> oder <<term deception>> vorhanden war) überwinden.

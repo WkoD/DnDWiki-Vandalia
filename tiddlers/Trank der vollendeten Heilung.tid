@@ -1,10 +1,10 @@
 category: potion
 created: 20200818075523712
-modified: 20261023203220659
+modified: 20261026132956217
 tags: Item Consumable
 title: Trank der vollendeten Heilung
 type: text/vnd.tiddlywiki
 
 Ein roter Trank, der besonders viel Gesundheit wiederherstellte.
 
-<<effect "Heilung">> Die Gesundheit berechnete sich aus 3/4 <<term hit-dice>> + Durchschnittswert eines <<term hit-dice>> + <<term con>>-Modifikator.
+<<effect "Heilung">> Die Gesundheit berechnete sich aus <<dice "3/4 hit-dice + hit-dice:average + con:mod">>.

@@ -1,13 +1,13 @@
 category: wondrous-item
 created: 20261023184831766
 creator: Ragna Hyrr
-modified: 20261025121552588
+modified: 20261026132956217
 rarity: rare
 tags: Item Equipment Totem
 title: Totem des Hyrr
 type: text/vnd.tiddlywiki
 
-Ein Totem, in das [[Ragna]] die Kräfte von [[Hyrr]], dem [[Tiergeist|Tiergeister]] des Feuers und der Flammen, einband.
+Ein [[Totem]], in das [[Ragna]] die Kräfte von [[Hyrr]], dem [[Tiergeist|Tiergeister]] des Feuers und der Flammen, einband.
 
 <<effect "Wegweisendes Licht">> Der Träger dachte an eine Person oder einen Gegenstand, den er gesehen hatte, und schickte einen brennenden Raben als Fernkampfangriff los, der sein Ziel innerhalb von <<unit "90 ft" kind:"range">> selbst suchte. Bei einem Treffer erlitt das Ziel <<damage "1d8 fire">>.
 

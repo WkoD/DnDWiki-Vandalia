@@ -7,7 +7,7 @@ damage: 1d8 acid
 damage-versatile: 1d10 acid
 former: [[Raksha der Schlächter]]
 image: Wrath of Raksha.jpg
-modified: 20261024084246565
+modified: 20261026132956217
 owner: Balseth
 rarity: rare
 tags: Artifact Sjach Equipment
@@ -19,4 +19,4 @@ Diese mehrere hundert Jahre alte Axt wurde von [[Raksha dem Schlächter|Raksha d
 
 <<effect "Säureexplosion">> Starb ein Gegner durch einen Angriff mit der Axt, zerfetzte eine Säureexplosion seine Leiche: Jede Kreatur im Umkreis von <<unit "5 ft">> außer dem Träger erlitt <<damage "1d6 acid">>.
 
-<<effect "Hass des Raksha">> Jeder Treffer lud die Axt auf. Der sechste Treffer entlud den Hass des Raksha und verursachte zusätzlich zum normalen Schaden <<damage "1d4 + 1d6 + 1d8 + 1d10 + 1d12 acid">>. Griff der Träger eine Minute lang nicht mit ihr an, verlor sie alle Aufladungen.
+<<effect "Hass des Raksha">> Jeder Treffer lud die Axt auf. Der sechste Treffer entlud den Hass des Raksha und verursachte zusätzlich zum normalen Schaden <<damage "1d4 + 1d6 + 1d8 + 1d10 + 1d12 acid">>. Griff der Träger <<unit "1 minute">> lang nicht mit ihr an, verlor sie alle Aufladungen.

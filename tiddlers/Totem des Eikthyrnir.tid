@@ -1,13 +1,13 @@
 category: wondrous-item
 created: 20261023184831766
 creator: Ragna Eikthyrnir
-modified: 20261025121552588
+modified: 20261026132956217
 rarity: rare
 tags: Item Equipment Totem
 title: Totem des Eikthyrnir
 type: text/vnd.tiddlywiki
 
-Ein Totem, in das [[Ragna]] die Kräfte von [[Eikthyrnir]], dem [[Tiergeist|Tiergeister]] der Gravitation und Schwerkraft, einband.
+Ein [[Totem]], in das [[Ragna]] die Kräfte von [[Eikthyrnir]], dem [[Tiergeist|Tiergeister]] der Gravitation und Schwerkraft, einband.
 
 <<effect "Macht">> Machte der Träger einen Nahkampfangriff, konnte er seine <<term reaction>> verwenden, um zusätzlich <<damage "1d4 force">> zu verursachen.
 

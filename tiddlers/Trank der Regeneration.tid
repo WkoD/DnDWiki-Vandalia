@@ -2,11 +2,11 @@ category: potion
 component: Graufarn Löwengras
 created: 20200818075541264
 duration: 3 rounds
-modified: 20261023203220659
+modified: 20261026132956217
 tags: Item Consumable
 title: Trank der Regeneration
 type: text/vnd.tiddlywiki
 
 Eine orange Flüssigkeit, die Runde für Runde Gesundheit wiederherstellte.
 
-<<effect "Regeneration">> Die Regenerationsrate berechnete sich aus (1/4 <<term hit-dice>> + Durchschnittswert eines <<term hit-dice>> + <<term con>>-Modifikator) / 2.
+<<effect "Regeneration">> Die Regenerationsrate berechnete sich aus <<dice "(1/4 hit-dice + hit-dice:average + con:mod) / 2">>.

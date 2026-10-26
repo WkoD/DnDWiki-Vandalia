@@ -4,11 +4,11 @@ category: poison, inhaled
 component: Löwengras Venenuss
 created: 20200818072452618
 damage: 2d8 poison
-modified: 20261023183943405
+modified: 20261026132956217
 tags: Item Consumable
 title: Tinktur des Giftrauchs
 type: text/vnd.tiddlywiki
 
 Eine grünlich schimmernde Tinktur. Wenn diese Flüssigkeit auf den Boden geworfen wurde, verteilte sie einen giftigen Rauch, der jede Kreatur darin umnebelte.
 
-<<effect "Giftnebel">> Der Nebel blieb eine Runde stehen, solange ihn kein starker Wind wegwehte. Das Gift traf jede Kreatur, die ihren Zug im Nebel begann oder ihn während ihres Zugs betrat.
+<<effect "Giftnebel">> Der Nebel blieb <<unit "1 round">> stehen, solange ihn kein starker Wind wegwehte. Das Gift traf jede Kreatur, die ihren Zug im Nebel begann oder ihn während ihres Zugs betrat.

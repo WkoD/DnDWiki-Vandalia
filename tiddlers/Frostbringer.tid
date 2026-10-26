@@ -7,7 +7,7 @@ creator: [[Owen Kupferauge]]
 damage: 1d8 bludgeoning plus 1d8 cold
 damage-versatile: 1d10 bludgeoning plus 1d8 cold
 date: 1351-05
-modified: 20261023210219259
+modified: 20261026132956217
 owner: Ragna
 range: 15/30 ft
 rarity: rare
@@ -20,4 +20,4 @@ Ein Warhammer, den sich [[Ragna]] anfertigen ließ.
 
 <<effect "Spektrale Ketten">> Spektrale Ketten verbanden den Hammer mit seinem Träger, und als Angriff konnte der Hammer so einmal pro Runde auf Gegner geschleudert werden. Die Ketten selbst interagierten nicht mit anderen Kreaturen und konnten auch nicht gesehen werden. Als <<term bonus-action>> konnte der Hammer wieder in die eigenen Hände zurückgezogen werden, solange er sich auf der gleichen Ebene wie der Träger befand.
 
-<<effect "Schrei des Leviathans">> Einmal pro Rage konnte der Träger als <<term action>> seine Wut in den Schrei des Leviathans bündeln. Alle Kreaturen in einem Kegel von <<unit "20 ft">> machten einen <<term wis variant:"save">> gegen <<term dc>> 10 + Rage Damage oder waren <<term frightened>>. Dabei bekam jede Kreatur <<term disadvantage>> auf jeden <<term ability-check>> und jeden <<term attack-roll>>, solange sie den Träger des Hammers im Sichtfeld hatte. Außerdem konnte sie nicht willentlich näher an den Träger des Hammers treten. Der <<term saving-throw>> wurde am Ende jedes Zuges wiederholt.
+<<effect "Schrei des Leviathans">> Einmal pro <<rule "Rage" entry:"Barbarian">> konnte der Träger als <<term action>> seine Wut in den Schrei des Leviathans bündeln. Alle Kreaturen in einem <<term cone>> von <<unit "20 ft">> machten einen <<term wis variant:"save">> gegen <<term dc value:"10 + 'Rage Damage|Barbarian'">> oder waren <<term frightened>>. Dabei bekam jede Kreatur <<term disadvantage>> auf jeden <<term ability-check>> und jeden <<term attack-roll>>, solange sie den Träger des Hammers im Sichtfeld hatte. Außerdem konnte sie nicht willentlich näher an den Träger des Hammers treten. Der <<term saving-throw>> wurde am Ende jedes Zuges wiederholt.
