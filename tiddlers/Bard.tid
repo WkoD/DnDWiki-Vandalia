@@ -104,7 +104,7 @@ The extra hit points increase when you reach certain levels in this class: to 1d
 
 <<feature "Font of Inspiration">> Beginning when you reach 5th level, you regain all of your expended uses of Bardic Inspiration when you finish a short or long rest.
 
-<<feature "Countercharm">> At 6th level, you gain the ability to use musical notes or words of power to disrupt mind-influencing effects. As an action, you can start a performance that lasts until the end of your next turn. During that time, you and any friendly creatures within 30 feet of you have advantage on saving throws against being <<term frightened>> or charmed. A creature must be able to hear you to gain this benefit. The performance ends early if you are <<term incapacitated>> or silenced or if you voluntarily end it (no action required).
+<<feature "Countercharm">> At 6th level, you gain the ability to use musical notes or words of power to disrupt mind-influencing effects. As an action, you can start a performance that lasts until the end of your next turn. During that time, you and any friendly creatures within 30 feet of you have advantage on saving throws against being <<term frightened>> or <<term charmed>>. A creature must be able to hear you to gain this benefit. The performance ends early if you are <<term incapacitated>> or silenced or if you voluntarily end it (no action required).
 
 <<feature "Bard College feature">> At 3rd level, you delve into the advanced techniques of a bard college of your choice, such as the College of Lore. Your choice grants you features at 3rd level and again at 6th and 14th level.
 
