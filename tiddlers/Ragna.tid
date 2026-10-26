@@ -4,13 +4,14 @@ classes: Barbarian [[Path of the Totem Warrior]] [[Totem Spirit: Bear]]
 created: 20171014102056965
 date: 1325
 family: [[Astrid den Okuvliga]] [[Olaf den Okuvliga]] Hydi
+folk: Nordvolk
 height: 183 cm
 image: Ragna.jpg
-leader: Nordvolk
-modified: 20261026132956217
+leader: [[Jarltum Kattegat]]
+modified: 20261026150704709
 player: Jan
 spouse: Lagertha
-tags: Nordvolk Player
+tags: [[Jarltum Kattegat]] Player
 title: Ragna
 type: text/vnd.tiddlywiki
 xp: 120000
