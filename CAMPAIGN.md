@@ -48,6 +48,13 @@ Wer welche Figur spielt, steht im Feld `player` der Figuren (siehe unten), nicht
   Dateinamen), die Sehenswürdigkeiten als `<<spot "Name">>`-Abschnitte am Ende seines Texts;
   sie erscheinen unter den Karten. Ein Spot ohne eigenen Tiddler trägt Bilder und Karten als
   Parameter (`image:"…"` aus `images/location/`, `map:"…"`).
+- **Herkunft von Regel-Einträgen:** Einträge des SRD 5.1 kommen aus dem Inhaltspaket und
+  tragen dessen Tag `SRD 5.1 English` und das Feld `source`. Was aus einem anderen Regelbuch
+  übernommen und umgeschrieben ist, wird genauso markiert: Tag des Buchs (z. B.
+  `[[Player's Handbook]]`) und `source: <Buch> (<Jahr>), umgeschrieben`, bei einer umbenannten
+  Vorlage `source: <Buch> (<Jahr>), nach "<Originalname>", umgeschrieben`. Ein Regel-Eintrag
+  ohne solche Quelle ist Homebrew, auch wenn er sich auf einen Begriff oder Gegenstand eines
+  Buchs beruft. Namen der Forgotten Realms (Götter, Orte) bekommen keinen Buch-Tag.
 - **Spieler-Sichtbarkeit:** Am Tisch wird über den Knopf „Sicht“ (Sidebar) zwischen der
   öffentlichen Sicht, der Sicht eines Spielers und der DM-Sicht gewechselt. Was nur
   einzelne Spieler kennen, trägt den Tag `Secret` mit ihren Figuren (`Theren Secret`);
@@ -87,7 +94,8 @@ oder aus dieser Datei planen:**
   `leader` (z. B. `Haus Eiree` → `Baile`).
 - **Spielerstufe:** das Feld `xp` jeder Spielfigur; die Stufe ergibt sich daraus.
 - **Klassen und Völker der Figuren:** die Felder `classes` und `folk`; Unterklassen und Wahlen,
-  die nicht im SRD stehen, sind eigene Tiddler mit Tag `Information Class`.
+  die nicht im SRD stehen, sind eigene Tiddler mit Tag `Information Class` (Herkunft siehe
+  „Konventionen“).
 - **Offene Plot-Fäden:** Quest-Marker (`<<quest`, `<$quest`) in `Event`-Tiddlern und die
   `Quest`-getaggten Tiddler mit ihrem Planungstext.
 - **Kampagnenstruktur / Handlungsbögen:** Ereignisse, an denen eine Spielerfigur als Tag

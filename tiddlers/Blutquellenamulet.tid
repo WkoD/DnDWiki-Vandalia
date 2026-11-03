@@ -3,13 +3,14 @@ category: wondrous-item, focus, arcane
 charges: 1
 classes: Sorcerer
 created: 20210305093627469
-modified: 20261026132956217
+modified: 20261103184018213
 owner: Actrielle
 rarity: uncommon
 recharge-on: long-rest
+source: Tasha's Cauldron of Everything (2020), nach "Bloodwell Vial", umgeschrieben
 spell-attack-bonus: +1
 spell-dc-bonus: +1
-tags: Artifact Equipment
+tags: Artifact Equipment [[Tasha's Cauldron of Everything]]
 title: Blutquellenamulet
 type: text/vnd.tiddlywiki
 

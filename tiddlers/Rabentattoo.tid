@@ -1,11 +1,12 @@
 attunement: yes
 category: wondrous-item
 created: 20241112184018905
-modified: 20261025121552588
+modified: 20261103184018213
 owner: Ragna
 rarity: uncommon
 recharge-on: long-rest
-tags: Artifact Equipment Tätowierung
+source: Tasha's Cauldron of Everything (2020), nach "Eldritch Claw Tattoo", umgeschrieben
+tags: Artifact Equipment Tätowierung [[Tasha's Cauldron of Everything]]
 title: Rabentattoo
 type: text/vnd.tiddlywiki
 

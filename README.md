@@ -57,8 +57,8 @@ and is fan content under their Fan Content Policy. The part below shows in the w
 <!-- wiki -->
 Was in diesem Wiki eigene Arbeit ist, steht unter
 [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/deed.de) (`LICENSE`): frei
-für alle, auch ohne Namensnennung. Inhalte anderer bleiben bei ihren Rechteinhabern; woher die
-Bilder eines Eintrags stammen, steht, wo bekannt, in seiner Zeile „Quelle“.
+für alle, auch ohne Namensnennung. Inhalte anderer bleiben bei ihren Rechteinhabern; woher
+Bilder oder Regeltext eines Eintrags stammen, steht, wo bekannt, in seiner Zeile „Quelle“.
 
 DnDWiki-Vandalia is unofficial Fan Content permitted under the
 [Fan Content Policy](https://company.wizards.com/en/legal/fancontentpolicy). Not approved/endorsed
