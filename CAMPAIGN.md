@@ -82,7 +82,7 @@ Wer welche Figur spielt, steht im Feld `player` der Figuren (siehe unten), nicht
 oder aus dieser Datei planen:**
 
 - **Fraktionen / Häuser / Orte / NPCs:** Tiddler mit dem jeweiligen Typ-Tag. Startpunkte:
-  `Index` und die Kategorie-Hub-Tiddler `Person`, `Location`, `Organisation`, `Event`,
+  `Index` und die Hubs `Person`, `Location`, `Organisation`, `Event`,
   `Campaign`, ... (Shadows aus `tiddlyrpg-core`).
 - **Orte-Hierarchie (Ober-/Unterort):** über das Feld `location` („liegt in“, z. B.
   `Baile.tid: location: [[Königreich von Vandalia]]`) oder als Spot im Text des Oberorts

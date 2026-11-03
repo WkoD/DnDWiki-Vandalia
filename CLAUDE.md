@@ -30,15 +30,15 @@ only reads `tiddlers/`).
 
 Two separate version axes:
 
-- **Format layer** -> pin of `tiddlyrpg-plugins` in `devDependencies` (e.g. `#2.1.0`), versioned
+- **Format layer** -> pin of `tiddlyrpg-plugins` in `devDependencies` (e.g. `#2.2.0`), versioned
   in the separate repo `TiddlyRPG-Plugins`. Optional content for D&D (the ruleset
   `tiddlyrpg-ruleset-dnd5e2014`, the setting `tiddlyrpg-setting-forgottenrealms`, the content
-  package of the SRD 5.1) -> pin of `tiddlyrpg-dnd` (e.g. `#2.1.0`), versioned in
+  package of the SRD 5.1) -> pin of `tiddlyrpg-dnd` (e.g. `#2.2.0`), versioned in
   the repo `TiddlyRPG-DnD`; it needs the format layer. For now both keep the same major and
   minor version - pin both to the same `x.y`; the patch level is each one's own, a fix is
   released alone (`tiddlyrpg-dnd#2.2.1` next to `tiddlyrpg-plugins#2.2.0`).
 - **Scaffold template** -> field `version` in `package.json`, set to the `TiddlyRPG` release
-  version (e.g. `2.1.0`) - **no** campaign version of its own.
+  version (e.g. `2.2.0`) - **no** campaign version of its own.
 
 ### Raising the format layer version (pin bump)
 
@@ -47,7 +47,7 @@ see its `CLAUDE.md` -> "Publishing a new version". Here (and in every campaign t
 version) only the deliberate pin bump, once a new version is released:
 
 ```jsonc
-"tiddlyrpg-plugins": "git+https://github.com/WkoD/TiddlyRPG-Plugins.git#2.1.0"
+"tiddlyrpg-plugins": "git+https://github.com/WkoD/TiddlyRPG-Plugins.git#2.2.0"
 ```
 ```bash
 npm install
@@ -76,8 +76,9 @@ Optional, only if wanted - campaigns do not have to follow:
 
 1. `git remote add upstream https://github.com/WkoD/TiddlyRPG.git` (once)
 2. `git fetch upstream --tags`
-3. `git diff <own version>..<new version> -- scripts .gitignore .gitattributes .github tiddlywiki.info package.json CLAUDE.md`
-   (the versions are tags of the template, e.g. `2.0.0..2.1.0`)
+3. `git diff <own version>..<new version> -- scripts .gitignore .gitattributes .github tiddlywiki.info package.json CLAUDE.md 'tiddlers/$__graph_*'`
+   (the versions are tags of the template, e.g. `2.1.0..2.2.0`; the quotes keep the shell from
+   reading `$__graph_` as a variable)
 4. Take over the **scaffold + `CLAUDE.md`**, then set `version` in `package.json` to the new
    template version.
 
@@ -588,7 +589,7 @@ A tiddler gets up to four kinds of tags:
      trait of a folk, `Feat` a feat, `Language` a language, `Glossary` the explanation of a term
      of the ruleset).
 2. Faction/story line tag as thematic hub - the concrete names are **campaign-specific** and not
-   listed here (see the `CAMPAIGN.md` or the category hub tiddlers of the respective wiki).
+   listed here (see the `CAMPAIGN.md` or the hub tiddlers of the respective wiki).
    Never a location: places are fields and spots (see "Relation fields").
 3. **Player characters** who took part - on events the characters that were there (`Theren
    Ragna`), active or former (field `player`). This also makes the event a campaign event
