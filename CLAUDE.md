@@ -186,7 +186,7 @@ Technical tiddlers with a fixed function given by the format (no lore content):
 | `$:/graph/Default` (caption "Live") | Graph view: currently open tiddlers (`$:/StoryList`) of the main types (spells and creatures among them), including automatic `links` edges (wiki links, grey) and the function edges `rules` and `spots`. |
 | `$:/graph/Cosmogram` | Graph view: all `Deity`/`Organisation`/`Person`/`Player`/`Creature` tiddlers with their relation fields (a person points to its kind with `creature`). |
 | `$:/graph/Atlas` | Graph view: all `Location` tiddlers plus all persons/deities/players/organisations/creatures/folks - with and without a `location` field -, without the dead and destroyed, connected by the `location` edge and the function edges `rules` (leads a location) and `spots` (part of a location). The places of several worlds and planes, hence not "world map". |
-| `$:/graph/Items` | Graph view: `Artifact`/`Item`/`Material` tiddlers (with every category) plus their owners/creators/former owners linked by `owner`/`creator`/`former`, their locations linked by `location`, ingredients linked by `component`, base items linked by `base` and spells linked by `spells`. |
+| `$:/graph/Items` (caption "Inventarium") | Graph view: which items there are, where they are and where they come from - `Artifact`/`Item`/`Material` tiddlers (with every category) plus their owners/creators/former owners linked by `owner`/`creator`/`former`, their locations linked by `location`, ingredients linked by `component` and base items linked by `base`. Not their contents: no spells. |
 | `$:/tiddlyrpg/license`, `$:/tiddlyrpg/license/notice` | The license of the wiki content for ControlPanel -> License: the file `LICENSE` and the section of `README.md` between `<!-- wiki -->` and `<!-- /wiki -->`. No `.tid` files - loaded from the files by `tiddlers/license/tiddlywiki.files`; change the files, not the tiddlers (see "License"). |
 | `$:/config/tiddlyrpg/calendar` (optional) | Title of the calendar data tiddler. Set by the plugin `tiddlyrpg-setting-forgottenrealms` (Harptos, package `tiddlyrpg-dnd`) or by the wiki for an own calendar (see "Dates and calendar"). |
 | `$:/config/tiddlyrpg/currency` (optional) | Title of the currency data tiddler. Set by `tiddlyrpg-setting-forgottenrealms` (the coins of the Forgotten Realms) or by the wiki for an own currency. |
@@ -226,7 +226,7 @@ Standard `.tid` format (field header, blank line, body). Fields of content tiddl
   `location`, `member`, `former`, `leader`, `officer`, `patron`, `mentor`, `under`, `parent`,
   `ancestor`, `spouse`, `sibling`, `family`, `alliance`, `bond`, `enmity` (person/organisation/deity),
   `creature`, `folk`, `classes`, `feats` and `languages` (person/player/creature; `languages`
-  also a folk), `owner`/`creator`/`former`/`component`/`location`/`base`
+  and `patron` also a folk), `owner`/`creator`/`former`/`component`/`location`/`base`
   (items), `spells` (items, persons, player characters, creatures, classes) and `classes` (spells:
   who casts it; items: attunement by). Meaning, edge texts and axes:
   `README.md` of `TiddlyRPG-Plugins` -> "Relations".
@@ -282,6 +282,8 @@ Standard `.tid` format (field header, blank line, body). Fields of content tiddl
     adds its own subclass or choice as a tiddler with its own words, never text of a book.
   - **`location`** on a creature or a folk: where its kind or the folk lives - several entries,
     all equal; the place lists them as "Creatures" and "Folks".
+  - **`patron`** on a folk: the deities the folk worships (`Nordvolk` -> `Hela`, `Odin`) - on the
+    folk, not on each of its people or on an organisation of it.
   - **`base`** on an item: the item it is made on (`Frostbringer` -> `Warhammer`). Choosing it in
     the editor copies the values of the rules of the base item into the empty fields, once;
     nothing stays linked, the price never comes along.
@@ -388,11 +390,23 @@ Standard `.tid` format (field header, blank line, body). Fields of content tiddl
   - Lock values for the views that may not see them with `secret-fields` (see "Player
     characters, views and secrets").
 - **Content packages** (e.g. the SRD 5.1 of `tiddlyrpg-dnd`): items, spells, creatures, classes,
-  folks, traits, languages, feats and the glossary of the ruleset, offered in the editable wiki (a missing link, the button "Content" of the editor, every
-  relation picker, the search, the hub `Content`) and taken one at a time. A taken entry is an
-  ordinary tiddler of the wiki with the tag of its package (`SRD 5.1 English`) and `source`; edit
-  it like any other. Its text stays in the language of the package. A published wiki with taken
-  entries of the SRD 5.1 carries its attribution (see "License").
+  folks, traits, languages, feats and the glossary of the ruleset.
+  - **Included** without taking: an entry the wiki names (a relation, a link, `<<term>>`, `<<rule>>`,
+    and what that entry names in turn) is part of the wiki from the next start on - a shadow
+    tiddler of the plugin `$:/plugins/tiddlyrpg/content-packages`, built at every start
+    (`npm start`, `npm run build`, `npm run check`) and saved into the page, so the published
+    copy has it too. Found like a tiddler of the wiki, its links in italics. Nothing to do and
+    nothing in `tiddlers/`.
+  - **Changed:** edit the entry - the own version is an ordinary tiddler in `tiddlers/` with the
+    tag of its package and `source`, and wins; deleting it brings the entry back. To lock an
+    entry, give the own version the tag `Secret` - an included entry shows to everyone, even
+    when only a locked tiddler names it.
+  - **Taken** one at a time in the editable wiki (a missing link, the button "Content" of the
+    editor, every relation picker, the search, the hub `Content`): an ordinary tiddler as
+    above. Take an entry only to change it; an unchanged taken entry is the same as an
+    included one.
+  - Its text stays in the language of the package. A published wiki with taken or included
+    entries of the SRD 5.1 carries its attribution (see "License").
 - `data` (books) - file name of a PDF from `data/book/`, embedded below the body (instead of an
   `<embed>` in the body).
 - `player` - name of the real player: on a `Player` tiddler (an active player character), and
@@ -615,8 +629,8 @@ engine), `tiddlyrpg-core` (format layer), `staticfiles` (dev server), `graph` + 
 `relink` (`flibbles/tw5-graph` stack), optionally `tiddlyrpg-ruleset-dnd5e2014` (rules terms and
 fields of D&D 5e) and `tiddlyrpg-setting-forgottenrealms` (Calendar of Harptos, coins of the
 Forgotten Realms), both from the package `tiddlyrpg-dnd`, repo `TiddlyRPG-DnD`, which also brings
-the content package of the SRD 5.1 (offered while the wiki runs on `npm start`, nothing to list
-in `tiddlywiki.info`). Language packs of TiddlyWiki
+the content package of the SRD 5.1 (offered while the wiki runs on `npm start`; what the wiki
+names is included at every start - nothing to list in `tiddlywiki.info`). Language packs of TiddlyWiki
 under `"languages"`. Contents/documentation of the plugins: see `CLAUDE.md` and `README.md` in
 `TiddlyRPG-Plugins` and `TiddlyRPG-DnD`. The launcher `scripts/tw.js` lists the packages whose
 `plugins` folders it searches; a package that is not installed is skipped.
@@ -646,12 +660,12 @@ ControlPanel -> License (also in the published copy):
   approved/endorsed by Wizards. Portions of the materials used are property of Wizards of the
   Coast. ©Wizards of the Coast LLC." Never logos; text, maps and images copied from a book are
   not covered by it.
-- A campaign that takes entries of the SRD 5.1 (from the content package of `tiddlyrpg-dnd`)
-  publishes material under CC-BY-4.0: the section also carries the attribution of page 1 of the
+- A campaign that takes or includes entries of the SRD 5.1 (from the content package of
+  `tiddlyrpg-dnd`) publishes material under CC-BY-4.0: the section also carries the attribution of page 1 of the
   SRD 5.1 word for word - "This work includes material taken from the System Reference Document
   5.1 (“SRD 5.1”) by Wizards of the Coast LLC and available at
   https://dnd.wizards.com/resources/systems-reference-document. The SRD 5.1 is licensed under the
   Creative Commons Attribution 4.0 International License available at
-  https://creativecommons.org/licenses/by/4.0/legalcode." - from the first taken entry on. The
+  https://creativecommons.org/licenses/by/4.0/legalcode." - from the first taken or included entry on. The
   field `source` of each entry stays as well.
 - Where the images of a tiddler come from: the field `source` (see "Tiddler format").

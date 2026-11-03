@@ -1,6 +1,6 @@
 created: 20210305103941294
 date: 1351-06-04, 1351-09, 1351-12-16, ..
-modified: 20261019125318329
+modified: 20261103181446155
 tags: Event Sjach Balseth Actrielle
 title: Der Feind im eigenen Körper
 type: text/vnd.tiddlywiki
@@ -17,4 +17,4 @@ type: text/vnd.tiddlywiki
 
 <<date label:"Die Kammer">>
 
-<<quest "Die Sjach Geschwister">>Im <<spotlink "Brimsee" "Labor am Brimsee">> fanden die Abenteurer zusammen mit [[Sakur]] eine Kammer, die der gesuchten Transformationskammer von [[Tyria]] nahekam. Wie sie genau funktionierte, musste erst untersucht werden. [[Actrielle]] schickte die Kammer per Teleport zur [[Festung im Briarwood]], zusammen mit einem Brief von [[Balseth]] an [[Naatuja]], sie vorsichtig zu untersuchen.
+<<quest "Die Sjach Geschwister">>Im <<spotlink "Brimsee" "Labor am Brimsee">> fanden die Abenteurer zusammen mit [[Sakur]] eine Kammer, die der gesuchten Transformationskammer von [[Tyria]] nahekam. Wie sie genau funktionierte, musste erst untersucht werden. [[Actrielle]] schickte die Kammer per [[Teleport]] zur [[Festung im Briarwood]], zusammen mit einem Brief von [[Balseth]] an [[Naatuja]], sie vorsichtig zu untersuchen.

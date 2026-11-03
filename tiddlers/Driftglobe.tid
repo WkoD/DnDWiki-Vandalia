@@ -3,7 +3,7 @@ charges: 1
 created: 20201206103716466
 former: [[Faren Markelhay]]
 image: Driftglobe.jpg
-modified: 20261023203746581
+modified: 20261103181446155
 owner: Theren
 rarity: uncommon
 recharge-on: long-rest
@@ -15,6 +15,6 @@ weight: 1 lb
 
 Eine kleine Sphäre aus dickem Glas.
 
-<<effect "Licht">> Wer höchstens <<unit "60 ft" kind:"range">> von der Sphäre entfernt war, konnte ihr Kommandowort sprechen; sie strahlte dann den Zauber Light oder Daylight aus. Daylight ließ sich erst nach einer <<term long-rest>> wieder nutzen.
+<<effect "Licht">> Wer höchstens <<unit "60 ft" kind:"range">> von der Sphäre entfernt war, konnte ihr Kommandowort sprechen; sie strahlte dann den Zauber [[Light]] oder [[Daylight]] aus. [[Daylight]] ließ sich erst nach einer <<term long-rest>> wieder nutzen.
 
 <<effect "Schweben">> Mit einem zweiten Kommandowort ließ der Träger die leuchtende Sphäre als <<term action>> aufsteigen. Sie schwebte höchstens <<unit "5 ft">> über dem Boden, bis jemand sie ergriff. Entfernte sich der Träger mehr als <<unit "60 ft">> von ihr, folgte sie ihm auf dem kürzesten Weg, bis sie wieder höchstens <<unit "60 ft">> entfernt war. Wurde sie daran gehindert, sank sie sanft zu Boden, wurde inaktiv und ihr Licht erlosch.
