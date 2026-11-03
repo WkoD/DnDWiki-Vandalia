@@ -47,8 +47,7 @@ Wer welche Figur spielt, steht im Feld `player` der Figuren (siehe unten), nicht
   aus `images/map/`, Kampfkarten eingeschlossen; ab zwei Karten je ein Reiter mit dem
   Dateinamen), die Sehenswürdigkeiten als `<<spot "Name">>`-Abschnitte am Ende seines Texts;
   sie erscheinen unter den Karten. Ein Spot ohne eigenen Tiddler trägt Bilder und Karten als
-  Parameter (`image:"…"` aus `images/location/`, `map:"…"`). Die Bezirke von `Cair Di` stehen
-  als Hinweis (`''//Artisans Ward//''`) am Anfang der Spot-Texte.
+  Parameter (`image:"…"` aus `images/location/`, `map:"…"`).
 - **Spieler-Sichtbarkeit:** Am Tisch wird über den Knopf „Sicht“ (Sidebar) zwischen der
   öffentlichen Sicht, der Sicht eines Spielers und der DM-Sicht gewechselt. Was nur
   einzelne Spieler kennen, trägt den Tag `Secret` mit ihren Figuren (`Theren Secret`);
