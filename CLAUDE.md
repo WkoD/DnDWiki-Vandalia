@@ -183,9 +183,9 @@ Technical tiddlers with a fixed function given by the format (no lore content):
 | `$:/SiteSubtitle` | Subtitle. Empty in the template - the CI enters a timestamp at build time. |
 | `$:/DefaultTiddlers` | List of tiddlers shown in the story river when the wiki opens. |
 | `$:/language` | Active language, e.g. `$:/languages/de-DE` (needs `"languages"` in `tiddlywiki.info` for anything but en-GB). Supported languages: `README.md` -> "Languages". A language switch in the Control Panel during `npm start` writes this tiddler. |
-| `$:/graph/Default` (caption "Live") | Graph view: currently open tiddlers (`$:/StoryList`) of the main types (spells and creatures among them), including automatic `links` edges (wiki links, grey) and the function edges `rules` and `spots`. |
-| `$:/graph/Cosmogram` | Graph view: all `Deity`/`Organisation`/`Person`/`Player`/`Creature` tiddlers with their relation fields (a person points to its kind with `creature`). |
-| `$:/graph/Atlas` | Graph view: all `Location` tiddlers plus all persons/deities/players/organisations/creatures/folks - with and without a `location` field -, without the dead and destroyed, connected by the `location` edge and the function edges `rules` (leads a location) and `spots` (part of a location). The places of several worlds and planes, hence not "world map". |
+| `$:/graph/Default` (caption "Live") | Graph view: currently open tiddlers (`$:/StoryList`) of the main types (spells and creatures among them) and of `Information` with its categories (folks, classes, traits, feats, languages, the glossary), not the hubs the core brings (`Calendar`, `Ruleset`, `Content` ...), including automatic `links` edges (wiki links, grey) and the function edges `rules` and `spots`. |
+| `$:/graph/Cosmogram` | Graph view: all `Deity`/`Organisation`/`Person`/`Player` tiddlers with their relation fields. No creatures and no folks: the kind of a person (`creature`) and its folk show in its ego graph. |
+| `$:/graph/Atlas` | Graph view: all `Location` tiddlers plus all persons/deities/players/organisations - with and without a `location` field, so that none is forgotten -, and the creatures and folks that have a `location`; without the dead and destroyed, connected by the `location` edge and the function edges `rules` (leads a location) and `spots` (part of a location). The places of several worlds and planes, hence not "world map". |
 | `$:/graph/Items` (caption "Inventarium") | Graph view: which items there are, where they are and where they come from - `Artifact`/`Item`/`Material` tiddlers (with every category) plus their owners/creators/former owners linked by `owner`/`creator`/`former`, their locations linked by `location`, ingredients linked by `component` and base items linked by `base`. Not their contents: no spells. |
 | `$:/tiddlyrpg/license`, `$:/tiddlyrpg/license/notice` | The license of the wiki content for ControlPanel -> License: the file `LICENSE` and the section of `README.md` between `<!-- wiki -->` and `<!-- /wiki -->`. No `.tid` files - loaded from the files by `tiddlers/license/tiddlywiki.files`; change the files, not the tiddlers (see "License"). |
 | `$:/config/tiddlyrpg/calendar` (optional) | Title of the calendar data tiddler. Set by the plugin `tiddlyrpg-setting-forgottenrealms` (Harptos, package `tiddlyrpg-dnd`) or by the wiki for an own calendar (see "Dates and calendar"). |
@@ -211,6 +211,11 @@ The four graph views live in the wiki on purpose instead of the plugin: the side
 lists real tiddlers (shadows do not appear there), and e.g. the atlas can carry its own settings
 per campaign. The map of a location is no view of its own: it is a tab of the location (see
 "Maps of a location") and deliberately not in the dropdown.
+
+The views show the included entries of a content package like the tiddlers of the wiki. These
+are shadow tiddlers, and `[tag[X]]` does not see them: a filter of a view starts its runs with
+`[all[tiddlers+included]tag[X]]`. `tagging[]` (Inventarium) and `multitag` on the open tiddlers
+(Live) see them as they are.
 
 ### Tiddler format
 
