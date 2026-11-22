@@ -1,4 +1,5 @@
 # Normalise line endings - prevents CRLF/LF phantom diffs between the repos
+* text=auto eol=lf
 *.tid   text eol=lf
 *.js    text eol=lf
 *.json  text eol=lf
